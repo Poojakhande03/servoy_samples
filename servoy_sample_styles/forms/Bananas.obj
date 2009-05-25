@@ -1,0 +1,13 @@
+name:"Bananas",
+navigatorID:"-1",
+onLoadMethodID:"6f250c67-38a1-47bf-8693-b175204aadfe",
+onShowMethodID:"-1",
+paperPrintScale:100,
+scrollbars:36,
+serverName:"udm",
+showInMenu:true,
+size:"625,630",
+styleName:"svy_Bannanas",
+tableName:"companies",
+typeid:3,
+uuid:"60f8d53f-c622-41b7-8417-01dbce3bde05"

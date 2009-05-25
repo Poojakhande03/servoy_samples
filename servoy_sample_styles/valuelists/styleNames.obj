@@ -1,0 +1,8 @@
+addEmptyValue:1,
+customValues:"Autumn\nBananas\nCharcoal\nCherry\nCottonCandy\nDarkGrey\nGrape|Grape\nHunterGreen\nIce\nLightGrey\nLime\nNutmeg\nOlive\nPeach\nRose\nRoyalBlue\nRoyalGreen\nRoyalPurple\nSage\nSeaFoam\nViolet\nWalnut\nWheat\niPhone",
+name:"styleNames",
+returnDataProviders:1,
+separator:" ",
+showDataProviders:1,
+typeid:34,
+uuid:"038f8803-6cd8-4a0b-9418-ba5c2ad38d08"

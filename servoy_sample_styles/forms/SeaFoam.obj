@@ -1,0 +1,13 @@
+name:"SeaFoam",
+navigatorID:"-1",
+onLoadMethodID:"6f250c67-38a1-47bf-8693-b175204aadfe",
+onShowMethodID:"-1",
+paperPrintScale:100,
+scrollbars:36,
+serverName:"udm",
+showInMenu:true,
+size:"625,630",
+styleName:"svy_SeaFoam",
+tableName:"companies",
+typeid:3,
+uuid:"9f7bc098-80eb-41b8-81b1-88b903d8e20b"

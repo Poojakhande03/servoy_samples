@@ -1,0 +1,13 @@
+name:"LightGrey",
+navigatorID:"-1",
+onLoadMethodID:"6f250c67-38a1-47bf-8693-b175204aadfe",
+onShowMethodID:"-1",
+paperPrintScale:100,
+scrollbars:36,
+serverName:"udm",
+showInMenu:true,
+size:"625,630",
+styleName:"svy_LightGray",
+tableName:"companies",
+typeid:3,
+uuid:"80d6c5b3-625b-47eb-bca1-5d0789cb9d7e"

@@ -1,0 +1,12 @@
+anchors:11,
+formIndex:10900,
+location:"0,0",
+mediaOptions:14,
+name:"sectionHeaderOutset",
+showClick:false,
+showFocus:false,
+size:"1500,36",
+styleClass:"outsetmed",
+tabSeq:-1,
+typeid:7,
+uuid:"42d0c605-5a1c-46f7-87df-1fd3ce2250e7"

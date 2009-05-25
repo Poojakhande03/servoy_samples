@@ -1,0 +1,13 @@
+name:"Nutmeg",
+navigatorID:"-1",
+onLoadMethodID:"6f250c67-38a1-47bf-8693-b175204aadfe",
+onShowMethodID:"-1",
+paperPrintScale:100,
+scrollbars:36,
+serverName:"udm",
+showInMenu:true,
+size:"625,630",
+styleName:"svy_Nutmeg",
+tableName:"companies",
+typeid:3,
+uuid:"f552ef35-ab4f-4ea7-9382-e30494472ac5"

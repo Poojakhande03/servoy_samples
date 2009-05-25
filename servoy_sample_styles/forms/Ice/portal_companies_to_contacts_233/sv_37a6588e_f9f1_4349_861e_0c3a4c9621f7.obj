@@ -1,0 +1,8 @@
+borderType:"EmptyBorder,0,0,0,0",
+dataProviderID:"companies_to_contacts.contact_id",
+editable:false,
+location:"170,220",
+size:"120,20",
+text:"contact_id",
+typeid:4,
+uuid:"37a6588e-f9f1-4349-861e-0c3a4c9621f7"
