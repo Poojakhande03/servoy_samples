@@ -1,0 +1,11 @@
+displaysTags:true,
+formIndex:10100,
+location:"24,7",
+mediaOptions:14,
+size:"540,33",
+styleClass:"headerreport",
+tabSeq:-1,
+text:"%%item_name%%",
+transparent:true,
+typeid:7,
+uuid:"f025fc5b-9050-485f-b4b5-60529c37e993"
