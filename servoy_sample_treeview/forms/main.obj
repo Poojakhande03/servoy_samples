@@ -1,0 +1,11 @@
+name:"main",
+navigatorID:"-1",
+onShowMethodID:"adf1023b-f046-43a7-ad54-3f62a3d22a9e",
+paperPrintScale:100,
+serverName:"example_data",
+showInMenu:true,
+size:"800,568",
+styleName:"svyWebCrm",
+tableName:"customers",
+typeid:3,
+uuid:"93a71967-2073-446a-9399-77a956ec029c"

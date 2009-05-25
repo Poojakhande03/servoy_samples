@@ -1,0 +1,11 @@
+imageMediaID:"93c19aa3-df4c-44df-b770-2a2313c86098",
+location:"260,370",
+mediaOptions:14,
+name:"bRemove",
+onActionMethodID:"bc9dc9f9-f35c-4ccf-a90e-b7975998e820",
+onDoubleClickMethodID:"-1",
+onRightClickMethodID:"-1",
+size:"101,20",
+text:"Remove",
+typeid:7,
+uuid:"9dec2da1-a733-45bf-ba84-66fad0a10527"

@@ -1,0 +1,7 @@
+beanClassName:"com.servoy.extensions.beans.treeview.TreeView",
+beanXML:"<?xml version=\"1.0\" encoding=\"UTF-8\"?> \n<java version=\"1.6.0_10\" class=\"java.beans.XMLDecoder\"> \n <object class=\"com.servoy.extensions.beans.treeview.TreeView\"> \n  <void property=\"border\"> \n   <object class=\"javax.swing.border.EmptyBorder\"> \n    <object class=\"java.awt.Insets\"> \n     <int>0<\/int> \n     <int>0<\/int> \n     <int>0<\/int> \n     <int>0<\/int> \n    <\/object> \n   <\/object> \n  <\/void> \n <\/object> \n<\/java> \n",
+location:"0,52",
+name:"treeview",
+size:"641,281",
+typeid:12,
+uuid:"5790e150-4ec9-4d69-9774-606915e7fd60"

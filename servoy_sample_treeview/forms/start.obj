@@ -1,0 +1,12 @@
+borderType:"EmptyBorder,0,0,0,0",
+name:"start",
+navigatorID:"-1",
+paperPrintScale:100,
+scrollbars:36,
+serverName:"example_data",
+showInMenu:true,
+size:"790,500",
+styleName:"svyWebCrm",
+tableName:"customers",
+typeid:3,
+uuid:"a3774e9d-b8f7-4624-83a4-1c9f4f3aafd0"
