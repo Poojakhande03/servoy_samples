@@ -1,0 +1,8 @@
+addEmptyValue:1,
+customValues:"TEXT_FIELD|0\r\nTEXT_AREA|1\r\nCOMBOBOX|2\r\nRADIOS|3\r\nCHECKS|4\r\nCALENDAR|5\r\nPASSWORD|6\r\nRTF_AREA|7\r\nHTML_AREA|8\r\nIMAGE_MEDIA|9\r\nTYPE_AHEAD|10",
+name:"field_types",
+returnDataProviders:1,
+separator:" ",
+showDataProviders:1,
+typeid:34,
+uuid:"32d478ef-88c6-4848-99ea-71f8e91220d8"

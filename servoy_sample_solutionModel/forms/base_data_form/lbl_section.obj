@@ -1,0 +1,13 @@
+displaysTags:true,
+formIndex:10100,
+location:"10,10",
+mediaOptions:14,
+name:"lbl_section",
+size:"291,30",
+styleClass:"whtlg",
+tabSeq:-1,
+text:"%%globals.heading%%",
+transparent:true,
+typeid:7,
+uuid:"ebb06deb-477e-4132-a8e5-8affbe9944a6",
+verticalAlignment:0

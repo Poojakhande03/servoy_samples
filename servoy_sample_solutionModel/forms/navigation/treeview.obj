@@ -1,0 +1,7 @@
+anchors:13,
+beanClassName:"com.servoy.extensions.beans.dbtreeview.DBTreeView",
+location:"0,60",
+name:"treeview",
+size:"201,421",
+typeid:12,
+uuid:"0362bd75-2a6a-43be-963d-e5f04a8f52cf"

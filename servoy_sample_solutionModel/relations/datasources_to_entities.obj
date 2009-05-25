@@ -1,0 +1,12 @@
+allowCreationRelatedRecords:true,
+deleteRelatedRecords:true,
+foreignServerName:"user_data",
+foreignTableName:"entities",
+items:[
+{foreignColumnName:"datasource_id",primaryDataProviderID:"datasource_id",typeid:23,uuid:"ee720735-fda5-4c8f-8526-943ec9e81f25"}
+],
+name:"datasources_to_entities",
+primaryServerName:"user_data",
+primaryTableName:"datasources",
+typeid:22,
+uuid:"1a558451-0ae8-43f3-95e2-628b40c7d524"

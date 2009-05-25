@@ -1,0 +1,12 @@
+borderType:"EmptyBorder,0,0,0,0",
+name:"navigation",
+navigatorID:"-1",
+onShowMethodID:"b1ded561-996c-4e57-a394-c5f04411cdb6",
+paperPrintScale:100,
+serverName:"user_data",
+size:"200,480",
+styleName:"svyWebCrm",
+tableName:"datasources",
+typeid:3,
+useSeparateFoundSet:true,
+uuid:"00348be3-0058-4443-a9a8-334c7bde12e4"

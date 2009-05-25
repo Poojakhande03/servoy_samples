@@ -1,0 +1,8 @@
+addEmptyValue:1,
+customValues:"editable|0\r\nreadOnly|1\r\nenabled|2\r\nvisible|3\r\nnone|4\r\n",
+name:"display_options",
+returnDataProviders:1,
+separator:" ",
+showDataProviders:1,
+typeid:34,
+uuid:"6c35a751-183a-41db-9ec5-081a3606e7be"
