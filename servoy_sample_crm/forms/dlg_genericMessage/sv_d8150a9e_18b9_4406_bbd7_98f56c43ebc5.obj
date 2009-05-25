@@ -1,0 +1,12 @@
+dataProviderID:"globals.dialog_instructions01",
+displayType:1,
+editable:false,
+formIndex:10100,
+location:"315,0",
+margin:"10,8,0,5",
+scrollbars:36,
+size:"164,147",
+styleClass:"noborder",
+transparent:true,
+typeid:4,
+uuid:"d8150a9e-18b9-4406-bbd7-98f56c43ebc5"

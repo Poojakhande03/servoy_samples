@@ -1,0 +1,11 @@
+dataProviderID:"extended_price",
+editable:false,
+formIndex:14500,
+format:"¤###,###,###.00",
+horizontalAlignment:4,
+location:"451,241",
+size:"80,20",
+styleClass:"reportsm",
+transparent:true,
+typeid:4,
+uuid:"294eb752-d6cc-4d54-9095-0a5f7c63ef11"

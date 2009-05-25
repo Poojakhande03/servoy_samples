@@ -1,0 +1,10 @@
+borderType:"SpecialMatteBorder,0.0,0.0,1.0,1.0,#cccccc,#cccccc,#cccccc,#cccccc,0.0,",
+dataProviderID:"description",
+formIndex:10200,
+location:"29,40",
+name:"fld_value",
+selectOnEnter:true,
+size:"255,20",
+tabSeq:1,
+typeid:4,
+uuid:"bf1b9eba-870a-4df9-b985-42b1c3718600"

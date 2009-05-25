@@ -1,0 +1,10 @@
+dataProviderID:"pct_tax",
+formIndex:14500,
+format:"#%|#",
+location:"125,192",
+name:"fld_taxPct",
+selectOnEnter:true,
+size:"85,22",
+tabSeq:3,
+typeid:4,
+uuid:"a5c6db04-2c1d-43a2-96bf-62d489e7f5f9"

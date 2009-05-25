@@ -1,0 +1,12 @@
+dataProviderID:"job_title",
+displayType:2,
+formIndex:14300,
+location:"20,192",
+name:"fld_titlec",
+onDataChangeMethodID:"-1",
+size:"381,22",
+styleClass:"combo",
+tabSeq:4,
+typeid:4,
+uuid:"f4eb266d-6a8b-4188-aa74-8490529552f8",
+valuelistID:"33cbb619-11e4-44e6-af1d-c6c728afaeb6"

@@ -1,0 +1,13 @@
+borderType:"EmptyBorder,0,0,0,0",
+name:"lst_order_items",
+onShowMethodID:"-1",
+paperPrintScale:100,
+rowBGColorCalculation:"bgRowColor_ltGrey",
+scrollbars:33,
+serverName:"udm",
+size:"758,115",
+styleName:"svyWebCrm",
+tableName:"order_items",
+typeid:3,
+uuid:"ce1405a0-8bb2-4bfa-a66e-47c02451e75e",
+view:3

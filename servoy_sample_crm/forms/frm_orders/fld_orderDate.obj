@@ -1,0 +1,9 @@
+dataProviderID:"order_date",
+formIndex:14000,
+location:"125,149",
+name:"fld_orderDate",
+selectOnEnter:true,
+size:"85,22",
+tabSeq:1,
+typeid:4,
+uuid:"3e7e2107-fdc9-405c-9320-cbe7366e70c7"

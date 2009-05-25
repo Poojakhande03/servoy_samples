@@ -1,0 +1,10 @@
+formIndex:10900,
+location:"390,8",
+mediaOptions:14,
+name:"btn_getInfo",
+onActionMethodID:"0a15c93e-0c98-40ef-a507-4817a4dd50e8",
+size:"80,26",
+tabSeq:2,
+text:"Get Info",
+typeid:7,
+uuid:"9c28c79c-4d9a-4815-99c5-db99ed044f63"

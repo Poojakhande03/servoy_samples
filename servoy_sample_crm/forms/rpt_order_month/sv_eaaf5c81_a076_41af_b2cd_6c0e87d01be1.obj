@@ -1,0 +1,12 @@
+borderType:"EmptyBorder,0,0,0,0",
+dataProviderID:"order_total",
+editable:false,
+formIndex:11500,
+format:"¤###,###,###.00",
+horizontalAlignment:4,
+location:"426,119",
+size:"105,20",
+styleClass:"reportsm",
+transparent:true,
+typeid:4,
+uuid:"eaaf5c81-a076-41af-b2cd-6c0e87d01be1"

@@ -1,0 +1,11 @@
+borderType:"SpecialMatteBorder,0.0,1.0,1.0,1.0,#cccccc,#cccccc,#cccccc,#cccccc,0.0,",
+dataProviderID:"cost_each",
+formIndex:10900,
+format:"¤###,###.00",
+horizontalAlignment:4,
+location:"427,80",
+size:"80,20",
+styleClass:"reportsm",
+transparent:true,
+typeid:4,
+uuid:"63fb43a5-1c42-4a23-b70c-f8b0184d96d1"

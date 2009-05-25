@@ -1,0 +1,12 @@
+dataProviderID1:"address_type_id",
+dataProviderID2:"description",
+name:"address_types",
+returnDataProviders:1,
+separator:" ",
+serverName:"udm",
+showDataProviders:2,
+sortOptions:"description asc",
+tableName:"address_types",
+typeid:34,
+uuid:"bfe92878-60c3-49b5-adda-b0d45e11d6e6",
+valueListType:1

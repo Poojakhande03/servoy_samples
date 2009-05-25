@@ -1,0 +1,10 @@
+dataProviderID:"is_active",
+editable:false,
+formIndex:11100,
+location:"189,99",
+size:"80,20",
+styleClass:"reportsm",
+transparent:true,
+typeid:4,
+uuid:"bd4d78c1-45c5-46a3-bb27-6e0ae4071789",
+valuelistID:"039c7aa3-22ab-4f36-ac11-d8988bd7dd34"

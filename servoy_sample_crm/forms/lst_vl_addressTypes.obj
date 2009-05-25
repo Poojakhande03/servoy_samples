@@ -1,0 +1,13 @@
+borderType:"EmptyBorder,0,0,0,0",
+initialSort:"seq asc",
+name:"lst_vl_addressTypes",
+paperPrintScale:100,
+rowBGColorCalculation:"bgRowColor_ltGrey",
+scrollbars:33,
+serverName:"udm",
+size:"286,298",
+styleName:"svyWebCrm",
+tableName:"address_types",
+typeid:3,
+uuid:"71cbeda1-e80d-4ca7-b1fe-93e513e74be3",
+view:3

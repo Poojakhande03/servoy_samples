@@ -1,0 +1,10 @@
+dataProviderID:"email",
+formIndex:12100,
+location:"40,235",
+name:"fld_contactEmail",
+onDataChangeMethodID:"-1",
+selectOnEnter:true,
+size:"360,22",
+tabSeq:5,
+typeid:4,
+uuid:"c8968a29-72e0-4ed3-8f12-50e17e13bd70"

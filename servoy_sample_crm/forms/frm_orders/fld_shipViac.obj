@@ -1,0 +1,13 @@
+dataProviderID:"ship_via",
+displayType:2,
+editable:false,
+formIndex:17200,
+location:"170,278",
+name:"fld_shipViac",
+onDataChangeMethodID:"-1",
+size:"141,22",
+styleClass:"combo",
+tabSeq:8,
+typeid:4,
+uuid:"f81642c7-23e7-4dad-ae48-4d54e760f3b6",
+valuelistID:"e035b57a-eb44-41ed-8ae5-a29d67fd88ac"

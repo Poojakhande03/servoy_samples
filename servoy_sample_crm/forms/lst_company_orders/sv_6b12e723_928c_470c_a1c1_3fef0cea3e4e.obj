@@ -1,0 +1,9 @@
+dataProviderID:"po_number",
+editable:false,
+formIndex:10000,
+location:"195,34",
+size:"80,20",
+styleClass:"noborder",
+transparent:true,
+typeid:4,
+uuid:"6b12e723-928c-470c-a1c1-3fef0cea3e4e"

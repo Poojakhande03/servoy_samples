@@ -1,0 +1,12 @@
+dataProviderID1:"contact_type_id",
+dataProviderID2:"description",
+name:"contact_types",
+returnDataProviders:1,
+separator:" ",
+serverName:"udm",
+showDataProviders:2,
+sortOptions:"description asc",
+tableName:"contact_types",
+typeid:34,
+uuid:"d13ed873-424d-4f14-85de-b06148af5ee3",
+valueListType:1

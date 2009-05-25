@@ -1,0 +1,13 @@
+displaysTags:true,
+formIndex:10500,
+location:"50,39",
+mediaOptions:14,
+showClick:false,
+showFocus:false,
+size:"200,20",
+styleClass:"reportbold",
+tabSeq:-1,
+text:"%%order_month_year_display%%",
+transparent:true,
+typeid:7,
+uuid:"ad9fd3d1-5b13-4221-b51c-eb6b4916563f"

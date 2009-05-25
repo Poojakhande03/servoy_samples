@@ -1,0 +1,10 @@
+dataProviderID:"product_name",
+formIndex:11700,
+location:"20,193",
+name:"fld_productName",
+onDataChangeMethodID:"-1",
+selectOnEnter:true,
+size:"291,22",
+tabSeq:2,
+typeid:4,
+uuid:"fe4f768a-b9b1-455d-8aef-ce46d3044502"

@@ -1,0 +1,11 @@
+dataProviderID:"company_category",
+displayType:2,
+formIndex:14500,
+location:"640,148",
+name:"fld_companyCategoryc",
+size:"140,22",
+styleClass:"combo",
+tabSeq:7,
+typeid:4,
+uuid:"5db11af0-4890-4059-9794-32e6e9dc5656",
+valuelistID:"781edd9d-fdcb-41ee-a2fc-c4dd7b25c024"

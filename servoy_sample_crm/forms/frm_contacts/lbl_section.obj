@@ -1,0 +1,12 @@
+displaysTags:true,
+formIndex:10100,
+location:"20,10",
+mediaOptions:14,
+name:"lbl_section",
+size:"420,30",
+styleClass:"whtlg",
+tabSeq:-1,
+text:"Contact Info - %%name_fl%%",
+transparent:true,
+typeid:7,
+uuid:"a7b853c4-a728-41e3-82ef-03e2d5952989"

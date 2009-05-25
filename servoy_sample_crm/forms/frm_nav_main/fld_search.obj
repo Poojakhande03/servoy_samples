@@ -1,0 +1,11 @@
+background:"#ebebeb",
+borderType:"LineBorder,1,#969696",
+dataProviderID:"globals.nav_search",
+formIndex:11000,
+location:"8,20",
+name:"fld_search",
+onActionMethodID:"a0c21699-fea8-4445-81e4-8494edb62c56",
+size:"146,22",
+toolTipText:"Enter search critiera and click the magnifying glass icon or press enter",
+typeid:4,
+uuid:"98fab461-c7b3-4628-964d-2233e9fb1eca"

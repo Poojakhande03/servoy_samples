@@ -1,0 +1,12 @@
+dataProviderID:"bill_address_id",
+displayType:2,
+editable:false,
+formIndex:17400,
+location:"330,192",
+name:"fld_billingAddressc",
+size:"220,22",
+styleClass:"combo",
+tabSeq:11,
+typeid:4,
+uuid:"bf22f89f-749d-4a64-8cbd-7ea1f116aca0",
+valuelistID:"6e7373df-e42d-4690-83ad-d0d245de25ab"

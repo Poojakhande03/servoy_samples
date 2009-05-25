@@ -1,0 +1,10 @@
+defaultPageFormat:"0;612.0;792.0;36.0;36.0;540.0;720.0;",
+name:"rpt_products_list",
+paperPrintScale:100,
+serverName:"udm",
+size:"900,100",
+styleName:"svyWebCrm",
+tableName:"products",
+typeid:3,
+uuid:"1904f156-670a-4395-b2d9-53227ca63bc3",
+view:1

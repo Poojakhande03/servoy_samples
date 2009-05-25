@@ -1,0 +1,13 @@
+dataProviderID:"company_id",
+displayType:2,
+editable:false,
+formIndex:17300,
+location:"330,149",
+name:"fld_companyNamec",
+onDataChangeMethodID:"f62217ba-4041-4a58-9015-4fb94c6fda13",
+size:"220,22",
+styleClass:"combo",
+tabSeq:9,
+typeid:4,
+uuid:"f48bfd3d-e867-43c2-ba9d-87bf1946892d",
+valuelistID:"ba6ce6b4-3756-40bc-81cb-3e82a958e7b7"

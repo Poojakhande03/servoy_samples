@@ -1,0 +1,11 @@
+dataProviderID:"globals.core_sql_sqlResult",
+displayType:8,
+editable:false,
+formIndex:11700,
+location:"330,242",
+name:"sqlResult",
+size:"450,339",
+tabSeq:7,
+typeid:4,
+uuid:"d634df8f-63f8-48f2-949a-00b58f82077b",
+valuelistID:"44c92cb8-1dfb-4f20-b20a-a206c21a5480"

@@ -1,0 +1,10 @@
+dataProviderID:"pct_discount",
+formIndex:14300,
+format:"#%|#",
+location:"20,192",
+name:"fld_discountPct",
+selectOnEnter:true,
+size:"96,22",
+tabSeq:2,
+typeid:4,
+uuid:"127abbd8-5cc4-4890-a70f-245302ece6b6"

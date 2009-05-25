@@ -1,0 +1,9 @@
+dataProviderID:"quantity",
+editable:false,
+formIndex:10000,
+horizontalAlignment:4,
+location:"512,43",
+size:"40,20",
+styleClass:"noborder",
+typeid:4,
+uuid:"c6a02d9f-a8ab-4aab-8ece-d5462e240fd1"

@@ -1,0 +1,9 @@
+dataProviderID:"order_number",
+editable:false,
+formIndex:10200,
+location:"110,99",
+size:"80,20",
+styleClass:"reportsm",
+transparent:true,
+typeid:4,
+uuid:"3bf6267d-4b79-435e-b12f-2edbabbbf3b6"

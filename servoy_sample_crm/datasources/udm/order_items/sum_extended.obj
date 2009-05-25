@@ -1,0 +1,5 @@
+dataProviderIDToAggregate:"extended_price",
+name:"sum_extended",
+type:4,
+typeid:40,
+uuid:"db07fac1-d965-4f2d-8458-7ba49176407c"

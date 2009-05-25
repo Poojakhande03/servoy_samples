@@ -1,0 +1,13 @@
+borderType:"EmptyBorder,0,0,0,0",
+initialSort:"seq asc",
+name:"lst_vl_contactTypes",
+paperPrintScale:100,
+rowBGColorCalculation:"bgRowColor_ltGrey",
+scrollbars:33,
+serverName:"udm",
+size:"286,298",
+styleName:"svyWebCrm",
+tableName:"contact_types",
+typeid:3,
+uuid:"647b8dac-c2d3-49b1-9079-4054455b367a",
+view:3

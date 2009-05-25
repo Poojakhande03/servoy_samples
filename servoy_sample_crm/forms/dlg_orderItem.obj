@@ -1,0 +1,13 @@
+borderType:"EmptyBorder,0,0,0,0",
+name:"dlg_orderItem",
+navigatorID:"-1",
+onShowMethodID:"0ae15143-4959-44be-8264-df577baec013",
+paperPrintScale:100,
+scrollbars:36,
+serverName:"udm",
+size:"480,147",
+styleName:"svyWebCrm",
+tableName:"order_items",
+typeid:3,
+useSeparateFoundSet:true,
+uuid:"98057806-a3eb-4300-8492-65b8b89959e7"

@@ -1,0 +1,11 @@
+borderType:"SpecialMatteBorder,0.0,1.0,1.0,1.0,#cccccc,#cccccc,#cccccc,#cccccc,0.0,",
+dataProviderID:"margin",
+formIndex:11100,
+format:"¤###,###.00",
+horizontalAlignment:4,
+location:"506,80",
+size:"80,20",
+styleClass:"reportsm",
+transparent:true,
+typeid:4,
+uuid:"9c2a4f58-c4d9-4031-9fe4-b05458360df5"

@@ -1,0 +1,9 @@
+borderType:"SpecialMatteBorder,0.0,1.0,1.0,0.0,#cccccc,#cccccc,#cccccc,#cccccc,0.0,",
+dataProviderID:"category_type_id",
+editable:false,
+formIndex:10000,
+location:"0,40",
+size:"30,20",
+tabSeq:-2,
+typeid:4,
+uuid:"1d41454d-1e1e-4c13-a243-3dd8b85c8525"

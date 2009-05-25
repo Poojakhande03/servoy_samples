@@ -1,0 +1,13 @@
+displaysTags:true,
+formIndex:10100,
+location:"11,42",
+mediaOptions:14,
+showClick:false,
+showFocus:false,
+size:"200,20",
+styleClass:"reportbold",
+tabSeq:-1,
+text:"%%contacts_to_companies.company_name%%",
+transparent:true,
+typeid:7,
+uuid:"35ca8d9d-13be-4b96-b072-d56247f4626b"

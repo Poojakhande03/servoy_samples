@@ -1,0 +1,9 @@
+borderType:"SpecialMatteBorder,0.0,1.0,1.0,1.0,#cccccc,#cccccc,#cccccc,#cccccc,0.0,",
+dataProviderID:"product_name",
+formIndex:10500,
+location:"149,80",
+size:"200,20",
+styleClass:"reportsm",
+transparent:true,
+typeid:4,
+uuid:"245dec29-1aab-48bd-b48b-9333ae6b27b1"

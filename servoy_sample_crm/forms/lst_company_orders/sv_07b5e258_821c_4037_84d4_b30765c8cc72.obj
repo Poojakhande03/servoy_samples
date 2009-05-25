@@ -1,0 +1,9 @@
+dataProviderID:"ship_date",
+editable:false,
+formIndex:11400,
+location:"575,34",
+size:"90,20",
+styleClass:"noborder",
+transparent:true,
+typeid:4,
+uuid:"07b5e258-821c-4037-84d4-b30765c8cc72"

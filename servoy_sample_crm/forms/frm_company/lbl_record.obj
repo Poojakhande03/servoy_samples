@@ -1,0 +1,12 @@
+displaysTags:true,
+formIndex:11400,
+location:"63,55",
+mediaOptions:14,
+name:"lbl_record",
+size:"470,21",
+styleClass:"list",
+tabSeq:-1,
+text:"%%globals.record_status%%",
+transparent:true,
+typeid:7,
+uuid:"17f12a46-8291-4ec4-9e9a-966c6c0c5d9f"

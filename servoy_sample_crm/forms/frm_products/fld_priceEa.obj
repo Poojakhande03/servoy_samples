@@ -1,0 +1,11 @@
+dataProviderID:"price_each",
+formIndex:14000,
+format:"¤###,###.00|#.00",
+location:"170,281",
+name:"fld_priceEa",
+onDataChangeMethodID:"-1",
+selectOnEnter:true,
+size:"141,22",
+tabSeq:5,
+typeid:4,
+uuid:"995ae852-0796-4b90-b8e8-7cd55ef0bfdc"

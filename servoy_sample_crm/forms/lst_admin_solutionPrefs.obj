@@ -1,0 +1,13 @@
+borderType:"EmptyBorder,0,0,0,0",
+initialSort:"seq asc",
+name:"lst_admin_solutionPrefs",
+paperPrintScale:100,
+rowBGColorCalculation:"bgRowColor_ltGrey",
+scrollbars:33,
+serverName:"udm",
+size:"288,85",
+styleName:"svyWebCrm",
+tableName:"solution_preferences",
+typeid:3,
+uuid:"6461e7c1-f1f4-4028-bc8a-82d41e56ad2b",
+view:3

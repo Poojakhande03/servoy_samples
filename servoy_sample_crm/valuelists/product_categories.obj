@@ -1,0 +1,13 @@
+addEmptyValue:1,
+dataProviderID1:"category_type_id",
+dataProviderID2:"description",
+name:"product_categories",
+returnDataProviders:1,
+separator:" ",
+serverName:"udm",
+showDataProviders:2,
+sortOptions:"description asc",
+tableName:"category_types",
+typeid:34,
+uuid:"70c8fb7d-f98f-4b55-9e54-f54dde782db4",
+valueListType:1

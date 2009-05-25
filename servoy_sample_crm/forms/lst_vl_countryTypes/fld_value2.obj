@@ -1,0 +1,10 @@
+borderType:"SpecialMatteBorder,0.0,0.0,1.0,1.0,#cccccc,#cccccc,#cccccc,#cccccc,0.0,",
+dataProviderID:"country",
+formIndex:10700,
+location:"242,40",
+name:"fld_value2",
+selectOnEnter:true,
+size:"42,20",
+tabSeq:2,
+typeid:4,
+uuid:"de8c05b6-c86a-467d-a72d-b5b9e357a061"

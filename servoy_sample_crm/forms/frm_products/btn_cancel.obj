@@ -1,0 +1,11 @@
+formIndex:11600,
+location:"658,52",
+mediaOptions:14,
+name:"btn_cancel",
+onActionMethodID:"8aa3c84e-6cf7-4987-9b1d-b08b5e4d5a77",
+rolloverCursor:12,
+size:"70,26",
+tabSeq:10,
+text:"Cancel",
+typeid:7,
+uuid:"bc8f3881-016c-450f-b534-cce6c1167852"

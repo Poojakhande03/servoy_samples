@@ -1,0 +1,11 @@
+dataProviderID:"globals.vl_editNum",
+displayType:2,
+editable:false,
+formIndex:10000,
+location:"7,6",
+onActionMethodID:"9e17eab9-bf7a-404b-8269-80d85f4e6f64",
+size:"170,22",
+styleClass:"combo",
+typeid:4,
+uuid:"7cdd5518-3ff8-40aa-824e-0cfe78d67b2c",
+valuelistID:"f3349055-5c2e-4a22-9e85-cdf7acfe2ac4"

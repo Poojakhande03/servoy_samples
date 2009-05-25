@@ -1,0 +1,6 @@
+addEmptyValue:1,
+customValues:"Address Types|1\nCategory Types|2\nCompany Types|3\nContact Types|4\nCountries|5\nProduct Types|6",
+name:"valuelist_names",
+separator:" ",
+typeid:34,
+uuid:"f3349055-5c2e-4a22-9e85-cdf7acfe2ac4"

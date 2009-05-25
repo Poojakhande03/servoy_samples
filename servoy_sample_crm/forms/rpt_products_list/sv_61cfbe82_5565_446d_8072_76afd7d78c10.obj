@@ -1,0 +1,11 @@
+borderType:"SpecialMatteBorder,0.0,1.0,1.0,1.0,#cccccc,#cccccc,#cccccc,#cccccc,0.0,",
+dataProviderID:"margin_pct",
+formIndex:11300,
+format:"#.00%",
+horizontalAlignment:4,
+location:"585,80",
+size:"80,20",
+styleClass:"reportsm",
+transparent:true,
+typeid:4,
+uuid:"61cfbe82-5565-446d-8072-76afd7d78c10"

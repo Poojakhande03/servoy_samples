@@ -1,0 +1,9 @@
+dataProviderID:"orders_to_contacts.name_fl",
+formIndex:12200,
+location:"590,149",
+name:"fld_companyContact",
+size:"190,22",
+tabSeq:-2,
+typeid:4,
+uuid:"6d2e7eb9-e2c3-40f7-95da-b3834a6fd894",
+valuelistID:"25a93f5e-6088-4a26-b0e5-638271c6fa39"

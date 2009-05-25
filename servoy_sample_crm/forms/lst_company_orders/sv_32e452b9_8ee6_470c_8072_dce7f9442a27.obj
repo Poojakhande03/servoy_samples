@@ -1,0 +1,11 @@
+dataProviderID:"order_total",
+editable:false,
+formIndex:10800,
+format:"¤###,###,###.00",
+horizontalAlignment:4,
+location:"277,34",
+size:"101,20",
+styleClass:"noborder",
+transparent:true,
+typeid:4,
+uuid:"32e452b9-8ee6-470c-8072-dce7f9442a27"

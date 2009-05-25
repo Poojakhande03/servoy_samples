@@ -1,0 +1,9 @@
+borderType:"SpecialMatteBorder,0.0,0.0,1.0,1.0,#cccccc,#cccccc,#cccccc,#cccccc,0.0,",
+dataProviderID:"preference_value",
+formIndex:10200,
+location:"199,40",
+name:"fld_prefValue",
+selectOnEnter:true,
+size:"87,20",
+typeid:4,
+uuid:"d54acc72-cf5b-487e-a4e5-2d63c67208ff"

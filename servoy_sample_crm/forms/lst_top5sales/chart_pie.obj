@@ -1,0 +1,9 @@
+beanClassName:"com.ibm.eou.swingchart.PieChart",
+beanXML:"<?xml version=\"1.0\" encoding=\"UTF-8\"?> \n<java version=\"1.5.0_04\" class=\"java.beans.XMLDecoder\"> \n <object class=\"com.ibm.eou.swingchart.PieChart\"> \n  <void property=\"background\"> \n   <object class=\"java.awt.Color\"> \n    <int>255<\/int> \n    <int>255<\/int> \n    <int>255<\/int> \n    <int>255<\/int> \n   <\/object> \n  <\/void> \n  <void property=\"size\"> \n   <object class=\"java.awt.Dimension\"> \n    <int>360<\/int> \n    <int>170<\/int> \n   <\/object> \n  <\/void> \n <\/object> \n<\/java> \n",
+formIndex:10000,
+location:"390,11",
+name:"chart_pie",
+size:"360,170",
+typeid:12,
+usesUI:true,
+uuid:"9711cb7f-53ff-4013-891c-97151a3ec047"

@@ -1,0 +1,10 @@
+dataProviderID:"order_items_to_orders.ship_date",
+editable:false,
+formIndex:13500,
+format:"MMM d, yyyy",
+location:"335,185",
+size:"95,20",
+styleClass:"reportnobordersm",
+transparent:true,
+typeid:4,
+uuid:"d4542085-5b73-4c76-be25-8fdf4cb43cc2"

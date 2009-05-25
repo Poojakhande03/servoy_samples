@@ -1,0 +1,10 @@
+dataProviderID:"is_active",
+editable:false,
+formIndex:13100,
+location:"695,93",
+name:"fld_status",
+size:"85,22",
+tabSeq:-2,
+typeid:4,
+uuid:"0767669a-1651-480a-a47b-7d3ae2edebb3",
+valuelistID:"039c7aa3-22ab-4f36-ac11-d8988bd7dd34"

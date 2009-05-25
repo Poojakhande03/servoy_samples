@@ -1,0 +1,12 @@
+borderType:"EmptyBorder,0,0,0,0",
+name:"dlg_address",
+navigatorID:"-1",
+paperPrintScale:100,
+scrollbars:36,
+serverName:"udm",
+size:"480,147",
+styleName:"svyWebCrm",
+tableName:"addresses",
+typeid:3,
+useSeparateFoundSet:true,
+uuid:"9261e311-1db6-4f6d-aa1f-253f1dcf9800"

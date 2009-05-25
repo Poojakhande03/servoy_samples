@@ -1,0 +1,13 @@
+borderType:"EmptyBorder,0,0,0,0",
+name:"frm_admin_vl_choice",
+navigatorID:"-1",
+onLoadMethodID:"85b5c151-3554-404b-9f1a-bf6a71df961c",
+onShowMethodID:"-1",
+paperPrintScale:100,
+scrollbars:36,
+serverName:"udm",
+size:"288,335",
+styleName:"svyWebCrm",
+tableName:"solution_preferences",
+typeid:3,
+uuid:"77542fd3-8ee1-43fa-8085-0b303b6d2f3c"

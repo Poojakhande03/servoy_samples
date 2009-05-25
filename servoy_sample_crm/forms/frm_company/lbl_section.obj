@@ -1,0 +1,12 @@
+displaysTags:true,
+formIndex:10100,
+location:"20,10",
+mediaOptions:14,
+name:"lbl_section",
+size:"494,30",
+styleClass:"whtlg",
+tabSeq:-1,
+text:"Company Info - %%company_name%%",
+transparent:true,
+typeid:7,
+uuid:"8c4a8752-4f1e-47e1-9894-483da3b581f5"

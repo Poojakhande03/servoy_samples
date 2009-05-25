@@ -1,0 +1,12 @@
+background:"#ebebeb",
+borderType:"SpecialMatteBorder,0.0,0.0,1.0,0.0,#666666,#666666,#666666,#666666,0.0,",
+formIndex:10100,
+horizontalAlignment:0,
+location:"0,0",
+mediaOptions:14,
+size:"189,30",
+styleClass:"topnav",
+tabSeq:-1,
+text:"Order List",
+typeid:7,
+uuid:"9e5a7da1-58d4-4f23-99f1-7fc0b89583b8"

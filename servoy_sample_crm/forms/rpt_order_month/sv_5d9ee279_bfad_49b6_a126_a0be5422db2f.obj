@@ -1,0 +1,13 @@
+displaysTags:true,
+formIndex:10000,
+location:"10,7",
+mediaOptions:14,
+showClick:false,
+showFocus:false,
+size:"150,29",
+styleClass:"headerreport",
+tabSeq:-1,
+text:"Order Report",
+transparent:true,
+typeid:7,
+uuid:"5d9ee279-bfad-49b6-a126-a0be5422db2f"

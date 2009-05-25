@@ -1,0 +1,10 @@
+dataProviderID:"price_each",
+formIndex:14300,
+format:"¤###,###,###.00",
+horizontalAlignment:4,
+location:"382,241",
+size:"70,20",
+styleClass:"reportsm",
+transparent:true,
+typeid:4,
+uuid:"00edaf18-6b8f-41ec-a19c-820443ea3d6e"

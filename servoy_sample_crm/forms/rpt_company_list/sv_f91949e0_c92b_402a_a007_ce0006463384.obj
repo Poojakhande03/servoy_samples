@@ -1,0 +1,10 @@
+borderType:"SpecialMatteBorder,0.0,1.0,1.0,1.0,#cccccc,#cccccc,#cccccc,#cccccc,0.0,",
+dataProviderID:"company_category",
+formIndex:10500,
+location:"420,55",
+size:"100,20",
+styleClass:"reportsm",
+transparent:true,
+typeid:4,
+uuid:"f91949e0-c92b-402a-a007-ce0006463384",
+valuelistID:"781edd9d-fdcb-41ee-a2fc-c4dd7b25c024"

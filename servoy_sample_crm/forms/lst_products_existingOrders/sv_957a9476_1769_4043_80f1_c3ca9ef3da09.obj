@@ -1,0 +1,10 @@
+dataProviderID:"price_each",
+editable:false,
+formIndex:10400,
+format:"¤###,###,###.00",
+horizontalAlignment:4,
+location:"538,43",
+size:"90,20",
+styleClass:"noborder",
+typeid:4,
+uuid:"957a9476-1769-4043-80f1-c3ca9ef3da09"

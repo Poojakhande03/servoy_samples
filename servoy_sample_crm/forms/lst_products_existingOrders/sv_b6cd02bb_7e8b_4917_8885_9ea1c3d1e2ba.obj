@@ -1,0 +1,10 @@
+dataProviderID:"extended_price",
+editable:false,
+formIndex:11000,
+format:"¤###,###,###.00",
+horizontalAlignment:4,
+location:"630,43",
+size:"110,20",
+styleClass:"noborder",
+typeid:4,
+uuid:"b6cd02bb-7e8b-4917-8885-9ea1c3d1e2ba"

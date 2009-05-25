@@ -1,0 +1,13 @@
+dataProviderID:"amt_shipping",
+formIndex:16700,
+format:"¤###,###,###.00",
+horizontalAlignment:4,
+location:"670,539",
+name:"amtShipping",
+onDataChangeMethodID:"-1",
+size:"111,20",
+styleClass:"noborder",
+tabSeq:-2,
+transparent:true,
+typeid:4,
+uuid:"f0f918bc-f5d9-4e37-9c2a-38e08a0a68fd"

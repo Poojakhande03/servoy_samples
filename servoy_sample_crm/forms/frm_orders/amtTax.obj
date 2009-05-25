@@ -1,0 +1,13 @@
+dataProviderID:"amt_tax",
+formIndex:16500,
+format:"¤###,###,###.00",
+horizontalAlignment:4,
+location:"670,519",
+name:"amtTax",
+onDataChangeMethodID:"-1",
+size:"111,20",
+styleClass:"noborder",
+tabSeq:-2,
+transparent:true,
+typeid:4,
+uuid:"74ff44dd-03b4-4b21-af22-c4afc2ecc582"

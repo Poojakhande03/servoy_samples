@@ -1,0 +1,12 @@
+displaysTags:true,
+formIndex:10100,
+location:"20,10",
+mediaOptions:14,
+name:"lbl_section",
+size:"420,30",
+styleClass:"whtlg",
+tabSeq:-1,
+text:"Order Info - %%order_number%%",
+transparent:true,
+typeid:7,
+uuid:"ec3dc453-a2d0-4d50-88b5-e3087daab404"

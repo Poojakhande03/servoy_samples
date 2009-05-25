@@ -1,0 +1,11 @@
+dataProviderID:"mail_label",
+displayType:1,
+formIndex:15400,
+location:"420,192",
+name:"mailing_address",
+onDataChangeMethodID:"-1",
+scrollbars:33,
+size:"360,132",
+tabSeq:-2,
+typeid:4,
+uuid:"a0b0ed0e-21fb-4640-b6ce-4fd8a5a7c82c"

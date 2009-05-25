@@ -1,0 +1,13 @@
+displaysTags:true,
+formIndex:10900,
+horizontalAlignment:0,
+imageMediaID:"9db178bf-0cf0-4b26-959e-f825c8e467c1",
+location:"640,40",
+mediaOptions:2,
+onActionMethodID:"42787eed-cc19-457a-9940-c48b606e985c",
+rolloverCursor:12,
+showClick:false,
+size:"42,20",
+toolTipText:"Send an email to %%email%%",
+typeid:7,
+uuid:"186f678b-828b-48ff-a5f7-f2f2b3eead72"
