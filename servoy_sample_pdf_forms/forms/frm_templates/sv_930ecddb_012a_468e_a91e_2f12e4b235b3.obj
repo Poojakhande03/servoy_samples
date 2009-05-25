@@ -1,0 +1,11 @@
+formIndex:13100,
+location:"330,290",
+mediaOptions:14,
+size:"449,292",
+styleClass:"list",
+tabSeq:-1,
+text:"<html>\n  <head>\n    \n  <\/head>\n  <body>\n    <b>Default Values<\/b><br>Default values are those values that are filled \n    in by default every time this PDF template is used by a form.<br><br>The \n    defaults are based on a field name and a value. For example, if you have a \n    PDF form with a field named &quot;company&quot; and you wanted the default value to \n    be your company name, you would need to:<br><br>1. Create a new default \n    value<br><br>2. Enter &quot;company&quot; into the &quot;Field Name&quot; column<br><br>3. \n    Enter your company name into the &quot;Value&quot; column<br><br>That's \n    it! Now every time this form is used, it will contain the name of your \n    company in the company field. It will work even if you change the form (as \n    long as there is a field named &quot;company&quot; on the form).<br><br>If \n    the field &quot;company&quot; appears more than once - so will the data.\n  <\/body>\n<\/html>",
+transparent:true,
+typeid:7,
+uuid:"930ecddb-012a-468e-a91e-2f12e4b235b3",
+verticalAlignment:1

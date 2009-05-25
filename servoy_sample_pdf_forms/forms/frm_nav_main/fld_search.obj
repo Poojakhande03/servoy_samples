@@ -1,0 +1,10 @@
+background:"#ebebeb",
+borderType:"LineBorder,1,#969696",
+dataProviderID:"globals.nav_search",
+formIndex:10700,
+location:"8,20",
+name:"fld_search",
+onActionMethodID:"c734e9f3-ef0e-4dbe-9993-56f7cc7a5e37",
+size:"146,22",
+typeid:4,
+uuid:"44821a08-b6bf-4717-ace4-25d1400c7a0f"

@@ -1,0 +1,12 @@
+borderType:"EmptyBorder,0,0,0,0",
+name:"lst_template_defaults",
+onShowMethodID:"-1",
+paperPrintScale:100,
+rowBGColorCalculation:"bgRowColor_ltGrey",
+serverName:"pdf_forms",
+size:"288,285",
+styleName:"servoy_sample_auto_pdf",
+tableName:"pdf_template_values",
+typeid:3,
+uuid:"9bf32c6c-6c53-43c7-b949-bbf071f0098a",
+view:3

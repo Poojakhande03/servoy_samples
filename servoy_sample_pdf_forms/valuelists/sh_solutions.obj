@@ -1,0 +1,12 @@
+addEmptyValue:1,
+dataProviderID1:"solution_id",
+dataProviderID2:"display_name",
+name:"sh_solutions",
+returnDataProviders:1,
+separator:" ",
+serverName:"udm",
+showDataProviders:2,
+tableName:"solution_names",
+typeid:34,
+uuid:"fc7ce1be-b0c8-4e87-8e2e-cb993b65e579",
+valueListType:1

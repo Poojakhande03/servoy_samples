@@ -1,0 +1,10 @@
+foreignServerName:"pdf_forms",
+foreignTableName:"pdf_templates",
+items:[
+{foreignColumnName:"template_id",primaryDataProviderID:"template_id",typeid:23,uuid:"bd428d92-11c0-4e9c-bdf4-341a1c79cde2"}
+],
+name:"pdf_forms_to_pdf_templates",
+primaryServerName:"pdf_forms",
+primaryTableName:"pdf_forms",
+typeid:22,
+uuid:"a919be53-50f9-45cf-bbff-3884f34249a9"

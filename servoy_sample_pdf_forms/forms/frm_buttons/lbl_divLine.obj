@@ -1,0 +1,11 @@
+borderType:"SpecialMatteBorder,0.0,0.0,0.0,1.0,#ffffff,#ffffff,#ffffff,#ffffff,0.0,",
+formIndex:10600,
+horizontalAlignment:4,
+location:"87,1",
+mediaOptions:14,
+name:"lbl_divLine",
+size:"2,37",
+tabSeq:-1,
+transparent:true,
+typeid:7,
+uuid:"a89a8a96-db07-49ee-aedf-60da752b0dc7"

@@ -1,0 +1,9 @@
+borderType:"SpecialMatteBorder,0.0,0.0,1.0,0.0,#cccccc,#cccccc,#cccccc,#cccccc,0.0,",
+dataProviderID:"value_name",
+editable:false,
+formIndex:10000,
+location:"25,42",
+size:"120,20",
+styleClass:"noborder",
+typeid:4,
+uuid:"5b7865b4-16fb-49f1-bb58-15936065df54"

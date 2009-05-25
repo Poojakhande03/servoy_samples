@@ -1,0 +1,10 @@
+borderType:"EmptyBorder,0,0,0,0",
+name:"dlg_template_values",
+navigatorID:"-1",
+paperPrintScale:100,
+serverName:"pdf_forms",
+size:"480,147",
+styleName:"svyWebCrm",
+tableName:"pdf_template_values",
+typeid:3,
+uuid:"cb0eb7c7-ca3d-42b6-a1d3-164a8b34d955"

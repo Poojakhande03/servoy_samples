@@ -1,0 +1,11 @@
+formIndex:11500,
+location:"20,239",
+mediaOptions:14,
+size:"759,341",
+styleClass:"list",
+tabSeq:-1,
+text:"<html>\n  <head>\n    \n  <\/head>\n  <body>\n    <b>PDF Forms<\/b><br>These forms are &quot;instances&quot; of the template. In other \n    words, each form uses the template, and you can then fill out the template \n    differently for each form record.<br><br>For example: If you had a tax \n    form template, you could then fill out the tax form for different people. \n    Each person's record would be a new &quot;form&quot; record. You can even change the \n    template linked to this form record - and if that form has the same field \n    NAMES as the previous form - it will appear to be filled out with the same \n    values you entered for the previous form.<br><br><b>How It Works:<\/b> \n    Servoy uses Web Services to open up the template PDF form in Adobe \n    Acrobat, and adds a &quot;Submit&quot; button. After you fill out the form and click \n    &quot;Submit&quot;, Acrobat sends the Web Service back the name of the field and the \n    value that was typed in. For example, if the field was named &quot;first_name&quot; \n    and the value typed was &quot;Tom&quot; then Acrobat sends back: first_name=Tom.<br><br>The \n    plugin then creates new records in the &quot;pdf_form_values&quot; table - recording \n    the field name and field value for each field on the form. When you open \n    the same form again - the plug-in passes Acrobat the name and value pairs \n    for that filled out form and Acrobat displays the values on the form.<br><br><b>Technical \n    Note:<\/b> The PDF Plug-in uses hard-coded table names. You MUST use the \n    table names: &quot;pdf_form_values&quot;, &quot;pdf_templates&quot;, &quot;pdf_actions.&quot; Also, the \n    default name of the connection is &quot;pdf_forms.&quot;<br><br>You CAN \n    use a different connection name, but then you MUST go into the Admin \n    section of the Server (http://yourIPaddress:8080/servoy-admin) and click \n    on &quot;Server Plugin Setttings.&quot; You can change the connection name to \n    whatever you want (note: you'll have to restart the Servoy Server after \n    making the change).\n  <\/body>\n<\/html>",
+transparent:true,
+typeid:7,
+uuid:"66ce1d55-4c04-416d-9c3e-f49e1bf1be2a",
+verticalAlignment:1

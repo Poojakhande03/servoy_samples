@@ -1,0 +1,10 @@
+anchors:12,
+borderType:"EmptyBorder,0,0,0,0",
+formIndex:10200,
+location:"0,399",
+name:"tabs_solNav",
+printable:false,
+size:"192,200",
+tabOrientation:-1,
+typeid:16,
+uuid:"fabab1d5-0955-47c1-8213-bbed4113a926"

@@ -1,0 +1,11 @@
+borderType:"EmptyBorder,0,0,0,0",
+name:"dialog",
+navigatorID:"-1",
+paperPrintScale:100,
+scrollbars:36,
+serverName:"udm",
+size:"492,222",
+styleName:"servoy_sample_auto_pdf",
+tableName:"contacts",
+typeid:3,
+uuid:"294fb945-f76b-470d-9847-fd9d0607354b"
