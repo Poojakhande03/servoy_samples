@@ -1,0 +1,12 @@
+displaysTags:true,
+formIndex:10200,
+horizontalAlignment:4,
+location:"11,311",
+mediaOptions:14,
+size:"240,20",
+styleClass:"smgrey",
+tabSeq:-1,
+text:"%%globals.tempTextDisplay%%",
+transparent:true,
+typeid:7,
+uuid:"1f73436f-53ed-4695-977d-03534584b27a"

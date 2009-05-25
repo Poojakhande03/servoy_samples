@@ -1,0 +1,13 @@
+borderType:"LineBorder,1,#999999",
+formIndex:10000,
+location:"875,41",
+mediaOptions:14,
+name:"btn_newCompany",
+onActionMethodID:"bdfd97c5-aec0-4725-8e47-150c840f40d0",
+rolloverCursor:12,
+showClick:false,
+showFocus:false,
+size:"113,23",
+transparent:true,
+typeid:7,
+uuid:"e399ee82-3c94-4e47-8227-182a58e9b65b"

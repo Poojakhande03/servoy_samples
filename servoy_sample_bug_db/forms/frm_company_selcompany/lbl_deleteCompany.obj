@@ -1,0 +1,13 @@
+formIndex:11200,
+location:"671,42",
+mediaOptions:10,
+name:"lbl_deleteCompany",
+onActionMethodID:"5868696e-88ef-4006-8ed4-fdaf2f9c191e",
+rolloverCursor:12,
+showClick:false,
+showFocus:false,
+size:"84,21",
+text:"i18n:lbl.deleteComp",
+transparent:true,
+typeid:7,
+uuid:"d36385cd-cfbc-476d-b40a-4ee804cd64e9"

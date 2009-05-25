@@ -1,0 +1,10 @@
+location:"20,59",
+mediaOptions:14,
+size:"481,272",
+styleClass:"reportsm",
+tabSeq:-1,
+text:"<html><head><\/head><body>\nThis example file is a multi-tenant, web-based bug tracking system. There are 4 logins already created:\n<br><br><b>admin/admin<\/b>\n<br>The main login that will allow you to set everything up (admin for the \"Servoy\" tenant)\n<br><br><b>dev/dev<\/b><br>This is the a developer with the main company\n<br><br><b>client/client<\/b>\n<br>An example client login (admin for client - who is in the \"Servoy\" tenant)\n<br><br><b>client2/client2<\/b>\n<br>An example of someone who works for the client\n\n<br><br>As admin, you can create projects, people and companies. If you make a person's profile \"Admin\" - then \nthey will be able to create people and projects (within their own company). If you attach a person to a company \nin the \"Admin\" profile.\n<br><br>\nThat means if you create a person, and attach them to the main tenant (in this case \"Servoy\") - then they will see \nall projects and people and will be able to act like an admin for that tenant.\n\n<br><br>To disable this dialog - open the \"SolutionOpen\" global method and comment out the line that shows this dialog.\n<\/body><\/html>",
+transparent:true,
+typeid:7,
+uuid:"08b36597-b9d8-4f34-b675-c9ac5b43b271",
+verticalAlignment:1

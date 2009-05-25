@@ -1,0 +1,13 @@
+borderType:"LineBorder,1,#999999",
+formIndex:10000,
+location:"872,5",
+mediaOptions:14,
+name:"btn_newProject",
+onActionMethodID:"929a9b5d-a3c6-4d26-951d-9c1cfa07dadd",
+rolloverCursor:12,
+showClick:false,
+showFocus:false,
+size:"113,23",
+transparent:true,
+typeid:7,
+uuid:"2d281891-6e0e-421b-8377-811e560cf7f7"

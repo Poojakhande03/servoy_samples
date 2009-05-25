@@ -1,0 +1,12 @@
+borderType:"EmptyBorder,0,0,0,0",
+name:"frm_people_selperson_projects",
+navigatorID:"-1",
+paperPrintScale:100,
+rowBGColorCalculation:"background_rowColor",
+scrollbars:36,
+serverName:"bug_db",
+size:"982,449",
+styleName:"svyWebCrm",
+tableName:"tbl_people",
+typeid:3,
+uuid:"840fe74f-e3a4-482f-b897-842258a3decb"

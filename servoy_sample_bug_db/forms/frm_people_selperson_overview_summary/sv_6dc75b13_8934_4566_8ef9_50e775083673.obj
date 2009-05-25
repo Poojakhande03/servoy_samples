@@ -1,0 +1,11 @@
+formIndex:10500,
+horizontalAlignment:4,
+location:"6,4",
+mediaOptions:14,
+size:"80,20",
+styleClass:"smgrey",
+tabSeq:-1,
+text:"i18n:lbl.officeEmail",
+transparent:true,
+typeid:7,
+uuid:"6dc75b13-8934-4566-8ef9-50e775083673"

@@ -1,0 +1,13 @@
+borderType:"LineBorder,1,#999999",
+formIndex:11900,
+location:"523,41",
+mediaOptions:14,
+name:"btn_deletePerson",
+onActionMethodID:"9454eec6-ba59-43aa-89eb-75f870144f5c",
+rolloverCursor:12,
+showClick:false,
+showFocus:false,
+size:"113,23",
+transparent:true,
+typeid:7,
+uuid:"8b3f32e5-dd6e-4a25-9436-3b217a3f30df"

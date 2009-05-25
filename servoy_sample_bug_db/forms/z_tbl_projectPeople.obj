@@ -1,0 +1,8 @@
+name:"z_tbl_projectPeople",
+paperPrintScale:100,
+serverName:"bug_db",
+size:"640,480",
+styleName:"svyWebCrm",
+tableName:"tbl_project_people",
+typeid:3,
+uuid:"fc0b864a-cb56-49bb-8756-6fdc8f25b84a"

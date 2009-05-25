@@ -1,0 +1,13 @@
+formIndex:12000,
+location:"551,42",
+mediaOptions:10,
+name:"lbl_deletePerson",
+onActionMethodID:"9454eec6-ba59-43aa-89eb-75f870144f5c",
+rolloverCursor:12,
+showClick:false,
+showFocus:false,
+size:"84,21",
+text:"i18n:lbl.deletePers",
+transparent:true,
+typeid:7,
+uuid:"17e9d571-65a4-4d79-8800-70fe0e47a9ca"

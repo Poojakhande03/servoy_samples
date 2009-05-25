@@ -1,0 +1,11 @@
+dataProviderID:"ixpersonassigned",
+editable:false,
+formIndex:11600,
+location:"702,50",
+size:"105,20",
+styleClass:"noborder",
+text:"i18n:lbl.officePhone",
+transparent:true,
+typeid:4,
+uuid:"95202ca9-a4c0-4407-8dda-d068e6c3ac89",
+valuelistID:"507eae54-f47c-47b4-a86d-2ec9711d72e0"

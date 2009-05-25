@@ -1,0 +1,11 @@
+allowCreationRelatedRecords:true,
+foreignServerName:"bug_db",
+foreignTableName:"tbl_comment",
+items:[
+{foreignColumnName:"ixtask",primaryDataProviderID:"globals.currTaskID",typeid:23,uuid:"76b77159-53fe-4986-af3b-27262a2ffe21"}
+],
+name:"gcurrtask_to_comment",
+primaryServerName:"bug_db",
+primaryTableName:"tbl_task",
+typeid:22,
+uuid:"3b9d92dc-406a-4fa4-8779-1d959400f783"

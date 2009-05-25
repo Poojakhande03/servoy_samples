@@ -1,0 +1,10 @@
+dataProviderID:"globals.loginFullName",
+formIndex:10900,
+location:"340,175",
+name:"fld_fullName",
+onActionMethodID:"d97fbac3-8637-483c-af14-e8c7f4496d5e",
+selectOnEnter:true,
+size:"140,22",
+tabSeq:3,
+typeid:4,
+uuid:"292fcd63-cffe-4db4-ac96-fa86d1ed3b5b"

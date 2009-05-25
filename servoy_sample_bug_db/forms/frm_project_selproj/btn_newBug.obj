@@ -1,0 +1,13 @@
+borderType:"LineBorder,1,#999999",
+formIndex:11500,
+location:"875,41",
+mediaOptions:14,
+name:"btn_newBug",
+onActionMethodID:"97cd750b-3007-46ab-8be7-be789aaa50e1",
+rolloverCursor:12,
+showClick:false,
+showFocus:false,
+size:"113,23",
+transparent:true,
+typeid:7,
+uuid:"c8c16065-5fa6-4ccf-8644-5a3eb35ded49"

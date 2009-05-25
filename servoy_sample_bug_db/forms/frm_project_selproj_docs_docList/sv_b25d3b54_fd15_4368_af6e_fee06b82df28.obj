@@ -1,0 +1,13 @@
+borderType:"EmptyBorder,0,0,0,0",
+dataProviderID:"display_docInfo",
+displayType:8,
+editable:false,
+formIndex:10200,
+location:"48,50",
+scrollbars:36,
+size:"277,50",
+styleClass:"noborder",
+text:"i18n:lbl.name",
+transparent:true,
+typeid:4,
+uuid:"b25d3b54-fd15-4368-af6e-fee06b82df28"

@@ -1,0 +1,10 @@
+formIndex:10100,
+location:"95,338",
+mediaOptions:14,
+name:"btn_cancel",
+onActionMethodID:"4855f8e9-fe18-49b3-800b-12dfee8a98a9",
+size:"80,24",
+tabSeq:3,
+text:"i18n:lbl.cancel",
+typeid:7,
+uuid:"881a7c91-d448-4728-ab98-3ee230a8a3ea"

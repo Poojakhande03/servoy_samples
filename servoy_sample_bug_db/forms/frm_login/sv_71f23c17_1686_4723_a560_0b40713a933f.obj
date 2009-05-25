@@ -1,0 +1,13 @@
+dataProviderID:"globals.errorText",
+displayType:8,
+editable:false,
+formIndex:10000,
+horizontalAlignment:2,
+location:"261,65",
+scrollbars:36,
+size:"580,42",
+styleClass:"nobordersmall",
+tabSeq:6,
+transparent:true,
+typeid:4,
+uuid:"71f23c17-1686-4723-a560-0b40713a933f"

@@ -1,0 +1,13 @@
+formIndex:11405,
+location:"148,1",
+mediaOptions:14,
+name:"btn_sort_3",
+onActionMethodID:"22bfec2b-7f4a-492e-a0d0-1eeb4043672c",
+showClick:false,
+showFocus:false,
+size:"120,20",
+styleClass:"whte",
+text:"i18n:lbl.phone",
+transparent:true,
+typeid:7,
+uuid:"06b045c2-f832-46d1-9f0c-e7efcefe8afc"

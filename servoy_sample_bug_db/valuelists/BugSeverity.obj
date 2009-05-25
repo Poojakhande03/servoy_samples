@@ -1,0 +1,6 @@
+addEmptyValue:1,
+customValues:"i18n:lbl.undefined|0\ni18n:lbl.nitpicky|9\ni18n:lbl.feature|6\ni18n:lbl.trivial|8\ni18n:lbl.text|7\ni18n:lbl.tweak|5\ni18n:lbl.minor|4\ni18n:lbl.major|3\ni18n:lbl.crash|2\ni18n:lbl.blocker|1",
+name:"BugSeverity",
+separator:" ",
+typeid:34,
+uuid:"b776dfc5-3c8b-4597-911c-3a9506a95ff3"

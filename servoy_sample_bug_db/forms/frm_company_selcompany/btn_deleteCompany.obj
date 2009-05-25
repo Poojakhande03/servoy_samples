@@ -1,0 +1,13 @@
+borderType:"LineBorder,1,#999999",
+formIndex:11100,
+location:"643,41",
+mediaOptions:14,
+name:"btn_deleteCompany",
+onActionMethodID:"5868696e-88ef-4006-8ed4-fdaf2f9c191e",
+rolloverCursor:12,
+showClick:false,
+showFocus:false,
+size:"113,23",
+transparent:true,
+typeid:7,
+uuid:"2f0d4d36-6a17-40d5-ae54-99e717be03fc"

@@ -1,0 +1,13 @@
+formIndex:10100,
+location:"901,6",
+mediaOptions:10,
+name:"lbl_editYourProfile",
+onActionMethodID:"b79de579-4e67-45ba-8aaa-654bd1005ee3",
+rolloverCursor:12,
+showClick:false,
+showFocus:false,
+size:"84,21",
+text:"i18n:lbl.editProfile",
+transparent:true,
+typeid:7,
+uuid:"bd553325-6afc-4fd8-bf62-9bb511ed8ca6"

@@ -1,0 +1,13 @@
+borderType:"LineBorder,1,#999999",
+formIndex:11000,
+location:"640,41",
+mediaOptions:14,
+name:"btn_editPerson",
+onActionMethodID:"67eba98a-60ad-403d-b4d5-daf2ab2d58ac",
+rolloverCursor:12,
+showClick:false,
+showFocus:false,
+size:"113,23",
+transparent:true,
+typeid:7,
+uuid:"c2935ca9-7d67-4866-9408-cc1a477acddb"

@@ -1,0 +1,10 @@
+formIndex:10000,
+location:"182,338",
+mediaOptions:14,
+name:"btn_ok",
+onActionMethodID:"21b73c15-cafa-46cd-8c02-ba0eeaa670ae",
+size:"80,24",
+tabSeq:1,
+text:"i18n:lbl.ok",
+typeid:7,
+uuid:"f399b602-9b9e-4f2b-afe1-c1a5e18620cd"

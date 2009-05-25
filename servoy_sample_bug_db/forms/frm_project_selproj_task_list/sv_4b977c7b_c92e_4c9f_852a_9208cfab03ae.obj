@@ -1,0 +1,11 @@
+dataProviderID:"label",
+editable:false,
+formIndex:10300,
+location:"108,50",
+size:"85,20",
+styleClass:"noborder",
+text:"i18n:lbl.officePhone",
+transparent:true,
+typeid:4,
+uuid:"4b977c7b-c92e-4c9f-852a-9208cfab03ae",
+valuelistID:"7e4e74bb-d78c-43cc-9866-c6648d344bf5"

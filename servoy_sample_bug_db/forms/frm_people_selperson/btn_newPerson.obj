@@ -1,0 +1,13 @@
+borderType:"LineBorder,1,#999999",
+formIndex:10600,
+location:"875,41",
+mediaOptions:14,
+name:"btn_newPerson",
+onActionMethodID:"3f2bf117-4532-46ca-aeab-8d12f82ebb90",
+rolloverCursor:12,
+showClick:false,
+showFocus:false,
+size:"113,23",
+transparent:true,
+typeid:7,
+uuid:"1f9ada7b-ab17-4ab5-8a4b-c235bccda9da"

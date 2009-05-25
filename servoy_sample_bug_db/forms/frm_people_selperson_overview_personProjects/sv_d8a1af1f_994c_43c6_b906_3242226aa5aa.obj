@@ -1,0 +1,10 @@
+dataProviderID:"display_status",
+displayType:8,
+editable:false,
+formIndex:11100,
+location:"25,50",
+size:"90,20",
+styleClass:"noborder",
+transparent:true,
+typeid:4,
+uuid:"d8a1af1f-994c-43c6-b906-3242226aa5aa"

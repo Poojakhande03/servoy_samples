@@ -1,0 +1,12 @@
+dataProviderID:"display_status",
+displayType:8,
+editable:false,
+formIndex:11100,
+location:"25,50",
+size:"90,20",
+styleClass:"noborder",
+text:"i18n:lbl.name",
+transparent:true,
+typeid:4,
+uuid:"66c338eb-ec80-408b-a76f-b57295593ef9",
+valuelistID:"b023044a-cfda-4a38-887c-170c58ca6899"

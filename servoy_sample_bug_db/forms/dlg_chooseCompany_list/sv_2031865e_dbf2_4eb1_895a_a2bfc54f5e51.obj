@@ -1,0 +1,10 @@
+dataProviderID:"phone",
+editable:false,
+formIndex:10400,
+location:"154,50",
+size:"115,20",
+styleClass:"noborder",
+text:"i18n:lbl.name",
+transparent:true,
+typeid:4,
+uuid:"2031865e-dbf2-4eb1-895a-a2bfc54f5e51"

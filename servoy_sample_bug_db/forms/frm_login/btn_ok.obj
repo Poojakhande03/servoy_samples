@@ -1,0 +1,11 @@
+formIndex:10700,
+location:"390,235",
+mediaOptions:14,
+name:"btn_ok",
+onActionMethodID:"d97fbac3-8637-483c-af14-e8c7f4496d5e",
+size:"90,24",
+tabSeq:5,
+text:"i18n:servoy.button.ok",
+toolTipText:"i18n:tt.clickToContinue",
+typeid:7,
+uuid:"41d90a0a-3d63-42f0-8166-4e08bd2ac49e"

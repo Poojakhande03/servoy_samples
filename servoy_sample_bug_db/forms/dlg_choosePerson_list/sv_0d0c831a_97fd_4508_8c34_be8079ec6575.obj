@@ -1,0 +1,11 @@
+dataProviderID:"name_full",
+editable:false,
+formIndex:10200,
+location:"30,50",
+scrollbars:36,
+size:"114,20",
+styleClass:"noborder",
+text:"i18n:lbl.name",
+transparent:true,
+typeid:4,
+uuid:"0d0c831a-97fd-4508-8c34-be8079ec6575"

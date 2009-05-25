@@ -1,0 +1,10 @@
+borderType:"EmptyBorder,0,0,0,0",
+name:"frm_people_selperson_overview",
+navigatorID:"-1",
+paperPrintScale:100,
+serverName:"bug_db",
+size:"982,449",
+styleName:"svyWebCrm",
+tableName:"tbl_people",
+typeid:3,
+uuid:"65930e80-3e2f-4835-9d1f-ede7d1e61b6d"

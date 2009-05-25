@@ -1,0 +1,13 @@
+formIndex:10500,
+imageMediaID:"d8d3128d-a63e-4556-8f27-5d53a02e20ae",
+location:"249,4",
+mediaOptions:14,
+name:"btn_addFile",
+onActionMethodID:"c9a406d9-af84-4b27-b5a6-fc661a8898b9",
+rolloverCursor:12,
+showClick:false,
+showFocus:false,
+size:"16,16",
+transparent:true,
+typeid:7,
+uuid:"f4f17442-536c-419a-87ac-6243f7e8ee4a"

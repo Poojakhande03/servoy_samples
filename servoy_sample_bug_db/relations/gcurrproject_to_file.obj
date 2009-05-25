@@ -1,0 +1,11 @@
+allowCreationRelatedRecords:true,
+foreignServerName:"bug_db",
+foreignTableName:"tbl_file",
+items:[
+{foreignColumnName:"ixproject",primaryDataProviderID:"globals.currProjectID",typeid:23,uuid:"8c40c2fe-e7a0-4d2e-a8e4-38ca98ab9f5f"}
+],
+name:"gcurrproject_to_file",
+primaryServerName:"bug_db",
+primaryTableName:"tbl_project",
+typeid:22,
+uuid:"fe36844e-7f0e-4698-842f-39781de8090c"

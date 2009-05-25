@@ -1,0 +1,10 @@
+borderType:"EmptyBorder,0,0,0,0",
+name:"frm_project_selproj_files_summary",
+navigatorID:"-1",
+paperPrintScale:100,
+serverName:"bug_db",
+size:"270,157",
+styleName:"svyWebCrm",
+tableName:"tbl_file",
+typeid:3,
+uuid:"587d8dcb-75e1-467a-addb-5814413642c7"

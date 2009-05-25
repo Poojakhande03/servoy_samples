@@ -1,0 +1,11 @@
+formIndex:10100,
+horizontalAlignment:4,
+location:"6,4",
+mediaOptions:14,
+size:"80,20",
+styleClass:"smgrey",
+tabSeq:-1,
+text:"i18n:lbl.address",
+transparent:true,
+typeid:7,
+uuid:"94bcefc5-d446-412a-81a8-cb44a7370254"

@@ -1,0 +1,11 @@
+formIndex:11600,
+location:"12,47",
+mediaOptions:14,
+name:"lbl_smartclient",
+size:"342,30",
+styleClass:"topnav",
+tabSeq:-1,
+text:"i18n:msg.smartClientUpload",
+transparent:true,
+typeid:7,
+uuid:"d5c6a64e-8a3b-4223-bd7a-7f167c4a485d"

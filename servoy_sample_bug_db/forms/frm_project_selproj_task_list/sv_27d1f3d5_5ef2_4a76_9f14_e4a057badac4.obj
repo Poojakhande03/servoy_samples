@@ -1,0 +1,10 @@
+dataProviderID:"dt_modified",
+editable:false,
+formIndex:10500,
+location:"807,50",
+size:"85,20",
+styleClass:"noborder",
+text:"i18n:lbl.officePhone",
+transparent:true,
+typeid:4,
+uuid:"27d1f3d5-5ef2-4a76-9f14-e4a057badac4"

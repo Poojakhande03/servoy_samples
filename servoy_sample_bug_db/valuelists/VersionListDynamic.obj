@@ -1,0 +1,12 @@
+addEmptyValue:1,
+dataProviderID1:"ixversion",
+dataProviderID2:"version_name",
+name:"VersionListDynamic",
+relationName:"gcurrproject_to_version",
+returnDataProviders:1,
+separator:" ",
+showDataProviders:2,
+sortOptions:"version_name asc",
+typeid:34,
+uuid:"12328fb8-f8b1-4aaf-8056-9fa6f45ba8f0",
+valueListType:1

@@ -1,0 +1,10 @@
+dataProviderID:"status",
+editable:false,
+formIndex:11000,
+location:"79,68",
+size:"180,20",
+styleClass:"noborder",
+transparent:true,
+typeid:4,
+uuid:"46ab20b2-4615-4282-9ea2-84dd928e32cd",
+valuelistID:"290a1f14-d381-42de-8cf6-0a0e9ca40202"

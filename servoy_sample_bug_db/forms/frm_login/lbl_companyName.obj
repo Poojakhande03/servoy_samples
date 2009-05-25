@@ -1,0 +1,12 @@
+formIndex:10200,
+horizontalAlignment:4,
+labelFor:"fld_companyName",
+location:"238,205",
+mediaOptions:14,
+name:"lbl_companyName",
+size:"95,22",
+tabSeq:-1,
+text:"i18n:lbl.companyName",
+transparent:true,
+typeid:7,
+uuid:"7d3467db-3356-4ca3-b54e-78476d9a7213"

@@ -1,0 +1,13 @@
+addEmptyValue:1,
+dataProviderID1:"ixpeople",
+dataProviderID2:"name_full",
+name:"TaskPersonAssignedToDynamic",
+returnDataProviders:1,
+separator:" ",
+serverName:"bug_db",
+showDataProviders:1,
+sortOptions:"",
+tableName:"tbl_people",
+typeid:34,
+uuid:"d284e6d3-8cdf-41e7-a553-4ce0eb8eecc3",
+valueListType:1

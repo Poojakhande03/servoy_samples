@@ -1,0 +1,11 @@
+allowCreationRelatedRecords:true,
+foreignServerName:"bug_db",
+foreignTableName:"tbl_company",
+items:[
+{foreignColumnName:"ixcompany",primaryDataProviderID:"ixcompany",typeid:23,uuid:"8f28c01e-6884-423b-880b-5ab0cf818d6a"}
+],
+name:"people_company_to_company",
+primaryServerName:"bug_db",
+primaryTableName:"tbl_people_company",
+typeid:22,
+uuid:"67ab8c19-cbc6-4573-ab72-11cc1a2ceb9d"

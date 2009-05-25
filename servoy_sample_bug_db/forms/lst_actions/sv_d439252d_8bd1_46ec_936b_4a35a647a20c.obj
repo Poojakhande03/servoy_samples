@@ -1,0 +1,12 @@
+dataProviderID:"action_to_people.display_name_full",
+displayType:8,
+editable:false,
+formIndex:11300,
+location:"343,50",
+scrollbars:36,
+size:"140,20",
+styleClass:"noborder",
+text:"i18n:lbl.officePhone",
+transparent:true,
+typeid:4,
+uuid:"d439252d-8bd1-46ec-936b-4a35a647a20c"

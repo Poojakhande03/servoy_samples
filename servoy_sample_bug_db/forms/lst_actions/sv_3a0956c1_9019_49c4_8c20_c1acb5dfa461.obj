@@ -1,0 +1,12 @@
+dataProviderID:"display_project",
+displayType:8,
+editable:false,
+formIndex:10700,
+location:"137,50",
+scrollbars:36,
+size:"206,20",
+styleClass:"noborder",
+text:"i18n:lbl.officePhone",
+transparent:true,
+typeid:4,
+uuid:"3a0956c1-9019-49c4-8c20-c1acb5dfa461"

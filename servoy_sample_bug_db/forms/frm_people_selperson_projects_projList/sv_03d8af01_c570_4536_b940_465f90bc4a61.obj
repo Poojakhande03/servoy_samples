@@ -1,0 +1,12 @@
+dataProviderID:"project_people_to_project.display_peopleOnProject",
+displayType:8,
+editable:false,
+formIndex:10200,
+location:"394,50",
+scrollbars:36,
+size:"585,20",
+styleClass:"noborder",
+text:"i18n:lbl.officePhone",
+transparent:true,
+typeid:4,
+uuid:"03d8af01-c570-4536-b940-465f90bc4a61"

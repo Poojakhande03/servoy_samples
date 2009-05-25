@@ -1,0 +1,11 @@
+dataProviderID:"display_company_shortname",
+displayType:8,
+editable:false,
+formIndex:11100,
+location:"25,50",
+size:"90,20",
+styleClass:"noborder",
+text:"i18n:lbl.name",
+transparent:true,
+typeid:4,
+uuid:"015b95f2-98ff-43f9-ad96-1056e25db435"

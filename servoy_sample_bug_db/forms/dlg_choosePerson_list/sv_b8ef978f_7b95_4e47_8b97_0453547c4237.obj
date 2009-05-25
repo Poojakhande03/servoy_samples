@@ -1,0 +1,10 @@
+dataProviderID:"ph_office",
+editable:false,
+formIndex:10300,
+location:"144,50",
+size:"125,20",
+styleClass:"noborder",
+text:"i18n:lbl.name",
+transparent:true,
+typeid:4,
+uuid:"b8ef978f-7b95-4e47-8b97-0453547c4237"

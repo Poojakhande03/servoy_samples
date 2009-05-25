@@ -1,0 +1,11 @@
+dataProviderID:"company_name",
+editable:false,
+formIndex:10300,
+location:"25,50",
+scrollbars:36,
+size:"130,20",
+styleClass:"noborder",
+text:"i18n:lbl.name",
+transparent:true,
+typeid:4,
+uuid:"006cb510-0b54-41ac-a6e2-44ec8551bc89"

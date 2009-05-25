@@ -1,0 +1,11 @@
+allowCreationRelatedRecords:true,
+foreignServerName:"bug_db",
+foreignTableName:"tbl_version",
+items:[
+{foreignColumnName:"ixversion",primaryDataProviderID:"globals.currVersionID",typeid:23,uuid:"45bc315c-2e1b-4c42-81ba-7333af4b7bf1"}
+],
+name:"gcurrversion_to_version",
+primaryServerName:"bug_db",
+primaryTableName:"tbl_version",
+typeid:22,
+uuid:"cf8728e6-8031-4a26-bdac-a24ea42a5105"

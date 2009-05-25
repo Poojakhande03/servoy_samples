@@ -1,0 +1,11 @@
+dataProviderID:"display_project_bold",
+displayType:8,
+editable:false,
+formIndex:10600,
+location:"114,50",
+size:"280,20",
+styleClass:"noborder",
+text:"i18n:lbl.name",
+transparent:true,
+typeid:4,
+uuid:"f8b001c2-c381-427e-ad17-189e7da802a2"

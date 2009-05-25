@@ -1,0 +1,13 @@
+formIndex:11501,
+location:"25,1",
+mediaOptions:14,
+name:"btn_sort_1",
+onActionMethodID:"ce9ea843-29e7-417d-b586-d989b4cf16b0",
+showClick:false,
+showFocus:false,
+size:"130,20",
+styleClass:"whte",
+text:"i18n:lbl.company",
+transparent:true,
+typeid:7,
+uuid:"20d2183c-4324-4648-8e7b-5ab927ce2806"

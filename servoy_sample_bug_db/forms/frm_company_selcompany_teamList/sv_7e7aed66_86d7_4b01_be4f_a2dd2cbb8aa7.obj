@@ -1,0 +1,10 @@
+dataProviderID:"people_company_to_people.last_login",
+editable:false,
+formIndex:10400,
+location:"154,50",
+size:"95,20",
+styleClass:"noborder",
+text:"i18n:lbl.name",
+transparent:true,
+typeid:4,
+uuid:"7e7aed66-86d7-4b01-be4f-a2dd2cbb8aa7"

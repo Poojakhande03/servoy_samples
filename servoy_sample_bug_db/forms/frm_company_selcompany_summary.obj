@@ -1,0 +1,10 @@
+borderType:"EmptyBorder,0,0,0,0",
+name:"frm_company_selcompany_summary",
+navigatorID:"-1",
+paperPrintScale:100,
+serverName:"bug_db",
+size:"270,247",
+styleName:"svyWebCrm",
+tableName:"tbl_company",
+typeid:3,
+uuid:"85d9101b-a36a-47d0-b920-46900ebcb154"

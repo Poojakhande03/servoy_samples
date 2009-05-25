@@ -1,0 +1,10 @@
+formIndex:10300,
+location:"7,338",
+mediaOptions:14,
+name:"btn_newCompany",
+onActionMethodID:"93b48f33-64c9-4167-85a2-b86a30128208",
+size:"80,24",
+tabSeq:2,
+text:"i18n:lbl.newDot",
+typeid:7,
+uuid:"78565793-33a5-40b9-a254-8da7f9f0a73e"

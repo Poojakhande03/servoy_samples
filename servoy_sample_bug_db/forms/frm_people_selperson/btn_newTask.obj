@@ -1,0 +1,13 @@
+formIndex:11100,
+location:"786,42",
+mediaOptions:10,
+name:"btn_newTask",
+onActionMethodID:"7bf62650-1bec-494b-b7c1-aa49a7b45b84",
+rolloverCursor:12,
+showClick:false,
+showFocus:false,
+size:"84,21",
+text:"i18n:lbl.newProject",
+transparent:true,
+typeid:7,
+uuid:"f4cf5228-3caf-4313-a3c9-2e34610064dc"

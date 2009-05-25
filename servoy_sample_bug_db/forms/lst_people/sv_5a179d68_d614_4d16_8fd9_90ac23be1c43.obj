@@ -1,0 +1,10 @@
+dataProviderID:"ph_mobile",
+editable:false,
+formIndex:10300,
+location:"422,50",
+size:"120,20",
+styleClass:"noborder",
+text:"i18n:lbl.mobilePhone",
+transparent:true,
+typeid:4,
+uuid:"5a179d68-d614-4d16-8fd9-90ac23be1c43"

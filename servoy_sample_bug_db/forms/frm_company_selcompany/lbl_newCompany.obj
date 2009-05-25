@@ -1,0 +1,13 @@
+formIndex:10100,
+location:"904,42",
+mediaOptions:10,
+name:"lbl_newCompany",
+onActionMethodID:"bc5a84de-d7d2-433f-84d3-bfaeddf4df47",
+rolloverCursor:12,
+showClick:false,
+showFocus:false,
+size:"84,21",
+text:"i18n:lbl.newCompany",
+transparent:true,
+typeid:7,
+uuid:"646d19ca-7658-4fd4-8c8d-7c58e7c3e242"

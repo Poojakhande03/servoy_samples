@@ -1,0 +1,12 @@
+dataProviderID:"display_taskName_bold",
+displayType:8,
+editable:false,
+formIndex:10900,
+location:"193,50",
+scrollbars:36,
+size:"279,20",
+styleClass:"noborder",
+text:"i18n:lbl.officePhone",
+transparent:true,
+typeid:4,
+uuid:"32143a11-95d2-47f7-9fe6-853f40e3d9e0"

@@ -1,0 +1,12 @@
+addEmptyValue:1,
+dataProviderID1:"ixtask",
+dataProviderID2:"task_name",
+name:"Tasks",
+relationName:"gcurrproject_to_task",
+returnDataProviders:1,
+separator:" ",
+showDataProviders:2,
+sortOptions:"task_name asc",
+typeid:34,
+uuid:"f674d4cb-d3b3-4050-9d0b-f60a98b3a60a",
+valueListType:1

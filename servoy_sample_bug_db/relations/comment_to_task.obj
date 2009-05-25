@@ -1,0 +1,11 @@
+allowCreationRelatedRecords:true,
+foreignServerName:"bug_db",
+foreignTableName:"tbl_task",
+items:[
+{foreignColumnName:"ixtask",primaryDataProviderID:"ixtask",typeid:23,uuid:"03dfc5f0-ca54-420c-ac99-69bb8fc452f5"}
+],
+name:"comment_to_task",
+primaryServerName:"bug_db",
+primaryTableName:"tbl_comment",
+typeid:22,
+uuid:"564e88e2-6d51-47d8-8fc5-e03c2488c4d2"

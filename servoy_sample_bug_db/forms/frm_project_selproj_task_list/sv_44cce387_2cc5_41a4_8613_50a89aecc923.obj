@@ -1,0 +1,10 @@
+dataProviderID:"dt_estend",
+editable:false,
+formIndex:10700,
+location:"892,50",
+size:"85,20",
+styleClass:"noborder",
+text:"i18n:lbl.officePhone",
+transparent:true,
+typeid:4,
+uuid:"44cce387-2cc5-41a4-8613-50a89aecc923"
