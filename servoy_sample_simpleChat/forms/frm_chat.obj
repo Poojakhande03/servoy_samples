@@ -1,0 +1,12 @@
+borderType:"EmptyBorder,0,0,0,0",
+name:"frm_chat",
+navigatorID:"-1",
+onShowMethodID:"-1",
+paperPrintScale:100,
+scrollbars:36,
+serverName:"example_data",
+size:"800,600",
+styleName:"svyWebCrm",
+tableName:"chat_users",
+typeid:3,
+uuid:"6a71abed-421d-43d3-8b4b-46500309a379"

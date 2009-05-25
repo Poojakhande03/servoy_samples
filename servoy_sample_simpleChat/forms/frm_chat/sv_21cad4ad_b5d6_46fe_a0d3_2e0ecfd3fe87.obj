@@ -1,0 +1,11 @@
+formIndex:10200,
+location:"490,84",
+mediaOptions:14,
+size:"289,491",
+styleClass:"list",
+tabSeq:-1,
+text:"<html>\n  <head>\n    \n  <\/head>\n  <body>\n    <b>UDP Plug-In<\/b><br>The UDP (User Datagram Protocol) Plug-In sends \n    packets of information to a specific IP address on a specific port. This \n    example file has been hard-coded to send traffic on port 2828. For this \n    solution to work correctly, you must be on a local area network - and have \n    the ability to send traffic over port 2828 (you can change the port, if \n    you want to - by modifying the global method called &quot;startUDP&quot;).<br><br><b>How \n    It Works:<\/b> The plug-in is hard-coded to look for a global field called \n    &quot;received&quot; - where it will dump the results of a received packet. You \n    don't have to send just text - you can send whatever kind of data you \n    want. Sending is very simple - check out the method &quot;send_msg&quot; on the form \n    &quot;frm_chat&quot;.<br><br>You can view the methods by choosing &quot;Editor&quot; \n    from the &quot;Tools&quot; menu.<br><br><b>Technical Note:<\/b> You can't \n    work with the UDP plug-in over the Internet (at least not easily) - so \n    this solution doesn't work in Web Client. You would have to figure out how \n    to do some NAT (Network Address Translation) work to get to an individual \n    machine behind router.<br><br>You can talk to anyone else on the list at \n    any time by typing one or more characters of their name, followed by a \n    colon (:) then the message.<br><br>For example, if you were taking to \n    Jill, but wanted to say something to Tim real quick, you could type: \n    T:what time is lunch and Tim would get the message. It IS case sensitive.\n  <\/body>\n<\/html>",
+transparent:true,
+typeid:7,
+uuid:"21cad4ad-b5d6-46fe-a0d3-2e0ecfd3fe87",
+verticalAlignment:1
