@@ -1,0 +1,11 @@
+dataProviderID:"globals.mod_dialog_msg",
+displayType:8,
+formIndex:11200,
+location:"55,9",
+name:"fld_dlgHTML",
+scrollbars:36,
+size:"400,133",
+styleClass:"noborder",
+transparent:true,
+typeid:4,
+uuid:"4cbe2855-9408-4592-9d66-592774532907"
