@@ -1,0 +1,12 @@
+borderType:"EmptyBorder,0,0,0,0",
+name:"book_treeview",
+navigatorID:"-1",
+onLoadMethodID:"-1",
+onShowMethodID:"3ba5493a-2e04-4e5d-af35-493fff1c7048",
+paperPrintScale:100,
+serverName:"example_data",
+size:"200,470",
+tableName:"book_nodes",
+typeid:3,
+uuid:"029722b2-d475-4ee5-8415-7654568cd978",
+view:5

@@ -1,0 +1,11 @@
+borderType:"EmptyBorder,0,0,0,0",
+name:"book_comment_web",
+navigatorID:"-1",
+paperPrintScale:100,
+scrollbars:36,
+serverName:"example_data",
+size:"289,363",
+styleName:"svyWebCrm",
+tableName:"book_text",
+typeid:3,
+uuid:"b04b0208-e3da-4904-8d24-18f16c47c650"

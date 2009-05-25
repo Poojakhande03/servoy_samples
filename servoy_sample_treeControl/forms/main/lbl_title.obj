@@ -1,0 +1,13 @@
+fontType:"Tahoma,1,24",
+foreground:"#ffffff",
+formIndex:10100,
+horizontalAlignment:2,
+location:"15,7",
+mediaOptions:14,
+name:"lbl_title",
+size:"570,32",
+tabSeq:-1,
+text:"Example - Resizeable Panes & Tree Control",
+transparent:true,
+typeid:7,
+uuid:"3140f8f6-7a35-4acf-9f0b-eb5fe478fdb2"

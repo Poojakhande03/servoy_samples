@@ -1,0 +1,10 @@
+anchors:15,
+beanClassName:"com.servoy.extensions.beans.dbtreeview.DBTreeView",
+beanXML:"<?xml version=\"1.0\" encoding=\"UTF-8\"?> \n<java version=\"1.5.0_07\" class=\"java.beans.XMLDecoder\"> \n <object class=\"com.servoy.extensions.beans.dbtreeview.DBTreeView\"> \n  <void property=\"border\"> \n   <object class=\"javax.swing.border.EmptyBorder\"> \n    <int>0<\/int> \n    <int>0<\/int> \n    <int>0<\/int> \n    <int>0<\/int> \n   <\/object> \n  <\/void> \n  <void property=\"name\"> \n   <string>dbtreeview<\/string> \n  <\/void> \n  <void property=\"size\"> \n   <object class=\"java.awt.Dimension\"> \n    <int>200<\/int> \n    <int>470<\/int> \n   <\/object> \n  <\/void> \n <\/object> \n<\/java> \n",
+formIndex:10000,
+location:"0,0",
+name:"dbtreeview",
+size:"200,470",
+typeid:12,
+usesUI:true,
+uuid:"37c2cfd6-139b-4e0a-aafb-aa30371c3f53"

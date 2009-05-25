@@ -1,0 +1,8 @@
+dataProviderID:"book_text_id",
+editable:false,
+formIndex:10000,
+location:"0,0",
+size:"60,100",
+text:"id",
+typeid:4,
+uuid:"e0d0c555-5505-4442-a0a0-ba37a1be9f92"

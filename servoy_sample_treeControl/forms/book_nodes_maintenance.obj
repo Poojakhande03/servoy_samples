@@ -1,0 +1,9 @@
+name:"book_nodes_maintenance",
+paperPrintScale:100,
+serverName:"example_data",
+showInMenu:true,
+size:"640,30",
+tableName:"book_nodes",
+typeid:3,
+uuid:"68ecfda8-bf05-44dd-aa22-766e0cbed492",
+view:3

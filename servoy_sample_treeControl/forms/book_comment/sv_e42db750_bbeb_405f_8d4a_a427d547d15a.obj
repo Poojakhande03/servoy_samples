@@ -1,0 +1,11 @@
+anchors:15,
+borderType:"EmptyBorder,0,0,0,0",
+dataProviderID:"comment_text",
+displayType:1,
+editable:false,
+formIndex:10000,
+location:"0,26",
+scrollbars:33,
+size:"30,30",
+typeid:4,
+uuid:"e42db750-bbeb-405f-8d4a-a427d547d15a"

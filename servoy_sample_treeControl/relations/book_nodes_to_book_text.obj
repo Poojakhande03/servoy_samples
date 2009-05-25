@@ -1,0 +1,11 @@
+allowCreationRelatedRecords:true,
+foreignServerName:"example_data",
+foreignTableName:"book_text",
+items:[
+{foreignColumnName:"node_id",primaryDataProviderID:"node_id",typeid:23,uuid:"327953e3-10d8-4cbf-973e-bf992437c1b2"}
+],
+name:"book_nodes_to_book_text",
+primaryServerName:"example_data",
+primaryTableName:"book_nodes",
+typeid:22,
+uuid:"29a78a16-b373-4b16-ae6e-c6a1376422dc"

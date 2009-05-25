@@ -1,0 +1,10 @@
+anchors:15,
+borderType:"EmptyBorder,0,0,0,0",
+dataProviderID:"note_text",
+displayType:1,
+formIndex:10000,
+location:"0,26",
+scrollbars:33,
+size:"688,72",
+typeid:4,
+uuid:"32ecded0-8d4f-448f-8d54-b57f3a22bdd2"

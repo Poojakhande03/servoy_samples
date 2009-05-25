@@ -1,0 +1,11 @@
+anchors:15,
+borderType:"EmptyBorder,0,0,0,0",
+dataProviderID:"item_text",
+displayType:1,
+editable:false,
+formIndex:10000,
+location:"1,26",
+scrollbars:33,
+size:"30,30",
+typeid:4,
+uuid:"2f202086-47ff-4a0f-9e6e-6a8a2f723584"
