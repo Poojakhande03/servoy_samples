@@ -1,0 +1,11 @@
+dataProviderID:"globals.core_dlg_text",
+displayType:8,
+formIndex:11200,
+location:"55,33",
+name:"fld_dlgHTML",
+scrollbars:36,
+size:"400,73",
+styleClass:"noborder",
+transparent:true,
+typeid:4,
+uuid:"1626b08f-74df-45fa-9097-e91327b93d08"
