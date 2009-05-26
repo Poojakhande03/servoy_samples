@@ -23,6 +23,7 @@ var sub_id;
  */
 function node_selected()
 {
+	
 	//the dbtreeview bean passes the row pk id from the selected node to this method
 	//since the dbtreeview only can call global methods,we forward the call to a specific form
 	forms.book_treeview.node_selected(arguments[0])

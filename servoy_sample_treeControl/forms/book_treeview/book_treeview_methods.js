@@ -3,7 +3,6 @@
  */
 function initTreeView()
 {
-
 	if (globals.didTreeViewInit == 0)
 	{
 		//A binding object is needed for tree initialization
@@ -17,11 +16,11 @@ function initTreeView()
 
 		//set the method to call and dataprovider value to pass when node clicked
 		binding.setMethodToCallOnClick(globals.node_selected,'node_id');
-
+	
 		refreshTreeView();
 		globals.didTreeViewInit = 1
-
-		elements.dbtreeview.selectionPath = new Array(1,2,3);
+		var pathAr = new Array(1,2,3);
+		elements.dbtreeview.selectionPath = pathAr;
 	}
 //For more information on dbtreeview bean use,
 //please read here: http://forum.servoy.com/viewtopic.php?f=22&t=9957
@@ -34,12 +33,12 @@ function node_selected()
 {
 
 	//the dbtreeview bean passes the row pk id from the selected node to this method
-	var selected_node_id = arguments[0]
+	var selected_node_id = arguments[0];
 
 	//search for the row we have been passed in the dbtreeview
-	controller.find()
-	node_id = selected_node_id
-	var recordCount = controller.search()
+	controller.find();
+	node_id = selected_node_id;
+	var recordCount = controller.search();
 }
 
 /**
