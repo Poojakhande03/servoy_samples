@@ -1753,12 +1753,5 @@ function ValidateUserName()
  */
 function GoVersion()
 {
-	if (application.getApplicationType() == 5)
-	{
-		globals.currVersionID = arguments[0];
-	}
-	else
-	{
-		globals.currVersionID = ixversion;
-	}
+	globals.currVersionID = arguments[0];
 }
