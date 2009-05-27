@@ -1,5 +1,6 @@
 dataProviderID:"mail_label",
 displayType:1,
+editable:false,
 formIndex:15400,
 location:"420,192",
 name:"mailing_address",

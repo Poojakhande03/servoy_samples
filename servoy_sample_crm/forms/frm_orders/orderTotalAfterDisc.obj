@@ -1,4 +1,5 @@
 dataProviderID:"subtotal_after_discount",
+editable:false,
 formIndex:19000,
 format:"¤###,###,###.00",
 horizontalAlignment:4,

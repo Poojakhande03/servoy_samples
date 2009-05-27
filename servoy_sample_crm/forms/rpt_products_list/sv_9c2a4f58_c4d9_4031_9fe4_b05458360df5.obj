@@ -1,5 +1,6 @@
 borderType:"SpecialMatteBorder,0.0,1.0,1.0,1.0,#cccccc,#cccccc,#cccccc,#cccccc,0.0,",
 dataProviderID:"margin",
+editable:false,
 formIndex:11100,
 format:"¤###,###.00",
 horizontalAlignment:4,
