@@ -4,13 +4,6 @@
 function btn_goRec()
 {
 	globals.curID_form = form_id;
-	
-	/*if(application.getApplicationType() == 5)
-	{
-		needed for web client onl		var myRecID = new Array()
-		myRecID[0] = form_id
-		forms.frm_forms.controller.loadRecords(myRecID)
-	}*/
 }
 
 /**

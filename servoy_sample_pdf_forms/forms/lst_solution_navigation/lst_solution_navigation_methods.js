@@ -3,11 +3,11 @@
  */
 function goToForm()
 {
-//switch tabs in the main form - and the list form
-var rightTab = controller.getSelectedIndex()
+	//switch tabs in the main form - and the list form
+	var rightTab = controller.getSelectedIndex()
 
-forms.main.elements.tabs_main.tabIndex = rightTab
-forms.frm_nav_main.elements.tabs_recList.tabIndex = rightTab
+	forms.main.elements.tabs_main.tabIndex = rightTab
+	forms.frm_nav_main.elements.tabs_recList.tabIndex = rightTab
 }
 
 /**
@@ -15,5 +15,5 @@ forms.frm_nav_main.elements.tabs_recList.tabIndex = rightTab
  */
 function sort()
 {
-controller.sort('sort_order asc')
+	controller.sort('sort_order asc')
 }

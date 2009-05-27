@@ -3,8 +3,5 @@
  */
 function btn_close()
 {
-application.closeSolution()
-
-
-
+	application.closeSolution()
 }
