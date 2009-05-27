@@ -4,14 +4,6 @@
 function btn_goRec()
 {
 	globals.curID_template = template_id
-
-	if(application.getApplicationType() == 5)
-	{
-		//needed for web client only
-		var myRecID = new Array()
-		myRecID[0] = template_id
-		forms.frm_templates.controller.loadRecords(myRecID)
-	}
 }
 
 /**

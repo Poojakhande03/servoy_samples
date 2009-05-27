@@ -53,9 +53,9 @@ var thisSolutionID = 4;
  */
 function _dev_temp()
 {
-forms.main.elements.tabs_dialog.addTab( forms.core_dlg_generic,  'bob',  'bob',  '',  null,  '#ffffff', '#ffffff')
-forms.main.elements.tabs_dialog.tabIndex = forms.main.elements.tabs_dialog.getMaxTabIndex()
-forms.main.elements.tabs_dialog.visible = true
+	forms.main.elements.tabs_dialog.addTab( forms.core_dlg_generic,  'bob',  'bob',  '',  null,  '#ffffff', '#ffffff')
+	forms.main.elements.tabs_dialog.tabIndex = forms.main.elements.tabs_dialog.getMaxTabIndex()
+	forms.main.elements.tabs_dialog.visible = true
 }
 
 /**
@@ -63,19 +63,19 @@ forms.main.elements.tabs_dialog.visible = true
  */
 function btn_delete()
 {
-//see what form is front-most
-var frm = forms.main.elements.tabs_main.getTabFormNameAt(forms.main.elements.tabs_main.tabIndex)
-if(forms[frm].validate_beforeDelete() != 0) return;
+	//see what form is front-most
+	var frm = forms.main.elements.tabs_main.getTabFormNameAt(forms.main.elements.tabs_main.tabIndex)
+	if(forms[frm].validate_beforeDelete() != 0) return;
 
-var msg = forms[frm].delete_text
+	var msg = forms[frm].delete_text
 
-if(!msg) msg = 'Are you sure you want to delete this record?'
+	if(!msg) msg = 'Are you sure you want to delete this record?'
 
-//tell it what method to execute when dialog closes
-var methd = 'forms.' + frm + '.sub_doDelete()'
+	//tell it what method to execute when dialog closes
+	var methd = 'forms.' + frm + '.sub_doDelete()'
 
-//show the tabpanel "dialog"
-globals.showWarningDialog(msg, methd, 'Cancel', 'Delete');
+	//show the tabpanel "dialog"
+	globals.showWarningDialog(msg, methd, 'Cancel', 'Delete');
 }
 
 /**
@@ -83,39 +83,39 @@ globals.showWarningDialog(msg, methd, 'Cancel', 'Delete');
  */
 function btn_viewPDF()
 {
-var type = arguments[0]
-var template_id = arguments[1]
-var actionType = arguments[2]
+	var type = arguments[0]
+	var template_id = arguments[1]
+	var actionType = arguments[2]
 
-if(!actionType) actionType = 0 //view
+	if(!actionType) actionType = 0 //view
 
-if(type=='template')
-{
-	application.showURL(application.getServerURL()+'/servoy-service/pdf_forms/pdf_template/'+forms.frm_templates.filename+'?template_id='+template_id)
-}
-else
-{
-	//it's a document
-	//create action
-	forms.frm_forms.pdf_forms_to_pdf_actions.newRecord();
-	forms.frm_forms.pdf_forms_to_pdf_actions.template_id = template_id;
-	//forms.frm_forms.pdf_forms_to_pdf_actions.redirect_url = application.getServerURL() + '/servoy-service/pdf_forms/pdf_form/load.fdf?action_id=' + action_id
-	forms.frm_forms.pdf_forms_to_pdf_actions.action_type = actionType;//==edit = 1, view = 0
-	
-	//get the new record id
-	var action_id = forms.frm_forms.pdf_forms_to_pdf_actions.action_id
-	
-	forms.frm_forms.controller.saveData();//so changes are seen by servlet	
-	
-	if(application.getApplicationType()==5)
+	if(type=='template')
 	{
-		application.showURL('/servoy-service/pdf_forms/pdf_form/load.fdf?action_id=' + action_id,'_blank')
+		application.showURL(application.getServerURL()+'/servoy-service/pdf_forms/pdf_template/'+forms.frm_templates.filename+'?template_id='+template_id)
 	}
 	else
 	{
-		application.showURL(application.getServerURL() + '/servoy-service/pdf_forms/pdf_form/load.fdf?action_id=' + action_id,'_blank')
+		//it's a document
+		//create action
+		forms.frm_forms.pdf_forms_to_pdf_actions.newRecord();
+		forms.frm_forms.pdf_forms_to_pdf_actions.template_id = template_id;
+		//forms.frm_forms.pdf_forms_to_pdf_actions.redirect_url = application.getServerURL() + '/servoy-service/pdf_forms/pdf_form/load.fdf?action_id=' + action_id
+		forms.frm_forms.pdf_forms_to_pdf_actions.action_type = actionType;//==edit = 1, view = 0
+
+		//get the new record id
+		var action_id = forms.frm_forms.pdf_forms_to_pdf_actions.action_id
+
+		forms.frm_forms.controller.saveData();//so changes are seen by servlet	
+
+		if(application.getApplicationType()==5)
+		{
+			application.showURL('/servoy-service/pdf_forms/pdf_form/load.fdf?action_id=' + action_id,'_blank')
+		}
+		else
+		{
+			application.showURL(application.getServerURL() + '/servoy-service/pdf_forms/pdf_form/load.fdf?action_id=' + action_id,'_blank')
+		}
 	}
-}
 }
 
 /**
@@ -123,16 +123,16 @@ else
  */
 function disableBgElements()
 {
-//disable all the background elements when showing the dialog
-forms.frm_nav_main.elements.tabs_recList.enabled = false
-forms.frm_nav_main.elements.tabs_solNav.enabled = false
-forms.main.elements.tabs_nav.enabled = false
-forms.main.elements.tabs_main.enabled = false
+	//disable all the background elements when showing the dialog
+	forms.frm_nav_main.elements.tabs_recList.enabled = false
+	forms.frm_nav_main.elements.tabs_solNav.enabled = false
+	forms.main.elements.tabs_nav.enabled = false
+	forms.main.elements.tabs_main.enabled = false
 
-/*
+	/*
 //disable all the background elements when showing the dialog
 globals.core_dlg_elementDisableEnable = new Array('forms.frm_templates','forms.frm_nav_main.elements.tabs_recList','forms.frm_nav_main.elements.tabs_solNav','forms.main.elements.tabs_nav','forms.main.elements.tabs_main')
-*/
+	 */
 }
 
 /**
@@ -140,11 +140,11 @@ globals.core_dlg_elementDisableEnable = new Array('forms.frm_templates','forms.f
  */
 function enableBgElements()
 {
-//disable all the background elements when showing the dialog
-forms.frm_nav_main.elements.tabs_recList.enabled = true
-forms.frm_nav_main.elements.tabs_solNav.enabled = true
-forms.main.elements.tabs_nav.enabled = true
-forms.main.elements.tabs_main.enabled = true
+	//disable all the background elements when showing the dialog
+	forms.frm_nav_main.elements.tabs_recList.enabled = true
+	forms.frm_nav_main.elements.tabs_solNav.enabled = true
+	forms.main.elements.tabs_nav.enabled = true
+	forms.main.elements.tabs_main.enabled = true
 }
 
 /**
@@ -152,20 +152,20 @@ forms.main.elements.tabs_main.enabled = true
  */
 function getTopHTML()
 {
-if(application.getApplicationType() == 5)
-{
-	//web client
-	return '<html><body>'
-}
-else
-{
-	return '<html>\n<head>\n<style type="text/css">\n.body {font-family: "Verdana, sans-serif"; font-size: 11pt;}\n' +
+	if(application.getApplicationType() == 5)
+	{
+		//web client
+		return '<html><body>'
+	}
+	else
+	{
+		return '<html>\n<head>\n<style type="text/css">\n.body {font-family: "Verdana, sans-serif"; font-size: 11pt;}\n' +
 		'\n.red {font-family: "Verdana, sans-serif"; font-size: 11pt; color:#990000;}\n' +
 		'\n.largeRed {font-family: "Verdana, sans-serif"; font-size: 12pt; color:#990000;}\n' +
 		'\n.navList {font-family: "Verdana, sans-serif"; font-size: 12pt; font-weight: bold}' +
 		'\n.navListWhite {font-family: "Verdana, sans-serif"; font-size: 12pt; font-weight: bold; color: #ffffff;}' +
 		'</style>\n</head>\n<body class="body">\n\n'
-}
+	}
 }
 
 /**
@@ -173,10 +173,10 @@ else
  */
 function nav_nextRecord()
 {
-//see what form is front-most
-var frm = forms.main.elements.tabs_main.getTabFormNameAt(forms.main.elements.tabs_main.tabIndex)
+	//see what form is front-most
+	var frm = forms.main.elements.tabs_main.getTabFormNameAt(forms.main.elements.tabs_main.tabIndex)
 
-forms[frm].controller.setSelectedIndex(forms[frm].controller.getSelectedIndex() + 1)
+	forms[frm].controller.setSelectedIndex(forms[frm].controller.getSelectedIndex() + 1)
 }
 
 /**
@@ -184,10 +184,10 @@ forms[frm].controller.setSelectedIndex(forms[frm].controller.getSelectedIndex() 
  */
 function nav_prevRecord()
 {
-//see what form is front-most
-var frm = forms.main.elements.tabs_main.getTabFormNameAt(forms.main.elements.tabs_main.tabIndex)
+	//see what form is front-most
+	var frm = forms.main.elements.tabs_main.getTabFormNameAt(forms.main.elements.tabs_main.tabIndex)
 
-forms[frm].controller.setSelectedIndex(forms[frm].controller.getSelectedIndex() - 1)
+	forms[frm].controller.setSelectedIndex(forms[frm].controller.getSelectedIndex() - 1)
 }
 
 /**
@@ -195,40 +195,36 @@ forms[frm].controller.setSelectedIndex(forms[frm].controller.getSelectedIndex() 
  */
 function openSolution()
 {
-//use the right style sheet
-//substitute style sheet if we're on a mac
-if(utils.stringLeft(application.getOSName(), 3) == 'Mac')
-{
-	//we're on the mac - exchange style sheets
-	application.overrideStyle('svyWebCrm', 'svyWebCrm_mac')
-}
+	//use the right style sheet
+	//substitute style sheet if we're on a mac
+	if(utils.stringLeft(application.getOSName(), 3) == 'Mac')
+	{
+		//we're on the mac - exchange style sheets
+		application.overrideStyle('svyWebCrm', 'svyWebCrm_mac')
+	}
 
-//setup the apptype globals
-globals.core_setupAppType();
+	//setup the apptype globals
+	globals.core_setupAppType();
 
-//setup the right verbiage for the error
-if(application.getApplicationType() == 3) //developer
-{
-	globals.appType_forError = 'restart ' + globals.core_appTypeWords
-}
-else
-{
-	globals.appType_forError = 'have an administrator restart the ' + globals.core_appTypeWords +	' application'
-}
+	//setup the right verbiage for the error
+	if(application.getApplicationType() == 3) //developer
+	{
+		globals.appType_forError = 'restart ' + globals.core_appTypeWords
+	}
+	else
+	{
+		globals.appType_forError = 'have an administrator restart the ' + globals.core_appTypeWords +	' application'
+	}
 
-//check for pdf plugin if we arent in web client or headless client
-if(!(application.getApplicationType() == 5) || (!(application.getApplicationType() == 4)))
-{
-    if(plugins.pdf_forms)
-    {
-    	//plug-in NOT installed - can't use solution
-    	forms.frm_noplug.controller.show()
-    }
-}
-
-
-
-
+	//check for pdf plugin if we arent in web client or headless client
+	if(!(application.getApplicationType() == 5) || (!(application.getApplicationType() == 4)))
+	{
+		if(plugins.pdf_forms)
+		{
+			//plug-in NOT installed - can't use solution
+			forms.frm_noplug.controller.show()
+		}
+	}
 }
 
 /**
@@ -236,54 +232,54 @@ if(!(application.getApplicationType() == 5) || (!(application.getApplicationType
  */
 function setupRecordStatus()
 {
-//see what form is front-most
-var frm = forms.main.elements.tabs_main.getTabFormNameAt(forms.main.elements.tabs_main.tabIndex)
+	//see what form is front-most
+	var frm = forms.main.elements.tabs_main.getTabFormNameAt(forms.main.elements.tabs_main.tabIndex)
 
-var fs = databaseManager.getFoundSetCount(forms[frm].foundset)
-var tc = databaseManager.getTableCount(forms[frm].foundset)
-var cr = forms[frm].controller.getSelectedIndex()
+	var fs = databaseManager.getFoundSetCount(forms[frm].foundset)
+	var tc = databaseManager.getTableCount(forms[frm].foundset)
+	var cr = forms[frm].controller.getSelectedIndex()
 
-if(tc > 0) //there are some records
-{
-	globals.record_status = '<html><b>Record:</b> ' + cr + ' of ' + fs + '</b>'
-	
-	if( tc > fs)
+	if(tc > 0) //there are some records
 	{
-		globals.record_status += ' (' + tc + ' total records)'
+		globals.record_status = '<html><b>Record:</b> ' + cr + ' of ' + fs + '</b>'
+
+		if( tc > fs)
+		{
+			globals.record_status += ' (' + tc + ' total records)'
+		}
+
+		if(globals.nav_search)
+		{
+			globals.record_status += " - SEARCH TERM: '" + globals.nav_search + "'"
+			globals.nav_search = ''
+		}
+
+		globals.record_status += '</html>'
+
+		if(cr == 1) //current record 1 - so hide the "previous" button
+		{
+			forms[frm].elements.btn_prev.visible = false
+		}
+		else
+		{
+			forms[frm].elements.btn_prev.visible = true
+		}
+
+		if(cr == fs || cr == tc) //current is last one - so hide the "next" button
+		{
+			forms[frm].elements.btn_next.visible = false
+		}
+		else
+		{
+			forms[frm].elements.btn_next.visible = true
+		}
 	}
-	
-	if(globals.nav_search)
+	else
 	{
-		globals.record_status += " - SEARCH TERM: '" + globals.nav_search + "'"
-		globals.nav_search = ''
-	}
-	
-	globals.record_status += '</html>'
-	
-	if(cr == 1) //current record 1 - so hide the "previous" button
-	{
+		globals.record_status = '<html><b>No Records</b>'
+		forms[frm].elements.btn_next.visible = false
 		forms[frm].elements.btn_prev.visible = false
 	}
-	else
-	{
-		forms[frm].elements.btn_prev.visible = true
-	}
-	
-	if(cr == fs || cr == tc) //current is last one - so hide the "next" button
-	{
-		forms[frm].elements.btn_next.visible = false
-	}
-	else
-	{
-		forms[frm].elements.btn_next.visible = true
-	}
-}
-else
-{
-	globals.record_status = '<html><b>No Records</b>'
-	forms[frm].elements.btn_next.visible = false
-	forms[frm].elements.btn_prev.visible = false
-}
 }
 
 /**
@@ -291,59 +287,59 @@ else
  */
 function showDialog()
 {
-var title = arguments[0]
-var whatTab = arguments[1]
-var showCancelBtnOnly = arguments[2] //anything that is not null is a vaid value
-var cancelBtnLabel = arguments[3]
-var showBtn3 = arguments[4] //anything that is not null is valid value
-var btn3Label = arguments[5]
-var x = arguments[6]
-var y = arguments[7]
-var width = arguments[8]
-var height = arguments[9]
+	var title = arguments[0]
+	var whatTab = arguments[1]
+	var showCancelBtnOnly = arguments[2] //anything that is not null is a vaid value
+	var cancelBtnLabel = arguments[3]
+	var showBtn3 = arguments[4] //anything that is not null is valid value
+	var btn3Label = arguments[5]
+	var x = arguments[6]
+	var y = arguments[7]
+	var width = arguments[8]
+	var height = arguments[9]
 
-if(showCancelBtnOnly)
-{
-	//hide the OK button
-	forms.dialog.elements.btn_ok.visible = false
-	
-	if(cancelBtnLabel) forms.dialog.elements.btn_cancel.text = cancelBtnLabel
-}
+	if(showCancelBtnOnly)
+	{
+		//hide the OK button
+		forms.dialog.elements.btn_ok.visible = false
 
-if(showBtn3 && btn3Label)
-{
-	//show the 3rd button
-	forms.dialog.elements.btn_3.text = btn3Label
-	forms.dialog.elements.btn_3.visible = true
-	
-}
-else
-{
-	forms.dialog.elements.btn_3.visible = false
-}
+		if(cancelBtnLabel) forms.dialog.elements.btn_cancel.text = cancelBtnLabel
+	}
 
-var screenWidth = forms.main.elements.tabs_main.getWidth()
-var screenHeight = forms.main.elements.tabs_main.getHeight()
-var dlgWidth = forms.main.elements.tabs_dialog.getWidth()
-var dlgHeight = forms.main.elements.tabs_dialog.getHeight()
+	if(showBtn3 && btn3Label)
+	{
+		//show the 3rd button
+		forms.dialog.elements.btn_3.text = btn3Label
+		forms.dialog.elements.btn_3.visible = true
 
-if(!whatTab || whatTab == undefined) whatTab = 1
-if(!width || width == undefined) width = dlgWidth
-if(!height || height == undefined) height = dlgHeight
+	}
+	else
+	{
+		forms.dialog.elements.btn_3.visible = false
+	}
 
-if(!title || title == undefined) title = ''
-if(!x || x == undefined) x = ((screenWidth/2) - (width/2)) + 200
-if(!y || y == undefined) y = ((screenHeight/2) - (height/2))
+	var screenWidth = forms.main.elements.tabs_main.getWidth()
+	var screenHeight = forms.main.elements.tabs_main.getHeight()
+	var dlgWidth = forms.main.elements.tabs_dialog.getWidth()
+	var dlgHeight = forms.main.elements.tabs_dialog.getHeight()
 
-forms.dialog.elements.tabs_dlg.tabIndex = whatTab
-forms.main.elements.tabs_dialog.setLocation(x, y)
-forms.dialog.elements.lbl_title.text = title
+	if(!whatTab || whatTab == undefined) whatTab = 1
+	if(!width || width == undefined) width = dlgWidth
+	if(!height || height == undefined) height = dlgHeight
 
-//disable all the background elements when showing the dialog
-globals.disableBgElements()
+	if(!title || title == undefined) title = ''
+	if(!x || x == undefined) x = ((screenWidth/2) - (width/2)) + 200
+	if(!y || y == undefined) y = ((screenHeight/2) - (height/2))
 
-//show the tabpanel "dialog"
-forms.main.elements.tabs_dialog.visible = true
+	forms.dialog.elements.tabs_dlg.tabIndex = whatTab
+	forms.main.elements.tabs_dialog.setLocation(x, y)
+	forms.dialog.elements.lbl_title.text = title
+
+	//disable all the background elements when showing the dialog
+	globals.disableBgElements()
+
+	//show the tabpanel "dialog"
+	forms.main.elements.tabs_dialog.visible = true
 }
 
 /**
@@ -351,18 +347,18 @@ forms.main.elements.tabs_dialog.visible = true
  */
 function showErrorDialog()
 {
-var msg = arguments[0]  //accept the error message as an argument
-var methd = arguments[1] //method to execute after dialog closes
-var btn1 = arguments[2]
-var btn2 = arguments[3]
-var btn3 = arguments[4]
-var btn4 = arguments[5]
+	var msg = arguments[0]  //accept the error message as an argument
+	var methd = arguments[1] //method to execute after dialog closes
+	var btn1 = arguments[2]
+	var btn2 = arguments[3]
+	var btn3 = arguments[4]
+	var btn4 = arguments[5]
 
-//disable all the background elements when showing the dialog
-globals.disableBgElements()
+	//disable all the background elements when showing the dialog
+	globals.disableBgElements()
 
-//call the generic routine in the svyCore solution
-globals.core_showWcGenericDialog('Error', msg, methd, 'error', btn1, btn2, btn3, btn4);	
+	//call the generic routine in the svyCore solution
+	globals.core_showWcGenericDialog('Error', msg, methd, 'error', btn1, btn2, btn3, btn4);	
 }
 
 /**
@@ -370,16 +366,16 @@ globals.core_showWcGenericDialog('Error', msg, methd, 'error', btn1, btn2, btn3,
  */
 function showWarningDialog()
 {
-var msg = arguments[0]  //accept the error message as an argument
-var methd = arguments[1] //method to execute after dialog closes
-var btn1 = arguments[2]
-var btn2 = arguments[3]
-var btn3 = arguments[4]
-var btn4 = arguments[5]
+	var msg = arguments[0]  //accept the error message as an argument
+	var methd = arguments[1] //method to execute after dialog closes
+	var btn1 = arguments[2]
+	var btn2 = arguments[3]
+	var btn3 = arguments[4]
+	var btn4 = arguments[5]
 
-//disable all the background elements when showing the dialog
-globals.disableBgElements()
+	//disable all the background elements when showing the dialog
+	globals.disableBgElements()
 
-//call the generic routine in the svyCore solution
-globals.core_showWcGenericDialog('Warning!', msg, methd, 'warning', btn1, btn2, btn3, btn4);	
+	//call the generic routine in the svyCore solution
+	globals.core_showWcGenericDialog('Warning!', msg, methd, 'warning', btn1, btn2, btn3, btn4);	
 }

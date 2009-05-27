@@ -3,15 +3,14 @@
  */
 function btn_goRec()
 {
-globals.curID_form = form_id
-
-if(application.getApplicationType() == 5)
-{
-	//needed for web client only
-	var myRecID = new Array()
-	myRecID[0] = form_id
-	forms.frm_forms.controller.loadRecords(myRecID)
-}
+	globals.curID_form = form_id;
+	
+	/*if(application.getApplicationType() == 5)
+	{
+		needed for web client onl		var myRecID = new Array()
+		myRecID[0] = form_id
+		forms.frm_forms.controller.loadRecords(myRecID)
+	}*/
 }
 
 /**
@@ -19,9 +18,9 @@ if(application.getApplicationType() == 5)
  */
 function btn_sortAsc()
 {
-elements.btn_sortAsc.setImageURL('media:///sort_asc_blk.gif')
-elements.btn_sortDesc.setImageURL('media:///sort_desc_grey.gif')
-controller.sort("company_name asc")
+	elements.btn_sortAsc.setImageURL('media:///sort_asc_blk.gif')
+	elements.btn_sortDesc.setImageURL('media:///sort_desc_grey.gif')
+	controller.sort("company_name asc")
 }
 
 /**
@@ -29,9 +28,9 @@ controller.sort("company_name asc")
  */
 function btn_sortDesc()
 {
-elements.btn_sortAsc.setImageURL('media:///sort_asc_grey.gif')
-elements.btn_sortDesc.setImageURL('media:///sort_desc_blk.gif')
-controller.sort("company_name desc")
+	elements.btn_sortAsc.setImageURL('media:///sort_asc_grey.gif')
+	elements.btn_sortDesc.setImageURL('media:///sort_desc_blk.gif')
+	controller.sort("company_name desc")
 }
 
 /**
@@ -39,20 +38,20 @@ controller.sort("company_name desc")
  */
 function btn_toggleList()
 {
-//zoom the record list open and closed
-//make the rec list bigger or smaller
-var lh = forms.frm_nav_main.elements.tabs_recList.getHeight()
+	//zoom the record list open and closed
+	//make the rec list bigger or smaller
+	var lh = forms.frm_nav_main.elements.tabs_recList.getHeight()
 
-if(lh > 23)
-{
-	//expanded - so make smaller
-	elements.btn_triangle.setImageURL('media:///arrow_closed.gif')
-}
-else
-{
-	//not expanded - so make bigger
-	elements.btn_triangle.setImageURL('media:///arrow_open.gif')
-}
+	if(lh > 23)
+	{
+		//expanded - so make smaller
+		elements.btn_triangle.setImageURL('media:///arrow_closed.gif')
+	}
+	else
+	{
+		//not expanded - so make bigger
+		elements.btn_triangle.setImageURL('media:///arrow_open.gif')
+	}
 
-forms.frm_nav_main.sub_toggleRecList();
+	forms.frm_nav_main.sub_toggleRecList();
 }

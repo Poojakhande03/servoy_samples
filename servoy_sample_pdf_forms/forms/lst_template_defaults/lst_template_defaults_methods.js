@@ -3,16 +3,16 @@
  */
 function btn_addValue()
 {
-if(!databaseManager.hasTransaction()) databaseManager.startTransaction()
+	if(!databaseManager.hasTransaction()) databaseManager.startTransaction()
 
-forms.dlg_template_values.controller.newRecord()
+	forms.dlg_template_values.controller.newRecord()
 
-forms.dlg_template_values.template_id = forms.frm_templates.template_id
+	forms.dlg_template_values.template_id = forms.frm_templates.template_id
 
-//show the dialog
-globals.showDialog('Add New Default Value')
+	//show the dialog
+	globals.showDialog('Add New Default Value')
 
-forms.dlg_template_values.controller.focusFirstField()
+	forms.dlg_template_values.controller.focusFirstField()
 }
 
 /**
@@ -20,14 +20,14 @@ forms.dlg_template_values.controller.focusFirstField()
  */
 function btn_editValue()
 {
-forms.dlg_template_values.foundset.selectRecord(kval_id)
+	forms.dlg_template_values.foundset.selectRecord(kval_id)
 
-globals.dialog_performMethod = 'forms.dlg_template_values.deleteRow()'
+	globals.dialog_performMethod = 'forms.dlg_template_values.deleteRow()'
 
-if(!databaseManager.hasTransaction()) databaseManager.startTransaction()
+	if(!databaseManager.hasTransaction()) databaseManager.startTransaction()
 
-//show the dialog
-globals.showDialog('Edit Default Value', 1, null,null,true,'Delete Value')
+	//show the dialog
+	globals.showDialog('Edit Default Value', 1, null,null,true,'Delete Value')
 
-forms.dlg_template_values.controller.focusFirstField()
+	forms.dlg_template_values.controller.focusFirstField()
 }

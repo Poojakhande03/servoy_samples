@@ -3,8 +3,8 @@
  */
 function btn_cancel()
 {
-databaseManager.rollbackTransaction()
-hide_btn_reset_fields();
+	databaseManager.rollbackTransaction()
+	hide_btn_reset_fields();
 }
 
 /**
@@ -12,8 +12,7 @@ hide_btn_reset_fields();
  */
 function btn_editValues()
 {
-globals.btn_viewPDF('doc', template_id, 1)
-
+	globals.btn_viewPDF('doc', template_id, 1)
 }
 
 /**
@@ -21,17 +20,17 @@ globals.btn_viewPDF('doc', template_id, 1)
  */
 function btn_save()
 {
-if(template_id)
-{
-	databaseManager.commitTransaction()
-	hide_btn_reset_fields();
-	
-	onRecordSelect(); //to refresh buttons
-}
-else
-{
-	globals.showErrorDialog('You must fill in the template.', null, 'OK');
-}
+	if(template_id)
+	{
+		databaseManager.commitTransaction()
+		hide_btn_reset_fields();
+
+		onRecordSelect(); //to refresh buttons
+	}
+	else
+	{
+		globals.showErrorDialog('You must fill in the template.', null, 'OK');
+	}
 }
 
 /**
@@ -39,8 +38,7 @@ else
  */
 function btn_viewPDF()
 {
-globals.btn_viewPDF('doc', template_id)
-
+	globals.btn_viewPDF('doc', template_id)
 }
 
 /**
@@ -48,30 +46,30 @@ globals.btn_viewPDF('doc', template_id)
  */
 function doEdit()
 {
-databaseManager.startTransaction()
+	databaseManager.startTransaction()
 
-var allNames = elements.allnames
+	var allNames = elements.allnames
 
-for ( var i = 0 ; i < allNames.length ; i++ )
-{
-    //work on fields only - starting with name "fld_"
-    if(allNames[i].indexOf('fld_') >= 0)
-    {
-        //if it's a field - then change color and make editable
-        elements[allNames[i]].bgcolor = '#feffe4'
-        elements[allNames[i]].readOnly = false
-    }
-}
+	for ( var i = 0 ; i < allNames.length ; i++ )
+	{
+		//work on fields only - starting with name "fld_"
+		if(allNames[i].indexOf('fld_') >= 0)
+		{
+			//if it's a field - then change color and make editable
+			elements[allNames[i]].bgcolor = '#feffe4'
+			elements[allNames[i]].readOnly = false
+		}
+	}
 
-//show buttons
-elements.btn_save.visible = true
-elements.btn_cancel.visible = true
+	//show buttons
+	elements.btn_save.visible = true
+	elements.btn_cancel.visible = true
 
-//show popup menu field
-elements.fld_templateNamec.visible = true
+	//show popup menu field
+	elements.fld_templateNamec.visible = true
 
-//hide the view button
-elements.btn_view.visible = false
+	//hide the view button
+	elements.btn_view.visible = false
 }
 
 /**
@@ -79,36 +77,36 @@ elements.btn_view.visible = false
  */
 function hide_btn_reset_fields()
 {
-var allNames = elements.allnames
+	var allNames = elements.allnames
 
-for ( var i = 0 ; i < allNames.length ; i++ )
-{
-	//work on fields only - starting with name "fld_"
-	if(allNames[i].indexOf('fld_') >= 0)
+	for ( var i = 0 ; i < allNames.length ; i++ )
 	{
-		//if it's a field - then change color and make editable
-		elements[allNames[i]].bgcolor = '#f0f0f0'
-		elements[allNames[i]].readOnly = true
+		//work on fields only - starting with name "fld_"
+		if(allNames[i].indexOf('fld_') >= 0)
+		{
+			//if it's a field - then change color and make editable
+			elements[allNames[i]].bgcolor = '#f0f0f0'
+			elements[allNames[i]].readOnly = true
+		}
 	}
-}
 
-//hide buttons
-elements.btn_save.visible = false
-elements.btn_cancel.visible = false
+	//hide buttons
+	elements.btn_save.visible = false
+	elements.btn_cancel.visible = false
 
-//hide popup menu field
-elements.fld_templateNamec.visible = false
+	//hide popup menu field
+	elements.fld_templateNamec.visible = false
 
 
-//show the view button
-elements.btn_view.visible = true
+	//show the view button
+	elements.btn_view.visible = true
 
-var id = form_id
+	var id = form_id
 
-//sort
-forms.lst_pdf_forms.btn_sortAsc();
+	//sort
+	forms.lst_pdf_forms.btn_sortAsc();
 
-forms.lst_pdf_forms.foundset.selectRecord(id)
+	forms.lst_pdf_forms.foundset.selectRecord(id)
 }
 
 /**
@@ -116,8 +114,8 @@ forms.lst_pdf_forms.foundset.selectRecord(id)
  */
 function onRecordSelect()
 {
-//update the record status
-globals.setupRecordStatus();
+	//update the record status
+	globals.setupRecordStatus();
 }
 
 /**
@@ -125,25 +123,25 @@ globals.setupRecordStatus();
  */
 function onShow()
 {
-//show the add button
-if(application.getApplicationType() == 5)
-{
-	forms.frm_buttons.elements.btn_add.visible = true
-	forms.frm_buttons.elements.lbl_add.visible = true
-}
+	//show the add button
+	if(application.getApplicationType() == 5)
+	{
+		forms.frm_buttons.elements.btn_add.visible = true
+		forms.frm_buttons.elements.lbl_add.visible = true
+	}
 
-//make read only
-controller.readOnly = true
+	//make read only
+	controller.readOnly = true
 
-//hide save/cancel btsn
-elements.btn_save.visible = false
-elements.btn_cancel.visible = false
+	//hide save/cancel btsn
+	elements.btn_save.visible = false
+	elements.btn_cancel.visible = false
 
-//update record status
-globals.setupRecordStatus();
+	//update record status
+	globals.setupRecordStatus();
 
-//hide popup menu field
-elements.fld_templateNamec.visible = false
+	//hide popup menu field
+	elements.fld_templateNamec.visible = false
 }
 
 /**
@@ -151,10 +149,10 @@ elements.fld_templateNamec.visible = false
  */
 function sub_doDelete()
 {
-if(globals.core_dlg_buttonPressed == 'Delete')
-{
-	controller.deleteRecord()
-}
+	if(globals.core_dlg_buttonPressed == 'Delete')
+	{
+		controller.deleteRecord()
+	}
 }
 
 /**
@@ -162,6 +160,6 @@ if(globals.core_dlg_buttonPressed == 'Delete')
  */
 function validate_beforeDelete()
 {
-//there are no validations needed for this form
-return 0
+	//there are no validations needed for this form
+	return 0
 }
