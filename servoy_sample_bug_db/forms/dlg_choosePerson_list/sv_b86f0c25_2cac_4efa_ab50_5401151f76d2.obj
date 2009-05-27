@@ -1,6 +1,7 @@
 dataProviderID:"mutiselection_checkbox",
 displayType:4,
 displaysTags:true,
+editable:false,
 formIndex:10600,
 horizontalAlignment:0,
 location:"0,50",

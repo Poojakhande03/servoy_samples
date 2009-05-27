@@ -1,9 +1,8 @@
+dataSource:"db:/bug_db/tbl_action",
 name:"z_tbl_action",
 paperPrintScale:100,
-serverName:"bug_db",
-size:"640,480",
+size:"913,480",
 styleName:"svyWebCrm",
-tableName:"tbl_action",
 typeid:3,
 uuid:"c0faa981-6f55-4d03-9b7a-f780d76e52e6",
 view:3
