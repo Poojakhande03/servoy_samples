@@ -8,12 +8,4 @@ function btn_goRecord()
 
 	//setup the HTML
 	globals.setupHTML();
-
-	if(application.getApplicationType() == 5)
-	{
-		//needed for web client only
-		var myRecID = new Array()
-		myRecID[0] = info_id
-		forms.frm_info.controller.loadRecords(info_id)
-	}
 }
