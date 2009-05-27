@@ -1,11 +1,10 @@
 borderType:"EmptyBorder,0,0,0,0",
+dataSource:"db:/example_data/book_text",
 name:"book_comment",
 navigatorID:"-1",
 paperPrintScale:100,
 scrollbars:36,
-serverName:"example_data",
-size:"30,50",
+size:"290,363",
 styleName:"svyWebCrm",
-tableName:"book_text",
 typeid:3,
 uuid:"9396d5f7-61e5-4d46-8f10-df03d7c44ae7"

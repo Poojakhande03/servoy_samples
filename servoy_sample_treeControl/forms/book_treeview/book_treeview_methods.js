@@ -20,8 +20,10 @@ function initTreeView()
 
 		refreshTreeView();
 		globals.didTreeViewInit = 1
-
-		elements.dbtreeview.selectionPath = new Array(1,2,3);
+		var pathAr = new Array(1,2,3);
+		
+		elements.dbtreeview.setExpandNode(pathAr,true);
+		elements.dbtreeview.selectionPath = pathAr;
 	}
 //For more information on dbtreeview bean use,
 //please read here: http://forum.servoy.com/viewtopic.php?f=22&t=9957

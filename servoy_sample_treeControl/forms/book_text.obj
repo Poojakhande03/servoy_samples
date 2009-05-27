@@ -1,11 +1,10 @@
 borderType:"EmptyBorder,0,0,0,0",
+dataSource:"db:/example_data/book_text",
 name:"book_text",
 navigatorID:"-1",
 paperPrintScale:100,
 scrollbars:36,
-serverName:"example_data",
-size:"30,50",
+size:"394,364",
 styleName:"svyWebCrm",
-tableName:"book_text",
 typeid:3,
 uuid:"ef346da0-26bc-4dbe-8dd9-661ac940d054"
