@@ -78,6 +78,7 @@ function SubLogin()
 {
 	globals.errorText = null;
 	globals.tempInt = 0
+	var server = databaseManager.getServerNames();
 	
 	//search for the user
 	var query = 'SELECT tbl_tenant.tenant_id, tbl_people.ixpeople, tbl_people.profile, tbl_tenant.is_master_tenant, tbl_company.category, tbl_company.ixcompany \
@@ -90,13 +91,13 @@ function SubLogin()
 				 AND tbl_people.account_active = ? \
 				 AND tbl_tenant.is_active = ?'
 				
-	var args = new Array();
-	args[0] = globals.loginUserName
-	args[1] = globals.loginUserPass
-	args[2] = 1
-	args[3] = 1
+	var argm = new Array();
+	argm[0] = globals.loginUserName;
+	argm[1] = globals.loginUserPass;
+	argm[2] = 1;
+	argm[3] = 1;
 	
-	var dataset = databaseManager.getDataSetByQuery(controller.getServerName(), query, args, 1);
+	var dataset = databaseManager.getDataSetByQuery(server[0], query, argm, 1);
 	
 	var found = dataset.getMaxRowIndex()
 	
@@ -117,12 +118,12 @@ function SubLogin()
 					 AND (tbl_people.account_active = ? \
 					 OR tbl_tenant.is_active = ?)'
 					
-		var args = new Array();
-		args[0] = globals.loginUserName
-		args[1] = globals.loginUserPass
-		args[2] = 0
-		args[3] = 0
-		var dataset = databaseManager.getDataSetByQuery(controller.getServerName(), query, args, 1);
+		var argn = new Array();
+		argn[0] = globals.loginUserName;
+		argn[1] = globals.loginUserPass;
+		argn[2] = 0;
+		argn[3] = 0;
+		var dataset = databaseManager.getDataSetByQuery(server[0], query, argn, 1);
 		var found2 = dataset.getMaxRowIndex()
 		
 		if(found2 == 1)
@@ -149,7 +150,7 @@ function SubLogin()
 		if(isMasterAdmin)
 			var success = true
 		else
-			var success = databaseManager.addTableFilterParam(controller.getServerName(), null, 'ixtenant', '=', globals.currTenantID)
+			var success = databaseManager.addTableFilterParam(server[0], null, 'ixtenant', '=', globals.currTenantID)
 		
 		if(success)
 		{
@@ -159,9 +160,9 @@ function SubLogin()
 			{
 				var companyID = dataset.getValue(1, 6)
 				//only show the companies that the user is part of
-				success = databaseManager.addTableFilterParam(controller.getServerName(), null, 'ixcompany', 'IN', "SELECT ixcompany FROM tbl_people_company WHERE ixpeople = '" + globals.currUserID + "'")
+				success = databaseManager.addTableFilterParam(server[0], null, 'ixcompany', 'IN', "SELECT ixcompany FROM tbl_people_company WHERE ixpeople = '" + globals.currUserID + "'")
 				//only show people that are part of the sampe company the loged in user is part of
-				success = databaseManager.addTableFilterParam(controller.getServerName(), 'tbl_people', 'ixpeople', 'IN', "SELECT p1.ixpeople FROM tbl_people p1,  tbl_people_company pc1 WHERE pc1.ixpeople = p1.ixpeople AND pc1.ixcompany IN (SELECT pc2.ixcompany FROM tbl_people_company pc2 WHERE pc2.ixpeople = '" + 	globals.currUserID + "')")
+				success = databaseManager.addTableFilterParam(server[0], 'tbl_people', 'ixpeople', 'IN', "SELECT p1.ixpeople FROM tbl_people p1,  tbl_people_company pc1 WHERE pc1.ixpeople = p1.ixpeople AND pc1.ixcompany IN (SELECT pc2.ixcompany FROM tbl_people_company pc2 WHERE pc2.ixpeople = '" + 	globals.currUserID + "')")
 			}
 			
 			//continue to login
@@ -190,6 +191,7 @@ function SubLogin()
  */
 function SubNewTenant()
 {
+	var server = databaseManager.getServerNames();
 	if(!globals.loginUserName || !globals.loginUserPass || !globals.loginTenantName || !globals.loginFullName)
 	{
 		globals.errorText = "All fields must be filled out."
@@ -198,14 +200,14 @@ function SubNewTenant()
 	else
 	{
 		//add a tenant record
-		var tenantFS = databaseManager.getFoundSet(currentcontroller.getServerName(), 'tbl_tenant')
+		var tenantFS = databaseManager.getFoundSet(server[0], 'tbl_tenant')
 		tenantFS.clear()
 		var tenantRec = tenantFS.getRecord(tenantFS.newRecord(true, true))
 		tenantRec.tenant_name = globals.loginTenantName
 		globals.currTenantID = tenantRec.tenant_id
 	
 		//add a company record
-		var companyFS = databaseManager.getFoundSet(currentcontroller.getServerName(), 'tbl_company')
+		var companyFS = databaseManager.getFoundSet(server[0], 'tbl_company')
 		companyFS.clear()
 		var companyRec = companyFS.getRecord(companyFS.newRecord(true, true))
 		companyRec.company_name = globals.loginTenantName
@@ -213,7 +215,7 @@ function SubNewTenant()
 		globals.currCompanyID = companyRec.ixcompany
 		
 		//add a person record
-		var personFS = databaseManager.getFoundSet(currentcontroller.getServerName(), 'tbl_people')
+		var personFS = databaseManager.getFoundSet(server[0], 'tbl_people')
 		personFS.clear()
 		var personRec = personFS.getRecord(personFS.newRecord(true, true))
 		personRec.login_name = globals.loginUserName
@@ -226,7 +228,7 @@ function SubNewTenant()
 		globals.currUserID = personRec.ixpeople
 		
 		//add a person_company record
-		var pcFS = databaseManager.getFoundSet(currentcontroller.getServerName(), 'tbl_people_company')
+		var pcFS = databaseManager.getFoundSet(server[0], 'tbl_people_company')
 		pcFS.clear()
 		var pcRec = pcFS.getRecord(pcFS.newRecord(true, true))
 		pcRec.ixcompany = globals.currCompanyID
