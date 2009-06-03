@@ -97,10 +97,11 @@ function SubLogin()
 	argm[2] = 1;
 	argm[3] = 1;
 	
-	if ((argm[0] == '') || (argm[0] == null) || (argm[1] == '') || (argm[1] == null)) {
-		globals.loginUserName = 'admin';
-		globals.loginUserPass = 'admin';
-	}
+//	if ((argm[0] == '') || (argm[0] == null) || (argm[1] == '') || (argm[1] == null)) {
+//		globals.loginUserName = 'admin';
+//		globals.loginUserPass = 'admin';
+//	}
+	
 	var dataset = databaseManager.getDataSetByQuery(server[0], query, argm, 1);
 	
 	var found = dataset.getMaxRowIndex()
