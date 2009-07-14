@@ -1,0 +1,10 @@
+location:"10,60",
+mediaOptions:14,
+name:"saveButton",
+onActionMethodID:"C8C36E15-9C76-48E2-AFFA-AF6EB1F9F8F2",
+onDoubleClickMethodID:"-1",
+onRightClickMethodID:"-1",
+size:"130,20",
+text:"Save",
+typeid:7,
+uuid:"29FC58B6-EE22-4289-9ACF-B07E0133F196"

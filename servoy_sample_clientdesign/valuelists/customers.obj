@@ -1,0 +1,12 @@
+addEmptyValue:1,
+dataProviderID1:"contactname",
+dataProviderID2:"customerid",
+dataSource:"db:/example_data/customers",
+name:"customers",
+returnDataProviders:2,
+separator:" ",
+showDataProviders:1,
+sortOptions:"",
+typeid:34,
+uuid:"D15CBAF5-9DC9-4E82-84D8-7B43274F9F62",
+valueListType:1

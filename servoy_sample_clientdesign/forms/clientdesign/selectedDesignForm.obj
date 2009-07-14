@@ -1,0 +1,10 @@
+dataProviderID:"selectedDesignFormName",
+displayType:2,
+editable:false,
+location:"10,30",
+name:"selectedDesignForm",
+onDataChangeMethodID:"B09C4094-F3D4-4D9A-93E3-E879596029D4",
+size:"130,20",
+typeid:4,
+uuid:"3307C509-2911-4C98-95BC-CEA7729F205E",
+valuelistID:"E737B52E-9B83-4E09-B5B8-EFB4CC109D6F"

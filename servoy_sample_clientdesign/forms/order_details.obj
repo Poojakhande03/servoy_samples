@@ -1,0 +1,9 @@
+borderType:"EmptyBorder,0,0,0,0",
+dataSource:"db:/example_data/order_details",
+name:"order_details",
+paperPrintScale:100,
+size:"640,250",
+styleName:"svyWebCrm",
+typeid:3,
+uuid:"26925055-8A81-4AD4-9E23-31C90C71EF36",
+view:3
