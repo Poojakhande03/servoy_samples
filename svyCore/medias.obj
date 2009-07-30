@@ -264,6 +264,12 @@ typeid:37,
 uuid:"34493176-806e-48f7-aafe-0c87ef7194ea"
 },
 {
+mimeType:"image/png",
+name:"registry.png",
+typeid:37,
+uuid:"A614BACE-4842-4433-89AA-CCBD38AE9F88"
+},
+{
 mimeType:"image/gif",
 name:"servoy_logo_shadow.gif",
 typeid:37,
