@@ -1,6 +1,6 @@
 dataProviderID:"view_type",
 editable:false,
-location:"40,50",
+location:"40,40",
 size:"80,20",
 text:"View Type",
 typeid:4,

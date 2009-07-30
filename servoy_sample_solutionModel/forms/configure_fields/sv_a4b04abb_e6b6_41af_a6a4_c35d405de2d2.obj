@@ -1,7 +1,7 @@
 dataProviderID:"display_options",
 displayType:2,
 editable:false,
-location:"160,150",
+location:"250,190",
 size:"140,20",
 text:"Display Options",
 typeid:4,

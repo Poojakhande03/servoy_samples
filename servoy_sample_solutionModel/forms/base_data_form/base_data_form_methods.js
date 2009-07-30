@@ -58,6 +58,8 @@ function onShow()
 		{
 			globals.heading = entity_rec.heading_plural;
 		}
+		elements.lbl_design.visible = (controller.view == 0)
+		elements.btn_design.visible = (controller.view == 0)
 	}
 }
 

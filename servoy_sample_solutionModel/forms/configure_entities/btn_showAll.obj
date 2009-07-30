@@ -8,7 +8,7 @@ rolloverCursor:12,
 showClick:false,
 showFocus:false,
 size:"24,24",
-toolTipText:"Hold shift for reset",
+toolTipText:"Hold shift for reset to default",
 transparent:true,
 typeid:7,
 uuid:"0a30ff6a-1f25-4d66-b263-b62724fbb1c6"

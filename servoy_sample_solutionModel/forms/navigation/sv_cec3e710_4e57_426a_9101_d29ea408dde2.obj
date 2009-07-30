@@ -8,6 +8,7 @@ onRightClickMethodID:"-1",
 showClick:false,
 size:"24,24",
 text:"Configure",
+toolTipText:"Administrator function, to specify what an end user can see/design",
 transparent:true,
 typeid:7,
 uuid:"cec3e710-4e57-426a-9101-d29ea408dde2"

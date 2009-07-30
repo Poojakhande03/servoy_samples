@@ -123,7 +123,7 @@ function syncronizeWithDB()
 				}
 				if (recreate)
 				{
-					entity_rec.entities_to_fields.deleteAllRecords()
+					entity_rec.entities_to_elements.deleteAllRecords()
 				}
 				var x = 40;
 				var y = 60;
@@ -140,9 +140,9 @@ function syncronizeWithDB()
 						var jscolumn = jstable.getColumn(cname)
 						var column_dataprovider_id = jscolumn.getDataProviderID()
 						var field_rec = null;
-						for (var crindex = 1; crindex <= entity_rec.entities_to_fields.getSize(); crindex++) 
+						for (var crindex = 1; crindex <= entity_rec.entities_to_elements.getSize(); crindex++) 
 						{
-							field_rec = entity_rec.entities_to_fields.getRecord(crindex)
+							field_rec = entity_rec.entities_to_elements.getRecord(crindex)
 							if (field_rec.dataprovider_id == column_dataprovider_id && field_rec.view_type == vtype)
 							{
 								break;
@@ -152,12 +152,17 @@ function syncronizeWithDB()
 						if (field_rec == null)
 						{
 							//not found create
-							var i = entity_rec.entities_to_fields.newRecord()
-							field_rec = entity_rec.entities_to_fields.getRecord(i)
+							var i = entity_rec.entities_to_elements.newRecord()
+							field_rec = entity_rec.entities_to_elements.getRecord(i)
 							field_rec.view_type = vtype
 							field_rec.label = utils.stringReplace(utils.stringInitCap(cname),"_"," ");
 							field_rec.dataprovider_id = column_dataprovider_id;
-							field_rec.field_type = 0;
+							field_rec.element_name = column_dataprovider_id; 
+							field_rec.field_type = JSField.TEXT_FIELD;
+							if (jscolumn.getType() == JSColumn.DATETIME)
+							{
+								field_rec.field_type = JSField.CALENDAR;
+							}
 							field_rec.display_options = 0;
 							
 							if (vtype == SM_VIEW.LOCKED_TABLE_VIEW) x = x + 25;

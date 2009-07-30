@@ -1,7 +1,7 @@
-dataProviderID:"field_id",
+dataProviderID:"element_id",
 editable:false,
-location:"10,20",
+location:"10,10",
 size:"41,20",
-text:"Field Id",
+text:"Element Id",
 typeid:4,
 uuid:"32823e1f-8d46-4b29-a338-ab72f232dae9"

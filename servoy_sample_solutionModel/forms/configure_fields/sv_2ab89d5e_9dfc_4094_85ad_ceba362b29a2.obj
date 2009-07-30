@@ -1,6 +1,7 @@
 dataProviderID:"label",
-location:"100,110",
+location:"120,120",
 size:"140,20",
 text:"Label",
+toolTipText:"* means autocreate for fields",
 typeid:4,
 uuid:"2ab89d5e-9dfc-4094-85ad-ceba362b29a2"

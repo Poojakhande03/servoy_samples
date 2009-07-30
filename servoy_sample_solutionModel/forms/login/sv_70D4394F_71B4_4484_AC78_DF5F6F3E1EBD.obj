@@ -1,0 +1,12 @@
+anchors:15,
+location:"10,60",
+mediaOptions:14,
+size:"620,350",
+tabSeq:-1,
+text:"<html>This sample shows the flexibility of the Servoy solutionModel (solution blueprint modification/creation) together with client design functionallity.\r
+<br><br>\r
+You can use any name/password to login, but if the same login name is used in subsequential logins, changes done wiht client design will be seen.",
+transparent:true,
+typeid:7,
+uuid:"70D4394F-71B4-4484-AC78-DF5F6F3E1EBD",
+verticalAlignment:1

@@ -1,0 +1,10 @@
+anchors:12,
+location:"250,450",
+mediaOptions:14,
+onActionMethodID:"E0A7F3D3-5A3E-409B-8EE1-ADAAD52ABB9B",
+onDoubleClickMethodID:"-1",
+onRightClickMethodID:"-1",
+size:"80,20",
+text:"Login",
+typeid:7,
+uuid:"6761498E-E7D5-4D29-8830-1F4B59AF6FA1"

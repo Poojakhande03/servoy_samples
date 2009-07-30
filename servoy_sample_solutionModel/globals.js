@@ -9,6 +9,16 @@ var heading = '';
 var search = '';
 
 /**
+ * @properties={typeid:35,uuid:"98AFAEFE-CCD6-47D4-B85A-D82014258C17"}
+ */
+var const_null = null;
+
+/**
+ * @properties={typeid:35,uuid:"BBC3F82A-470D-4AB6-8751-3E335E20ECAF"}
+ */
+var user_uid = null;
+
+/**
  * @properties={typeid:24,uuid:"2cb5c5ac-5a16-45cb-9a8a-862745d9a0b6"}
  */
 function selectEntityNode()
@@ -87,12 +97,15 @@ function createForm()
 
 	var total_heigth = 100;
 	var field_rec = null;
-	for (var crindex = 1; crindex <= entity_rec.entities_to_fields.getSize(); crindex++) 
+	for (var crindex = 1; crindex <= entity_rec.entities_to_elements.getSize(); crindex++) 
 	{
-		field_rec = entity_rec.entities_to_fields.getRecord(crindex)
-		if (field_rec.view_type == vtype && field_rec.display_options < 4)
+		field_rec = entity_rec.entities_to_elements.getRecord(crindex)
+		if (field_rec.view_type == vtype && field_rec.display_options < 5)
 		{
 			var jsfield = jsform.newField(field_rec.dataprovider_id, field_rec.field_type, field_rec.xlocation, field_rec.ylocation, field_rec.width, field_rec.heigth)
+			jsfield.name = field_rec.element_name;
+			if (field_rec.display_options == 1) jsfield.editable = false;
+			if (field_rec.display_options == 4) jsfield.visble = false;
 			if (vtype == SM_VIEW.LOCKED_TABLE_VIEW) 
 			{
 				jsfield.text = field_rec.label;
@@ -101,7 +114,9 @@ function createForm()
 			else
 			{
 				var jslabel = jsform.newLabel(field_rec.label, field_rec.xlocation - 110, field_rec.ylocation, 100, field_rec.heigth,null)
+				jslabel.name = 'lbl_'+field_rec.element_name;
 				jslabel.transparent = true
+				if (field_rec.display_options == 4) jslabel.visble = false;
 			}
 			total_heigth = Math.max(total_heigth, field_rec.ylocation + field_rec.heigth + 10)
 		}
@@ -136,5 +151,37 @@ function gotoDetail()
 		}
 		forms[fname].controller.show()
 		forms.navigation.elements.treeview.selectionPath = null;
+	}
+}
+
+/**
+ * Perform the element default action.
+ *
+ * @param {JSEvent} event the event that triggered the action
+ *
+ * @properties={typeid:24,uuid:"D5955CA4-D24B-4B37-B9DE-8FEC23743F92"}
+ */
+function showFormInDesignMode(event)
+{
+	forms.clientdesign.showDesign(currentcontroller.getName(),changedElements);
+}
+
+/**
+ * Recieves the changed solutionModel objects from clientdesign which has to be stored persistent in elements table with a user_uid 
+ * so when an enduser logsin again his changes from last time are seen
+ * @properties={typeid:24,uuid:"A77BF540-9A7F-49AB-889F-25F22B500969"}
+ */
+function changedElements(formName,changedElementsArray)
+{
+	application.output(formName)
+	for (var index = 0; index < changedElementsArray.length; index++)
+	{
+		if ( changedElementsArray[index] != null )
+		{
+			application.output(changedElementsArray[index])
+//			var component = form.getComponent ( changedElementsArray[index].getName() );
+//			component.width = droppedElements[index].getWidth();
+//			component.height = droppedElements[index].getHeight();
+		}
 	}
 }

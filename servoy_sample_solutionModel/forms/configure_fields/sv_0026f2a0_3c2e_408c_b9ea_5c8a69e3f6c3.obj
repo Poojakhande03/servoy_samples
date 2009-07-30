@@ -1,7 +1,7 @@
 dataProviderID:"field_type",
 displayType:2,
 editable:false,
-location:"130,130",
+location:"220,170",
 size:"120,20",
 text:"Field Type",
 typeid:4,

@@ -9,7 +9,7 @@ showClick:false,
 size:"70,17",
 styleClass:"whtctr",
 text:"Syncronize",
-toolTipText:"Hold shift for reload",
+toolTipText:"Hold shift for reset to default",
 transparent:true,
 typeid:7,
 uuid:"f35bbb98-71cf-44bd-9e38-96a0a96aff8d"

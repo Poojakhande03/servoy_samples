@@ -9,6 +9,7 @@ showClick:false,
 size:"70,17",
 styleClass:"whtctr",
 text:"Configure",
+toolTipText:"Administrator function, to specify what an end user can see/design",
 transparent:true,
 typeid:7,
 uuid:"e0197155-df13-4582-91f1-722d5904f942"
