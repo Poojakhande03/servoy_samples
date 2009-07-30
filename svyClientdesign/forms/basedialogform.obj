@@ -1,7 +1,6 @@
 name:"basedialogform",
 onHideMethodID:"E7285303-5420-4BD2-8887-5670410BF626",
 paperPrintScale:100,
-showInMenu:true,
 size:"399,200",
 styleName:"svyWebCrm",
 typeid:3,

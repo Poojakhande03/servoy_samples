@@ -9,6 +9,16 @@ var selectedDesignFormName = null;
 var newComponentsCounter = 0;
 
 /**
+ * @properties={typeid:35,uuid:"49680BD0-ADEC-48A8-B04D-47FFB8217DA9",variableType:-4}
+ */
+var changedElements = null;
+
+/**
+ * @properties={typeid:35,uuid:"6AC0FFEC-DEE1-4A49-A4CD-2D702A03233E",variableType:-4}
+ */
+var callbackFunction = null;
+
+/**
  * Callback method when form is (re)loaded.
  *
  * @properties={typeid:24,uuid:"B6429733-2826-451E-A5F9-B86E14D24D43"}
@@ -20,6 +30,7 @@ function loadForms()
 			return element != "clientdesign" && element != "chooselabeltext"
 			&& element != "basedialogform" && element != "choosedataprovider"
 		} );
+	array.sort();
 	application.setValueListItems ( "formlist", array );
 }
 
@@ -33,16 +44,42 @@ function loadForms()
  *
  * @properties={typeid:24,uuid:"B09C4094-F3D4-4D9A-93E3-E879596029D4"}
  */
-function placeFormInDesign()
+function _showFormInDesign()
 {
-	elements.designTab.removeAllTabs ( );
 	var form = forms[selectedDesignFormName];
-	form.controller.setDesignMode ( onDrag, onDrop, onSelect, onResize );
-	elements.designTab.addTab ( form );
+	if (form.controller.getDesignMode())
+	{
+		_callBack();
+	}
+	form.controller.setDesignMode ( false );
+	changedElements = new Array();
 	elements.selectedDesignForm.enabled = false;
-	elements.saveButton.enabled = true;
-	elements.saveAndShow.enabled = true;
+	_ableButtons(true)
+	elements.designTab.removeAllTabs();
+	elements.designTab.addTab ( form );
+	controller.show();
+	form.controller.setDesignMode ( onDrag, onDrop, onSelect, onResize );
 	return;
+}
+
+/**
+ * @properties={typeid:24,uuid:"DF4C1BB1-371B-4484-ADE6-12D9DCCCEAF2"}
+ */
+function _ableButtons(state)
+{
+	elements.saveButton.enabled = state;
+	elements.saveAndShow.enabled = state;
+	elements.newField.enabled = state
+	elements.newLabel.enabled = state;
+}
+
+/**
+ * @properties={typeid:24,uuid:"80A6AB9F-36FE-403B-B0F7-93A55323596E"}
+ */
+function _callBack()
+{
+	if (callbackFunction && callbackFunction != null) callbackFunction(selectedDesignFormName,changedElements);
+	changedElements = new Array();
 }
 
 /**
@@ -54,12 +91,16 @@ function placeFormInDesign()
  */
 function closeDesign( event )
 {
-	forms[selectedDesignFormName].controller.setDesignMode ( false );
+	var form = forms[selectedDesignFormName];
+	if (form.controller.getDesignMode())
+	{
+		_callBack();
+	}
+	form.controller.setDesignMode ( false );
 	elements.selectedDesignForm.enabled = true;
-	elements.saveButton.enabled = false;
-	elements.saveAndShow.enabled = false;
+	_ableButtons(false)
 	selectedDesignFormName = null;
-	elements.designTab.removeAllTabs ( );
+	elements.designTab.removeAllTabs();
 }
 
 /**
@@ -73,24 +114,22 @@ function saveAndShow( event )
 {
 	var formToShow = selectedDesignFormName;
 	closeDesign ( event );
-	forms[formToShow].controller.show ( );
+	forms[formToShow].controller.show();
 }
 
 /**
  *
  * @properties={typeid:24,uuid:"D26CC339-C95E-48DB-9ABE-E32311AAD55F"}
  */
-function show()
+function showDesign(current,cf)
 {
-	var current = currentcontroller.getName ( );
-	if ( current != "clientdesign" && current != "chooselabeltext"
+	callbackFunction = cf
+	if (forms[current] && current != "clientdesign" && current != "chooselabeltext"
 	&& current != "basedialogform" && current != "choosedataprovider" )
 	{
-		elements.saveButton.enabled = false;
-		elements.saveAndShow.enabled = false;
-		selectedDesignFormName = currentcontroller.getName ( );
-		placeFormInDesign ( );
-		controller.show ( );
+		_ableButtons(false)
+		selectedDesignFormName = current;
+		_showFormInDesign();
 	}
 }
 
@@ -122,7 +161,7 @@ function newLabelImpl( label )
 		// give it a name so that you can move/change it later on.
 		component.name = "label_" + newComponentsCounter++;
 		// recreate the ui of the runtime instance
-		forms[selectedDesignFormName].controller.recreateUI ( );
+		forms[selectedDesignFormName].controller.recreateUI();
 	}
 }
 
@@ -152,7 +191,7 @@ function newFieldImpl( dataprovider, fieldtype )
 		// give it a name so that you can move/change it later on.
 		field.name = "field_" + newComponentsCounter++;
 		// recreate the ui of the runtime instance
-		forms[selectedDesignFormName].controller.recreateUI ( );
+		forms[selectedDesignFormName].controller.recreateUI();
 	}
 }
 
@@ -169,7 +208,7 @@ function onDrag( event )
 	// only allow drag on named components
 	for (var index = 0; index < droppedElements.length; index++)
 	{
-		if ( droppedElements[index].getName ( ) == null )
+		if ( droppedElements[index].getName() == null )
 		{
 			return false;
 		}
@@ -191,12 +230,18 @@ function onDrop( event )
 	var form = solutionModel.getForm ( selectedDesignFormName );
 	// event.data is an array of the dropped elements.
 	var droppedElements = event.data;
+
 	// walk through all the dropped elements and copy there current location in the solution model.
 	for (var index = 0; index < droppedElements.length; index++)
 	{
-		var component = form.getComponent ( droppedElements[index].getName ( ) );
-		component.x = droppedElements[index].getLocationX ( );
-		component.y = droppedElements[index].getLocationY ( );
+		var component = form.getComponent ( droppedElements[index].getName() );
+		if (component != null)
+		{
+			changedElements.push(component)
+	
+			component.x = droppedElements[index].getLocationX();
+			component.y = droppedElements[index].getLocationY();
+		}
 	}
 }
 
@@ -210,10 +255,11 @@ function onDrop( event )
 function onSelect( event )
 {
 	var droppedElements = event.data;
+
 	// only allow selection on named components
 	for (var index = 0; index < droppedElements.length; index++)
 	{
-		if ( droppedElements[index].getName ( ) == null )
+		if ( droppedElements[index].getName() == null )
 		{
 			return false;
 		}
@@ -232,14 +278,20 @@ function onResize( event )
 	var form = solutionModel.getForm ( selectedDesignFormName );
 	// event.data is an array of the resized elements.
 	var droppedElements = event.data;
+
 	// walk through all the resized elements and copy there current width and height in the solution model.
 	for (var index = 0; index < droppedElements.length; index++)
 	{
-		if ( droppedElements[index].getName ( ) != null )
+		if ( droppedElements[index].getName() != null )
 		{
-			var component = form.getComponent ( droppedElements[index].getName ( ) );
-			component.width = droppedElements[index].getWidth ( );
-			component.height = droppedElements[index].getHeight ( );
+			var component = form.getComponent ( droppedElements[index].getName() );
+			if (component != null)
+			{
+				changedElements.push(component)
+	
+				component.width = droppedElements[index].getWidth();
+				component.height = droppedElements[index].getHeight();
+			}
 		}
 	}
 }

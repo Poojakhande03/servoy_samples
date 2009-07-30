@@ -1,7 +1,7 @@
 dataProviderID:"selectedDesignFormName",
 displayType:2,
 editable:false,
-location:"10,30",
+location:"10,90",
 name:"selectedDesignForm",
 onDataChangeMethodID:"B09C4094-F3D4-4D9A-93E3-E879596029D4",
 size:"130,20",

@@ -1,10 +1,10 @@
-location:"10,90",
+location:"10,150",
 mediaOptions:14,
 name:"saveAndShow",
 onActionMethodID:"3D28E716-2C4E-4CA1-B1F5-F4BB86D5D00C",
 onDoubleClickMethodID:"-1",
 onRightClickMethodID:"-1",
 size:"130,20",
-text:"Save and Show",
+text:"Close Design",
 typeid:7,
 uuid:"6BE75AB3-8702-4785-B1EB-35AC02C39F43"

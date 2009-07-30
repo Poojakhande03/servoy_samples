@@ -1,6 +1,7 @@
-location:"10,10",
+location:"10,70",
 mediaOptions:14,
 size:"80,20",
+styleClass:"whtctr",
 tabSeq:-1,
 text:"Choose form",
 transparent:true,

@@ -1,8 +1,0 @@
-dataSource:"db:/example_data/orders",
-name:"orders",
-paperPrintScale:100,
-showInMenu:true,
-size:"640,480",
-styleName:"svyWebCrm",
-typeid:3,
-uuid:"918E2638-653A-4479-8AA4-DBA40749238C"
