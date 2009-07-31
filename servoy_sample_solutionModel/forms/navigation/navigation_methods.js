@@ -170,7 +170,7 @@ function syncronizeWithDB()
 							
 							field_rec.xlocation = x, field_rec.ylocation = y 
 							field_rec.width = 150;
-							field_rec.heigth = 20
+							field_rec.height = 20
 
 							if (jscolumn.isRowIdentifier())
 							{

@@ -95,14 +95,14 @@ function createForm()
 		jsform.setOnDeleteAllRecordsCmdMethod(SM_DEFAULTS.NONE);
 	}
 
-	var total_heigth = 100;
+	var total_height = 100;
 	var field_rec = null;
 	for (var crindex = 1; crindex <= entity_rec.entities_to_elements.getSize(); crindex++) 
 	{
 		field_rec = entity_rec.entities_to_elements.getRecord(crindex)
 		if (field_rec.view_type == vtype && field_rec.display_options < 5)
 		{
-			var jsfield = jsform.newField(field_rec.dataprovider_id, field_rec.field_type, field_rec.xlocation, field_rec.ylocation, field_rec.width, field_rec.heigth)
+			var jsfield = jsform.newField(field_rec.dataprovider_id, field_rec.field_type, field_rec.xlocation, field_rec.ylocation, field_rec.width, field_rec.height)
 			jsfield.name = field_rec.element_name;
 			if (field_rec.display_options == 1) jsfield.editable = false;
 			if (field_rec.display_options == 4) jsfield.visble = false;
@@ -113,19 +113,37 @@ function createForm()
 			}
 			else
 			{
-				var jslabel = jsform.newLabel(field_rec.label, field_rec.xlocation - 110, field_rec.ylocation, 100, field_rec.heigth,null)
+				var jslabel = jsform.newLabel(field_rec.label, field_rec.xlocation - 110, field_rec.ylocation, 100, field_rec.height,null)
 				jslabel.name = 'lbl_'+field_rec.element_name;
 				jslabel.transparent = true
 				if (field_rec.display_options == 4) jslabel.visble = false;
 			}
-			total_heigth = Math.max(total_heigth, field_rec.ylocation + field_rec.heigth + 10)
+			total_height = Math.max(total_height, field_rec.ylocation + field_rec.height + 10)
 		}
 	}
-	if (vtype == SM_VIEW.LOCKED_TABLE_VIEW && total_heigth < 800) 
+	//add or change user specific fields
+	for (var crindex = 1; crindex <= entity_rec.entities_to_elements_user_specific.getSize(); crindex++) 
 	{
-		total_heigth = 800;
+		field_rec = entity_rec.entities_to_elements_user_specific.getRecord(crindex);
+		var jscomponent = jsform.getComponent(field_rec.element_name);
+		if (jscomponent != null)
+		{
+			jscomponent.x = field_rec.xlocation
+			jscomponent.y = field_rec.ylocation
+			jscomponent.width = field_rec.width
+			jscomponent.height = field_rec.height
+			//TODO handle more properties
+		}
+		else
+		{
+			//TODO handle new elements
+		}
 	}
-	jsbody.height = total_heigth
+	if (vtype == SM_VIEW.LOCKED_TABLE_VIEW && total_height < 800) 
+	{
+		total_height = 800;
+	}
+	jsbody.height = total_height
 }
 
 /**
@@ -174,14 +192,54 @@ function showFormInDesignMode(event)
 function changedElements(formName,changedElementsArray)
 {
 	application.output(formName)
-	for (var index = 0; index < changedElementsArray.length; index++)
+	
+	var entity_rec = null;
+	var fs = databaseManager.getFoundSet('user_data', 'entities')
+	if (fs.find())
 	{
-		if ( changedElementsArray[index] != null )
+		var search_entity_rec = fs.getRecord(1)
+		search_entity_rec.table_name = forms[formName].controller.getTableName();
+		var count = fs.search();
+		if (count > 0) entity_rec = fs.getRecord(1)
+	}
+	if (entity_rec != null)
+	{
+		var element_rec = null;
+		fs = entity_rec.entities_to_elements;
+		for (var index = 0; index < changedElementsArray.length; index++)
 		{
-			application.output(changedElementsArray[index])
-//			var component = form.getComponent ( changedElementsArray[index].getName() );
-//			component.width = droppedElements[index].getWidth();
-//			component.height = droppedElements[index].getHeight();
+			var comp = changedElementsArray[index]
+			if ( comp != null )
+			{
+				if (fs.find())
+				{
+					var search_elements_rec = fs.getRecord(1)
+					search_elements_rec.element_name = comp.getName();
+					search_elements_rec.view_type = SM_VIEW.RECORD_VIEW;
+					var count = fs.search();
+					if (count > 0) element_rec = fs.getRecord(1)
+				}
+				if (element_rec == null)
+				{
+					//new element
+					//TODO support more then only fields
+					var idx = fs.newRecord();
+					element_rec = fs.getRecord(idx);
+					element_rec.element_name = comp.getName();
+					element_rec.view_type = SM_VIEW.RECORD_VIEW;
+ 				}
+ 				else
+				{
+ 					var idx = fs.duplicateRecord()
+ 					element_rec = fs.getRecord(idx)
+				}
+				element_rec.xlocation = comp.getX();
+				element_rec.ylocation = comp.getY();
+				element_rec.width = comp.getWidth();
+				element_rec.height = comp.getHeight();
+				element_rec.user_uid = security.getUserUID()
+			}
 		}
+		databaseManager.saveData();
 	}
 }

@@ -29,7 +29,7 @@ length:100,
 name:"element_name"
 },
 {
-allowNull:false,
+allowNull:true,
 creationOrderIndex:14,
 dataType:4,
 name:"element_type"
@@ -50,7 +50,7 @@ name:"field_type"
 allowNull:true,
 creationOrderIndex:10,
 dataType:4,
-name:"heigth"
+name:"height"
 },
 {
 allowNull:true,
