@@ -1,0 +1,13 @@
+displaysTags:true,
+formIndex:10100,
+location:"10,10",
+mediaOptions:14,
+name:"lbl_section",
+size:"360,30",
+styleClass:"whtlg",
+tabSeq:-1,
+text:"Solution Model sample",
+transparent:true,
+typeid:7,
+uuid:"FBC2E09E-4BF3-442E-B146-DA32126D10FA",
+verticalAlignment:0
