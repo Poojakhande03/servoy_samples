@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>servoy_sample_clientdesign</name>
+	<name>svyClientdesign</name>
 	<comment></comment>
 	<projects>
 		<project>servoy_resources</project>
