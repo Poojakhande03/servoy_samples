@@ -1,4 +1,5 @@
 dataProviderID:"order_total",
+editable:false,
 formIndex:16900,
 format:"¤###,###,###.00",
 horizontalAlignment:4,
@@ -7,7 +8,6 @@ name:"orderTotal",
 onDataChangeMethodID:"-1",
 size:"111,20",
 styleClass:"noborderbold",
-tabSeq:-2,
 transparent:true,
 typeid:4,
 uuid:"a652b57d-e61a-41c9-a538-0d344d8c9a4a"

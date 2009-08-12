@@ -1,4 +1,5 @@
 dataProviderID:"amt_discount",
+editable:false,
 formIndex:16300,
 format:"¤###,###,###.00",
 horizontalAlignment:4,
@@ -7,7 +8,6 @@ name:"amtDiscount",
 onDataChangeMethodID:"-1",
 size:"111,20",
 styleClass:"noborder",
-tabSeq:-2,
 transparent:true,
 typeid:4,
 uuid:"af7d114b-1bfd-428c-a829-265cf54f464a"

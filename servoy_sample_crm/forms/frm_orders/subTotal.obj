@@ -1,4 +1,5 @@
 dataProviderID:"order_subtotal",
+editable:false,
 formIndex:16000,
 format:"¤###,###,###.00",
 horizontalAlignment:4,
@@ -7,7 +8,6 @@ name:"subTotal",
 onDataChangeMethodID:"-1",
 size:"111,20",
 styleClass:"noborderbold",
-tabSeq:-2,
 transparent:true,
 typeid:4,
 uuid:"4c96eee4-15fb-47af-bfae-6762eb4e4499"
