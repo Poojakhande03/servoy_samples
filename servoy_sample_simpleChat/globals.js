@@ -41,7 +41,7 @@ var loginID;
 /**
  * @properties={typeid:35,uuid:"c53cada0-e080-44ef-af5c-c91a597c9af0"}
  */
-var recieved = '';
+var received = '';
 
 /**
  * @properties={typeid:35,uuid:"c8c6c661-bda0-490e-8631-341e435a1c07",variableType:4}
@@ -56,107 +56,96 @@ var toIP = '';
 /**
  * @properties={typeid:24,uuid:"f7ed618e-46e3-407f-9955-4cc3296a2090"}
  */
-function closeSolution()
-{
-if(forms.frm_nav_main.elements.btn_login.text == 'Logout') forms.frm_nav_main.btn_login_logOut()
+function closeSolution() {
+	if(forms.frm_nav_main.elements.btn_login.text == 'Logout') forms.frm_nav_main.btn_login_logOut()
 
-//stop the UDP
-globals.stopUDP();
+	//stop the UDP
+	globals.stopUDP();
 }
 
 /**
  * @properties={typeid:24,uuid:"6dc01228-1a0d-4614-a0a1-0e9aea332634"}
  */
-function disableAllButLogin()
-{
-forms.main.elements.tabs_main.enabled = false
-forms.frm_nav_main.elements.tabs_recList.enabled = false
-forms.frm_nav_main.elements.fld_login.requestFocus(false)
+function disableAllButLogin() {
+	forms.main.elements.tabs_main.enabled = false;
+	forms.frm_nav_main.elements.tabs_recList.enabled = false;
+	forms.frm_nav_main.elements.fld_login.requestFocus(false);
 }
 
 /**
  * @properties={typeid:24,uuid:"038ef84e-f676-4500-9702-d6b3f9bf85e7"}
  */
-function disableBgElements()
-{
+function disableBgElements() {
 }
 
 /**
  * @properties={typeid:24,uuid:"f7bc27c2-bba5-43d3-9c4d-5afbe96004a1"}
  */
-function enableAll()
-{
+function enableAll() {
 }
 
 /**
  * @properties={typeid:24,uuid:"2075715d-9aac-49ca-add1-ab3b22d43447"}
  */
-function enableBgElements()
-{
-forms.main.elements.tabs_main.enabled = true
-forms.frm_nav_main.elements.tabs_recList.enabled = true
+function enableBgElements() {
+	forms.main.elements.tabs_main.enabled = true;
+	forms.frm_nav_main.elements.tabs_recList.enabled = true;
 }
 
 /**
  * @properties={typeid:24,uuid:"b09755fe-3326-4873-901d-28d12eebefb2"}
  */
-function openSolution()
-{
-//use the right style sheet
-//substitute style sheet if we're on a mac
-if(utils.stringLeft(application.getOSName(), 3) == 'Mac')
-{
-	//we're on the mac - exchange style sheets
-	application.overrideStyle('svyWebCrm', 'svyWebCrm_mac')
-}
+function openSolution() {
+	//use the right style sheet
+	//substitute style sheet if we're on a mac
+	if(utils.stringLeft(application.getOSName(), 3) == 'Mac') {
+		//we're on the mac - exchange style sheets
+		application.overrideStyle('svyWebCrm', 'svyWebCrm_mac');
+	}
 
-globals.disableBgElements();
-
-
-
+	globals.disableBgElements();
 }
 
 /**
  * @properties={typeid:24,uuid:"4036fa64-a1fe-4af5-b851-012aab17825a"}
  */
-function packetRecieved()
-{
-if(globals.beepOnNewMessage == 1) application.beep()
-var toIP = ''
-var packet;
-var fontColor = '#666666'
-while ( (packet = plugins.udp.getRecievedPacket()) != null)
-{
-	var msg = packet.readUTF();
-	var fromUser = packet.getHost()
-	
-	if(fromUser != globals.toIP)
-	{
-		toIP = fromUser
-	
-		//find the user and store their ID
-		forms.lst_control_usersLogin.controller.find()
-		forms.lst_control_usersLogin.ip_address = toIP
-		var found = forms.lst_control_usersLogin.controller.search()
-		
-		if(found > 0)
+function packetReceived() {
+	if(globals.beepOnNewMessage == 1) 
+		application.beep();
+	var toIP = '';
+	var packet;
+	var fontColor = '#666666';
+	while ( (packet = plugins.udp.getReceivedPacket()) != null) {
+		var msg = packet.readUTF();
+		var fromUser = packet.getHost();
+
+		if(fromUser != globals.toIP) 
 		{
-			fromUser = forms.lst_control_usersLogin.user_name
-			fontColor = '#9999ff'
+			toIP = fromUser;
+
+			//find the user and store their ID
+			forms.lst_control_usersLogin.controller.find();
+			forms.lst_control_usersLogin.ip_address = toIP;
+			var found = forms.lst_control_usersLogin.controller.search();
+
+			if(found > 0)
+			{
+				fromUser = forms.lst_control_usersLogin.user_name;
+				fontColor = '#9999ff';
+			}
+
 		}
-		
+		else
+		{
+			fromUser = gfromchatuserid_to_chat_users.user_name;
+		}
+
+		if (msg != null && msg.length > 0)
+		{
+			globals.received = '<html><font color="' + fontColor + '"><b>' + fromUser +' - ' + utils.dateFormat(new Date(), 'HH:mm') + ': ' + msg + '</b></font><br>' + globals.received;
+			forms.frm_chat.elements.fld_message.requestFocus(false);
+		}
 	}
-	else
-	{
-		fromUser = gfromchatuserid_to_chat_users.user_name
-	}
-	
-	if (msg != null && msg.length > 0)
-	{
-		globals.recieved = '<html><font color="' + fontColor + '"><b>' + fromUser +' - ' + utils.dateFormat(new Date(), 'HH:mm') + ': ' + msg + '</b></font><br>' + globals.recieved
-		forms.frm_chat.elements.fld_message.requestFocus(false)
-	}
-}
 }
 
 /**
@@ -164,59 +153,59 @@ while ( (packet = plugins.udp.getRecievedPacket()) != null)
  */
 function showDialog()
 {
-var title = arguments[0]
-var whatTab = arguments[1]
-var showCancelBtnOnly = arguments[2] //anything that is not null is a vaid value
-var cancelBtnLabel = arguments[3]
-var showBtn3 = arguments[4] //anything that is not null is valid value
-var btn3Label = arguments[5]
-var x = arguments[6]
-var y = arguments[7]
-var width = arguments[8]
-var height = arguments[9]
+	var title = arguments[0];
+	var whatTab = arguments[1];
+	var showCancelBtnOnly = arguments[2]; //anything that is not null is a vaid value
+	var cancelBtnLabel = arguments[3];
+	var showBtn3 = arguments[4]; //anything that is not null is valid value
+	var btn3Label = arguments[5];
+	var x = arguments[6];
+	var y = arguments[7];
+	var width = arguments[8];
+	var height = arguments[9];
 
-if(showCancelBtnOnly)
-{
-	//hide the OK button
-	forms.dialog.elements.btn_ok.visible = false
-	
-	if(cancelBtnLabel) forms.dialog.elements.btn_cancel.text = cancelBtnLabel
-}
+	if(showCancelBtnOnly)
+	{
+		//hide the OK button
+		forms.dialog.elements.btn_ok.visible = false;
 
-if(showBtn3 && btn3Label)
-{
-	//show the 3rd button
-	forms.dialog.elements.btn_3.text = btn3Label
-	forms.dialog.elements.btn_3.visible = true
-	
-}
-else
-{
-	forms.dialog.elements.btn_3.visible = false
-}
+		if(cancelBtnLabel) forms.dialog.elements.btn_cancel.text = cancelBtnLabel;
+	}
 
-var screenWidth = forms.main.elements.tabs_main.getWidth()
-var screenHeight = forms.main.elements.tabs_main.getHeight()
-var dlgWidth = forms.main.elements.tabs_dialog.getWidth()
-var dlgHeight = forms.main.elements.tabs_dialog.getHeight()
+	if(showBtn3 && btn3Label)
+	{
+		//show the 3rd button
+		forms.dialog.elements.btn_3.text = btn3Label;
+		forms.dialog.elements.btn_3.visible = true;
 
-if(!whatTab || whatTab == undefined) whatTab = 1
-if(!width || width == undefined) width = dlgWidth
-if(!height || height == undefined) height = dlgHeight
+	}
+	else
+	{
+		forms.dialog.elements.btn_3.visible = false;
+	}
 
-if(!title || title == undefined) title = ''
-if(!x || x == undefined) x = ((screenWidth/2) - (width/2)) + 200
-if(!y || y == undefined) y = ((screenHeight/2) - (height/2))
+	var screenWidth = forms.main.elements.tabs_main.getWidth();
+	var screenHeight = forms.main.elements.tabs_main.getHeight();
+	var dlgWidth = forms.main.elements.tabs_dialog.getWidth();
+	var dlgHeight = forms.main.elements.tabs_dialog.getHeight();
 
-forms.dialog.elements.tabs_dlg.tabIndex = whatTab
-forms.main.elements.tabs_dialog.setLocation(x, y)
-forms.dialog.elements.lbl_title.text = title
+	if(!whatTab || whatTab == undefined) whatTab = 1;
+	if(!width || width == undefined) width = dlgWidth;
+	if(!height || height == undefined) height = dlgHeight;
 
-//disable all the background elements when showing the dialog
-globals.disableBgElements()
+	if(!title || title == undefined) title = '';
+	if(!x || x == undefined) x = ((screenWidth/2) - (width/2)) + 200;
+	if(!y || y == undefined) y = ((screenHeight/2) - (height/2));
 
-//show the tabpanel "dialog"
-forms.main.elements.tabs_dialog.visible = true
+	forms.dialog.elements.tabs_dlg.tabIndex = whatTab;
+	forms.main.elements.tabs_dialog.setLocation(x, y);
+	forms.dialog.elements.lbl_title.text = title;
+
+	//disable all the background elements when showing the dialog
+	globals.disableBgElements();
+
+	//show the tabpanel "dialog"
+	forms.main.elements.tabs_dialog.visible = true;
 }
 
 /**
@@ -224,18 +213,18 @@ forms.main.elements.tabs_dialog.visible = true
  */
 function showErrorDialog()
 {
-var msg = arguments[0]  //accept the error message as an argument
-var methd = arguments[1] //method to execute after dialog closes
-var btn1 = arguments[2]
-var btn2 = arguments[3]
-var btn3 = arguments[4]
-var btn4 = arguments[5]
+	var msg = arguments[0];  //accept the error message as an argument
+	var methd = arguments[1]; //method to execute after dialog closes
+	var btn1 = arguments[2];
+	var btn2 = arguments[3];
+	var btn3 = arguments[4];
+	var btn4 = arguments[5];
 
-//disable all the background elements when showing the dialog
-globals.disableBgElements()
+	//disable all the background elements when showing the dialog
+	globals.disableBgElements();
 
-//call the generic routine in the svyCore solution
-globals.core_showWcGenericDialog('Error', msg, methd, 'error', btn1, btn2, btn3, btn4);	
+	//call the generic routine in the svyCore solution
+	globals.core_showWcGenericDialog('Error', msg, methd, 'error', btn1, btn2, btn3, btn4);	
 }
 
 /**
@@ -243,18 +232,18 @@ globals.core_showWcGenericDialog('Error', msg, methd, 'error', btn1, btn2, btn3,
  */
 function showWarningDialog()
 {
-var msg = arguments[0]  //accept the error message as an argument
-var methd = arguments[1] //method to execute after dialog closes
-var btn1 = arguments[2]
-var btn2 = arguments[3]
-var btn3 = arguments[4]
-var btn4 = arguments[5]
+	var msg = arguments[0]  //accept the error message as an argument
+	var methd = arguments[1] //method to execute after dialog closes
+	var btn1 = arguments[2]
+	var btn2 = arguments[3]
+	var btn3 = arguments[4]
+	var btn4 = arguments[5]
 
-//disable all the background elements when showing the dialog
-globals.disableBgElements()
+	//disable all the background elements when showing the dialog
+	globals.disableBgElements()
 
-//call the generic routine in the svyCore solution
-globals.core_showWcGenericDialog('Warning!', msg, methd, 'warning', btn1, btn2, btn3, btn4);	
+	//call the generic routine in the svyCore solution
+	globals.core_showWcGenericDialog('Warning!', msg, methd, 'warning', btn1, btn2, btn3, btn4);	
 }
 
 /**
@@ -262,7 +251,7 @@ globals.core_showWcGenericDialog('Warning!', msg, methd, 'warning', btn1, btn2, 
  */
 function startUDP()
 {
-plugins.udp.startSocket(2828, globals.packetRecieved)
+	plugins.udp.startSocket(2828, globals.packetReceived);
 }
 
 /**
@@ -270,5 +259,5 @@ plugins.udp.startSocket(2828, globals.packetRecieved)
  */
 function stopUDP()
 {
-plugins.udp.stopSocket();
+	plugins.udp.stopSocket();
 }
