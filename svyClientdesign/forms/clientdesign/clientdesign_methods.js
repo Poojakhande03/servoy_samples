@@ -240,7 +240,7 @@ function onDrop( event )
 			changedElements.push(component)
 	
 			component.x = droppedElements[index].getLocationX();
-			component.y = droppedElements[index].getLocationY();
+			component.y = droppedElements[index].getAbsoluteFormLocationY();
 		}
 	}
 }

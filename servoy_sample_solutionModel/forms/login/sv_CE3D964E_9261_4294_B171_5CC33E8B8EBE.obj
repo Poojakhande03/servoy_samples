@@ -1,6 +1,7 @@
 anchors:12,
 dataProviderID:"username",
 location:"100,420",
+onActionMethodID:"E0A7F3D3-5A3E-409B-8EE1-ADAAD52ABB9B",
 size:"140,20",
 typeid:4,
 uuid:"CE3D964E-9261-4294-B171-5CC33E8B8EBE"

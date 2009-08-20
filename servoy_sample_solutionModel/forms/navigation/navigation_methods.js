@@ -20,15 +20,7 @@ function configureModel()
 	elements.lbl_configure.text = 'Edit'
 	
 	//test if first time, if no records found genereate for example data
-	controller.loadAllRecords()
-	if (controller.getMaxRecordIndex() == 0)
-	{
-		controller.newRecord()
-		server_name = 'example_data';
-		databaseManager.saveData();
-		
-		syncronizeWithDB(datasource_id)
-	}
+	checkForSampleData()
 	
 	var fs = databaseManager.getFoundSet('user_data', 'entities')
 	//start with no selection, user should select in tree 
@@ -44,6 +36,7 @@ function configureModel()
 function selectDatasourceNode()
 {
 	var d_id = arguments[0]
+	globals.selectEntityNode(0)
 	//forms.datasources.controller.show()
 }
 
@@ -218,4 +211,21 @@ function makePlural()
 	}
 	name = utils.stringReplace(name, '_', ' ')
 	return utils.stringInitCap(name);
+}
+
+/**
+ *
+ * @properties={typeid:24,uuid:"4E3362A3-90E4-409F-9ED4-005307CF503F"}
+ */
+function checkForSampleData()
+{
+	controller.loadAllRecords()
+	if (controller.getMaxRecordIndex() == 0)
+	{
+		controller.newRecord()
+		server_name = 'example_data';
+		databaseManager.saveData();
+		
+		syncronizeWithDB(datasource_id)
+	}
 }

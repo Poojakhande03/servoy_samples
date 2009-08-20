@@ -9,14 +9,14 @@ var heading = '';
 var search = '';
 
 /**
- * @properties={typeid:35,uuid:"98AFAEFE-CCD6-47D4-B85A-D82014258C17",variableType:-4}
+ * @properties={typeid:35,uuid:"98AFAEFE-CCD6-47D4-B85A-D82014258C17"}
  */
-var const_null = '';
+var const_null = null;
 
 /**
  * @properties={typeid:35,uuid:"BBC3F82A-470D-4AB6-8751-3E335E20ECAF"}
  */
-var user_uid = '';
+var user_uid = null;
 
 /**
  * @properties={typeid:24,uuid:"2cb5c5ac-5a16-45cb-9a8a-862745d9a0b6"}
@@ -60,6 +60,13 @@ function selectEntityNode()
 			createForm(entity_rec,fname,SM_VIEW.LOCKED_TABLE_VIEW)
 		}
 		forms[fname].controller.show()
+	}
+	else
+	{
+		if (currentcontroller.getName() == "configure_entities")
+		{
+			forms.configure_entities.foundset.clear();
+		}
 	}
 }
 
@@ -191,8 +198,6 @@ function showFormInDesignMode(event)
  */
 function changedElements(formName,changedElementsArray)
 {
-	application.output(formName)
-	
 	var entity_rec = null;
 	var fs = databaseManager.getFoundSet('user_data', 'entities')
 	if (fs.find())
