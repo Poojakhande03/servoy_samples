@@ -222,27 +222,26 @@ function changedElements(formName,changedElementsArray)
 					search_elements_rec.element_name = comp.getName();
 					search_elements_rec.view_type = SM_VIEW.RECORD_VIEW;
 					var count = fs.search();
-					if (count > 0) element_rec = fs.getRecord(1)
+					if (count > 0) 
+					{
+	 					var idx = fs.duplicateRecord()
+	 					element_rec = fs.getRecord(idx)
+					}
+					else
+					{
+						//new element
+						//TODO support more then only fields
+						var idx = fs.newRecord();
+						element_rec = fs.getRecord(idx);
+						element_rec.element_name = comp.getName();
+						element_rec.view_type = SM_VIEW.RECORD_VIEW;
+	 				}
+					element_rec.xlocation = comp.getX();
+					element_rec.ylocation = comp.getY();
+					element_rec.width = comp.getWidth();
+					element_rec.height = comp.getHeight();
+					element_rec.user_uid = security.getUserUID()
 				}
-				if (element_rec == null)
-				{
-					//new element
-					//TODO support more then only fields
-					var idx = fs.newRecord();
-					element_rec = fs.getRecord(idx);
-					element_rec.element_name = comp.getName();
-					element_rec.view_type = SM_VIEW.RECORD_VIEW;
- 				}
- 				else
-				{
- 					var idx = fs.duplicateRecord()
- 					element_rec = fs.getRecord(idx)
-				}
-				element_rec.xlocation = comp.getX();
-				element_rec.ylocation = comp.getY();
-				element_rec.width = comp.getWidth();
-				element_rec.height = comp.getHeight();
-				element_rec.user_uid = security.getUserUID()
 			}
 		}
 		databaseManager.saveData();
