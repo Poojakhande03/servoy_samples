@@ -1,5 +1,6 @@
 borderType:"EmptyBorder,0,0,0,0",
 name:"base_data_form",
+onRecordEditStopMethodID:"-1",
 onShowMethodID:"5d285df9-536e-4d0b-9155-dcf91e190879",
 paperPrintScale:100,
 serverName:"user_data",

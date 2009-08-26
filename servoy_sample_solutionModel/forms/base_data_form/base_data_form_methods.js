@@ -66,29 +66,35 @@ function onShow()
  */
 function search()
 {
-			application.output('search '+globals.search)
-	if (globals.search != null && globals.search != '')
-	{
+	if (globals.search != null && globals.search != '') {
 		var jstable = databaseManager.getTable(controller.getServerName(),controller.getTableName())
-		if (controller.find())
-		{
+		if (controller.find()) {
 			var columnnames = jstable.getColumnNames();
-			for (var cindex = 0; cindex < columnnames.length; cindex++) 
-			{
+			for (var cindex = 0; cindex < columnnames.length; cindex++) {
 				var cname = columnnames[cindex];
 				var jscolumn = jstable.getColumn(cname);
-				if (jscolumn.getTypeAsString() == 'TEXT')
-				{
+				if (jscolumn.getTypeAsString() == 'TEXT') {
 					controller.setDataProviderValue(jscolumn.getDataProviderID(), '#%'+globals.search+'%');
 					controller.newRecord()
 				}
 			}
 			var count = controller.search()
-			application.output('results '+count)
-			if (count > 0)
-			{
-				globals.search = ''
+			if (count > 0) {
+				globals.search = '';
 			}
 		}
 	}
+}
+
+/**
+ * @properties={typeid:24,uuid:"24946fdf-82b6-44c4-af82-0248babb9806"}
+ */
+function Sort()
+{
+	databaseManager.saveData();
+	controller.loadAllRecords();
+	var srt = foundset.getCurrentSort();
+	var a_srt = srt.split(' ');
+	foundset.sort(a_srt[0], a_srt[1]);
+	foundset.loadAllRecords();
 }
