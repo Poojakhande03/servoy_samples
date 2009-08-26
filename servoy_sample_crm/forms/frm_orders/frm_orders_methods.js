@@ -46,13 +46,13 @@ function btn_save()
 	if(!order_number) {globals.showErrorDialog('There must be an order number.'); return;}
 	if(!order_date) {globals.showErrorDialog('There must be an order date.'); return;}
 
-	globals.saveEdits()
+	globals.saveEdits();
 	hide_btn_reset_fields();
 
 	//do sort and hilight the newly added (edited) record
-	var id = forms.lst_orders.order_id
-	forms.lst_orders.btn_sortAsc()
-	forms.lst_orders.foundset.selectRecord(id)
+	var id = forms.lst_orders.order_id;
+	forms.lst_orders.btn_sortAsc();
+	forms.lst_orders.foundset.selectRecord(id);
 
 	if(application.getApplicationType() == 5) onRecordSelect(); //for web client - to refresh buttons
 }
@@ -103,8 +103,8 @@ function doEdit()
 			elements[allNames[i]].readOnly = false
 		}
 
-		if(application.getApplicationType() != 5)
-		{
+//		if(application.getApplicationType() != 5)
+//		{
 			//not the web client so also do the "checkboxes" as well
 			if(allNames[i].indexOf('chk_') >= 0)
 			{
@@ -112,7 +112,7 @@ function doEdit()
 				elements[allNames[i]].bgcolor = '#feffe4'
 				elements[allNames[i]].readOnly = false
 			}
-		}
+//		}
 	}
 
 	elements.btn_save.visible = true
@@ -181,8 +181,8 @@ function hide_btn_reset_fields()
 			elements[allNames[i]].readOnly = true
 		}
 
-		if(application.getApplicationType() != 5)
-		{
+//		if(application.getApplicationType() != 5)
+//		{
 			//not the web client so also do the "checkboxes" as well
 			if(allNames[i].indexOf('chk_') >= 0)
 			{
@@ -190,7 +190,7 @@ function hide_btn_reset_fields()
 				elements[allNames[i]].bgcolor = '#f0f0f0'
 				elements[allNames[i]].readOnly = true
 			}
-		}
+//		}
 	}
 
 	elements.btn_save.visible = false
