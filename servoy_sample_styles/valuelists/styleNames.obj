@@ -1,5 +1,5 @@
 addEmptyValue:1,
-customValues:"Autumn\nBananas\nCharcoal\nCherry\nCottonCandy\nDarkGrey\nGrape|Grape\nHunterGreen\nIce\nLightGrey\nLime\nNutmeg\nOlive\nPeach\nRose\nRoyalBlue\nRoyalGreen\nRoyalPurple\nSage\nSeaFoam\nViolet\nWalnut\nWheat\niPhone",
+customValues:"Autumn\r\nBananas\r\nCharcoal\r\nCherry\r\nCottonCandy\r\nDarkGrey\r\nGrape\r\nHunterGreen\r\nIce\r\nLightGrey\r\nLime\r\nNutmeg\r\nOlive\r\nPeach\r\nRose\r\nRoyalBlue\r\nRoyalGreen\r\nRoyalPurple\r\nRoyalRed\r\nSage\r\nSeaFoam\r\nViolet\r\nWalnut\r\nWheat\r\niPhone",
 name:"styleNames",
 returnDataProviders:1,
 separator:" ",

@@ -28,9 +28,9 @@ var radios = '';
  */
 function btn_next()
 {
-	var formName = globals.getNextForm(currentcontroller.getName(),'next')
-	globals.curStyle = formName
-	globals.goForm()
+	var formName = globals.getNextForm(currentcontroller.getName(),'next');
+	globals.curStyle = formName;
+	globals.goForm();
 }
 
 /**
@@ -38,9 +38,9 @@ function btn_next()
  */
 function btn_prev()
 {
-	var formName = globals.getNextForm(currentcontroller.getName(),'prev')
-	globals.curStyle = formName
-	globals.goForm()
+	var formName = globals.getNextForm(currentcontroller.getName(),'prev');
+	globals.curStyle = formName;
+	globals.goForm();
 }
 
 /**
@@ -48,9 +48,9 @@ function btn_prev()
  */
 function getNextForm()
 {
-	var curForm = arguments[0]
-	var direction = arguments[1]
-	var myForms = forms.allnames.sort()
+	var curForm = arguments[0];
+	var direction = arguments[1];
+	var myForms = forms.allnames.sort();
 	for (var i=0; i<myForms.length; i++)
 	{
 		if(myForms[i] == curForm)
@@ -59,22 +59,22 @@ function getNextForm()
 			{
 				if(i < myForms.length-1)
 				{
-					return myForms[i+1]
+					return myForms[i+1];
 				}
 				else
 				{
-					return myForms[0]
+					return myForms[0];
 				}
 			}
 			else
 			{
 				if(i == 0)
 				{
-					return myForms[myForms.length-1]
+					return myForms[myForms.length-1];
 				}
 				else
 				{
-					return myForms[i-1]
+					return myForms[i-1];
 				}
 			}
 		}
@@ -86,10 +86,10 @@ function getNextForm()
  */
 function goForm()
 {
-	var frmName = globals.curStyle
-	frmName = utils.stringReplace(frmName,'\r','')
-	forms[frmName].controller.show()
-	globals.formName = 'svy_'+ frmName
+	var frmName = globals.curStyle;
+	frmName = utils.stringReplace(frmName,'\r','');
+	forms[frmName].controller.show();
+	globals.formName = 'svy_'+ frmName;
 }
 
 /**
@@ -104,6 +104,6 @@ function onShow()
  */
 function solutionOpen()
 {
-	globals.formName = "svy_Autumn"
-	globals.curStyle = 'Autumn'
+	globals.formName = "svy_Autumn";
+	globals.curStyle = 'Autumn';
 }
