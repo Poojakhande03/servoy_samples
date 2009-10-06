@@ -1,9 +1,0 @@
-borderType:"SpecialMatteBorder,0.0,1.0,1.0,0.0,#cccccc,#cccccc,#cccccc,#cccccc,0.0,",
-dataProviderID:"product_type_id",
-editable:false,
-formIndex:10000,
-location:"0,40",
-size:"30,20",
-tabSeq:-2,
-typeid:4,
-uuid:"bc5f4578-d50e-4f10-81a1-d151f53595ad"

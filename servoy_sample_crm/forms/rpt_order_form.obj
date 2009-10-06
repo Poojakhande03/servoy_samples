@@ -1,9 +1,0 @@
-defaultPageFormat:"1;612.0;792.0;36.0;36.0;540.0;720.0;",
-name:"rpt_order_form",
-paperPrintScale:100,
-serverName:"udm",
-size:"640,401",
-styleName:"svyWebCrm",
-tableName:"order_items",
-typeid:3,
-uuid:"18bb4e0e-a164-4fb6-95e9-767e0c1f5ac7"

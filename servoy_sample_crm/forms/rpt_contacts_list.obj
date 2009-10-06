@@ -1,8 +1,0 @@
-dataSource:"db:/udm/contacts",
-defaultPageFormat:"0;612.0;792.0;36.0;36.0;540.0;720.0;",
-name:"rpt_contacts_list",
-paperPrintScale:100,
-size:"719,100",
-styleName:"svyWebCrm",
-typeid:3,
-uuid:"98e3142f-5c2b-4ed3-9735-44933dc1a32c"

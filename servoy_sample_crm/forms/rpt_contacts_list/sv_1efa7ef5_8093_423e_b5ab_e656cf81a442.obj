@@ -1,9 +1,0 @@
-borderType:"SpecialMatteBorder,0.0,1.0,1.0,1.0,#cccccc,#cccccc,#cccccc,#cccccc,0.0,",
-dataProviderID:"email",
-formIndex:10600,
-location:"517,80",
-size:"200,20",
-styleClass:"reportsm",
-transparent:true,
-typeid:4,
-uuid:"1efa7ef5-8093-423e-b5ab-e656cf81a442"

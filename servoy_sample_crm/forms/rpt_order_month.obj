@@ -1,8 +1,0 @@
-dataSource:"db:/udm/orders",
-defaultPageFormat:"1;612.0;792.0;36.0;36.0;540.0;720.0;",
-name:"rpt_order_month",
-paperPrintScale:100,
-size:"640,181",
-styleName:"svyWebCrm",
-typeid:3,
-uuid:"21b55546-04d7-42aa-8c09-41d3a004bc4b"

@@ -1,9 +1,0 @@
-dataProviderID:"fax_direct",
-formIndex:14000,
-location:"20,362",
-name:"fld_phoneFax",
-selectOnEnter:true,
-size:"191,22",
-tabSeq:8,
-typeid:4,
-uuid:"1db20790-ff49-4478-b186-ebd9dfe2f7e6"

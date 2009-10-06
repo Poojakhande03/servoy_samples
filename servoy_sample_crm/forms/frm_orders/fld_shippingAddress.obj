@@ -1,9 +1,0 @@
-dataProviderID:"ship_address_id",
-formIndex:13900,
-location:"590,192",
-name:"fld_shippingAddress",
-size:"190,22",
-tabSeq:-2,
-typeid:4,
-uuid:"85af4639-6ade-4024-8ea0-5677b3ae5fb9",
-valuelistID:"c47f61ff-6939-461d-9cf5-af5ba79076c5"

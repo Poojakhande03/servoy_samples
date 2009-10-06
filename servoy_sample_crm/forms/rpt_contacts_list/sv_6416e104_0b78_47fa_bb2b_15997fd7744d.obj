@@ -1,9 +1,0 @@
-borderType:"SpecialMatteBorder,0.0,1.0,1.0,1.0,#cccccc,#cccccc,#cccccc,#cccccc,0.0,",
-dataProviderID:"phone_direct",
-formIndex:10800,
-location:"368,80",
-size:"150,20",
-styleClass:"reportsm",
-transparent:true,
-typeid:4,
-uuid:"6416e104-0b78-47fa-bb2b-15997fd7744d"

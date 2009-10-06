@@ -1,8 +1,0 @@
-dataProviderID:"price_each",
-formIndex:10200,
-format:"¤###,###,###.00|#.00",
-location:"100,120",
-size:"80,22",
-tabSeq:5,
-typeid:4,
-uuid:"641e0d82-d4e9-4576-a6b1-93f06c9cf0ad"

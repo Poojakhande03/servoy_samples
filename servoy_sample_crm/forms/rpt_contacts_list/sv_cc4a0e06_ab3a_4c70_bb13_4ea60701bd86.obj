@@ -1,9 +1,0 @@
-borderType:"SpecialMatteBorder,0.0,1.0,1.0,1.0,#cccccc,#cccccc,#cccccc,#cccccc,0.0,",
-dataProviderID:"job_title",
-formIndex:10700,
-location:"169,80",
-size:"200,20",
-styleClass:"reportsm",
-transparent:true,
-typeid:4,
-uuid:"cc4a0e06-ab3a-4c70-bb13-4ea60701bd86"

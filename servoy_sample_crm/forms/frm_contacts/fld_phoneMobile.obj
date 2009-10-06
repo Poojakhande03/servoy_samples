@@ -1,9 +1,0 @@
-dataProviderID:"phone_cell",
-formIndex:13800,
-location:"220,319",
-name:"fld_phoneMobile",
-selectOnEnter:true,
-size:"180,22",
-tabSeq:7,
-typeid:4,
-uuid:"aea6b73a-0e62-40f4-addf-5cc23a8a3630"

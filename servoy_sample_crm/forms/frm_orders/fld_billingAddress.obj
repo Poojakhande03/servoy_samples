@@ -1,9 +1,0 @@
-dataProviderID:"bill_address_id",
-formIndex:13700,
-location:"350,192",
-name:"fld_billingAddress",
-size:"200,22",
-tabSeq:-2,
-typeid:4,
-uuid:"9880fd17-b99f-4b18-9827-ecd6f0f285ac",
-valuelistID:"c47f61ff-6939-461d-9cf5-af5ba79076c5"
