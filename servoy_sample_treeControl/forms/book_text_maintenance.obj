@@ -1,9 +1,0 @@
-name:"book_text_maintenance",
-paperPrintScale:100,
-serverName:"example_data",
-showInMenu:true,
-size:"900,110",
-tableName:"book_text",
-typeid:3,
-uuid:"57d675d9-ff72-4a2d-8b9e-d4e43dfc98c2",
-view:3

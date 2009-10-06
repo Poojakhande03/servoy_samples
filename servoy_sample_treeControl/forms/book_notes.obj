@@ -1,9 +1,0 @@
-borderType:"EmptyBorder,0,0,0,0",
-dataSource:"db:/example_data/book_text",
-name:"book_notes",
-navigatorID:"-1",
-paperPrintScale:100,
-size:"698,128",
-styleName:"svyWebCrm",
-typeid:3,
-uuid:"580f9b6c-d372-451d-a08e-0368923cc088"

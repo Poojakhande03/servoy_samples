@@ -1,9 +1,0 @@
-beanClassName:"javax.swing.JSplitPane",
-beanXML:"<?xml version=\"1.0\" encoding=\"UTF-8\"?> \n<java version=\"1.6.0_02\" class=\"java.beans.XMLDecoder\"> \n <object class=\"javax.swing.JSplitPane\"> \n  <int>1<\/int> \n  <void property=\"size\"> \n   <object class=\"java.awt.Dimension\"> \n    <int>80<\/int> \n    <int>80<\/int> \n   <\/object> \n  <\/void> \n  <void property=\"border\"> \n   <object class=\"javax.swing.border.EmptyBorder\"> \n    <object class=\"java.awt.Insets\"> \n     <int>0<\/int> \n     <int>0<\/int> \n     <int>0<\/int> \n     <int>0<\/int> \n    <\/object> \n   <\/object> \n  <\/void> \n  <void property=\"dividerLocation\"> \n   <int>0<\/int> \n  <\/void> \n  <void property=\"name\"> \n   <string>bean_625<\/string> \n  <\/void> \n <\/object> \n<\/java> \n",
-formIndex:10400,
-location:"675,305",
-name:"bean_625",
-size:"80,80",
-typeid:12,
-usesUI:true,
-uuid:"356866ff-8dc4-4cb4-92cd-bbb0f9f08b9a"
