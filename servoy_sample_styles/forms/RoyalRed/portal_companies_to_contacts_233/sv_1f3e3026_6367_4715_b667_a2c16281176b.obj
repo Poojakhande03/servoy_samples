@@ -1,8 +1,0 @@
-borderType:"EmptyBorder,0,0,0,0",
-dataProviderID:"companies_to_contacts.contact_id",
-editable:false,
-location:"170,220",
-size:"120,20",
-text:"contact_id",
-typeid:4,
-uuid:"1f3e3026-6367-4715-b667-a2c16281176b"
