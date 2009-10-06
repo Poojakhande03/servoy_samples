@@ -1,8 +1,0 @@
-dataSource:"db:/bug_db/tbl_action",
-name:"z_tbl_action",
-paperPrintScale:100,
-size:"913,480",
-styleName:"svyWebCrm",
-typeid:3,
-uuid:"c0faa981-6f55-4d03-9b7a-f780d76e52e6",
-view:3

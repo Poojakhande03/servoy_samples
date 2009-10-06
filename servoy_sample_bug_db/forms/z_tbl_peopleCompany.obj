@@ -1,8 +1,0 @@
-name:"z_tbl_peopleCompany",
-paperPrintScale:100,
-serverName:"bug_db",
-size:"640,480",
-styleName:"svyWebCrm",
-tableName:"tbl_people_company",
-typeid:3,
-uuid:"3dcb8cb4-729b-4cce-a5b2-a9a60a83b64a"

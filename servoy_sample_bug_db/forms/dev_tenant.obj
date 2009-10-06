@@ -1,7 +1,0 @@
-name:"dev_tenant",
-paperPrintScale:100,
-serverName:"bug_db",
-size:"640,480",
-tableName:"tbl_tenant",
-typeid:3,
-uuid:"01b7aa29-9795-40a8-a49b-eb02fa5e526e"

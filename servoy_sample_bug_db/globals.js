@@ -161,7 +161,7 @@ var tempTextDisplay2 = '';
 /**
  * @properties={typeid:24,uuid:"99b9383f-5529-4b74-a2e4-8c474758c121"}
  */
-function ArrayIsInArray()
+function ArrayIsInArray(arg0, arg1)
 {
 	/*
 	PURPOSE: See if a value is in an array
@@ -174,8 +174,8 @@ function ArrayIsInArray()
 	MODIFIED: NONE
 	********************************************/
 	
-	var myArray = arguments[0]
-	var value = arguments[1]
+	var myArray = arg0;
+	var value = arg1;
 	
 	if(!myArray || !value) {
 		return false
@@ -599,7 +599,7 @@ function NewRecordBug()
 /**
  * @properties={typeid:24,uuid:"0aab2af3-aea9-4158-bbb0-15d7e72a848c"}
  */
-function NewRecordCompany()
+function NewRecordCompany(arg0)
 {
 	/*
 	PURPOSE: Create new company
@@ -613,19 +613,19 @@ function NewRecordCompany()
 	
 	if(globals.isAdmin)
 	{
-		if((arguments[0]) && (typeof arguments[0] != 'object'))
+		if((arg0) && (typeof arg0 != 'object'))
 		{
 			//set flag so we assign to current person
-			globals.tempInt = 1
+			globals.tempInt = 1;
 		}
 		
 		//new record
-		forms.dlg_company.controller.newRecord(true)
-		forms.dlg_company.ixcreatedperson = globals.currUserID
-		forms.dlg_company.dt_created = new Date()
-		forms.dlg_company.ixmodifiedperson = null
-		forms.dlg_company.dt_modififed = null
-		forms.dlg_company.category = 0
+		forms.dlg_company.controller.newRecord(true);
+		forms.dlg_company.ixcreatedperson = globals.currUserID;
+		forms.dlg_company.dt_created = new Date();
+		forms.dlg_company.ixmodifiedperson = null;
+		forms.dlg_company.dt_modififed = null;
+		forms.dlg_company.category = 0;
 		
 		globals.ShowDialogCompany(i18n.getI18NMessage('lbl.newCompany'), null, 1);
 	}
@@ -638,7 +638,7 @@ function NewRecordCompany()
 /**
  * @properties={typeid:24,uuid:"1be9e30f-b942-4019-94ff-de9b9eba0c36"}
  */
-function NewRecordDocument()
+function NewRecordDocument(arg0)
 {
 	/*
 	PURPOSE: Create new document
@@ -650,19 +650,19 @@ function NewRecordDocument()
 	MODIFIED: NONE
 	********************************************/
 	
-	if((arguments[0]) && (typeof arguments[0] != 'object'))
+	if((arg0) && (typeof arg0 != 'object'))
 	{
 		//set flag so we assign to current person
-		globals.tempInt = 1
+		globals.tempInt = 1;
 	}
 	
 	//new record
-	forms.dlg_document.controller.newRecord(true)
-	forms.dlg_document.ixcreatedperson = globals.currUserID
-	forms.dlg_document.dt_created = new Date()
-	forms.dlg_document.ixmodifiedperson = null
-	forms.dlg_document.dt_modififed = null
-	forms.dlg_document.ixproject = globals.currProjectID
+	forms.dlg_document.controller.newRecord(true);
+	forms.dlg_document.ixcreatedperson = globals.currUserID;
+	forms.dlg_document.dt_created = new Date();
+	forms.dlg_document.ixmodifiedperson = null;
+	forms.dlg_document.dt_modififed = null;
+	forms.dlg_document.ixproject = globals.currProjectID;
 	//forms.dlg_document.ixtenant = globals.currTenantID
 	
 	globals.ShowDialogDocument(i18n.getI18NMessage('lbl.newDocument'),null,1);
@@ -671,7 +671,7 @@ function NewRecordDocument()
 /**
  * @properties={typeid:24,uuid:"71619be1-297f-46e5-9c69-f12e078ab68e"}
  */
-function NewRecordPerson()
+function NewRecordPerson(arg0)
 {
 	/*
 	PURPOSE: Create new person
@@ -685,7 +685,7 @@ function NewRecordPerson()
 	
 	if(globals.isAdmin)
 	{
-		if((arguments[0]) && (typeof arguments[0] != 'object'))
+		if((arg0) && (typeof arg0 != 'object'))
 		{
 			//set flag so we assign to current company
 			globals.tempInt = 1
@@ -708,7 +708,7 @@ function NewRecordPerson()
 /**
  * @properties={typeid:24,uuid:"929a9b5d-a3c6-4d26-951d-9c1cfa07dadd"}
  */
-function NewRecordProject()
+function NewRecordProject(arg0, arg1)
 {
 	/*
 	PURPOSE: Create new project
@@ -723,26 +723,26 @@ function NewRecordProject()
 	
 	if(globals.isAdmin)
 	{
-		if((arguments[0]) && (typeof arguments[0] != 'object'))
+		if((arg0) && (typeof arg0 != 'object'))
 		{
 			//set flag so we assign to current person
 			globals.tempInt = 1
 		}
 		
-		var isNew = arguments[1]
+		var isNew = arg1;
 		
 		if(isNew) {
-			globals.flagIsNew = 1
+			globals.flagIsNew = 1;
 		}
 		else {
-			globals.flagIsNew = 0
+			globals.flagIsNew = 0;
 		}
 		
 		//new record
-		forms.dlg_project.controller.newRecord(true)
-		forms.dlg_project.dt_created = new Date()
-		forms.dlg_project.ixcreatedperson = globals.currUserID
-		forms.dlg_project.status = 1 //open
+		forms.dlg_project.controller.newRecord(true);
+		forms.dlg_project.dt_created = new Date();
+		forms.dlg_project.ixcreatedperson = globals.currUserID;
+		forms.dlg_project.status = 1; //open
 		globals.ShowDialogProject(i18n.getI18NMessage('lbl.newProject'), null, 1);
 	}
 	else
@@ -803,22 +803,22 @@ function NewRecordVersion()
 	MODIFIED: NONE
 	********************************************/
 	
-	if((arguments[0]) && (typeof arguments[0] != 'object'))
+	if((arg0) && (typeof arg0 != 'object'))
 	{
 		//set flag so we assign to current person
-		globals.tempInt = 1
+		globals.tempInt = 1;
 	}
 	
 	//new record
-	forms.dlg_version.controller.newRecord(true)
-	forms.dlg_version.ixcreatedperson = globals.currUserID
-	forms.dlg_version.dt_created = new Date()
-	forms.dlg_version.ixmodifiedperson = null
-	forms.dlg_version.dt_modififed = null
-	forms.dlg_version.ixproject = globals.currProjectID
+	forms.dlg_version.controller.newRecord(true);
+	forms.dlg_version.ixcreatedperson = globals.currUserID;
+	forms.dlg_version.dt_created = new Date();
+	forms.dlg_version.ixmodifiedperson = null;
+	forms.dlg_version.dt_modififed = null;
+	forms.dlg_version.ixproject = globals.currProjectID;
 	//forms.dlg_version.ixtenant = globals.currTenantID
-	forms.dlg_version.status = 0
-	forms.dlg_version.release_as = 0
+	forms.dlg_version.status = 0;
+	forms.dlg_version.release_as = 0;
 	
 	globals.ShowDialogVersion(i18n.getI18NMessage('lbl.newVersion'),null,1);
 	
@@ -827,9 +827,9 @@ function NewRecordVersion()
 /**
  * @properties={typeid:24,uuid:"fce97a92-dfb2-4968-9eea-9da514c6a25a"}
  */
-function OpenUrl()
+function OpenUrl(arg0)
 {
-	var url = arguments[0];
+	var url = arg0;
 	if(url)
 	{
 		application.showURL(url);
@@ -839,7 +839,7 @@ function OpenUrl()
 /**
  * @properties={typeid:24,uuid:"9c5f0766-0e88-4eb5-8ba1-965dc433f038"}
  */
-function ReturnSqlWhereQuestionMarks()
+function ReturnSqlWhereQuestionMarks(arg0)
 {
 	/*
 	PURPOSE: Used for SQL queries with an IN clause
@@ -851,22 +851,22 @@ function ReturnSqlWhereQuestionMarks()
 	MODIFIED: NONE
 	********************************************/
 	
-	var myArray = arguments[0]
-	var output = null
+	var myArray = arg0;
+	var output = null;
 	
 	if(myArray && myArray.length > 0) {
 		for ( var i = 0 ; i < myArray.length ; i++ )
 		{
 			if(!output){
-				output = '?'
+				output = '?';
 			}
 			else {
-				output += ', ?'
+				output += ', ?';
 			}
 		}
 	}
 	
-	return output
+	return output;
 }
 
 /**
@@ -1198,7 +1198,7 @@ function ShowDialogCompany()
 /**
  * @properties={typeid:24,uuid:"00a31c19-6d69-497e-912a-3652eb9e2c27"}
  */
-function ShowDialogCompanyChooser()
+function ShowDialogCompanyChooser(arg0)
 {
 	/*
 	PURPOSE: Shows the dialog for choosing a company
@@ -1210,7 +1210,7 @@ function ShowDialogCompanyChooser()
 	MODIFIED: NONE
 	********************************************/
 	
-	var title = arguments[0]
+	var title = arg0;
 	globals.tempTextDisplay = null
 	globals.tempChooseInt = null
 	
@@ -1228,7 +1228,7 @@ function ShowDialogCompanyChooser()
 /**
  * @properties={typeid:24,uuid:"c713fda7-290b-4bcc-8f35-a2695630d199"}
  */
-function ShowDialogDocument()
+function ShowDialogDocument(arg0, arg1, arg2)
 {
 	/*
 	PURPOSE: Shows the dialog for editing profile/adding a document
@@ -1242,32 +1242,32 @@ function ShowDialogDocument()
 	MODIFIED: NONE
 	********************************************/
 	
-	var title = arguments[0]
-	var docID = arguments[1]
-	var isNew = arguments[2]
+	var title = arg0;
+	var docID = arg1;
+	var isNew = arg2;
 	
 	if(isNew) {
-		globals.flagIsNew = 1
+		globals.flagIsNew = 1;
 	}
 	else {
-		globals.flagIsNew = 0
+		globals.flagIsNew = 0;
 	}
 	
 	if(docID) { //find the doc
-		forms.dlg_document.controller.find()
-		forms.dlg_document.ixdocument = docID
-		forms.dlg_document.controller.search()
+		forms.dlg_document.controller.find();
+		forms.dlg_document.ixdocument = docID;
+		forms.dlg_document.controller.search();
 	}
 	
 	if(!title) //no title was specified
 	{
-		title = i18n.getI18NMessage('lbl.editDocument')
+		title = i18n.getI18NMessage('lbl.editDocument');
 	}
 	
 	//set the global so that if they click the "X" close it won't close
-	globals.isDialogOpen = 1
+	globals.isDialogOpen = 1;
 	
-	application.showFormInDialog(forms.dlg_document, -1,-1,-1,-1, title, false, false, 'document', true)
+	application.showFormInDialog(forms.dlg_document, -1,-1,-1,-1, title, false, false, 'document', true);
 }
 
 /**
@@ -1373,7 +1373,7 @@ function ShowDialogPerson()
 /**
  * @properties={typeid:24,uuid:"06538b17-a55f-4472-a50e-ce6d4bfa7df2"}
  */
-function ShowDialogPersonChooser()
+function ShowDialogPersonChooser(arg0, arg1)
 {
 	/*
 	PURPOSE: Shows the dialog for choosing a person
@@ -1386,8 +1386,8 @@ function ShowDialogPersonChooser()
 	MODIFIED: NONE
 	********************************************/
 	
-	var title = arguments[0]
-	var isProject = arguments[1]
+	var title = arg0;
+	var isProject = arg1;
 	
 	
 	if(globals.isAdmin)
@@ -1751,14 +1751,15 @@ function ValidateUserName()
 /**
  * @properties={typeid:24,uuid:"cb70433b-09b3-48d3-8a02-9d9304f18bdb"}
  */
-function GoVersion()
+function GoVersion(arg0)
 {
+	var ixvers = arg0;
 	if (application.getApplicationType() == 5)
 	{
-		globals.currVersionID = arguments[0];
+		globals.currVersionID = arg0;
 	}
 	else
 	{
-		globals.currVersionID = ixversion;
+		globals.currVersionID = ixvers;
 	}
 }
