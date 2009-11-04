@@ -1,10 +1,8 @@
-foreignServerName:"user_data",
-foreignTableName:"datasources",
+foreignDataSource:"db:/user_data/datasources",
 items:[
 {foreignColumnName:"datasource_id",primaryDataProviderID:"datasource_id",typeid:23,uuid:"95f3acbb-f5df-40c3-a001-2403f8486ad7"}
 ],
 name:"entities_to_datasources",
-primaryServerName:"user_data",
-primaryTableName:"entities",
+primaryDataSource:"db:/user_data/entities",
 typeid:22,
 uuid:"e018f10c-e135-47cc-9713-669ea8ab677f"

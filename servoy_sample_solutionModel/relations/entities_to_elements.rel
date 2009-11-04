@@ -2,8 +2,8 @@ allowCreationRelatedRecords:true,
 deleteRelatedRecords:true,
 foreignDataSource:"db:/user_data/elements",
 items:[
-{foreignColumnName:"entity_id",primaryDataProviderID:"entity_id",typeid:23,uuid:"5051308d-8a87-4ac6-b4ed-8bea2caee402"},
-{foreignColumnName:"user_uid",primaryDataProviderID:"globals.const_null",typeid:23,uuid:"38E0E489-95B4-4B1A-84AB-EEB8FA921146"}
+{foreignColumnName:"user_uid",primaryDataProviderID:"globals.const_null",typeid:23,uuid:"38E0E489-95B4-4B1A-84AB-EEB8FA921146"},
+{foreignColumnName:"entity_id",primaryDataProviderID:"entity_id",typeid:23,uuid:"5051308d-8a87-4ac6-b4ed-8bea2caee402"}
 ],
 name:"entities_to_elements",
 primaryDataSource:"db:/user_data/entities",

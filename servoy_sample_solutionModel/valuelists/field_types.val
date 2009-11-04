@@ -1,5 +1,15 @@
 addEmptyValue:1,
-customValues:"TEXT_FIELD|0\r\nTEXT_AREA|1\r\nCOMBOBOX|2\r\nRADIOS|3\r\nCHECKS|4\r\nCALENDAR|5\r\nPASSWORD|6\r\nRTF_AREA|7\r\nHTML_AREA|8\r\nIMAGE_MEDIA|9\r\nTYPE_AHEAD|10",
+customValues:"TEXT_FIELD|0
+TEXT_AREA|1
+COMBOBOX|2
+RADIOS|3
+CHECKS|4
+CALENDAR|5
+PASSWORD|6
+RTF_AREA|7
+HTML_AREA|8
+IMAGE_MEDIA|9
+TYPE_AHEAD|10",
 name:"field_types",
 returnDataProviders:1,
 separator:" ",

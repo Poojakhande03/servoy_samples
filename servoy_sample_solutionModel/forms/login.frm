@@ -34,12 +34,12 @@ location:"10,60",
 mediaOptions:14,
 size:"620,350",
 tabSeq:-1,
-text:"<html>This sample shows the flexibility of the Servoy solutionModel (solution blueprint creation/modification) together with client design functionallity.<br><br>\r
-It will create list and detail forms on the fly, based upon a database description, which can be configured.<br>\r
-The configuration takes place in the configure mode (is an aministrator function), which tells what an enduser can see, how forms should be looking, etc. (the configuration mode can be left by clicking Edit)<br>\r
-<br>\r
-The client design functionallity can be seen in action in the detail forms.<br><br>\r
-<br>\r
+text:"<html>This sample shows the flexibility of the Servoy solutionModel (solution blueprint creation/modification) together with client design functionallity.<br><br>
+It will create list and detail forms on the fly, based upon a database description, which can be configured.<br>
+The configuration takes place in the configure mode (is an aministrator function), which tells what an enduser can see, how forms should be looking, etc. (the configuration mode can be left by clicking Edit)<br>
+<br>
+The client design functionallity can be seen in action in the detail forms.<br><br>
+<br>
 You can use any name/password to login, when the same login name is used in subsequential logins, changes done with client design will be shown in the detail forms. (a subsequential login is possible via 'logout\" menu action or new browser start incase of webclient)<br>",
 transparent:true,
 typeid:7,
@@ -61,7 +61,6 @@ uuid:"90D58817-E7F1-4C18-8793-4ACD6B90BB45"
 anchors:12,
 dataProviderID:"username",
 location:"100,420",
-name:"fld_name",
 onActionMethodID:"E0A7F3D3-5A3E-409B-8EE1-ADAAD52ABB9B",
 size:"140,20",
 typeid:4,
@@ -102,7 +101,6 @@ verticalAlignment:0
 ],
 name:"login",
 navigatorID:"-1",
-onShowMethodID:"D05B296E-9B69-4415-AAD2-E19406D9F7BE",
 paperPrintScale:100,
 showInMenu:true,
 size:"640,480",

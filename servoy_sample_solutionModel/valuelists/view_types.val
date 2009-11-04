@@ -1,5 +1,6 @@
 addEmptyValue:1,
-customValues:"recordview|0\r\ntableview|3",
+customValues:"recordview|0
+tableview|3",
 name:"view_types",
 returnDataProviders:1,
 separator:" ",

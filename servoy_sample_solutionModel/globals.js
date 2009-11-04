@@ -1,4 +1,9 @@
 /**
+ * @properties={typeid:35,uuid:"98AFAEFE-CCD6-47D4-B85A-D82014258C17"}
+ */
+var const_null = null;
+
+/**
  * @properties={typeid:35,uuid:"19ade47b-b781-4e81-ae00-fa8dc1d26410"}
  */
 var heading = '';
@@ -7,11 +12,6 @@ var heading = '';
  * @properties={typeid:35,uuid:"ed38f152-e865-4e2f-9b7b-d5661773e1dd"}
  */
 var search = '';
-
-/**
- * @properties={typeid:35,uuid:"98AFAEFE-CCD6-47D4-B85A-D82014258C17"}
- */
-var const_null = null;
 
 /**
  * @properties={typeid:35,uuid:"BBC3F82A-470D-4AB6-8751-3E335E20ECAF"}

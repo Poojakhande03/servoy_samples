@@ -23,15 +23,3 @@ function login(event)
 	globals.user_uid = utils.stringReplace(username.toLowerCase(), ' ', '_');
 	var ok = security.login(username,globals.user_uid, groups)
 }
-
-/**
- * Callback method for when form is shown.
- *
- * @param {Boolean} firstShow form is shown first time after load
- * @param {JSEvent} event the event that triggered the action
- *
- * @properties={typeid:24,uuid:"D05B296E-9B69-4415-AAD2-E19406D9F7BE"}
- */
-function onShowForm(firstShow, event) {
-	elements.fld_name.requestFocus();
-}
