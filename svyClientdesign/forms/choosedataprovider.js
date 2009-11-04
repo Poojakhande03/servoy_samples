@@ -1,12 +1,12 @@
 /**
- * @properties={typeid:35,uuid:"3719ABA0-124D-43CC-8235-95D60C2F5F15",variableType:4}
- */
-var fieldtype = null;
-
-/**
  * @properties={typeid:35,uuid:"C670ED3C-9D3D-4081-A50F-7EF94DA24A74"}
  */
 var dataprovider = null;
+
+/**
+ * @properties={typeid:35,uuid:"3719ABA0-124D-43CC-8235-95D60C2F5F15",variableType:4}
+ */
+var fieldtype = null;
 
 /**
  * @param {String} formname The formname for which this dataprovider should be called.

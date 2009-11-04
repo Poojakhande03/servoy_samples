@@ -7,7 +7,6 @@ name:"employees",
 returnDataProviders:4,
 separator:" ",
 showDataProviders:3,
-sortOptions:"",
 typeid:34,
 uuid:"6554F376-F19D-46A7-B92C-9B9309FFF30F",
 valueListType:1

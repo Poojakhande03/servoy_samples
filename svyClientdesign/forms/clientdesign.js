@@ -1,12 +1,7 @@
 /**
- * @properties={typeid:35,uuid:"DFD5679D-501D-4F45-A0DA-3BE220EAE2AF"}
+ * @properties={typeid:35,uuid:"6AC0FFEC-DEE1-4A49-A4CD-2D702A03233E",variableType:-4}
  */
-var selectedDesignFormName = null;
-
-/**
- * @properties={typeid:35,uuid:"186CA2D8-D560-4CF4-98F4-49AE59A895FE",variableType:4}
- */
-var newComponentsCounter = 0;
+var callbackFunction = null;
 
 /**
  * @properties={typeid:35,uuid:"49680BD0-ADEC-48A8-B04D-47FFB8217DA9",variableType:-4}
@@ -14,9 +9,14 @@ var newComponentsCounter = 0;
 var changedElements = null;
 
 /**
- * @properties={typeid:35,uuid:"6AC0FFEC-DEE1-4A49-A4CD-2D702A03233E",variableType:-4}
+ * @properties={typeid:35,uuid:"186CA2D8-D560-4CF4-98F4-49AE59A895FE",variableType:4}
  */
-var callbackFunction = null;
+var newComponentsCounter = 0;
+
+/**
+ * @properties={typeid:35,uuid:"DFD5679D-501D-4F45-A0DA-3BE220EAE2AF"}
+ */
+var selectedDesignFormName = null;
 
 /**
  * Callback method when form is (re)loaded.
