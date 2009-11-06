@@ -1,4 +1,9 @@
 /**
+ * @properties={typeid:35,uuid:"8B5F84A7-45CC-41D6-92CE-D985086F8420",variableType:4}
+ */
+var smart_chg = 0;
+
+/**
  * @properties={typeid:35,uuid:"d63336f0-7f12-4bd2-b65d-4ed061b6846d",variableType:4}
  */
 var const_one = 1;

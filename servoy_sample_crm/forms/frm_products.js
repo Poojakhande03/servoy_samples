@@ -5,7 +5,7 @@ function btn_addImage()
 {
 	//Shows a file open dialog, by default files and folders can be selected
 	var file = plugins.file.showFileOpenDialog(0,globals.default_image_directory);
-
+	
 	//if they didn't "cancel" this dialog
 	if(file)
 	{
@@ -18,11 +18,15 @@ function btn_addImage()
 			var ext = utils.stringRight(fileName, 3);
 			var type = plugins.images.getImage(rawData);
 			var contentType = type.getContentType();
-
+	
 			if(utils.stringPatternCount(contentType, 'image') > 0)
 			{
 				//it's an image we can display
-				image_thumbnail = application.createJPGImage(rawData, 90, 90)
+//				image_thumbnail = application.createJPGImage(rawData, 90, 90);
+				
+				var img_raw = plugins.images.getImage(rawData);
+				image_thumbnail = img_raw.resize(90,90);
+				globals.smart_chg = 1;
 			}
 			else
 			{
@@ -38,10 +42,64 @@ function btn_addImage()
 			image_mime_type = contentType;
 			product_image = rawData;
 
+			databaseManager.saveData();
 			sub_setPreviewLabels();
-
-			controller.saveData();
 		}
+	}
+}
+
+/**
+ * @properties={typeid:24,uuid:"64FA3E0F-0CEA-4904-AC11-44307F40DC74"}
+ */
+function product_image_dataChange() {
+	if (globals.smart_chg == 0) {
+		var rawData = product_image;
+
+		if(rawData)
+		{
+			var fileName = product_image_filename;
+			var ext = utils.stringRight(fileName, 3);
+			var type = plugins.images.getImage(rawData);
+			var contentType = type.getContentType();
+
+			if(utils.stringPatternCount(contentType, 'image') > 0)
+			{
+				//it's an image we can display
+				//image_thumbnail = application.createJPGImage(rawData, 90, 90);  - depricated method
+
+				var img_raw = plugins.images.getImage(rawData);
+				image_thumbnail = img_raw.resize(90,90);
+			}
+			else
+			{
+				//there will be no display
+				image_thumbnail = null;
+				//show error message!
+				globals.svyCore_dlg_warning('<html>This is<b> NOT an image file!</b><br>Please select a different file.</html>','','OK')
+				return;
+			}
+			image_type = ext;
+			image_name = product_image_filename;
+			image_mime_type = product_image_mimetype;
+
+			databaseManager.saveData();
+			sub_setPreviewLabels();
+		}
+	}
+	else {
+		globals.smart_chg = 0;
+	}
+	if (product_image_mimetype == null)
+	{
+		image_mime_type = null
+		image_name = null
+		image_thumbnail = null
+		image_type = null
+		product_image = null;
+		product_image_filename = null;
+		product_image_mimetype = null;
+		databaseManager.saveData();
+		sub_setPreviewLabels();
 	}
 }
 
@@ -227,6 +285,9 @@ function sub_clearImage()
 		image_name = null
 		image_thumbnail = null
 		image_type = null
+		product_image = null;
+		product_image_filename = null;
+		product_image_mimetype = null;
 	}
 }
 
@@ -252,18 +313,21 @@ function sub_setPreviewLabels()
 	if(product_image && (utils.stringPatternCount(image_mime_type, 'image') == 0 || !image_mime_type))
 	{
 		//show that there is no preview for this item
-		elements.lbl_imagePreview.text = '<html><body><center>No Preview for .' + image_type + ' files</center></body></html>'
+		elements.lbl_imagePreview.text = '<html><body><center>No Preview for .' + image_type + ' files</center></body></html>';
 		elements.lbl_imagePreview.visible = true;
+		application.updateUI(100);
 	}
 	else if(!product_image)
 	{
-		elements.lbl_imagePreview.text = 'No Image'
+		elements.lbl_imagePreview.text = 'No Image';
 		elements.lbl_imagePreview.visible = true;
+		application.updateUI(100);
 	}
 	else
 	{
 		elements.lbl_imagePreview.text = '';
 		elements.lbl_imagePreview.visible = false;
+		application.updateUI(100);
 	}
 }
 
