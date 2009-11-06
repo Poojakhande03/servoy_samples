@@ -108,7 +108,8 @@ location:"160,140",
 size:"140,20",
 text:"Element Type",
 typeid:4,
-uuid:"B80A0045-AF4A-435C-A07D-27DF1086A5DE"
+uuid:"B80A0045-AF4A-435C-A07D-27DF1086A5DE",
+valuelistID:"0AD1C931-221D-47B9-BDEB-2FD7A908425C"
 },
 {
 dataProviderID:"display_options",

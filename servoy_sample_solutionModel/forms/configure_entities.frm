@@ -117,6 +117,18 @@ typeid:7,
 uuid:"734794C2-25FB-4169-AD51-6B55D3BFD8AE"
 },
 {
+anchors:3,
+dataProviderID:"globals.selected_user_uid",
+displayType:2,
+editable:false,
+formIndex:16503,
+location:"460,340",
+size:"80,20",
+typeid:4,
+uuid:"78CC27DD-4587-4AEC-9B28-660081DE88F5",
+valuelistID:"BDA2C2DA-8DBE-41C8-9CA0-C48AE4AFAB3A"
+},
+{
 location:"10,120",
 mediaOptions:14,
 size:"130,20",
@@ -131,8 +143,8 @@ anchors:15,
 items:[
 {
 containsFormID:"109293d0-50bc-46ec-b0ef-a30a15eb9324",
-location:"30,370",
-relationName:"entities_to_elements",
+location:"30,400",
+relationName:"entities_to_elements_specific",
 text:"configure_elements",
 typeid:15,
 uuid:"3a824014-6ede-4d3e-814f-68c3f3a2051c"
@@ -141,7 +153,7 @@ uuid:"3a824014-6ede-4d3e-814f-68c3f3a2051c"
 location:"10,370",
 name:"tabs_400",
 printable:false,
-size:"481,171",
+size:"530,171",
 typeid:16,
 uuid:"7c7b4f3c-0adf-405c-9b6d-3e89091037fd"
 },
@@ -159,7 +171,7 @@ uuid:"950fe329-231b-4570-a4fd-e707d3a6490b"
 formIndex:16501,
 location:"10,340",
 mediaOptions:14,
-size:"480,20",
+size:"440,20",
 tabSeq:-1,
 text:"Note: elements witout an element name cannot be designed in client design",
 transparent:true,
@@ -276,7 +288,7 @@ dataProviderID:"tabs_relation_names",
 displayType:1,
 location:"150,270",
 scrollbars:2,
-size:"341,61",
+size:"390,61",
 typeid:4,
 uuid:"f084b857-c291-4059-abd6-dab565e743f1"
 },
@@ -301,7 +313,7 @@ uuid:"f35bbb98-71cf-44bd-9e38-96a0a96aff8d"
 name:"configure_entities",
 navigatorID:"00348be3-0058-4443-a9a8-334c7bde12e4",
 paperPrintScale:100,
-size:"499,550",
+size:"550,550",
 styleName:"svyWebCrm",
 typeid:3,
 uuid:"938d1cde-170a-4fe0-9877-c881ffe2c88d"

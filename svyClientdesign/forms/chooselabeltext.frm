@@ -13,7 +13,7 @@ uuid:"0608ACDD-05FC-45DB-800A-5FE4AF96E9E4"
 {
 dataProviderID:"labelText",
 location:"160,70",
-size:"140,20",
+size:"180,20",
 typeid:4,
 uuid:"1CE094E3-2F2B-4254-B974-4F819531A40E"
 },
@@ -28,7 +28,7 @@ name:"chooselabeltext",
 navigatorID:"-1",
 onHideMethodID:"-1",
 paperPrintScale:100,
-size:"401,201",
+size:"350,201",
 styleName:"svyWebCrm",
 typeid:3,
 uuid:"C2F65B57-AB4D-453B-909C-933FE23F9587"

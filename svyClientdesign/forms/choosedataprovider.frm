@@ -52,7 +52,7 @@ name:"choosedataprovider",
 navigatorID:"-1",
 onLoadMethodID:"E27CFFA0-FD76-4BA4-9D37-F29E8A42119B",
 paperPrintScale:100,
-size:"401,201",
+size:"350,201",
 styleName:"svyWebCrm",
 typeid:3,
 uuid:"B64AF913-0CE6-4559-9234-482F78B11841"

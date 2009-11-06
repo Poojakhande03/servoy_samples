@@ -71,6 +71,18 @@ uuid:"98565A4A-9024-4D6E-8433-8D9B62746A49",
 verticalAlignment:0
 },
 {
+location:"10,260",
+mediaOptions:14,
+name:"deleteElements",
+onActionMethodID:"F1BD8DC4-C643-4C74-B3D4-73AD9B489C0B",
+onDoubleClickMethodID:"-1",
+onRightClickMethodID:"-1",
+size:"130,20",
+text:"Delete Elements",
+typeid:7,
+uuid:"B28F8DE3-4C85-4DF4-AF40-904C07120219"
+},
+{
 location:"10,70",
 mediaOptions:14,
 size:"80,20",

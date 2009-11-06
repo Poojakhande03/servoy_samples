@@ -19,6 +19,11 @@ var newComponentsCounter = 0;
 var selectedDesignFormName = null;
 
 /**
+ * @properties={typeid:35,uuid:"02B4793C-3C18-411F-A328-06FDDD471FEC",variableType:-4}
+ */
+var eventElements = null;
+
+/**
  * Callback method when form is (re)loaded.
  *
  * @properties={typeid:24,uuid:"B6429733-2826-451E-A5F9-B86E14D24D43"}
@@ -190,6 +195,7 @@ function newFieldImpl( dataprovider, fieldtype )
 		var field = form.newField ( dataprovider, forms.choosedataprovider.fieldtype, 50, 100, 80, 20 );
 		// give it a name so that you can move/change it later on.
 		field.name = "field_" + newComponentsCounter++;
+		field.text = field.dataProviderID;
 		// recreate the ui of the runtime instance
 		forms[selectedDesignFormName].controller.recreateUI();
 	}
@@ -204,11 +210,11 @@ function newFieldImpl( dataprovider, fieldtype )
  */
 function onDrag( event )
 {
-	var droppedElements = event.data;
+	eventElements = event.data;
 	// only allow drag on named components
-	for (var index = 0; index < droppedElements.length; index++)
+	for (var index = 0; index < eventElements.length; index++)
 	{
-		if ( droppedElements[index].getName() == null )
+		if ( eventElements[index].getName() == null )
 		{
 			return false;
 		}
@@ -226,23 +232,120 @@ function onDrag( event )
 function onDrop( event )
 {
 	// store the location of all the dropped elements in the solution model.
+	
 	// take the form out of the solution model
 	var form = solutionModel.getForm ( selectedDesignFormName );
 	// event.data is an array of the dropped elements.
-	var droppedElements = event.data;
+	eventElements = event.data;
 
-	// walk through all the dropped elements and copy there current location in the solution model.
-	for (var index = 0; index < droppedElements.length; index++)
+	// walk through all the dropped elements and copy there current location in the solution model elements.
+	for (var index = 0; index < eventElements.length; index++)
 	{
-		var component = form.getComponent ( droppedElements[index].getName() );
+		var droppedRuntimeElement = eventElements[index];
+		
+		var X = droppedRuntimeElement.getLocationX();
+		//use the absolute position since thats where solutionModel works with
+		var Y = droppedRuntimeElement.getAbsoluteFormLocationY();
+		var W = droppedRuntimeElement.getWidth();
+		var H = droppedRuntimeElement.getHeight();
+		
+		var component = form.getComponent ( droppedRuntimeElement.getName() );
+		if (component instanceof JSField)
+		{
+			//test if intersects with anotother field
+			var intersectFieldsArray = getIntersectsFields(form,component,X,Y,W,H);
+			if (intersectFieldsArray.length == 1)
+			{
+				//when dropped on 1, exchange pos...
+				var iField = intersectFieldsArray[0];
+				exchangeFieldPositions(form, component,iField);
+				changedElements.push(component);
+				changedElements.push(iField);
+				
+				//now also reflect this at the runtime side
+				forms[selectedDesignFormName].controller.recreateUI();
+				
+				component = null;
+			}
+		}
 		if (component != null)
 		{
 			changedElements.push(component)
 	
-			component.x = droppedElements[index].getLocationX();
-			component.y = droppedElements[index].getAbsoluteFormLocationY();
+			component.x = X;
+			component.y = Y;
 		}
 	}
+}
+
+/**
+ * @properties={typeid:24,uuid:"359DB058-D25A-4BD4-BFC4-C05BF18EF40D"}
+ */
+function exchangeFieldPositions( smForm, smField1, smField2)
+{
+	var smField1Rect = new java.awt.Rectangle(smField1.x,smField1.y,smField1.width,smField1.height);
+	smField1.x = smField2.x;
+	smField1.y = smField2.y;
+	smField1.width = smField2.width;
+	smField1.height = smField2.height;
+	
+	smField2.x = smField1Rect.x;
+	smField2.y = smField1Rect.y;
+	smField2.width = smField1Rect.width;
+	smField2.height = smField1Rect.height;
+	
+	//now also excange labelFor if present for these fields
+	var smLabel1 = null;
+	var smLabel2 = null;
+
+	var smLabels = smForm.getLabels()
+	for (var index = 0; index < smLabels.length; index++) 
+	{
+		var label = smLabels[index];
+		if (label.labelFor == smField1.name)
+		{
+			smLabel1 = label;
+		}
+		if (label.labelFor == smField2.name)
+		{
+			smLabel2 = label;
+		}
+	}
+	
+	if (smLabel1 != null && smLabel2 != null)
+	{
+		var smLabel1Rect = new java.awt.Rectangle(smLabel1.x,smLabel1.y,smLabel1.width,smLabel1.height);
+		smLabel1.x = smLabel2.x;
+		smLabel1.y = smLabel2.y;
+		smLabel1.width = smLabel2.width;
+		smLabel1.height = smLabel2.height;
+		
+		smLabel2.x = smLabel1Rect.x;
+		smLabel2.y = smLabel1Rect.y;
+		smLabel2.width = smLabel1Rect.width;
+		smLabel2.height = smLabel1Rect.height;
+	}
+}
+
+/**
+ * @properties={typeid:24,uuid:"CEADA319-A140-4B7C-9BFF-4D5356D041DC"}
+ */
+function getIntersectsFields( smForm,ignoreComponent, x, y, w, h)
+{
+	var retval = new Array();
+	var testRect = new java.awt.Rectangle(x,y,w,h);
+	var smFields = smForm.getFields();
+	for (var index = 0; index < smFields.length; index++) 
+	{
+		var field = smFields[index];
+		if (field == ignoreComponent) continue; //ignore the one we are testing for
+		var fieldRect = new java.awt.Rectangle(field.x,field.y,field.width,field.height);
+		if (testRect.intersects(fieldRect))
+		{
+			retval.push(field);
+		}
+	}
+	return retval;
 }
 
 /**
@@ -254,12 +357,12 @@ function onDrop( event )
  */
 function onSelect( event )
 {
-	var droppedElements = event.data;
+	eventElements = event.data;
 
 	// only allow selection on named components
-	for (var index = 0; index < droppedElements.length; index++)
+	for (var index = 0; index < eventElements.length; index++)
 	{
-		if ( droppedElements[index].getName() == null )
+		if ( eventElements[index].getName() == null )
 		{
 			return false;
 		}
@@ -277,21 +380,51 @@ function onResize( event )
 	// take the form out of the solution model
 	var form = solutionModel.getForm ( selectedDesignFormName );
 	// event.data is an array of the resized elements.
-	var droppedElements = event.data;
+	eventElements = event.data;
 
 	// walk through all the resized elements and copy there current width and height in the solution model.
-	for (var index = 0; index < droppedElements.length; index++)
+	for (var index = 0; index < eventElements.length; index++)
 	{
-		if ( droppedElements[index].getName() != null )
+		var element = eventElements[index];
+		if ( element.getName() != null )
 		{
-			var component = form.getComponent ( droppedElements[index].getName() );
+			var component = form.getComponent ( element.getName() );
 			if (component != null)
 			{
 				changedElements.push(component)
 	
-				component.width = droppedElements[index].getWidth();
-				component.height = droppedElements[index].getHeight();
+				component.width = element.getWidth();
+				component.height = element.getHeight();
 			}
 		}
+	}
+}
+
+/**
+ * Perform the element default action.
+ *
+ * @param {JSEvent} event the event that triggered the action
+ *
+ * @properties={typeid:24,uuid:"F1BD8DC4-C643-4C74-B3D4-73AD9B489C0B"}
+ */
+function deleteElements(event) 
+{
+	var form = solutionModel.getForm ( selectedDesignFormName );
+	if (eventElements != null)
+	{
+		for (var index = 0; index < eventElements.length; index++)
+		{
+			var element = eventElements[index];
+			if ( element.getName() != null )
+			{
+				var component = form.getComponent ( element.getName() );
+				if (component != null)
+				{
+					changedElements.push(component)
+					form.removeComponent(element.getName())
+				}
+			}
+		}
+		forms[selectedDesignFormName].controller.recreateUI();
 	}
 }

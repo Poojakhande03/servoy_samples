@@ -20,6 +20,6 @@ function login(event)
 	if (username == null) return;
 	var groups = new Array()
 	groups[0] = 'Administrators'; //normally these groups are for example received from LDAP based on name and password
-	globals.user_uid = utils.stringReplace(username.toLowerCase(), ' ', '_');
-	var ok = security.login(username,globals.user_uid, groups)
+	globals.login_user_uid = utils.stringReplace(username.toLowerCase(), ' ', '_');
+	var ok = security.login(username,globals.login_user_uid, groups)
 }

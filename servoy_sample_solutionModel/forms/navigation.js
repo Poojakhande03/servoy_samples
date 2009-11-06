@@ -114,18 +114,19 @@ function syncronizeWithDB()
 					
 					databaseManager.saveData();
 				}
+				
 				if (recreate)
 				{
-					entity_rec.entities_to_elements.deleteAllRecords()
+					entity_rec.entities_to_elements_all.deleteAllRecords()
 				}
 				var x = 40;
 				var y = 60;
-				var vtypes = new Array(SM_VIEW.RECORD_VIEW,SM_VIEW.LOCKED_TABLE_VIEW)
+				var vtypes = new Array(JSForm.RECORD_VIEW,JSForm.LOCKED_TABLE_VIEW)
 				for (var vindex = 0; vindex < vtypes.length; vindex++)
 				{
 					var vtype = vtypes[vindex];
-					if (vtype == SM_VIEW.LOCKED_TABLE_VIEW) y = 60;
-					if (vtype == SM_VIEW.RECORD_VIEW) x = 140;
+					if (vtype == JSForm.LOCKED_TABLE_VIEW) y = 60;
+					if (vtype == JSForm.RECORD_VIEW) x = 140;
 					var columnnames = jstable.getColumnNames();
 					for (var cindex = 0; cindex < columnnames.length; cindex++) 
 					{
@@ -133,9 +134,9 @@ function syncronizeWithDB()
 						var jscolumn = jstable.getColumn(cname)
 						var column_dataprovider_id = jscolumn.getDataProviderID()
 						var field_rec = null;
-						for (var crindex = 1; crindex <= entity_rec.entities_to_elements.getSize(); crindex++) 
+						for (var crindex = 1; crindex <= entity_rec.entities_to_elements_all.getSize(); crindex++) 
 						{
-							field_rec = entity_rec.entities_to_elements.getRecord(crindex)
+							field_rec = entity_rec.entities_to_elements_all.getRecord(crindex)
 							if (field_rec.dataprovider_id == column_dataprovider_id && field_rec.view_type == vtype)
 							{
 								break;
@@ -145,8 +146,8 @@ function syncronizeWithDB()
 						if (field_rec == null)
 						{
 							//not found create
-							var i = entity_rec.entities_to_elements.newRecord()
-							field_rec = entity_rec.entities_to_elements.getRecord(i)
+							var i = entity_rec.entities_to_elements_all.newRecord()
+							field_rec = entity_rec.entities_to_elements_all.getRecord(i)
 							field_rec.view_type = vtype
 							field_rec.label = utils.stringReplace(utils.stringInitCap(cname),"_"," ");
 							field_rec.dataprovider_id = column_dataprovider_id;
@@ -158,8 +159,8 @@ function syncronizeWithDB()
 							}
 							field_rec.display_options = 0;
 							
-							if (vtype == SM_VIEW.LOCKED_TABLE_VIEW) x = x + 25;
-							if (vtype == SM_VIEW.RECORD_VIEW) y = y + 25;
+							if (vtype == JSForm.LOCKED_TABLE_VIEW) x = x + 25;
+							if (vtype == JSForm.RECORD_VIEW) y = y + 25;
 							
 							field_rec.xlocation = x, field_rec.ylocation = y 
 							field_rec.width = 150;
@@ -169,7 +170,7 @@ function syncronizeWithDB()
 							{
 								field_rec.display_options = 1;
 								field_rec.label = 'ID'
-								if (vtype == SM_VIEW.LOCKED_TABLE_VIEW)							
+								if (vtype == JSForm.LOCKED_TABLE_VIEW)							
 								{
 									field_rec.width = 50;
 								}

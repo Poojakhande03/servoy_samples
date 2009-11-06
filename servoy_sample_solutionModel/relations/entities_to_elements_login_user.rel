@@ -2,10 +2,10 @@ allowCreationRelatedRecords:true,
 deleteRelatedRecords:true,
 foreignDataSource:"db:/user_data/elements",
 items:[
-{foreignColumnName:"user_uid",primaryDataProviderID:"globals.user_uid",typeid:23,uuid:"50B185EF-9385-41AB-9AC0-5F46A6A967B2"},
+{foreignColumnName:"user_uid",primaryDataProviderID:"globals.login_user_uid",typeid:23,uuid:"50B185EF-9385-41AB-9AC0-5F46A6A967B2"},
 {foreignColumnName:"entity_id",primaryDataProviderID:"entity_id",typeid:23,uuid:"8CA16867-8CA3-40EC-94F5-9854623374AE"}
 ],
-name:"entities_to_elements_user_specific",
+name:"entities_to_elements_login_user",
 primaryDataSource:"db:/user_data/entities",
 typeid:22,
 uuid:"8513556C-2857-417B-8896-9833AF5AA59B"
