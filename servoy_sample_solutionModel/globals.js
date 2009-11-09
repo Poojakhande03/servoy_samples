@@ -293,11 +293,11 @@ function changedElements(formName,changedElementsArray)
 						{
 							element_rec.field_type = comp.displayType
 						}
-						if (comp.getElementType() == ELEMENT_TYPES.LABEL)
+						if (comp instanceof JSLabel)
 						{
 							element_rec.element_type = 1
 						}
-						if (comp.getElementType() == ELEMENT_TYPES.BUTTON)
+						if (comp instanceof JSButton)
 						{
 							element_rec.element_type = 2
 						}
