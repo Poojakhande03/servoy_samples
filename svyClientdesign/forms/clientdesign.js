@@ -164,10 +164,24 @@ function newLabelImpl( label )
 		var component = form.newLabel ( label, 50, 100, 80, 20 );
 		component.transparent = true;
 		// give it a name so that you can move/change it later on.
-		component.name = "label_" + newComponentsCounter++;
+		component.name = getNewComponentName(form,"label_"); 
 		// recreate the ui of the runtime instance
 		forms[selectedDesignFormName].controller.recreateUI();
 	}
+}
+
+/**
+ * @properties={typeid:24,uuid:"5D80CE5D-1471-4910-940D-000B530E3269"}
+ */
+function getNewComponentName(form, prefix)
+{
+	
+	var n = prefix + newComponentsCounter++;
+	while ( form.getComponent(n) != null)
+	{
+		n = prefix + newComponentsCounter++;
+	}
+	return n;
 }
 
 /**
@@ -194,7 +208,7 @@ function newFieldImpl( dataprovider, fieldtype )
 		var form = solutionModel.getForm ( selectedDesignFormName );
 		var field = form.newField ( dataprovider, forms.choosedataprovider.fieldtype, 50, 100, 80, 20 );
 		// give it a name so that you can move/change it later on.
-		field.name = "field_" + newComponentsCounter++;
+		field.name = getNewComponentName(form,"field_");
 		field.text = field.dataProviderID;
 		// recreate the ui of the runtime instance
 		forms[selectedDesignFormName].controller.recreateUI();
@@ -249,6 +263,7 @@ function onDrop( event )
 		var W = droppedRuntimeElement.getWidth();
 		var H = droppedRuntimeElement.getHeight();
 		
+		application.output(droppedRuntimeElement + "::" + X + "," + Y)
 		var component = form.getComponent ( droppedRuntimeElement.getName() );
 		if (component instanceof JSField)
 		{
