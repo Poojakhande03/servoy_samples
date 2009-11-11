@@ -3,6 +3,8 @@
  */
 function btn_addImage()
 {
+	databaseManager.setAutoSave(false);
+	
 	//Shows a file open dialog, by default files and folders can be selected
 	var file = plugins.file.showFileOpenDialog(0,globals.default_image_directory);
 	
@@ -42,7 +44,6 @@ function btn_addImage()
 			image_mime_type = contentType;
 			product_image = rawData;
 
-			databaseManager.saveData();
 			sub_setPreviewLabels();
 		}
 	}
@@ -52,6 +53,8 @@ function btn_addImage()
  * @properties={typeid:24,uuid:"64FA3E0F-0CEA-4904-AC11-44307F40DC74"}
  */
 function product_image_dataChange() {
+	databaseManager.setAutoSave(false);
+	
 	if (globals.smart_chg == 0) {
 		var rawData = product_image;
 
@@ -82,7 +85,6 @@ function product_image_dataChange() {
 			image_name = product_image_filename;
 			image_mime_type = product_image_mimetype;
 
-			databaseManager.saveData();
 			sub_setPreviewLabels();
 		}
 	}
@@ -98,7 +100,6 @@ function product_image_dataChange() {
 		product_image = null;
 		product_image_filename = null;
 		product_image_mimetype = null;
-		databaseManager.saveData();
 		sub_setPreviewLabels();
 	}
 }
@@ -134,7 +135,7 @@ function btn_save()
 if(!bill_address_id){globals.showErrorDialog('You must choose a billing address.'); return;}
 	 */
 
-	globals.saveEdits()
+	globals.saveEdits();
 	hide_btn_reset_fields();
 
 	if(application.getApplicationType() == 5) onRecordSelect(); //for web client - to refresh buttons
