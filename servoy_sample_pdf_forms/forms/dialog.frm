@@ -14,7 +14,7 @@ uuid:"3888ecc9-2bd3-4a1e-af8f-0a307b24f226"
 },
 {
 formIndex:10500,
-location:"284,187",
+location:"294,187",
 mediaOptions:14,
 name:"btn_ok",
 onActionMethodID:"473d0db1-9ea9-40a8-a16d-9a66cb0a3b0b",

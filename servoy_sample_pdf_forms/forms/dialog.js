@@ -34,5 +34,4 @@ function btn_ok()
 	if(databaseManager.hasTransaction()) databaseManager.commitTransaction()
 	forms.main.elements.tabs_dialog.visible = false
 	globals.enableBgElements();
-	var k1 = 1000;
 }
