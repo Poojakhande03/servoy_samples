@@ -1,5 +1,5 @@
 borderType:"EmptyBorder,0,0,0,0",
-initialSort:"solution_id asc",
+initialSort:"user_name asc",
 name:"lst_chatUsers",
 navigatorID:"-1",
 onLoadMethodID:"252c8c17-4e73-4697-a02e-c3349a70addb",

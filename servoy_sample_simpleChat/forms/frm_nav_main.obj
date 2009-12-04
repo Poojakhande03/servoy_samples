@@ -1,5 +1,5 @@
 borderType:"EmptyBorder,0,0,0,0",
-initialSort:"solution_id asc",
+initialSort:"form_id asc",
 name:"frm_nav_main",
 navigatorID:"-1",
 onRecordSelectionMethodID:"-1",
