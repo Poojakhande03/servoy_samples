@@ -1,5 +1,5 @@
 borderType:"EmptyBorder,0,0,0,0",
-initialSort:"solution_id asc",
+initialSort:"template_name asc",
 name:"lst_pdf_templates",
 navigatorID:"-1",
 onLoadMethodID:"11cec0f8-581a-4ba5-a445-c88b9a029b98",

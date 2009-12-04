@@ -1,5 +1,5 @@
 borderType:"EmptyBorder,0,0,0,0",
-initialSort:"solution_id asc",
+initialSort:"form_id asc",
 name:"lst_pdf_forms",
 navigatorID:"-1",
 onLoadMethodID:"12a3f948-985f-4a57-a572-0af74035f98f",
