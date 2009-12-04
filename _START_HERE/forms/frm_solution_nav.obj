@@ -1,5 +1,5 @@
 borderType:"EmptyBorder,0,0,0,0",
-initialSort:"solution_id asc",
+initialSort:"item_name asc",
 name:"frm_solution_nav",
 onRecordSelectionMethodID:"1237187c-f2b4-4dbb-889d-bf20175f4af2",
 paperPrintScale:100,
