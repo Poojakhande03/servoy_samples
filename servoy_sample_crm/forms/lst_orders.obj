@@ -1,5 +1,5 @@
 borderType:"EmptyBorder,0,0,0,0",
-initialSort:"solution_id asc",
+initialSort:"order_id asc",
 name:"lst_orders",
 navigatorID:"-1",
 onLoadMethodID:"509725d3-4719-4db9-adf2-d43e4c46ea57",

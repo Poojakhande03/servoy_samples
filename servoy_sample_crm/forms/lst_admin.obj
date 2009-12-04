@@ -1,5 +1,5 @@
 borderType:"EmptyBorder,0,0,0,0",
-initialSort:"solution_id asc",
+initialSort:"company_name asc",
 name:"lst_admin",
 navigatorID:"-1",
 onLoadMethodID:"-1",

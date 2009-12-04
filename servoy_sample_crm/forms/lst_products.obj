@@ -1,5 +1,5 @@
 borderType:"EmptyBorder,0,0,0,0",
-initialSort:"solution_id asc",
+initialSort:"product_name asc",
 name:"lst_products",
 navigatorID:"-1",
 onLoadMethodID:"ea313167-ef69-461f-bd2a-d920bc193bd4",

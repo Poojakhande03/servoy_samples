@@ -1,5 +1,5 @@
 borderType:"EmptyBorder,0,0,0,0",
-initialSort:"seq asc",
+initialSort:"country_type_id asc",
 name:"lst_vl_countryTypes",
 paperPrintScale:100,
 rowBGColorCalculation:"bgRowColor_ltGrey",

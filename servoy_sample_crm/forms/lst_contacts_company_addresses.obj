@@ -1,5 +1,5 @@
 borderType:"EmptyBorder,0,0,0,0",
-initialSort:"solution_id asc",
+initialSort:"address_id asc",
 name:"lst_contacts_company_addresses",
 navigatorID:"-1",
 onLoadMethodID:"-1",

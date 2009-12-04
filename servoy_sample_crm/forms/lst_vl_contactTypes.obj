@@ -1,5 +1,5 @@
 borderType:"EmptyBorder,0,0,0,0",
-initialSort:"seq asc",
+initialSort:"contact_type_id asc",
 name:"lst_vl_contactTypes",
 paperPrintScale:100,
 rowBGColorCalculation:"bgRowColor_ltGrey",
