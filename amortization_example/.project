@@ -3,6 +3,7 @@
 	<name>amortization_example</name>
 	<comment></comment>
 	<projects>
+		<project>servoy_resources</project>
 		<project>servoy_localhost_resources</project>
 	</projects>
 	<buildSpec>
