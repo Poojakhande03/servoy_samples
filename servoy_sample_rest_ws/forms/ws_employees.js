@@ -20,7 +20,9 @@ function ws_create(emp)
 	record.lastname = emp.lastName
 	if (databaseManager.saveData(record))
 	{
-		return record.employeeid // response body
+		var ret = new Object()
+		ret.id = record.employeeid
+		return ret // response body
 	}
 	return null;
 }
