@@ -20,7 +20,7 @@ uuid:"0e3d4cdc-42c2-47c8-8f9b-d8380f8675d3"
 },
 {
 formIndex:12400,
-location:"20,293",
+location:"20,298",
 mediaOptions:14,
 showClick:false,
 showFocus:false,
@@ -203,20 +203,43 @@ uuid:"725c28ec-fc24-4070-8213-d566f89baebe",
 valuelistID:"de4e914c-8eda-4e5d-8c15-a547eeaac751"
 },
 {
+formIndex:13100,
+location:"330,195",
+mediaOptions:14,
+size:"450,120",
+styleClass:"list",
+tabSeq:-1,
+text:"<html>\r
+  <head>\r
+    \r
+  <\/head>\r
+  <body>\r
+    <b>Submit button<\/b><br>To add a submit button to your template, create 2 hidden fields named \"servoy_pdf_submit_url\" and \"servoy_action_id\". Then create the submit button, name it \"SUBMIT\" and add the following javascript to the mouse up event:<br>\r
+<i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var ef = this.getField(\"servoy_pdf_submit_url\")<br>\r
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.submitForm(ef.value)<\/i>\r
+  <\/body>\r
+<\/html>",
+toolTipText:"With older versions of Adobe Reader, Servoy was able to automatically add a submit button. But this was disabled by Adobe in latest versions.",
+transparent:true,
+typeid:7,
+uuid:"74E43F55-6830-4816-B54A-3B2254737D84",
+verticalAlignment:1
+},
+{
 dataProviderID:"description",
 displayType:1,
 formIndex:12300,
 location:"330,126",
 name:"fld_description",
 scrollbars:33,
-size:"450,130",
+size:"450,60",
 tabSeq:3,
 typeid:4,
 uuid:"77648d1a-9032-407c-a50f-dbc19bf80a10"
 },
 {
 formIndex:12700,
-location:"20,274",
+location:"20,279",
 mediaOptions:14,
 showClick:false,
 showFocus:false,
@@ -292,7 +315,7 @@ uuid:"891b740e-f90c-474b-a76a-d5de17eb9cad"
 },
 {
 formIndex:12800,
-location:"28,274",
+location:"28,279",
 mediaOptions:14,
 size:"130,20",
 styleClass:"darkgrc",
@@ -323,28 +346,29 @@ uuid:"913ea1c6-7c30-483d-ae90-69582f67b727"
 },
 {
 formIndex:13100,
-location:"330,290",
+labelFor:"",
+location:"330,320",
 mediaOptions:14,
-size:"449,292",
+size:"449,260",
 styleClass:"list",
 tabSeq:-1,
-text:"<html>
-  <head>
-    
-  <\/head>
-  <body>
-    <b>Default Values<\/b><br>Default values are those values that are filled 
-    in by default every time this PDF template is used by a form.<br><br>The 
-    defaults are based on a field name and a value. For example, if you have a 
-    PDF form with a field named &quot;company&quot; and you wanted the default value to 
-    be your company name, you would need to:<br><br>1. Create a new default 
-    value<br><br>2. Enter &quot;company&quot; into the &quot;Field Name&quot; column<br><br>3. 
-    Enter your company name into the &quot;Value&quot; column<br><br>That's 
-    it! Now every time this form is used, it will contain the name of your 
-    company in the company field. It will work even if you change the form (as 
-    long as there is a field named &quot;company&quot; on the form).<br><br>If 
-    the field &quot;company&quot; appears more than once - so will the data.
-  <\/body>
+text:"<html>\r
+  <head>\r
+    \r
+  <\/head>\r
+  <body>\r
+    <b>Default Values<\/b><br>Default values are those values that are filled \r
+    in by default every time this PDF template is used by a form.<br><br>The \r
+    defaults are based on a field name and a value. For example, if you have a \r
+    PDF form with a field named &quot;company&quot; and you wanted the default value to \r
+    be your company name, you would need to:<br><br>1. Create a new default \r
+    value<br>2. Enter &quot;company&quot; into the &quot;Field Name&quot; column<br>3. \r
+    Enter your company name into the &quot;Value&quot; column<br><br>That's \r
+    it! Now every time this form is used, it will contain the name of your \r
+    company in the company field. It will work even if you change the form (as \r
+    long as there is a field named &quot;company&quot; on the form).<br><br>If \r
+    the field &quot;company&quot; appears more than once - so will the data.\r
+  <\/body>\r
 <\/html>",
 transparent:true,
 typeid:7,
@@ -378,9 +402,9 @@ uuid:"b60683fa-680d-42ac-8a56-c71307123d3b"
 {
 dataProviderID:"filename",
 formIndex:12200,
-location:"23,235",
+location:"20,235",
 onDataChangeMethodID:"d0282692-3c76-44f0-a448-c4728325cdae",
-size:"248,22",
+size:"251,22",
 tabSeq:-2,
 typeid:4,
 uuid:"d141d7a7-d536-4ca8-b996-cf4259edd862"
@@ -424,17 +448,17 @@ formIndex:11600,
 items:[
 {
 containsFormID:"9bf32c6c-6c53-43c7-b949-bbf071f0098a",
-location:"50,325",
+location:"50,330",
 relationName:"pdf_templates_to_pdf_template_values",
 text:"lst_template_defaults",
 typeid:15,
 uuid:"9847b405-ffaf-4484-a00d-30afb54379d5"
 }
 ],
-location:"20,295",
+location:"20,300",
 name:"tabs_mainPanel",
 printable:false,
-size:"290,286",
+size:"290,280",
 tabOrientation:-1,
 typeid:16,
 uuid:"ea8db22e-603a-4b41-85dd-5956d72eb6f8"
