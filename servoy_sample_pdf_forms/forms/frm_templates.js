@@ -4,9 +4,8 @@
 function btn_addTemplate()
 {
 	var fname = application.showFileOpenDialog();
-	if(fname)
-	{
-		var filedata = application.readFile(fname);
+	if(fname) {
+		var filedata = plugins.file.readFile(fname);
 		if ( filedata != null )
 		{
 			//store data
