@@ -1,4 +1,4 @@
-dataSource:"db:/example_data/empty_table",
+dataSource:"db:/example_data/orders",
 items:[
 {
 background:"#ffffff",
