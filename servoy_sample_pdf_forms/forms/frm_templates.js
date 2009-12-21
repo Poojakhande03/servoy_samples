@@ -16,8 +16,7 @@ function btn_addTemplate()
 			var i1 = fname.lastIndexOf('/');
 			var i2 = fname.lastIndexOf('\\');
 			var index = Math.max(i1,i2);
-			if (index > 0)
-			{
+			if (index > 0) {
 				fname = fname.substring(index+1);
 			}
 			fname = utils.stringReplace(fname," ","_");//name may NOT contain spaces
@@ -45,7 +44,7 @@ function btn_save()
 {
 	if(template_name)
 	{
-		databaseManager.commitTransaction()
+		databaseManager.commitTransaction();
 		hide_btn_reset_fields();
 
 		onRecordSelect(); //to refresh buttons
@@ -69,9 +68,9 @@ function btn_viewTemplate()
  */
 function doEdit()
 {
-	databaseManager.startTransaction()
+	databaseManager.startTransaction();
 
-	var allNames = elements.allnames
+	var allNames = elements.allnames;
 
 	for ( var i = 0 ; i < allNames.length ; i++ )
 	{
@@ -79,21 +78,21 @@ function doEdit()
 		if(allNames[i].indexOf('fld_') >= 0)
 		{
 			//if it's a field - then change color and make editable
-			elements[allNames[i]].bgcolor = '#feffe4'
-			elements[allNames[i]].readOnly = false
+			elements[allNames[i]].bgcolor = '#feffe4';
+			elements[allNames[i]].readOnly = false;
 		}
 	}
 
-	elements.btn_save.visible = true
-	elements.btn_cancel.visible = true
+	elements.btn_save.visible = true;
+	elements.btn_cancel.visible = true;
 
 	//hide view PDF button
-	elements.btn_viewPDF.visible = false
+	elements.btn_viewPDF.visible = false;
 
 	if(application.getApplicationType() != 5) //anything BUT the web client
 	{
 		//show upload PDF button
-		elements.btn_addTemplate.visible = true
+		elements.btn_addTemplate.visible = true;
 	}
 }
 
@@ -115,17 +114,17 @@ function hide_btn_reset_fields()
 		}
 	}
 
-	elements.btn_save.visible = false
-	elements.btn_cancel.visible = false
+	elements.btn_save.visible = false;
+	elements.btn_cancel.visible = false;
 
 	//hide upload PDF button
-	elements.btn_addTemplate.visible = false
+	elements.btn_addTemplate.visible = false;
 
-	if(application.getApplicationType() != 5) //anything BUT the web client
-	{
+//	if(application.getApplicationType() != 5) //anything BUT the web client
+//	{
 		//show view PDF button - for everything EXCEPT web client
-		elements.btn_viewPDF.visible = true
-	}
+	elements.btn_viewPDF.visible = true;
+//	}
 }
 
 /**
@@ -136,13 +135,13 @@ function onLoad()
 	//if we're in the web client - hide the "add" button
 	if(application.getApplicationType() == 5)
 	{
-		forms.frm_buttons.elements.btn_add.visible = false
-		forms.frm_buttons.elements.lbl_add.visible = false
+		forms.frm_buttons.elements.btn_add.visible = false;
+		forms.frm_buttons.elements.lbl_add.visible = false;
 	}
 	else
 	{
-		forms.frm_buttons.elements.btn_add.visible = true
-		forms.frm_buttons.elements.lbl_add.visible = true
+		forms.frm_buttons.elements.btn_add.visible = true;
+		forms.frm_buttons.elements.lbl_add.visible = true;
 	}
 }
 
@@ -155,18 +154,19 @@ function onRecordSelect()
 	globals.setupRecordStatus();
 
 	//show or hide the "view" icon
-	if(application.getApplicationType() != 5) //anything BUT the web client
+//	if(application.getApplicationType() != 5) //anything BUT the web client
 	{
 		if(actual_pdf_form)
 		{
-			elements.btn_viewPDF.visible = true
+			elements.btn_viewPDF.visible = true;
 		}
 		else
 		{
-			elements.btn_viewPDF.visible = false
+			elements.btn_viewPDF.visible = false;
 		}
 	}
-	else
+//	else
+	/**
 	{
 		if(actual_pdf_form)
 		{
@@ -177,6 +177,7 @@ function onRecordSelect()
 			elements.pdf_btns_wc.visible = false
 		}
 	}
+	*/
 }
 
 /**
@@ -188,34 +189,35 @@ function onShow()
 	onLoad();
 
 	//make read only
-	controller.readOnly = true
+	controller.readOnly = true;
 
 	//hide save/cancel btsn
-	elements.btn_save.visible = false
-	elements.btn_cancel.visible = false
+	elements.btn_save.visible = false;
+	elements.btn_cancel.visible = false;
 
 	//hide upload PDF button
-	elements.btn_addTemplate.visible = false
+	elements.btn_addTemplate.visible = false;
 
 	//update record status
 	globals.setupRecordStatus();
-
+/**
 	if(application.getApplicationType() == 5) //web client
 	{
 		//show buttons for viewing and saving PDF
-		elements.pdf_btns_wc.visible = true
+		elements.pdf_btns_wc.visible = true;
 
 		//hide smart client view PDF button
-		elements.btn_viewPDF.visible = false
+		elements.btn_viewPDF.visible = false;
 	}
 	else
-	{
-		//hide web client buttons for viewing and saving PDF
-		elements.pdf_btns_wc.visible = false
+	*/
+//	{
+	//hide web client buttons for viewing and saving PDF
+	elements.pdf_btns_wc.visible = false;
 
-		//show smart client view PDF button
-		elements.btn_viewPDF.visible = true
-	}
+	//show smart client view PDF button
+	elements.btn_viewPDF.visible = true;
+//	}
 }
 
 /**
@@ -235,17 +237,17 @@ function sub_doDelete()
 function validate_beforeDelete()
 {
 	//see if there are any filled out forms that rely on this template
-	var frmCount = pdf_templates_to_pdf_forms.getSize()
+	var frmCount = pdf_templates_to_pdf_forms.getSize();
 
 	if(frmCount > 0)
 	{
 		var msg = 'There are filled out forms that require this template. ' +
 		'To delete this template, first delete all the existing filled-in forms that use this template.'
-		globals.showErrorDialog(msg, null, 'OK')
-		return 1
+		globals.showErrorDialog(msg, null, 'OK');
+		return 1;
 	}
 	else
 	{
-		return 0
+		return 0;
 	}
 }
