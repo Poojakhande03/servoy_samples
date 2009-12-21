@@ -83,15 +83,15 @@ function btn_delete()
  */
 function btn_viewPDF()
 {
-	var type = arguments[0]
-	var template_id = arguments[1]
-	var actionType = arguments[2]
+	var type = arguments[0];
+	var template_id = arguments[1];
+	var actionType = arguments[2];
 
 	if(!actionType) actionType = 0 //view
 
 	if(type=='template')
 	{
-		application.showURL(application.getServerURL()+'/servoy-service/pdf_forms/pdf_template/'+forms.frm_templates.filename+'?template_id='+template_id)
+		application.showURL(application.getServerURL()+'/servoy-service/pdf_forms/pdf_template/'+forms.frm_templates.filename+'?template_id='+template_id,'_self')
 	}
 	else
 	{
@@ -101,19 +101,23 @@ function btn_viewPDF()
 		forms.frm_forms.pdf_forms_to_pdf_actions.template_id = template_id;
 		//forms.frm_forms.pdf_forms_to_pdf_actions.redirect_url = application.getServerURL() + '/servoy-service/pdf_forms/pdf_form/load.fdf?action_id=' + action_id
 		forms.frm_forms.pdf_forms_to_pdf_actions.action_type = actionType;//==edit = 1, view = 0
+		if(application.getApplicationType()==5)
+		{
+			forms.frm_forms.pdf_forms_to_pdf_actions.redirect_url = application.getServerURL() + '/servoy-webclient/solutions/solution/' + application.getSolutionName();
+		}
 
 		//get the new record id
-		var action_id = forms.frm_forms.pdf_forms_to_pdf_actions.action_id
+		var action_id = forms.frm_forms.pdf_forms_to_pdf_actions.action_id;
 
 		forms.frm_forms.controller.saveData();//so changes are seen by servlet	
 
 		if(application.getApplicationType()==5)
 		{
-			application.showURL('/servoy-service/pdf_forms/pdf_form/load.fdf?action_id=' + action_id,'_blank')
+			application.showURL('/servoy-service/pdf_forms/pdf_form/load.fdf?action_id=' + action_id,'_self');
 		}
 		else
 		{
-			application.showURL(application.getServerURL() + '/servoy-service/pdf_forms/pdf_form/load.fdf?action_id=' + action_id,'_blank')
+			application.showURL(application.getServerURL() + '/servoy-service/pdf_forms/pdf_form/load.-fdf?action_id=' + action_id,'_blank');
 		}
 	}
 }
@@ -311,7 +315,6 @@ function showDialog()
 		//show the 3rd button
 		forms.dialog.elements.btn_3.text = btn3Label
 		forms.dialog.elements.btn_3.visible = true
-
 	}
 	else
 	{

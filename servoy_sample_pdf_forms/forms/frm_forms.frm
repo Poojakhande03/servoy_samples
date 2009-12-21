@@ -146,37 +146,37 @@ mediaOptions:14,
 size:"759,335",
 styleClass:"list",
 tabSeq:-1,
-text:"<html>
-  <head>
-    
-  <\/head>
-  <body>
-    <b>PDF Forms<\/b><br>These forms are &quot;instances&quot; of the template. In other 
-    words, each form uses the template, and you can then fill out the template 
-    differently for each form record.<br><br>For example: If you had a tax 
-    form template, you could then fill out the tax form for different people. 
-    Each person's record would be a new &quot;form&quot; record. You can even change the 
-    template linked to this form record - and if that form has the same field 
-    NAMES as the previous form - it will appear to be filled out with the same 
-    values you entered for the previous form.<br><br><b>How It Works:<\/b> 
-    Servoy uses Web Services to open up the template PDF form in Adobe 
-    Acrobat, and adds a &quot;Submit&quot; button. After you fill out the form and click 
-    &quot;Submit&quot;, Acrobat sends the Web Service back the name of the field and the 
-    value that was typed in. For example, if the field was named &quot;first_name&quot; 
-    and the value typed was &quot;Tom&quot; then Acrobat sends back: first_name=Tom.<br><br>The 
-    plugin then creates new records in the &quot;pdf_form_values&quot; table - recording 
-    the field name and field value for each field on the form. When you open 
-    the same form again - the plug-in passes Acrobat the name and value pairs 
-    for that filled out form and Acrobat displays the values on the form.<br><br><b>Technical 
-    Note:<\/b> The PDF Plug-in uses hard-coded table names. You MUST use the 
-    table names: &quot;pdf_form_values&quot;, &quot;pdf_templates&quot;, &quot;pdf_actions.&quot; Also, the 
-    default name of the connection is &quot;pdf_forms.&quot;<br><br>You CAN 
-    use a different connection name, but then you MUST go into the Admin 
-    section of the Server (http://yourIPaddress:8080/servoy-admin) and click 
-    on &quot;Server Plugin Setttings.&quot; You can change the connection name to 
-    whatever you want (note: you'll have to restart the Servoy Server after 
-    making the change).
-  <\/body>
+text:"<html>\r
+  <head>\r
+    \r
+  <\/head>\r
+  <body>\r
+    <b>PDF Forms<\/b><br>These forms are &quot;instances&quot; of the template. In other \r
+    words, each form uses the template, and you can then fill out the template \r
+    differently for each form record.<br><br>For example: If you had a tax \r
+    form template, you could then fill out the tax form for different people. \r
+    Each person's record would be a new &quot;form&quot; record. You can even change the \r
+    template linked to this form record - and if that form has the same field \r
+    NAMES as the previous form - it will appear to be filled out with the same \r
+    values you entered for the previous form.<br><br><b>How It Works:<\/b> \r
+    Servoy uses Web Services to open up the template PDF form in Adobe \r
+    Acrobat. After you fill out the form and click \r
+    &quot;Submit&quot;, Acrobat sends the Web Service back the name of the field and the \r
+    value that was typed in. For example, if the field was named &quot;first_name&quot; \r
+    and the value typed was &quot;Tom&quot; then Acrobat sends back: first_name=Tom.<br><br>The \r
+    plugin then creates new records in the &quot;pdf_form_values&quot; table - recording \r
+    the field name and field value for each field on the form. When you open \r
+    the same form again - the plug-in passes Acrobat the name and value pairs \r
+    for that filled out form and Acrobat displays the values on the form.<br><br><b>Technical \r
+    Note:<\/b> The PDF Plug-in uses hard-coded table names. You MUST use the \r
+    table names: &quot;pdf_form_values&quot;, &quot;pdf_templates&quot;, &quot;pdf_actions.&quot; Also, the \r
+    default name of the connection is &quot;pdf_forms.&quot;<br><br>You CAN \r
+    use a different connection name, but then you MUST go into the Admin \r
+    section of the Server (http://yourIPaddress:8080/servoy-admin) and click \r
+    on &quot;Server Plugin Setttings.&quot; You can change the connection name to \r
+    whatever you want (note: you'll have to restart the Servoy Server after \r
+    making the change).\r
+  <\/body>\r
 <\/html>",
 transparent:true,
 typeid:7,

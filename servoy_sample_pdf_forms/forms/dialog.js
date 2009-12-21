@@ -29,9 +29,11 @@ function btn_cancel()
 /**
  * @properties={typeid:24,uuid:"473d0db1-9ea9-40a8-a16d-9a66cb0a3b0b"}
  */
-function btn_ok()
-{
-	if(databaseManager.hasTransaction()) databaseManager.commitTransaction()
-	forms.main.elements.tabs_dialog.visible = false
+function btn_ok() {
+	if(databaseManager.hasTransaction()) {
+		databaseManager.commitTransaction();
+	}
+	
+	forms.main.elements.tabs_dialog.visible = false;
 	globals.enableBgElements();
 }
