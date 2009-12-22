@@ -4,14 +4,9 @@
 function btn_addTemplate()
 {
 	var fname = application.showFileOpenDialog();
-<<<<<<< .working
 	if(fname)
 	{
 		var filedata = plugins.file.readFile(fname);
-=======
-	if(fname) {
-		var filedata = plugins.file.readFile(fname);
->>>>>>> .merge-right.r196
 		if ( filedata != null )
 		{
 			//store data
