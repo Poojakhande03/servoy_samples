@@ -38,12 +38,6 @@ allowNull:true,
 creationOrderIndex:1,
 dataType:4,
 name:"template_id"
-},
-{
-allowNull:true,
-creationOrderIndex:6,
-dataType:4,
-name:"user_id"
 }
 ],
 name:"pdf_actions",
