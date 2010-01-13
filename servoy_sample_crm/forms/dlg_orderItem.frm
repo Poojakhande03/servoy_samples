@@ -98,6 +98,7 @@ uuid:"92d727d5-68b7-4405-bd0f-dc96cbbfe887"
 {
 dataProviderID:"product_id",
 displayType:2,
+editable:false,
 formIndex:10400,
 location:"100,10",
 onActionMethodID:"0a15c93e-0c98-40ef-a507-4817a4dd50e8",
