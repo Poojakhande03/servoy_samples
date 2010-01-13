@@ -158,5 +158,6 @@ onSortCmdMethodID:"-1",
 paperPrintScale:100,
 scrollbars:36,
 size:"475,186",
+styleName:"svyWebCrm",
 typeid:3,
 uuid:"20602797-706d-4af8-aead-6cc4ef12a393"
