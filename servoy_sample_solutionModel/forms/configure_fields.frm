@@ -104,6 +104,7 @@ uuid:"9d2c820a-ee69-4ccb-a3df-39712b5b7bdd"
 {
 dataProviderID:"element_type",
 displayType:2,
+editable:false,
 location:"160,140",
 size:"140,20",
 text:"Element Type",
