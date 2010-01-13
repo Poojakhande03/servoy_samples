@@ -66,7 +66,7 @@ name:"ixcompany"
 {
 allowNull:true,
 autoEnterSubType:0,
-autoEnterType:5,
+autoEnterType:1,
 creationOrderIndex:9,
 dataType:4,
 lookupValue:"globals.currUserID",
@@ -75,7 +75,7 @@ name:"ixcreatedperson"
 {
 allowNull:true,
 autoEnterSubType:0,
-autoEnterType:5,
+autoEnterType:1,
 creationOrderIndex:8,
 dataType:4,
 lookupValue:"globals.currUserID",
@@ -84,7 +84,7 @@ name:"ixmodifiedperson"
 {
 allowNull:true,
 autoEnterSubType:0,
-autoEnterType:5,
+autoEnterType:1,
 creationOrderIndex:10,
 dataType:4,
 lookupValue:"globals.currTenantID",

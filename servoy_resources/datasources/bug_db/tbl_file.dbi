@@ -67,7 +67,7 @@ name:"ixdocument"
 {
 allowNull:true,
 autoEnterSubType:0,
-autoEnterType:5,
+autoEnterType:1,
 creationOrderIndex:9,
 dataType:4,
 lookupValue:"globals.currUserID",
@@ -76,7 +76,7 @@ name:"ixpersoncreated"
 {
 allowNull:true,
 autoEnterSubType:0,
-autoEnterType:5,
+autoEnterType:1,
 creationOrderIndex:10,
 dataType:4,
 lookupValue:"globals.currUserID",
@@ -97,7 +97,7 @@ name:"ixtask"
 {
 allowNull:true,
 autoEnterSubType:0,
-autoEnterType:5,
+autoEnterType:1,
 creationOrderIndex:11,
 dataType:4,
 lookupValue:"globals.currTenantID",

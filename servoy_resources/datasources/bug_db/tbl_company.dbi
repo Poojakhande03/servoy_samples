@@ -108,7 +108,7 @@ name:"ix_personcreated"
 {
 allowNull:true,
 autoEnterSubType:0,
-autoEnterType:5,
+autoEnterType:1,
 creationOrderIndex:21,
 dataType:4,
 lookupValue:"globals.currUserID",
@@ -117,7 +117,7 @@ name:"ix_personmodified"
 {
 allowNull:true,
 autoEnterSubType:0,
-autoEnterType:5,
+autoEnterType:1,
 creationOrderIndex:20,
 dataType:4,
 lookupValue:"globals.currTenantID",
