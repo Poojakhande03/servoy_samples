@@ -35,7 +35,8 @@ function draw_chart()
 	}
 	else
 	{
-		HTML += '<table width=145 border=0 cellpadding=1 bgcolor="#ffffff" width=100%>\n'
+//		HTML += '<table width=145 border=0 cellpadding=1 bgcolor="#ffffff" width=100%>\n'
+		HTML += '<table width=145 border=0 cellpadding=1 bgcolor="#ffffff">\n'
 		HTML += '<tr bgcolor="#cccccc"><td colspan=2 class="body"><b>Top 5 Products</b></td></tr>'
 
 		elements.chart_pie.visible = true;
