@@ -1,21 +1,4 @@
 /**
- * @properties={typeid:24,uuid:"65129b4f-8a84-45c5-ad00-6bd941c5a1c7"}
- */
-function _dev()
-{
-	forms.main.showError();
-}
-
-/**
- * @properties={typeid:24,uuid:"6e3df560-0895-4a23-9cf1-cef7721cbf9b"}
- */
-function btn_cancel()
-{
-	globals.cancelEditing()
-	hide_btn_reset_fields();
-}
-
-/**
  * @properties={typeid:24,uuid:"222c04c2-4bd1-42dd-bfeb-5b2cf0fd6c2a"}
  */
 function btn_openURL()
@@ -36,9 +19,7 @@ function btn_openURL()
  */
 function btn_save()
 {
-	globals.saveEdits()
-
-	hide_btn_reset_fields();
+	_super.btn_save()
 
 	//do sort and hilight the newly added (edited) record
 	var id = forms.lst_company.company_id
@@ -138,23 +119,7 @@ function btn_tabTop5()
  */
 function doEdit()
 {
-	if(!globals.isEditing()) globals.startEditing()
-
-	var allNames = elements.allnames
-
-	for ( var i = 0 ; i < allNames.length ; i++ )
-	{
-		//work on fields only - starting with name "fld_"
-		if(allNames[i].indexOf('fld_') >= 0)
-		{
-			//if it's a field - then change color and make editable
-			elements[allNames[i]].bgcolor = '#feffe4'
-			elements[allNames[i]].readOnly = false
-		}
-	}
-
-	elements.btn_save.visible = true
-	elements.btn_cancel.visible = true
+	_super.doEdit()
 
 	//hide the non combobox fields
 	elements.fld_companyCategory.visible = false
@@ -189,21 +154,7 @@ function doEdit()
  */
 function hide_btn_reset_fields()
 {
-	var allNames = elements.allnames
-
-	for ( var i = 0 ; i < allNames.length ; i++ )
-	{
-		//work on fields only - starting with name "fld_"
-		if(allNames[i].indexOf('fld_') >= 0)
-		{
-			//if it's a field - then change color and make editable
-			elements[allNames[i]].bgcolor = '#f0f0f0'
-			elements[allNames[i]].readOnly = true
-		}
-	}
-
-	elements.btn_save.visible = false
-	elements.btn_cancel.visible = false
+	_super.hide_btn_reset_fields()
 
 	//hide the comboboxes
 	elements.fld_companyCategoryc.visible = false
@@ -327,20 +278,6 @@ function rpt_company_list()
 	forms.rpt_company_list.controller.sort('company_name asc')
 
 	globals.printRoutine('rpt_company_list')
-}
-
-/**
- * @properties={typeid:24,uuid:"87a81e74-d143-4719-939f-ed70e54bdc78"}
- */
-function sub_doDelete()
-{
-	if(globals.core_dlg_buttonPressed == 'Delete')
-	{
-		controller.deleteRecord()
-
-		//if there are no records showing - then show all
-		if(controller.getMaxRecordIndex() == 0) forms.frm_nav_buttons.btn_showAll();
-	}
 }
 
 /**

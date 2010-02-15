@@ -4,12 +4,27 @@
 function btn_goForm()
 {
 	//switch tabs in the main form - and the list form
-	var rightTab = controller.getSelectedIndex()
+	if (action_method == null)
+	{
+		//incase having old db, fill with correct data
+		var name =item_name.toLocaleLowerCase();
+		if (name == 'customers') name = 'company'
+		action_method = name;
+	}
+	
+	forms['frm_'+action_method].controller.show()
+	var tabCount = forms.frm_nav_main.elements.tabs_recList.getMaxTabIndex();
+	for (var index = 1; index <= tabCount; index++) 
+	{
+		var tname = forms.frm_nav_main.elements.tabs_recList.getTabFormNameAt(index);
+		if (tname.substr(4) == action_method)
+		{
+			forms.frm_nav_main.elements.tabs_recList.tabIndex = index;
+			break;
+		}
+	}
 
-	forms.main.elements.tabs_main.tabIndex = rightTab
-	forms.frm_nav_main.elements.tabs_recList.tabIndex = rightTab
-
-	if(item_name.indexOf('Admin') == -1)
+	if (item_name.indexOf('Admin') == -1)
 	{
 		//update the record information
 		globals.setupRecordStatus();

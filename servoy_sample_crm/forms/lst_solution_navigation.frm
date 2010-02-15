@@ -3,8 +3,7 @@ dataSource:"db:/udm/solution_navigation",
 initialSort:"solution_id asc",
 items:[
 {
-background:"#ebebeb",
-borderType:"SpecialMatteBorder,1.0,0.0,1.0,0.0,#666666,#666666,#666666,#666666,0.0,",
+foreground:"#ffffff",
 formIndex:10200,
 horizontalAlignment:0,
 location:"0,0",
@@ -13,17 +12,19 @@ size:"190,23",
 styleClass:"topnav",
 tabSeq:-1,
 text:"Navigation",
+transparent:true,
 typeid:7,
 uuid:"349b8f2b-500a-4e3b-a874-1070a0d156bd"
 },
 {
+background:"#999999",
 height:23,
 partType:2,
 typeid:19,
 uuid:"3efde395-6821-47f2-aa92-30781163fa70"
 },
 {
-borderType:"SpecialMatteBorder,1.0,0.0,0.0,0.0,#cccccc,#cccccc,#cccccc,#cccccc,0.0,",
+borderType:"SpecialMatteBorder,0.0,0.0,0.0,0.0,#cccccc,#cccccc,#cccccc,#cccccc,0.0,",
 displaysTags:true,
 formIndex:10000,
 location:"35,70",
@@ -49,7 +50,7 @@ typeid:19,
 uuid:"73af9019-60ce-4f34-a763-2df2b99b75d3"
 },
 {
-borderType:"SpecialMatteBorder,1.0,0.0,0.0,0.0,#cccccc,#cccccc,#cccccc,#cccccc,0.0,",
+borderType:"SpecialMatteBorder,0.0,0.0,0.0,0.0,#cccccc,#cccccc,#cccccc,#cccccc,0.0,",
 displaysTags:true,
 formIndex:10100,
 horizontalAlignment:0,

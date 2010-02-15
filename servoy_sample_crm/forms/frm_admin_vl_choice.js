@@ -28,7 +28,7 @@ function btn_delete()
  */
 function evt_changeList()
 {
-	elements.tabs_lists.tabIndex = globals.vl_editNum
+	//elements.tabs_lists.tabIndex = globals.vl_editNum
 }
 
 /**

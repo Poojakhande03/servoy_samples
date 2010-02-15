@@ -1,13 +1,4 @@
 /**
- * @properties={typeid:24,uuid:"c331adf4-5625-428a-8cd0-1e6018aac2be"}
- */
-function btn_cancel()
-{
-	globals.cancelEditing()
-	evt_onShow();
-}
-
-/**
  * @properties={typeid:24,uuid:"1251746d-f682-4c1f-9b48-7dcf18c6480d"}
  */
 function btn_performSQL()
@@ -45,27 +36,14 @@ function btn_performSQL()
 }
 
 /**
- * @properties={typeid:24,uuid:"3dc28fec-2e28-4d68-8579-1db5bdfa8c0d"}
- */
-function btn_save()
-{
-	globals.saveEdits()
-
-	evt_onShow()
-}
-
-/**
  * @properties={typeid:24,uuid:"8d9a59ef-b880-4e5b-a287-563a107c285d"}
  */
 function doEdit()
 {
-	if(!globals.isEditing()) globals.startEditing()
-
+	_super.doEdit()
+	
 	forms.lst_admin_solutionPrefs.controller.readOnly = false
 	forms.frm_admin_vl_choice.controller.readOnly = false
-
-	elements.btn_save.visible = true
-	elements.btn_cancel.visible = true
 
 	//show add & delete buttons on the value list
 	forms.frm_admin_vl_choice.elements.btn_add.visible = true
@@ -75,10 +53,9 @@ function doEdit()
 /**
  * @properties={typeid:24,uuid:"9e49caec-dd04-4386-8c98-60d96c32b3c0"}
  */
-function evt_onShow()
+function hide_btn_reset_fields()
 {
-	elements.btn_cancel.visible = false
-	elements.btn_save.visible = false
+	_super.hide_btn_reset_fields()
 
 	elements.tabs_prefs.readOnly = true
 	elements.tabs_valueLists.readOnly = true

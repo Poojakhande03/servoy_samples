@@ -1,5 +1,10 @@
 addEmptyValue:1,
-customValues:"Address Types|1\nCategory Types|2\nCompany Types|3\nContact Types|4\nCountries|5\nProduct Types|6",
+customValues:"Address Types|address_types\r
+Category Types|category_types\r
+Company Types|company_types\r
+Contact Types|contact_types\r
+Countries|country_types\r
+Product Types|product_types",
 name:"valuelist_names",
 separator:" ",
 typeid:34,

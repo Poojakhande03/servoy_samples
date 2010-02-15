@@ -104,9 +104,9 @@ var tempHTML = '';
 var thisSolution_ID = 2;
 
 /**
- * @properties={typeid:35,uuid:"442205bc-2c0d-4262-8716-ed2c9e244997",variableType:4}
+ * @properties={typeid:35,uuid:"442205bc-2c0d-4262-8716-ed2c9e244997"}
  */
-var vl_editNum = 1;
+var vl_editName = null;
 
 /**
  * @properties={typeid:24,uuid:"4dd0e476-1aa0-4884-8a5a-d77fea0e6bdb"}
@@ -125,8 +125,7 @@ function disableBgElements()
 	//disable all the background elements when showing the dialog
 	forms.frm_nav_main.elements.tabs_recList.enabled = false
 	forms.frm_nav_main.elements.tabs_solNav.enabled = false
-	forms.main.elements.tabs_nav.enabled = false
-	forms.main.elements.tabs_main.enabled = false
+	currentcontroller.enabled = false
 }
 
 /**
@@ -137,8 +136,7 @@ function enableBgElements()
 	//enable all the background elements when showing the dialog
 	forms.frm_nav_main.elements.tabs_recList.enabled = true
 	forms.frm_nav_main.elements.tabs_solNav.enabled = true
-	forms.main.elements.tabs_nav.enabled = true
-	forms.main.elements.tabs_main.enabled = true
+	currentcontroller.enabled = true
 }
 
 /**
@@ -176,7 +174,7 @@ function isEditing()
 function nav_nextRecord()
 {
 	//see what form is front-most
-	var frm = forms.main.elements.tabs_main.getTabFormNameAt(forms.main.elements.tabs_main.tabIndex)
+	var frm = currentcontroller.getName();
 
 	forms[frm].controller.setSelectedIndex(forms[frm].controller.getSelectedIndex() + 1)
 }
@@ -187,7 +185,7 @@ function nav_nextRecord()
 function nav_prevRecord()
 {
 	//see what form is front-most
-	var frm = forms.main.elements.tabs_main.getTabFormNameAt(forms.main.elements.tabs_main.tabIndex)
+	var frm = currentcontroller.getName();
 
 	forms[frm].controller.setSelectedIndex(forms[frm].controller.getSelectedIndex() - 1)
 }
@@ -199,27 +197,30 @@ function openSolution()
 {
 	//use the right style sheet
 	//substitute style sheet if we're on a mac
-	if(utils.stringLeft(application.getOSName(), 3) == 'Mac')
+	if (utils.stringLeft(application.getOSName(), 3) == 'Mac')
 	{
 		//we're on the mac - exchange style sheets
 		application.overrideStyle('svyWebCrm', 'svyWebCrm_mac')
 	}
 
 	//setup the admin global settings
-	if(gconst2_to_solution_preferences.getSize() > 0)
+	if (gconst2_to_solution_preferences.getSize() > 0)
 	{
 		//the sample CRM ID is 2
 		forms.lst_admin_solutionPrefs.controller.loadRecords(gconst2_to_solution_preferences)
 		forms.lst_admin_solutionPrefs.controller.sort('seq asc')
 
-		/*
-	There are more "robust" ways to do this - the loading of the preferences.
-	You should probabably do a "find" for each preference to ensure they exist
-		 ***********/
+		//There are more "robust" ways to do this - the loading of the preferences.
+		//You should probabably do a "find" for each preference to ensure they exist
 		var record =forms.lst_admin_solutionPrefs.foundset.getRecord(1)
-		if(record.preference_name == 'Background Row Color') globals.core_color_bgRowColor = record.preference_value
+		if (record.preference_name == 'Background Row Color') globals.core_color_bgRowColor = record.preference_value
 		record = forms.lst_admin_solutionPrefs.foundset.getRecord(2)
-		if(record.preference_name == 'Default Background Color') globals.core_color_defaultBgColor = record.preference_value
+		if (record.preference_name == 'Default Background Color') globals.core_color_defaultBgColor = record.preference_value
+	}
+	
+	if (databaseManager.getTableCount(forms.lst_valuelists.controller.getDataSource()) == 0)
+	{
+		migrateToOneValueListTable()
 	}
 }
 
@@ -253,7 +254,7 @@ function saveEdits()
 function setupRecordStatus()
 {
 	//see what form is front-most
-	var frm = forms.main.elements.tabs_main.getTabFormNameAt(forms.main.elements.tabs_main.tabIndex)
+	var frm = currentcontroller.getName();
 
 	var fs = databaseManager.getFoundSetCount(forms[frm].foundset)
 	var tc = databaseManager.getTableCount(forms[frm].foundset)
@@ -471,4 +472,112 @@ function showWarningDialog()
 function startEditing()
 {
 	databaseManager.setAutoSave(false);
+}
+
+/**
+ *
+ * @properties={typeid:24,uuid:"DCDE335D-CD89-49E8-8850-101916EAD7C1"}
+ */
+function migrateToOneValueListTable() 
+{
+	//migrate some old data, incase someone imports ontop of existing db/solution 
+	var vl_ds = forms.lst_valuelists.controller.getDataSource();
+	var vl_fs = databaseManager.getFoundSet(vl_ds);
+	var serverName = databaseManager.getDataSourceServerName(vl_ds);
+	
+	var fs = null;
+	var table_name = null;
+	
+	table_name = 'address_types'
+	fs = databaseManager.getFoundSet(serverName,table_name);
+	if (fs != null)
+	{
+		fs.loadAllRecords();
+		for (var index = 1; index <= fs.getSize(); index++) 
+		{
+			fs.setSelectedIndex(index);
+			vl_fs.newRecord()
+			vl_fs.valuelist_name = table_name;
+			vl_fs.value_id = fs.address_type_id
+			vl_fs.value1 = fs.description
+		}
+	}
+
+	table_name = 'category_types'
+	fs = databaseManager.getFoundSet(serverName,table_name);
+	if (fs != null)
+	{
+		fs.loadAllRecords();
+		for (var index = 1; index <= fs.getSize(); index++) 
+		{
+			fs.setSelectedIndex(index);
+			vl_fs.newRecord()
+			vl_fs.valuelist_name = table_name;
+			vl_fs.value_id = fs.category_type_id
+			vl_fs.value1 = fs.description
+		}
+	}
+	
+	table_name = 'company_types'
+	fs = databaseManager.getFoundSet(serverName,table_name);
+	if (fs != null)
+	{
+		fs.loadAllRecords();
+		for (var index = 1; index <= fs.getSize(); index++) 
+		{
+			fs.setSelectedIndex(index);
+			vl_fs.newRecord()
+			vl_fs.valuelist_name = table_name;
+			vl_fs.value_id = fs.company_type_id
+			vl_fs.value1 = fs.description
+		}
+	}
+	
+	table_name = 'contact_types'
+	fs = databaseManager.getFoundSet(serverName,table_name);
+	if (fs != null)
+	{
+		fs.loadAllRecords();
+		for (var index = 1; index <= fs.getSize(); index++) 
+		{
+			fs.setSelectedIndex(index);
+			vl_fs.newRecord()
+			vl_fs.valuelist_name = table_name;
+			vl_fs.value_id = fs.contact_type_id
+			vl_fs.value1 = fs.description
+		}
+	}
+	
+	table_name = 'country_types'
+	fs = databaseManager.getFoundSet(serverName,table_name);
+	if (fs != null)
+	{
+		fs.loadAllRecords();
+		for (var index = 1; index <= fs.getSize(); index++) 
+		{
+			fs.setSelectedIndex(index);
+			vl_fs.newRecord()
+			vl_fs.valuelist_name = table_name;
+			vl_fs.value_id = fs.country_type_id
+			vl_fs.value1 = fs.country_name
+			vl_fs.value2 = fs.country
+		}
+	}
+	
+	table_name = 'product_types'
+	fs = databaseManager.getFoundSet(serverName,table_name);
+	if (fs != null)
+	{
+		fs.loadAllRecords();
+		for (var index = 1; index <= fs.getSize(); index++) 
+		{
+			fs.setSelectedIndex(index);
+			vl_fs.newRecord()
+			vl_fs.valuelist_name = table_name;
+			vl_fs.value_id = fs.product_type_id
+			vl_fs.value1 = fs.description
+		}
+	}
+	
+	databaseManager.saveData()
 }

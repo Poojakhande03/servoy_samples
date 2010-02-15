@@ -11,8 +11,7 @@ function btn_goRec()
  */
 function btn_sortAsc()
 {
-	elements.btn_sortAsc.setImageURL('media:///sort_asc_blk.gif')
-	elements.btn_sortDesc.setImageURL('media:///sort_desc_grey.gif')
+	_super.btn_sortAsc();
 	controller.sort('name_last asc, name_first asc')
 }
 
@@ -21,7 +20,6 @@ function btn_sortAsc()
  */
 function btn_sortDesc()
 {
-	elements.btn_sortAsc.setImageURL('media:///sort_asc_grey.gif')
-	elements.btn_sortDesc.setImageURL('media:///sort_desc_blk.gif')
+	_super.btn_sortDesc()
 	controller.sort('name_last desc, name_first desc')
 }

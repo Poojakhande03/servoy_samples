@@ -4,7 +4,7 @@
 function btn_add()
 {
 	//see what form is front-most
-	var frm = forms.main.elements.tabs_main.getTabFormNameAt(forms.main.elements.tabs_main.tabIndex)
+	var frm = currentcontroller.getName()
 
 	//if there's no transaction, start one - so they can "cancel"
 	if(!globals.isEditing()) globals.startEditing()
@@ -28,7 +28,7 @@ function btn_add()
 function btn_delete()
 {
 	//see what form is front-most
-	var frm = forms.main.elements.tabs_main.getTabFormNameAt(forms.main.elements.tabs_main.tabIndex)
+	var frm = currentcontroller.getName()
 	if(forms[frm].validate_beforeDelete() != 0) return;
 
 	var msg = forms[frm].delete_text
@@ -51,7 +51,7 @@ function btn_edit()
 	if(!globals.isEditing())
 	{
 		//see what form is front-most
-		var frm = forms.main.elements.tabs_main.getTabFormNameAt(forms.main.elements.tabs_main.tabIndex)
+		var frm = currentcontroller.getName()
 
 		//ALL forms must have a method "doEdit" for this to work
 		forms[frm].doEdit()
@@ -67,7 +67,7 @@ function btn_edit()
 function btn_print()
 {
 	//see what form is front-most
-	var frm = forms.main.elements.tabs_main.getTabFormNameAt(forms.main.elements.tabs_main.tabIndex)
+	var frm = currentcontroller.getName()
 
 	//execute the "print_default" method on each form
 	forms[frm].print_default()
@@ -79,7 +79,7 @@ function btn_print()
 function btn_showAll()
 {
 	//see what form is front-most
-	var frm = forms.main.elements.tabs_main.getTabFormNameAt(forms.main.elements.tabs_main.tabIndex)
+	var frm = currentcontroller.getName()
 	var frm2 = utils.stringReplace(frm, 'frm', 'lst')
 
 	//load all records
@@ -115,7 +115,7 @@ function sub_doDelete()
 	//see what button text was pressed and then delete if necessary
 	if(globals.core_dlg_buttonPressed == 'Delete')
 	{
-		var frm = forms.main.elements.tabs_main.getTabFormNameAt(forms.main.elements.tabs_main.tabIndex)
+		var frm = currentcontroller.getName()
 		forms[frm].controller.deleteRecord()
 
 		//clear out global - so we don't accidentally delete something

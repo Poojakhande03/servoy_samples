@@ -1,13 +1,4 @@
 /**
- * @properties={typeid:24,uuid:"f43b2684-6781-47f3-b872-b84a54780125"}
- */
-function btn_cancel()
-{
-	globals.cancelEditing()
-	hide_btn_reset_fields();
-}
-
-/**
  * @properties={typeid:24,uuid:"8ec0341c-d0d2-4de6-ba7e-5334f824b912"}
  */
 function btn_goCompany()
@@ -46,8 +37,7 @@ function btn_save()
 	if(!order_number) {globals.showErrorDialog('There must be an order number.'); return;}
 	if(!order_date) {globals.showErrorDialog('There must be an order date.'); return;}
 
-	globals.saveEdits()
-	hide_btn_reset_fields();
+	_super.btn_save()
 
 	//do sort and hilight the newly added (edited) record
 	var id = forms.lst_orders.order_id
@@ -86,37 +76,10 @@ function btn_showShipAddr()
  */
 function doEdit()
 {
-	if(!globals.isEditing()) globals.startEditing()
+	_super.doEdit()
 
 	//make sure that we set this to 0 or if they add an item - the dialog will commit the entire transaction
 	globals.okToCommit = 0
-
-	var allNames = elements.allnames
-
-	for ( var i = 0 ; i < allNames.length ; i++ )
-	{
-		//work on fields only - starting with name "fld_"
-		if(allNames[i].indexOf('fld_') >= 0)
-		{
-			//if it's a field - then change color and make editable
-			elements[allNames[i]].bgcolor = '#feffe4'
-			elements[allNames[i]].readOnly = false
-		}
-
-		if(application.getApplicationType() != 5)
-		{
-			//not the web client so also do the "checkboxes" as well
-			if(allNames[i].indexOf('chk_') >= 0)
-			{
-				//if it's a checkbox - then change color and make editable
-				elements[allNames[i]].bgcolor = '#feffe4'
-				elements[allNames[i]].readOnly = false
-			}
-		}
-	}
-
-	elements.btn_save.visible = true
-	elements.btn_cancel.visible = true
 
 	//disable the 'jump' buttons
 	elements.btn_goCompany.visible = false
@@ -169,33 +132,7 @@ function evt_companyChange()
  */
 function hide_btn_reset_fields()
 {
-	var allNames = elements.allnames
-
-	for ( var i = 0 ; i < allNames.length ; i++ )
-	{
-		//work on fields only - starting with name "fld_"
-		if(allNames[i].indexOf('fld_') >= 0)
-		{
-			//if it's a field - then change color and make not editable
-			elements[allNames[i]].bgcolor = '#f0f0f0'
-			elements[allNames[i]].readOnly = true
-		}
-
-		if(application.getApplicationType() != 5)
-		{
-			//not the web client so also do the "checkboxes" as well
-			if(allNames[i].indexOf('chk_') >= 0)
-			{
-				//if it's a checkbox - then change color and make editable
-				elements[allNames[i]].bgcolor = '#f0f0f0'
-				elements[allNames[i]].readOnly = true
-			}
-		}
-	}
-
-	elements.btn_save.visible = false
-	elements.btn_cancel.visible = false
-
+	_super.hide_btn_reset_fields()
 
 	//enable the 'jump' buttons
 	elements.btn_goCompany.visible = true
@@ -331,20 +268,6 @@ function rpt_printThisOrder()
 	forms.rpt_order_form.controller.loadRecords(orders_to_order_items)
 
 	globals.printRoutine('rpt_order_form')
-}
-
-/**
- * @properties={typeid:24,uuid:"e345adb7-cfd6-451e-96b8-7d9a50ab839e"}
- */
-function sub_doDelete()
-{
-	if(globals.core_dlg_buttonPressed == 'Delete')
-	{
-		controller.deleteRecord()
-
-		//if there are no records showing - then show all
-		if(controller.getMaxRecordIndex() == 0) forms.frm_nav_buttons.btn_showAll();
-	}
 }
 
 /**

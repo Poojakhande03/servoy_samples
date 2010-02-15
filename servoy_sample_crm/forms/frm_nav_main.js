@@ -3,7 +3,7 @@
  */
 function btn_search()
 {
-	var frm = forms.main.elements.tabs_main.getTabFormNameAt(forms.main.elements.tabs_main.tabIndex)
+	var frm = currentcontroller.getName();
 	var search = globals.nav_search
 
 	if(search)
@@ -72,7 +72,7 @@ function btn_search()
 			}
 			else
 			{
-				forms[frm].controller.find()
+				if (!forms[frm].controller.find()) return; //cannot enter find, previous edits can't be saved?
 			}
 
 			//on the companies form
@@ -100,7 +100,7 @@ function btn_search()
 			}
 			else
 			{
-				forms[frm].controller.find()
+				if (!forms[frm].controller.find()) return; //cannot enter find, previous edits can't be saved?
 			}
 
 			forms[frm].name_first = searchStr
@@ -123,7 +123,7 @@ function btn_search()
 		//ORDERS FIND
 		else if(frm.indexOf('orders') >= 0)
 		{
-			forms[frm].controller.find()
+			if (!forms[frm].controller.find()) return; //cannot enter find, previous edits can't be saved?
 
 			if(dataType == 'int')
 			{
@@ -158,7 +158,7 @@ function btn_search()
 		//PRODUCTS FIND
 		if(frm.indexOf('products') >= 0)
 		{
-			forms[frm].controller.find()
+			if (!forms[frm].controller.find()) return; //cannot enter find, previous edits can't be saved?
 
 			if(dataType == 'int')
 			{

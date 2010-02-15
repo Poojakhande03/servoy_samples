@@ -105,15 +105,6 @@ function product_image_dataChange() {
 }
 
 /**
- * @properties={typeid:24,uuid:"8aa3c84e-6cf7-4987-9b1d-b08b5e4d5a77"}
- */
-function btn_cancel()
-{
-	globals.cancelEditing()
-	hide_btn_reset_fields();
-}
-
-/**
  * @properties={typeid:24,uuid:"65b500da-e795-4529-9dcd-a18569e2a647"}
  */
 function btn_deleteImage()
@@ -135,8 +126,7 @@ function btn_save()
 if(!bill_address_id){globals.showErrorDialog('You must choose a billing address.'); return;}
 	 */
 
-	globals.saveEdits();
-	hide_btn_reset_fields();
+	_super.btn_save()
 
 	if(application.getApplicationType() == 5) onRecordSelect(); //for web client - to refresh buttons
 }
@@ -146,23 +136,7 @@ if(!bill_address_id){globals.showErrorDialog('You must choose a billing address.
  */
 function doEdit()
 {
-	if(!globals.isEditing()) globals.startEditing()
-
-	var allNames = elements.allnames
-
-	for ( var i = 0 ; i < allNames.length ; i++ )
-	{
-		//work on fields only - starting with name "fld_"
-		if(allNames[i].indexOf('fld_') >= 0)
-		{
-			//if it's a field - then change color and make editable
-			elements[allNames[i]].bgcolor = '#feffe4'
-			elements[allNames[i]].readOnly = false
-		}
-	}
-
-	elements.btn_save.visible = true
-	elements.btn_cancel.visible = true
+	_super.doEdit();
 
 	//don't need image buttons for webclient - at all
 	if(application.getApplicationType() != 5)
@@ -187,21 +161,7 @@ function doEdit()
  */
 function hide_btn_reset_fields()
 {
-	var allNames = elements.allnames
-
-	for ( var i = 0 ; i < allNames.length ; i++ )
-	{
-		//work on fields only - starting with name "fld_"
-		if(allNames[i].indexOf('fld_') >= 0)
-		{
-			//if it's a field - then change color and make editable
-			elements[allNames[i]].bgcolor = '#f0f0f0'
-			elements[allNames[i]].readOnly = true
-		}
-	}
-
-	elements.btn_save.visible = false
-	elements.btn_cancel.visible = false
+	_super.hide_btn_reset_fields()
 
 	//hide the image buttons
 	elements.btn_addImage.visible = false
@@ -237,7 +197,6 @@ function onShow()
 	//make read only
 	controller.readOnly = true
 
-
 	//hide save/cancel btsn
 	elements.btn_save.visible = false
 	elements.btn_cancel.visible = false
@@ -271,7 +230,7 @@ function print_default()
 	forms.rpt_products_list.controller.loadAllRecords()
 
 	//sort for the subsummary report
-	forms.rpt_products_list.controller.sort('products_to_category_types.description asc')
+	forms.rpt_products_list.controller.sort('description asc')
 	globals.printRoutine('rpt_products_list')
 }
 
@@ -289,20 +248,6 @@ function sub_clearImage()
 		product_image = null;
 		product_image_filename = null;
 		product_image_mimetype = null;
-	}
-}
-
-/**
- * @properties={typeid:24,uuid:"ef079374-b4fd-49bb-a710-dc3fcdf4fdc3"}
- */
-function sub_doDelete()
-{
-	if(globals.core_dlg_buttonPressed == 'Delete')
-	{
-		controller.deleteRecord()
-
-		//if there are no records showing - then show all
-		if(controller.getMaxRecordIndex() == 0) forms.frm_nav_buttons.btn_showAll();
 	}
 }
 

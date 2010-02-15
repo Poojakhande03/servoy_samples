@@ -1,13 +1,4 @@
 /**
- * @properties={typeid:24,uuid:"89392893-38a4-440f-8ac4-950c3aa53280"}
- */
-function btn_cancel()
-{
-	globals.cancelEditing()
-	hide_btn_reset_fields();
-}
-
-/**
  * @properties={typeid:24,uuid:"39cf7a78-fb86-46b1-88cf-d49438f6eaeb"}
  */
 function btn_goCompany()
@@ -25,8 +16,7 @@ function btn_goCompany()
  */
 function btn_save()
 {
-	globals.saveEdits()
-	hide_btn_reset_fields();
+	_super.btn_save()
 
 	//do sort and hilight the newly added (edited) record
 	var id = forms.lst_contacts.contact_id
@@ -50,31 +40,7 @@ function btn_sendEmail()
  */
 function doEdit()
 {
-	if(!globals.isEditing()) globals.startEditing()
-
-	var allNames = elements.allnames
-
-	for ( var i = 0 ; i < allNames.length ; i++ )
-	{
-		//work on fields only - starting with name "fld_"
-		if(allNames[i].indexOf('fld_') >= 0)
-		{
-			//if it's a field - then change color and make editable
-			elements[allNames[i]].bgcolor = '#feffe4'
-			elements[allNames[i]].readOnly = false
-		}
-
-		if(application.getApplicationType() != 5)
-		{
-			//not the web client so also do the "checkboxes" as well
-			if(allNames[i].indexOf('chk_') >= 0)
-			{
-				//if it's a checkbox - then change color and make editable
-				elements[allNames[i]].bgcolor = '#feffe4'
-				elements[allNames[i]].readOnly = false
-			}
-		}
-	}
+	_super.doEdit()
 
 	//enable the list of addresses so it can be changed
 	elements.tabs_addressList.enabled = true
@@ -97,9 +63,6 @@ function doEdit()
 	//hide the buttons that will screw things up
 	elements.btn_sendEmail.visible = false
 	elements.btn_goCompany.visible = false
-
-	elements.btn_save.visible = true
-	elements.btn_cancel.visible = true
 }
 
 /**
@@ -107,32 +70,7 @@ function doEdit()
  */
 function hide_btn_reset_fields()
 {
-	var allNames = elements.allnames
-
-	for ( var i = 0 ; i < allNames.length ; i++ )
-	{
-		//work on fields only - starting with name "fld_"
-		if(allNames[i].indexOf('fld_') >= 0)
-		{
-			//if it's a field - then change color and make editable
-			elements[allNames[i]].bgcolor = '#f0f0f0'
-			elements[allNames[i]].readOnly = true
-		}
-
-		if(application.getApplicationType() != 5)
-		{
-			//not the web client so also do the "checkboxes" as well
-			if(allNames[i].indexOf('chk_') >= 0)
-			{
-				//if it's a checkbox - then change color and make editable
-				elements[allNames[i]].bgcolor = '#f0f0f0'
-				elements[allNames[i]].readOnly = true
-			}
-		}
-	}
-
-	elements.btn_save.visible = false
-	elements.btn_cancel.visible = false
+	_super.hide_btn_reset_fields()
 
 	//disable the list of addresses
 	elements.tabs_addressList.enabled = false
@@ -221,20 +159,6 @@ function rpt_contacts_list()
 	forms.rpt_contacts_list.controller.sort('contacts_to_companies.company_name asc, name_last asc, name_first asc')
 
 	globals.printRoutine('rpt_contacts_list')
-}
-
-/**
- * @properties={typeid:24,uuid:"d5490de9-1b6c-4cd9-afda-92299b23b80b"}
- */
-function sub_doDelete()
-{
-	if(globals.core_dlg_buttonPressed == 'Delete')
-	{
-		controller.deleteRecord()
-
-		//if there are no records showing - then show all
-		if(controller.getMaxRecordIndex() == 0) forms.frm_nav_buttons.btn_showAll();
-	}
 }
 
 /**
