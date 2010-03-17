@@ -210,7 +210,7 @@ borderType:"SpecialMatteBorder,0.0,1.0,1.0,1.0,#cccccc,#cccccc,#cccccc,#cccccc,0
 dataProviderID:"product_number",
 editable:false,
 formIndex:10700,
-location:"0,80",
+location:"30,80",
 size:"120,20",
 styleClass:"reportsm",
 transparent:true,
