@@ -14,7 +14,8 @@ function btn_performSQL()
 	var query = globals.core_sql_sqlQuery
 
 	//if only a part of the query is hilighted - then use that
-	if(elements.fld_sqlQuery.getSelectedText()) query = elements.fld_sqlQuery.getSelectedText()
+	if(elements.sqlQuery.getSelectedText()) query = elements.sqlQuery.getSelectedText();
+	
 
 	//there is a query - so try to run it
 	//Get a dataset based on query

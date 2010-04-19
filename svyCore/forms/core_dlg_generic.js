@@ -1,31 +1,4 @@
 /**
- * @properties={typeid:24,uuid:"45209a89-0673-47a3-a134-b8cc92030206"}
- */
-function close()
-{
-	var frm = globals.core_dlg_formName
-	var elmt = globals.core_dlg_elementName
-
-	//set the global to the text of the pressed button
-	globals.core_dlg_buttonPressed = elements[application.getMethodTriggerElementName()].text
-
-	//close the form in dialog
-	application.closeFormDialog("Dialog")
-
-	globals.enableBgElements();
-
-	//re-enable anything behind the dialog
-	globals.core_enableDisableElements();
-
-	//execute the method to be executed, then clear the global
-	if(globals.core_dlg_methodToExecute)
-	{
-		eval(globals.core_dlg_methodToExecute)
-		globals.core_dlg_methodToExecute = null
-	}
-}
-
-/**
  * @properties={typeid:24,uuid:"7639999a-c7fb-453f-a101-13382ce64208"}
  */
 function hide_allIcons()
@@ -125,4 +98,34 @@ function show_iconQuestion()
 function show_iconWarning()
 {
 	elements.icn_warning.visible = true
+}
+
+/**
+ * Perform the element default action.
+ *
+ * @param {JSEvent} event the event that triggered the action
+ *
+ * @properties={typeid:24,uuid:"F22BFEAD-B0B7-468E-AF48-2B2675756720"}
+ */
+function close(event) {
+	var frm = globals.core_dlg_formName;
+	var elmt = globals.core_dlg_elementName;
+
+	//set the global to the text of the pressed button
+	globals.core_dlg_buttonPressed = elements[event.getElementName()].text;
+
+	//close the form in dialog
+	application.closeFormDialog("Dialog");
+
+	globals.enableBgElements();
+
+	//re-enable anything behind the dialog
+	globals.core_enableDisableElements();
+
+	//execute the method to be executed, then clear the global
+	if(globals.core_dlg_methodToExecute);
+	{
+		eval(globals.core_dlg_methodToExecute);
+		globals.core_dlg_methodToExecute = null;
+	}
 }
