@@ -54,7 +54,7 @@ function doEdit()
 	elements.fld_contactTypec.visible = true
 
 	//if the LAN then show the popup menu when editing
-	if(application.getApplicationType() < 5)
+//	if(application.getApplicationType() < 5) - not needed anymore
 	{
 		elements.fld_title.visible = false
 		elements.fld_titlec.visible = true //lan only
