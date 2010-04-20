@@ -144,7 +144,7 @@ function enableBgElements()
  */
 function getTopHTML()
 {
-	if(application.getApplicationType() == 5)
+	if(application.getApplicationType() == APPLICATION_TYPES.WEB_CLIENT)
 	{
 		//web client
 		return '<html><body>'

@@ -37,7 +37,7 @@ function evt_changeList()
 function evt_onLoad()
 {
 	//hide the little "go" button if not in web client
-	if(application.getApplicationType() != 5)
+	if(application.getApplicationType() != APPLICATION_TYPES.WEB_CLIENT)
 	{
 		elements.btn_changeList.visible = false
 	}

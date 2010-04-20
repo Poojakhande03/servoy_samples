@@ -31,7 +31,7 @@ function btn_performSQL()
 
 	//setup the top HTML
 	var myHTML = globals.getTopHTML()
-	if(application.getApplicationType() == 5) myHTML = '<html>'
+	if(application.getApplicationType() == APPLICATION_TYPES.WEB_CLIENT) myHTML = '<html>'
 
 	globals.core_sql_sqlResult = myHTML + '<b>QUERY: </b>' + query + '<br><br>' + dataset.getAsHTML() + '</html>';
 }

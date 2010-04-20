@@ -23,7 +23,7 @@ function btn_save()
 	forms.lst_contacts.btn_sortAsc()
 	forms.lst_contacts.foundset.selectRecord(id)
 
-	if(application.getApplicationType() == 5) onRecordSelect(); //for web client - to refresh buttons
+	if(application.getApplicationType() == APPLICATION_TYPES.WEB_CLIENT) onRecordSelect(); //for web client - to refresh buttons
 }
 
 /**

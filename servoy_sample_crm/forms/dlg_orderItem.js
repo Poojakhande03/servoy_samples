@@ -15,7 +15,7 @@ function evt_changeItem()
  */
 function onShow()
 {
-	if(application.getApplicationType() == 5)
+	if(application.getApplicationType() == APPLICATION_TYPES.WEB_CLIENT)
 	{
 		elements.btn_getInfo.visible = true
 	}
