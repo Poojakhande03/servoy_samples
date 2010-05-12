@@ -111,10 +111,13 @@ function GoDocument(arg0)
 }
 
 /**
- * @properties={typeid:24,uuid:"3f9b4b58-80ee-456d-8eeb-42d22f778b9a"}
+ * Perform the element default action.
+ *
+ * @param {JSEvent} event the event that triggered the action
+ *
+ * @properties={typeid:24,uuid:"684B4B7A-D78A-4329-A36A-98E5547F6941"}
  */
-function BtnSort(arg0)
-{
+function BtnSort(event, arg1) {
 	/*
 	PURPOSE: Sort the list in a generic way
 	
@@ -127,7 +130,18 @@ function BtnSort(arg0)
 	SPECIAL THANKS to David Workman of http://www.servoymagazine.com
 	********************************************/
 
-	var isInitial = arg0;
+	if (arg1 != null) {
+		var isInitial = arg1;
+		ftsort = false;
+		event = 'details_asc';
+	}
+	if (ftsort == true) {
+		var isInitial = 'initial';
+		ftsort = false;
+	}
+	else {
+		ftsort = false;
+	}
 	
 	//load sort images for all columns
 	var sortImages = new Array('details_asc:::doc_name asc',
@@ -137,7 +151,10 @@ function BtnSort(arg0)
 	var formName = controller.getName();
 	
 	//column number
-	var btnName = application.getMethodTriggerElementName();
+	if (arg1 != null)
+		var btnName = event;
+	else
+		var btnName = event.getElementName();
 	var columnNum = utils.stringRight(btnName, 1);
 	
 	if (columnNum.charAt(0) == '_')

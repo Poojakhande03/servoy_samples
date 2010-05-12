@@ -66,7 +66,7 @@ function BtnGoPerson()
  */
 function onShow()
 {
-//	BtnSort('initial');
+//	BtnSort(null, 'initial');
 //	application.output(foundset.getCurrentSort());
 //	if (project_people_to_people) project_people_to_people.sort(project_people_to_people.name_full);
 //	if (project_people_to_people) application.output(project_people_to_people.getSize());
