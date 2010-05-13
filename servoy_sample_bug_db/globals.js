@@ -949,47 +949,47 @@ function SetupInitialSorts()
 	
 	//task list - your tasks
 	forms.lst_task.elements.label_asc.visible = false
-	forms.lst_task.BtnSort('initial');
+	forms.lst_task.BtnSort(null,'initial');
 	
 	//people overview list sort
 	forms.frm_people_selperson_overview_personProjects.elements.project_name_asc.visible = false
-	forms.frm_people_selperson_overview_personProjects.BtnSort('initial');
+	forms.frm_people_selperson_overview_personProjects.BtnSort(null, 'initial');
 	
 	//task overview list sort
 	forms.frm_people_selperson_overview_personTasks.elements.project_name_asc.visible = false
-	forms.frm_people_selperson_overview_personTasks.BtnSort('initial');
+	forms.frm_people_selperson_overview_personTasks.BtnSort(null, 'initial');
 	
 	//project list sort
 	forms.frm_people_selperson_projects_projList.elements.project_name_asc.visible = false
-	forms.frm_people_selperson_projects_projList.BtnSort('initial');
+	forms.frm_people_selperson_projects_projList.BtnSort(null, 'initial');
 	
 	//project list sort
 	forms.frm_people_selperson_projects_projList2.elements.project_name_asc.visible = false
-	forms.frm_people_selperson_projects_projList2.BtnSort('initial');
+	forms.frm_people_selperson_projects_projList2.BtnSort(null, 'initial');
 	
 	//task list sort
 	forms.frm_people_selperson_tasks_taskList.elements.project_name_asc.visible = false
-	forms.frm_people_selperson_tasks_taskList.BtnSort('initial');
+	forms.frm_people_selperson_tasks_taskList.BtnSort(null, 'initial');
 	
 	//home - recent activity
 	forms.lst_actions.elements.date_desc.visible = false
-	forms.lst_actions.BtnSort('initial');
+	forms.lst_actions.BtnSort(null, 'initial');
 	
 	//company list
 	forms.lst_company.elements.company_name_asc.visible = false
-	forms.lst_company.BtnSort('initial');
+	forms.lst_company.BtnSort(null, 'initial');
 	
 	//project overview actions
 	forms.frm_project_selroj_overview_actions.elements.date_desc.visible = false
-	forms.frm_project_selroj_overview_actions.BtnSort('initial');
+	forms.frm_project_selroj_overview_actions.BtnSort(null, 'initial');
 	
 	//project overview task list
 	forms.frm_project_selproj_task_list.elements.task_asc.visible = false
-	forms.frm_project_selproj_task_list.BtnSort('initial');
+	forms.frm_project_selproj_task_list.BtnSort(null, 'initial');
 	
 	//project overview files
 	forms.frm_project_selproj_files_filelist.elements.file_name_asc.visible = false
-	forms.frm_project_selproj_files_filelist.BtnSort('initial');
+	forms.frm_project_selproj_files_filelist.BtnSort(null, 'initial');
 }
 
 /**
@@ -997,22 +997,22 @@ function SetupInitialSorts()
  */
 function SetUpInitialTabHilights()
 {
-/*
-PURPOSE: Sets the "active" tab on each form
-
-PARAMETERS: NONE
-OUTPUTS: NONE
-
-CREATED: 04/18/08 BC
-MODIFIED:5/30/08 JM
-
-********************************************/
-
-//forms.frm_submain.BtnHome();
-forms.frm_home.TabHome();
-forms.frm_project.TabActive();
-forms.frm_people_selperson.TabOverview();
-forms.frm_project_selproj.TabOverview();
+	/*
+	PURPOSE: Sets the "active" tab on each form
+	
+	PARAMETERS: NONE
+	OUTPUTS: NONE
+	
+	CREATED: 04/18/08 BC
+	MODIFIED:5/30/08 JM
+	
+	********************************************/
+	
+	//forms.frm_submain.BtnHome();
+	forms.frm_home.TabHome();
+	forms.frm_project.TabActive();
+	forms.frm_people_selperson.TabOverview();
+	forms.frm_project_selproj.TabOverview();
 }
 
 /**
@@ -1530,32 +1530,32 @@ function ShowDialogVersion()
 	MODIFIED: NONE
 	********************************************/
 	
-	var title = arguments[0]
-	var versID = arguments[1]
-	var isNew = arguments[2]
+	var title = arguments[0];
+	var versID = arguments[1];
+	var isNew = arguments[2];
 	
 	if(isNew) {
-		globals.flagIsNew = 1
+		globals.flagIsNew = 1;
 	}
 	else {
-		globals.flagIsNew = 0
+		globals.flagIsNew = 0;
 	}
 	
 	if(versID) { //find the doc
-		forms.dlg_version.controller.find()
-		forms.dlg_version.ixversion = versID
-		forms.dlg_version.controller.search()
+		forms.dlg_version.controller.find();
+		forms.dlg_version.ixversion = versID;
+		forms.dlg_version.controller.search();
 	}
 	
 	if(!title) //no title was specified
 	{
-		title = i18n.getI18NMessage('lbl.editVersion')
+		title = i18n.getI18NMessage('lbl.editVersion');
 	}
 	
 	//set the global so that if they click the "X" close it won't close
-	globals.isDialogOpen = 1
+	globals.isDialogOpen = 1;
 	
-	application.showFormInDialog(forms.dlg_version, -1,-1,-1,-1, title, false, false, 'version', true)
+	application.showFormInDialog(forms.dlg_version, -1,-1,-1,-1, title, false, false, 'version', true);
 }
 
 /**
