@@ -1,13 +1,16 @@
 /**
- * @properties={typeid:24,uuid:"46004cf2-b714-4234-a7cd-12554cb6935c"}
+ * Perform the element default action.
+ *
+ * @param {JSEvent} event the event that triggered the action
+ *
+ * @properties={typeid:24,uuid:"09CD048F-A462-4537-96E5-BDD98CF78653"}
  */
-function close()
-{
-	var frm = globals.core_dlg_formName
+function BtnSort(event) {
+		var frm = globals.core_dlg_formName
 	var elmt = globals.core_dlg_elementName
 
 	//set the global to the text of the pressed button
-	var btn = elements[application.getMethodTriggerElementName()].text
+	var btn = elements[event.getElementName()].text
 
 	//close the form in dialog
 	application.closeFormDialog("Dialog")
