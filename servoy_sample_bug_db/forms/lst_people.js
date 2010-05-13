@@ -1,4 +1,9 @@
 /**
+ * @properties={typeid:35,uuid:"F058A708-638F-46E4-9A02-F61F72FA67B7",variableType:-4}
+ */
+var ftsort = true;
+
+/**
  * @properties={typeid:24,uuid:"c7f75705-413c-480e-a4b7-4ff57bc58cae"}
  */
 function BtnGoPerson(arg0)
@@ -29,10 +34,13 @@ function BtnGoPerson(arg0)
 }
 
 /**
- * @properties={typeid:24,uuid:"05359f39-1ecd-4f8e-9dbb-393d8f475026"}
+ * Perform the element default action.
+ *
+ * @param {JSEvent} event the event that triggered the action
+ *
+ * @properties={typeid:24,uuid:"2E74D546-5A09-46DA-935B-8C9820C9B758"}
  */
-function BtnSort(arg0)
-{
+function BtnSort(event, arg1) {
 	/*
 	PURPOSE: Sort the list in a generic way
 	
@@ -45,7 +53,18 @@ function BtnSort(arg0)
 	SPECIAL THANKS to David Workman of http://www.servoymagazine.com
 	********************************************/
 	
-	var isInitial = arg0;
+	if (arg1 != null) {
+		var isInitial = arg1;
+		ftsort = false;
+		event = 'nickname_asc';
+	}
+	if (ftsort == true) {
+		var isInitial = 'initial';
+		ftsort = false;
+	}
+	else {
+		ftsort = false;
+	}
 	
 	//load sort images for all columns
 	var sortImages = new Array('nickname_asc:::nickname',
@@ -57,7 +76,10 @@ function BtnSort(arg0)
 	var formName = 'lst_people';
 	
 	//column number
-	var btnName = application.getMethodTriggerElementName();
+	if (arg1 != null)
+		var btnName = event;
+	else
+		var btnName = event.getElementName();
 	var columnNum = utils.stringRight(btnName, 2);
 	
 	if (columnNum.charAt(0) == '_')

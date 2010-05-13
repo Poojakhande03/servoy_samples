@@ -31,5 +31,5 @@ function LoadPeople()
 	
 	//set initial sort
 	forms.lst_people.elements.name_full_asc.visible =  false;
-	forms.lst_people.BtnSort('initial');
+	forms.lst_people.BtnSort(null, 'initial');
 }

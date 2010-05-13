@@ -35,5 +35,5 @@ function OnShow()
 	
 	//active projects
 	forms.lst_project.elements.project_name_asc.visible = false
-	forms.lst_project.BtnSort('initial');
+	forms.lst_project.BtnSort(null, 'initial');
 }

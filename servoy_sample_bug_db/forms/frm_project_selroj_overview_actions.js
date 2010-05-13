@@ -1,4 +1,9 @@
 /**
+ * @properties={typeid:35,uuid:"A4FB49DA-5309-44C1-B3F3-098C5BF55500",variableType:-4}
+ */
+var ftsort = true;
+
+/**
  * @properties={typeid:24,uuid:"93c85c13-f594-4e47-8c7e-b1ad23564fba"}
  */
 function BtnGoTask()
@@ -26,10 +31,13 @@ function BtnGoTask()
 }
 
 /**
- * @properties={typeid:24,uuid:"df775143-cd0a-4bbc-9b53-c3f774fd8cdd"}
+ * Perform the element default action.
+ *
+ * @param {JSEvent} event the event that triggered the action
+ *
+ * @properties={typeid:24,uuid:"8D37340B-6361-46FF-9FFC-7BBA408DE5E0"}
  */
-function BtnSort(arg0)
-{
+function BtnSort(event, arg1) {
 	/*
 	PURPOSE: Sort the list in a generic way
 	
@@ -42,7 +50,18 @@ function BtnSort(arg0)
 	SPECIAL THANKS to David Workman of http://www.servoymagazine.com
 	********************************************/
 	
-	var isInitial = arg0;
+	if (arg1 != null) {
+		var isInitial = arg1;
+		ftsort = false;
+		event = 'date_asc';
+	}
+	if (ftsort == true) {
+		var isInitial = 'initial';
+		ftsort = false;
+	}
+	else {
+		ftsort = false;
+	}
 	
 	//load sort images for all columns
 	var sortImages = new Array('date_asc:::dt_created asc',
@@ -57,7 +76,10 @@ function BtnSort(arg0)
 	var formName = controller.getName()
 	
 	//column number
-	var btnName = application.getMethodTriggerElementName();
+	if (arg1 != null)
+		var btnName = event;
+	else
+		var btnName = event.getElementName();
 	var columnNum = utils.stringRight(btnName, 2);
 	
 	if (columnNum.charAt(0) == '_')
