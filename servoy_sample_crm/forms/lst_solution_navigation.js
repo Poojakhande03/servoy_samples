@@ -1,49 +1,4 @@
 /**
- * @properties={typeid:24,uuid:"d8232e5e-ca61-4b51-8a40-a7c5a8746a6f"}
- */
-function btn_goForm()
-{
-	//switch tabs in the main form - and the list form
-	if (action_method == null)
-	{
-		//incase having old db, fill with correct data
-		var name =item_name.toLocaleLowerCase();
-		if (name == 'customers') name = 'company'
-		action_method = name;
-	}
-	
-	forms['frm_'+action_method].controller.show()
-	var tabCount = forms.frm_nav_main.elements.tabs_recList.getMaxTabIndex();
-	for (var index = 1; index <= tabCount; index++) 
-	{
-		var tname = forms.frm_nav_main.elements.tabs_recList.getTabFormNameAt(index);
-		if (tname.substr(4) == action_method)
-		{
-			forms.frm_nav_main.elements.tabs_recList.tabIndex = index;
-			break;
-		}
-	}
-
-	if (item_name.indexOf('Admin') == -1)
-	{
-		//update the record information
-		globals.setupRecordStatus();
-
-		//hide search stuff
-		forms.frm_nav_main.elements.lbl_search.visible = true
-		forms.frm_nav_main.elements.fld_search.visible = true
-		forms.frm_nav_main.elements.btn_search.visible = true
-	}
-	else
-	{
-		//hide search stuff
-		forms.frm_nav_main.elements.lbl_search.visible = false
-		forms.frm_nav_main.elements.fld_search.visible = false
-		forms.frm_nav_main.elements.btn_search.visible = false
-	}
-}
-
-/**
  * @properties={typeid:24,uuid:"746c8df6-cc97-4b7e-9d40-127943096979"}
  */
 function btn_showDialog()
@@ -109,4 +64,54 @@ function setupNav()
 	html += '</table>\n</body>\n</html>'
 
 	globals.nav_solution = html
+}
+
+/**
+ * Handle record selected.
+ *
+ * @param {JSEvent} event the event that triggered the action
+ *
+ * @properties={typeid:24,uuid:"03A02C9C-2006-4736-9EFF-F9923C16402B"}
+ */
+function btn_goForm(event) {
+	if (item_name != null) {
+		//switch tabs in the main form - and the list form
+		if (action_method == null)
+		{
+			//incase having old db, fill with correct data
+			var name =item_name.toLocaleLowerCase();
+			if (name == 'customers') name = 'company'
+			action_method = name;
+		}
+		
+		forms['frm_'+action_method].controller.show()
+		var tabCount = forms.frm_nav_main.elements.tabs_recList.getMaxTabIndex();
+		for (var index = 1; index <= tabCount; index++) 
+		{
+			var tname = forms.frm_nav_main.elements.tabs_recList.getTabFormNameAt(index);
+			if (tname.substr(4) == action_method)
+			{
+				forms.frm_nav_main.elements.tabs_recList.tabIndex = index;
+				break;
+			}
+		}
+	
+		if (item_name.indexOf('Admin') == -1)
+		{
+			//update the record information
+			globals.setupRecordStatus();
+	
+			//hide search stuff
+			forms.frm_nav_main.elements.lbl_search.visible = true
+			forms.frm_nav_main.elements.fld_search.visible = true
+			forms.frm_nav_main.elements.btn_search.visible = true
+		}
+		else
+		{
+			//hide search stuff
+			forms.frm_nav_main.elements.lbl_search.visible = false
+			forms.frm_nav_main.elements.fld_search.visible = false
+			forms.frm_nav_main.elements.btn_search.visible = false
+		}
+	}
 }
