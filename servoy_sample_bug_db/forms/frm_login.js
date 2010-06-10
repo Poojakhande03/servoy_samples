@@ -84,8 +84,8 @@ function SubLogin()
 	var query = 'SELECT tbl_tenant.tenant_id, tbl_people.ixpeople, tbl_people.profile, tbl_tenant.is_master_tenant, tbl_company.category, tbl_company.ixcompany \
 				 FROM tbl_tenant, tbl_company, tbl_people, tbl_people_company \
 				 WHERE tbl_tenant.tenant_id = tbl_company.ixtenant \
-				 AND tbl_company.ixcompany = tbl_people_company.ixcompany \
 				 AND tbl_people_company.ixpeople = tbl_people.ixpeople \
+				 AND tbl_company.ixcompany = tbl_people_company.ixcompany \
 				 AND tbl_people.login_name = ? \
 				 AND tbl_people.login_pw = ? \
 				 AND tbl_people.account_active = ? \
@@ -102,7 +102,7 @@ function SubLogin()
 //		globals.loginUserPass = 'admin';
 //	}
 	
-	var dataset = databaseManager.getDataSetByQuery(server[0], query, argm, 1);
+	var dataset = databaseManager.getDataSetByQuery('bug_db', query, argm, 1);
 	
 	var found = dataset.getMaxRowIndex()
 	
@@ -128,9 +128,9 @@ function SubLogin()
 		argn[1] = globals.loginUserPass;
 		argn[2] = 0;
 		argn[3] = 0;
-		var dataset = databaseManager.getDataSetByQuery(server[0], query, argn, 1);
-		var found2 = dataset.getMaxRowIndex()
+		var dataset = databaseManager.getDataSetByQuery('bug_db', query, argn, 1);
 		
+		var found2 = dataset.getMaxRowIndex()
 		if(found2 == 1)
 		{
 			//there were disabled - so let them know in the error
@@ -155,7 +155,7 @@ function SubLogin()
 		if(isMasterAdmin)
 			var success = true
 		else
-			var success = databaseManager.addTableFilterParam(server[0], null, 'ixtenant', '=', globals.currTenantID)
+			var success = databaseManager.addTableFilterParam('bug_db', null, 'ixtenant', '=', globals.currTenantID)
 		
 		if(success)
 		{
@@ -165,9 +165,9 @@ function SubLogin()
 			{
 				var companyID = dataset.getValue(1, 6)
 				//only show the companies that the user is part of
-				success = databaseManager.addTableFilterParam(server[0], null, 'ixcompany', 'IN', "SELECT ixcompany FROM tbl_people_company WHERE ixpeople = '" + globals.currUserID + "'")
+				success = databaseManager.addTableFilterParam('bug_db', null, 'ixcompany', 'IN', "SELECT ixcompany FROM tbl_people_company WHERE ixpeople = '" + globals.currUserID + "'")
 				//only show people that are part of the sampe company the loged in user is part of
-				success = databaseManager.addTableFilterParam(server[0], 'tbl_people', 'ixpeople', 'IN', "SELECT p1.ixpeople FROM tbl_people p1,  tbl_people_company pc1 WHERE pc1.ixpeople = p1.ixpeople AND pc1.ixcompany IN (SELECT pc2.ixcompany FROM tbl_people_company pc2 WHERE pc2.ixpeople = '" + 	globals.currUserID + "')")
+				success = databaseManager.addTableFilterParam('bug_db', 'tbl_people', 'ixpeople', 'IN', "SELECT p1.ixpeople FROM tbl_people p1,  tbl_people_company pc1 WHERE pc1.ixpeople = p1.ixpeople AND pc1.ixcompany IN (SELECT pc2.ixcompany FROM tbl_people_company pc2 WHERE pc2.ixpeople = '" + 	globals.currUserID + "')")
 			}
 			
 			//continue to login
@@ -186,7 +186,7 @@ function SubLogin()
 		else
 		{
 			//Stop the login process.  Could be showing incorrect data to our users
-			globals.errorText = "Error filtering records.  Unable to login."
+			globals.errorText = "Error filtering records. Unable to login."
 		}
 	}
 }
@@ -205,22 +205,26 @@ function SubNewTenant()
 	else
 	{
 		//add a tenant record
-		var tenantFS = databaseManager.getFoundSet(server[0], 'tbl_tenant')
+		var tenantFS = databaseManager.getFoundSet('bug_db', 'tbl_tenant')
 		tenantFS.clear()
 		var tenantRec = tenantFS.getRecord(tenantFS.newRecord(true, true))
 		tenantRec.tenant_name = globals.loginTenantName
 		globals.currTenantID = tenantRec.tenant_id
-	
+		tenantRec.ixtenant = tenantRec.tenant_id
+			tenantRec.is_active = 1;
+		
 		//add a company record
-		var companyFS = databaseManager.getFoundSet(server[0], 'tbl_company')
-		companyFS.clear()
+		var companyFS = databaseManager.getFoundSet('bug_db', 'tbl_company')
 		var companyRec = companyFS.getRecord(companyFS.newRecord(true, true))
+		companyFS.clear()
 		companyRec.company_name = globals.loginTenantName
 		companyRec.category = 1 //need to make it admin
+			companyRec.ixtenant = globals.currTenantID;
+				
 		globals.currCompanyID = companyRec.ixcompany
 		
 		//add a person record
-		var personFS = databaseManager.getFoundSet(server[0], 'tbl_people')
+		var personFS = databaseManager.getFoundSet('bug_db', 'tbl_people')
 		personFS.clear()
 		var personRec = personFS.getRecord(personFS.newRecord(true, true))
 		personRec.login_name = globals.loginUserName
@@ -229,15 +233,17 @@ function SubNewTenant()
 		personRec.name_full = globals.loginFullName
 		personRec.category = 0
 		personRec.last_login = new Date()
+			personRec.ixtenant = globals.currTenantID;
 		globals.currPersonID = personRec.ixpeople
 		globals.currUserID = personRec.ixpeople
 		
 		//add a person_company record
-		var pcFS = databaseManager.getFoundSet(server[0], 'tbl_people_company')
+		var pcFS = databaseManager.getFoundSet('bug_db', 'tbl_people_company')
 		pcFS.clear()
 		var pcRec = pcFS.getRecord(pcFS.newRecord(true, true))
 		pcRec.ixcompany = globals.currCompanyID
 		pcRec.ixpeople = globals.currPersonID
+			pcRec.ixtenant = globals.currTenantID;
 		
 		databaseManager.saveData()
 	}
