@@ -3,7 +3,7 @@ dataSource:"db:/example_data/book_text",
 items:[
 {
 background:"#ffffdd",
-height:363,
+height:390,
 partType:5,
 typeid:19,
 uuid:"145c4a9a-17d4-4272-b439-f3494ee660b6"
@@ -30,7 +30,7 @@ editable:false,
 formIndex:10000,
 location:"0,26",
 scrollbars:33,
-size:"290,337",
+size:"290,360",
 typeid:4,
 uuid:"3d420750-68ad-4f3a-b7b4-549bebc600aa"
 },
@@ -58,7 +58,7 @@ name:"book_comment_web",
 navigatorID:"-1",
 paperPrintScale:100,
 scrollbars:36,
-size:"290,363",
+size:"292,390",
 styleName:"svyWebCrm",
 typeid:3,
 uuid:"b04b0208-e3da-4904-8d24-18f16c47c650"

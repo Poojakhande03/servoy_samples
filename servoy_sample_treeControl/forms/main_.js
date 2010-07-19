@@ -1,5 +1,5 @@
 /**
- * @properties={typeid:24,uuid:"e6b63cd7-e894-43be-84da-5a867091d89c"}
+ * @properties={typeid:24,uuid:"49D438CF-05D4-4403-89E9-AE1613F96ACB"}
  */
 function loadFormsInBean()
 {
@@ -27,7 +27,7 @@ function loadFormsInBean()
 }
 
 /**
- * @properties={typeid:24,uuid:"1c446972-a86e-4b10-b579-3ccb81080cd0"}
+ * @properties={typeid:24,uuid:"64CC95D3-E664-43E4-ACAB-C08FEA35D03B"}
  */
 function node_selected()
 {
@@ -41,12 +41,13 @@ function node_selected()
 }
 
 /**
- * Perform the element default action.
+ * Callback method for when form is shown.
  *
+ * @param {Boolean} firstShow form is shown first time after load
  * @param {JSEvent} event the event that triggered the action
  *
- * @properties={typeid:24,uuid:"B31BDC00-398B-4B40-87DC-F304402892B1"}
+ * @properties={typeid:24,uuid:"7AFAD97E-2066-4C24-827A-326F6BBA651F"}
  */
-function show_smain(event) {
-	application.showForm(forms.main_);
+function onShow(firstShow, event) {
+	elements.main.dividerLocation = 0.3;
 }

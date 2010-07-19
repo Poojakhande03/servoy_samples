@@ -1,3 +1,4 @@
+borderType:"EmptyBorder,0,0,0,0",
 dataSource:"db:/example_data/book_nodes",
 items:[
 {
@@ -71,6 +72,18 @@ size:"80,80",
 typeid:12,
 usesUI:true,
 uuid:"356866ff-8dc4-4cb4-92cd-bbb0f9f08b9a"
+},
+{
+formIndex:11201,
+location:"810,20",
+mediaOptions:14,
+onActionMethodID:"B31BDC00-398B-4B40-87DC-F304402892B1",
+onDoubleClickMethodID:"-1",
+onRightClickMethodID:"-1",
+size:"80,20",
+text:"button",
+typeid:7,
+uuid:"4498233A-5820-46DD-8BF1-A3CC544498B9"
 },
 {
 formIndex:10900,

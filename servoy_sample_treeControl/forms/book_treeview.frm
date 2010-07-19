@@ -9,7 +9,7 @@ typeid:19,
 uuid:"2c35e03b-aea6-40b0-b1a3-6b537c26a5bc"
 },
 {
-anchors:15,
+anchors:13,
 beanClassName:"com.servoy.extensions.beans.dbtreeview.DBTreeView",
 beanXML:"<?xml version=\"1.0\" encoding=\"UTF-8\"?> 
 <java version=\"1.5.0_07\" class=\"java.beans.XMLDecoder\"> 
