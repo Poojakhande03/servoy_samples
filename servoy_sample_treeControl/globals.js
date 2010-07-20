@@ -35,14 +35,14 @@ function openSolution()
 {
 	if(application.getApplicationType() == 5) //WebClient
 	{
-		forms.main.elements.bean_625.visible = false
-		forms.main.elements.bean_667.visible = false
-		forms.main.elements.bean_882.visible = false
+//		forms.main.elements.bean_625.visible = false
+//		forms.main.elements.bean_667.visible = false
+//		forms.main.elements.bean_882.visible = false
 
-		forms.main.elements.comment.tabIndex = 2
+//		forms.main_.elements.comment.tabIndex = 2
 
-		forms.main.elements.text.tabIndex = 2
+//		forms.main_.elements.text.tabIndex = 2
 
-		forms.main.elements.lbl_title.text = "Example - Ajax Tree Control"
+		forms.main_.elements.lbl_title.text = "Example - Ajax Tree Control"
 	}
 }

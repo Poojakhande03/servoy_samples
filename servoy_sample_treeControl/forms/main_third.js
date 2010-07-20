@@ -7,5 +7,5 @@
  * @properties={typeid:24,uuid:"4F1803F1-3BB5-4C82-B529-F3638F393715"}
  */
 function onShow(firstShow, event) {
-	elements.third_split.dividerLocation = 0.7;
+	elements.third_split.dividerLocation = 0.6;
 }

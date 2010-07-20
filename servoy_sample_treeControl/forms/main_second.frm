@@ -24,7 +24,7 @@ uuid:"AA873667-3818-4F60-A557-CE0C1E890EF9"
 location:"0,0",
 name:"second_tab",
 printable:false,
-size:"700,550",
+size:"750,550",
 tabOrientation:-3,
 typeid:16,
 uuid:"4B202728-CFE6-4F60-9730-48F4A1AF43D3"
@@ -41,6 +41,6 @@ navigatorID:"-1",
 onShowMethodID:"B8F010B5-F718-480F-8A82-B735CBCE7577",
 paperPrintScale:100,
 scrollbars:36,
-size:"702,550",
+size:"752,550",
 typeid:3,
 uuid:"97FB9D70-9C2F-4122-B399-D315F6A0E395"
