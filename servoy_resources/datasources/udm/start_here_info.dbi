@@ -25,8 +25,8 @@ name:"how_to_use"
 {
 allowNull:true,
 creationOrderIndex:9,
-dataType:-4,
-length:2147483647,
+dataType:-2,
+length:-1,
 name:"image"
 },
 {
@@ -65,8 +65,8 @@ name:"sort_order"
 {
 allowNull:true,
 creationOrderIndex:10,
-dataType:-4,
-length:2147483647,
+dataType:-2,
+length:-1,
 name:"thumbnail"
 },
 {
