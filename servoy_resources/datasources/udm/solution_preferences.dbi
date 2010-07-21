@@ -11,8 +11,8 @@ name:"solution_preferece_id"
 {
 allowNull:true,
 creationOrderIndex:1,
-dataType:-4,
-length:2147483647,
+dataType:-2,
+length:-1,
 name:"preference_blob"
 },
 {
@@ -25,8 +25,8 @@ name:"preference_name"
 {
 allowNull:true,
 creationOrderIndex:5,
-dataType:-1,
-length:2147483647,
+dataType:12,
+length:-1,
 name:"preference_value"
 },
 {

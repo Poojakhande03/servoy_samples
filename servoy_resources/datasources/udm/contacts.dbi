@@ -17,8 +17,8 @@ name:"company_id"
 {
 allowNull:true,
 creationOrderIndex:19,
-dataType:-1,
-length:2147483647,
+dataType:12,
+length:-1,
 name:"contact_notes"
 },
 {

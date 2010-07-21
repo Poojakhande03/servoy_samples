@@ -30,8 +30,8 @@ name:"creation_user"
 {
 allowNull:true,
 creationOrderIndex:0,
-dataType:-1,
-length:2147483647,
+dataType:12,
+length:-1,
 name:"description"
 },
 {
