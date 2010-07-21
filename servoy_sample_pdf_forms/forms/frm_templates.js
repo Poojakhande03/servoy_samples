@@ -24,7 +24,7 @@ function btn_addTemplate()
 			filename = fname;
 
 			globals.setupRecordStatus();
-			controller.saveData()
+			databaseManager.saveData();
 		}
 	}
 }

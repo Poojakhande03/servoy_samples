@@ -109,7 +109,7 @@ function btn_viewPDF()
 		//get the new record id
 		var action_id = forms.frm_forms.pdf_forms_to_pdf_actions.action_id;
 
-		forms.frm_forms.controller.saveData();//so changes are seen by servlet	
+		databaseManager.saveData();//so changes are seen by servlet	
 
 		if(application.getApplicationType()==5)
 		{
