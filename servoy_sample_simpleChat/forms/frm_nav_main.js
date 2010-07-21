@@ -28,7 +28,7 @@ function btn_login_logOut() {
 				forms.frm_nav_main.elements.tabs_recList.enabled = true
 			}
 
-			forms.lst_control_usersLogin.controller.saveData() //so it registers
+			databaseManager.saveData(); //so it registers
 			forms.lst_chatUsers.controller.loadRecords(mylogin_not_equal_chat_users)
 		}
 		else {
