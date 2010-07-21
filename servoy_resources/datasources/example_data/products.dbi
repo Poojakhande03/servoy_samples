@@ -49,8 +49,8 @@ name:"supplierid"
 {
 allowNull:true,
 creationOrderIndex:5,
-dataType:7,
-length:7,
+dataType:8,
+length:8,
 name:"unitprice"
 },
 {
