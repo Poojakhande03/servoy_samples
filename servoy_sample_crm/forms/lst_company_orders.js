@@ -42,7 +42,7 @@ function btn_newOrder()
 		forms.frm_orders.validate_autoEnter()
 		forms.frm_orders.company_id = companyID
 		
-		forms.frm_orders.controller.saveData()
+		databaseManager.saveData();
 		
 		//call the edit method so they can edit the record
 		forms.frm_orders.doEdit();

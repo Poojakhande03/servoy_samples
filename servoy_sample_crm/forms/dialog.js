@@ -50,7 +50,7 @@ function btn_ok()
 		if(globals.isEditing()) globals.saveEdits()
 	}
 	
-	forms.frm_orders.controller.saveData()
+	databaseManager.saveData();
 	
 	application.closeFormDialog("Dialog")
 	globals.enableBgElements();

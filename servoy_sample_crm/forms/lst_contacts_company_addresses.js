@@ -4,5 +4,5 @@
 function btn_setContactMailingAddress()
 {
 	gcurcontactid_to_contacts.mail_address_id = address_id
-	currentcontroller.saveData()
+	databaseManager.saveData();
 }
