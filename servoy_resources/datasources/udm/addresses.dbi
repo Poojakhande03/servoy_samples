@@ -70,8 +70,8 @@ name:"fax"
 {
 allowNull:true,
 creationOrderIndex:22,
-dataType:-4,
-length:2147483647,
+dataType:-2,
+length:-1,
 name:"icon"
 },
 {
