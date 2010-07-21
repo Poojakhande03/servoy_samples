@@ -33,7 +33,7 @@ function btn_newContact()
 
 	forms.frm_contacts.company_id = companyID
 
-	currentcontroller.saveData()
+	databaseManager.saveData();
 
 	//call the edit method so they can edit the record
 	forms.frm_contacts.doEdit();

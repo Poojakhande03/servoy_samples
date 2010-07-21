@@ -14,7 +14,7 @@ function btn_newAddress()
 
 	forms.dlg_address.company_id = companyID
 
-	forms.dlg_address.controller.saveData()
+	databaseManager.saveData();
 
 	//show the "fake" dialog
 	globals.showDialog('New Address')
