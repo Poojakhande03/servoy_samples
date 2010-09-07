@@ -1,5 +1,5 @@
 firstFormID:"4d92b815-df5b-4762-8141-80affc8e0268",
-loginFormID:"30E19F78-37B3-4371-BC17-EF19DD495B3A",
-modulesNames:"svyClientdesign,svyCore",
+loginFormID:"-1",
+modulesNames:"svyClientdesign,svyCore,servoy_sample_solutionModel_login,servoy_sample_solutionModel_auth",
 typeid:43,
 uuid:"bdef4065-b153-460a-94e2-c3576d335c1e"
