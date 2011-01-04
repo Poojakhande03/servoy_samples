@@ -158,19 +158,21 @@ text:"<html>\r
     Each person's record would be a new &quot;form&quot; record. You can even change the \r
     template linked to this form record - and if that form has the same field \r
     NAMES as the previous form - it will appear to be filled out with the same \r
-    values you entered for the previous form.<br><br><b>How It Works:<\/b> \r
-    Servoy uses Web Services to open up the template PDF form in Adobe \r
-    Acrobat. After you fill out the form and click \r
-    &quot;Submit&quot;, Acrobat sends the Web Service back the name of the field and the \r
-    value that was typed in. For example, if the field was named &quot;first_name&quot; \r
-    and the value typed was &quot;Tom&quot; then Acrobat sends back: first_name=Tom.<br><br>The \r
-    plugin then creates new records in the &quot;pdf_form_values&quot; table - recording \r
-    the field name and field value for each field on the form. When you open \r
-    the same form again - the plug-in passes Acrobat the name and value pairs \r
-    for that filled out form and Acrobat displays the values on the form.<br><br><b>Technical \r
-    Note:<\/b> The PDF Plug-in uses hard-coded table names. You MUST use the \r
-    table names: &quot;pdf_form_values&quot;, &quot;pdf_templates&quot;, &quot;pdf_actions.&quot; Also, the \r
-    default name of the connection is &quot;pdf_forms.&quot;<br><br>You CAN \r
+    values you entered for the previous form.<br><br><b>PDF actions:<\/b>For security reasons, \r
+    you don't open a form directly but use a pdf action. An action is the connection between a template and a form. \r
+   A closed action cannot be opened anymore (an action is automatically closed after the submit\r). The action can have a view( value 0 in database) or edit type (value 1 in database). Urls needed to open a template or an action are:\r
+
+   <br/>\r
+   <i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;serverUrl/servoy-service/pdf_forms/pdf_form/load.fdf?action_id={action_id}<\/i>\r
+   <br/>\r
+   <i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;serverUrl/servoy-service/pdf_forms/pdf_template?template_id={template_id}<\/i>\r
+   <br/>\r
+   An action has a redirect url that will be used to redirect after submit. If action doesn't have a redirect url \r
+   the one from template will be used. If redirect url from template is also null a message will be displayed that submit was successfull.\r
+   If action is view action the FDF form will be flattened. For XFA form the following javascript has to be added in initialize event of the form:\r
+  <br/>\r
+<i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (xfa.resolveNode(\"Form_name.Page_name.servoy_pdf_submit_url\").rawValue==null) {xfa.resolveNode (\"Form_name.Page_name.submitButton_name\").presence=\"invisible\";Form_name.access = \"nonInteractive\";}<\/i>\r
+   <br><br>Table names are hard coded but you CAN \r
     use a different connection name, but then you MUST go into the Admin \r
     section of the Server (http://yourIPaddress:8080/servoy-admin) and click \r
     on &quot;Server Plugin Setttings.&quot; You can change the connection name to \r

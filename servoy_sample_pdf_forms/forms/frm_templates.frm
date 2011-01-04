@@ -19,8 +19,19 @@ typeid:7,
 uuid:"0e3d4cdc-42c2-47c8-8f9b-d8380f8675d3"
 },
 {
+formIndex:13201,
+location:"23,300",
+mediaOptions:14,
+size:"80,20",
+tabSeq:-1,
+text:"Description",
+transparent:true,
+typeid:7,
+uuid:"10149C68-2DF4-451E-B715-9A744C74FBDB"
+},
+{
 formIndex:12400,
-location:"20,298",
+location:"21,419",
 mediaOptions:14,
 showClick:false,
 showFocus:false,
@@ -69,18 +80,6 @@ tabSeq:-2,
 transparent:true,
 typeid:7,
 uuid:"1c64be92-25ff-47ce-862a-eb920a0a8c96"
-},
-{
-formIndex:11900,
-location:"470,124",
-mediaOptions:14,
-showClick:false,
-showFocus:false,
-size:"310,2",
-styleClass:"solidgrc",
-tabSeq:-1,
-typeid:7,
-uuid:"1e30b03e-7726-44b7-9f86-1c16dff819c5"
 },
 {
 height:600,
@@ -204,9 +203,9 @@ valuelistID:"de4e914c-8eda-4e5d-8c15-a547eeaac751"
 },
 {
 formIndex:13100,
-location:"330,195",
+location:"330,100",
 mediaOptions:14,
-size:"450,120",
+size:"460,340",
 styleClass:"list",
 tabSeq:-1,
 text:"<html>\r
@@ -214,9 +213,13 @@ text:"<html>\r
     \r
   <\/head>\r
   <body>\r
-    <b>Submit button<\/b><br>To add a submit button to your template, create 2 hidden fields named \"servoy_pdf_submit_url\" and \"servoy_action_id\". Then create the submit button, name it \"SUBMIT\" and add the following javascript to the mouse up event:<br>\r
+    <b>PDF Template<\/b><br>The PDF template is the basis of pdf forms plugin. The template information is <br>stored in pdf_templates table. It contains some general information like name,<br/>category, filename but also the actual pdf file content in actual_pdf_form <br/>column. The PDF document should be an FDF or XFA form. The template can <br/>be viewed (like as is stored in database) or opened in view mode or edit mode <br/>(using a form and action). In edit mode the values can be submitted and will <br/>be stored in database, pdf_form_values table. See the PDF Forms link from <br/>navigation for more details about forms and actions.<br/>To add a submit functionality to your template, create 2 hidden fields named <br/>\"servoy_pdf_submit_url\" and \"servoy_action_id\". Then add a button and <br/>change its type to submit.  For FDF forms add the following javascript to <br/>the mouse up event:<br>\r
 <i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var ef = this.getField(\"servoy_pdf_submit_url\")<br>\r
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.submitForm(ef.value)<\/i>\r
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.submitForm(ef.value)<\/i><br>\r
+For XFA forms add javascript to preSubmit event of the button( where <br/>Form_name and Page_name should be modified to the actual names from PDF <br/>document):\r
+<br>\r
+<i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.resolveNode(\"#event\").submit.target = event.target.getField( \"Form_name[0].Page_name[0].servoy_pdf_submit_url[0]\").value+\"?action_id=<br/>\"+event.target.getField (\"Form_name[0].Page_name[0].servoy_action_id[0]\").value;\r
+<\/i>\r
   <\/body>\r
 <\/html>",
 toolTipText:"With older versions of Adobe Reader, Servoy was able to automatically add a submit button. But this was disabled by Adobe in latest versions.",
@@ -229,17 +232,17 @@ verticalAlignment:1
 dataProviderID:"description",
 displayType:1,
 formIndex:12300,
-location:"330,126",
+location:"24,320",
 name:"fld_description",
 scrollbars:33,
-size:"450,60",
+size:"290,60",
 tabSeq:3,
 typeid:4,
 uuid:"77648d1a-9032-407c-a50f-dbc19bf80a10"
 },
 {
 formIndex:12700,
-location:"20,279",
+location:"21,400",
 mediaOptions:14,
 showClick:false,
 showFocus:false,
@@ -303,20 +306,8 @@ typeid:7,
 uuid:"88734195-4640-4782-813a-47046da8eca1"
 },
 {
-formIndex:11800,
-location:"330,105",
-mediaOptions:14,
-showClick:false,
-showFocus:false,
-size:"140,21",
-styleClass:"darkgrc",
-tabSeq:-1,
-typeid:7,
-uuid:"891b740e-f90c-474b-a76a-d5de17eb9cad"
-},
-{
 formIndex:12800,
-location:"28,279",
+location:"29,400",
 mediaOptions:14,
 size:"130,20",
 styleClass:"darkgrc",
@@ -325,6 +316,17 @@ text:"Default Values",
 transparent:true,
 typeid:7,
 uuid:"8d43be62-2d8b-4e26-88b4-e130ffeeef11"
+},
+{
+formIndex:13201,
+location:"21,258",
+mediaOptions:14,
+size:"80,20",
+tabSeq:-1,
+text:"Redirect Url",
+transparent:true,
+typeid:7,
+uuid:"90D1F29C-BF56-4130-9EA9-E6F0B6C9A944"
 },
 {
 formIndex:13200,
@@ -348,9 +350,9 @@ uuid:"913ea1c6-7c30-483d-ae90-69582f67b727"
 {
 formIndex:13100,
 labelFor:"",
-location:"330,320",
+location:"330,450",
 mediaOptions:14,
-size:"449,260",
+size:"460,140",
 styleClass:"list",
 tabSeq:-1,
 text:"<html>\r
@@ -358,17 +360,13 @@ text:"<html>\r
     \r
   <\/head>\r
   <body>\r
-    <b>Default Values<\/b><br>Default values are those values that are filled \r
-    in by default every time this PDF template is used by a form.<br><br>The \r
+    <b>Default Values (template default values are sample implementation)<\/b><br>Default values are those values that are filled \r
+    in by default every time this PDF template is used by a form.<br>The \r
     defaults are based on a field name and a value. For example, if you have a \r
     PDF form with a field named &quot;company&quot; and you wanted the default value to \r
-    be your company name, you would need to:<br><br>1. Create a new default \r
+    be your company name, you would need to:<br>1. Create a new default \r
     value<br>2. Enter &quot;company&quot; into the &quot;Field Name&quot; column<br>3. \r
-    Enter your company name into the &quot;Value&quot; column<br><br>That's \r
-    it! Now every time this form is used, it will contain the name of your \r
-    company in the company field. It will work even if you change the form (as \r
-    long as there is a field named &quot;company&quot; on the form).<br><br>If \r
-    the field &quot;company&quot; appears more than once - so will the data.\r
+    Enter your company name into the &quot;Value&quot; column\r
   <\/body>\r
 <\/html>",
 transparent:true,
@@ -377,16 +375,13 @@ uuid:"930ecddb-012a-468e-a91e-2f12e4b235b3",
 verticalAlignment:1
 },
 {
-formIndex:12000,
-location:"338,105",
-mediaOptions:14,
-size:"130,20",
-styleClass:"darkgrc",
-tabSeq:-1,
-text:"Description",
-transparent:true,
-typeid:7,
-uuid:"9b2093d3-5a12-421b-9256-5540b893ffbb"
+dataProviderID:"redirect_url",
+formIndex:13202,
+location:"22,279",
+name:"fld_redirect_url",
+size:"290,20",
+typeid:4,
+uuid:"A200A550-D2FC-4B49-B851-0FABA6DFF93C"
 },
 {
 formIndex:10300,
@@ -449,17 +444,17 @@ formIndex:11600,
 items:[
 {
 containsFormID:"9bf32c6c-6c53-43c7-b949-bbf071f0098a",
-location:"50,330",
+location:"30,440",
 relationName:"pdf_templates_to_pdf_template_values",
 text:"lst_template_defaults",
 typeid:15,
 uuid:"9847b405-ffaf-4484-a00d-30afb54379d5"
 }
 ],
-location:"20,300",
+location:"20,420",
 name:"tabs_mainPanel",
 printable:false,
-size:"290,280",
+size:"290,170",
 tabOrientation:-1,
 typeid:16,
 uuid:"ea8db22e-603a-4b41-85dd-5956d72eb6f8"
