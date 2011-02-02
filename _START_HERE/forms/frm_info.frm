@@ -29,7 +29,7 @@ location:"50,80",
 name:"fld_info",
 scrollbars:33,
 size:"680,480",
-styleClass:"noborder",
+styleClass:"noborder10px",
 transparent:true,
 typeid:4,
 uuid:"a81279fb-aef9-4ffb-9437-c9e4a2474804"

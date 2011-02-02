@@ -1,15 +1,21 @@
 /**
+ * @type Number
+ *
  * @properties={typeid:35,uuid:"e64339a8-9313-4136-ada1-9c4da7454ea6",variableType:4}
  */
 var cur_infoId;
 
 /**
- * @properties={typeid:35,uuid:"79553b89-053c-44e4-9636-e53f8a414ce9"}
+ * @type String
+ *
+ * @properties={typeid:35,uuid:"79553b89-053c-44e4-9636-e53f8a414ce9",variableType:12}
  */
 var display_HTML = '';
 
 /**
- * @properties={typeid:35,uuid:"e6e26354-6ab0-4952-a074-870b99a82063"}
+ * @type String
+ *
+ * @properties={typeid:35,uuid:"e6e26354-6ab0-4952-a074-870b99a82063",variableType:12}
  */
 var print_HTML = '';
 
@@ -53,7 +59,9 @@ function setupHTML()
 
 		if(forms.frm_info.overview)
 		{
-			txt03 = '<b><font size=4>Overview</font></b><br>' + forms.frm_info.overview
+			txt03 = '<b>Overview</b><br>' + forms.frm_info.overview
+// 		font tag moved in the css class svyWebCrm-noborder10px:
+//			txt03 = '<b><font size=4px>Overview</font></b><br>' + forms.frm_info.overview
 		}
 
 		if(forms.frm_info.thumbnail)
@@ -77,12 +85,17 @@ function setupHTML()
 
 	if(forms.frm_info.unique_features)
 	{
-		html += '<b><font size=4>Unique Features</font></b><br>' + forms.frm_info.unique_features + '<p>'
+		html += '<b>Unique Features</b><br>' + forms.frm_info.unique_features + '<p>'
+		
+// 		font tag moved in the css class svyWebCrm-noborder10px
+//		html += '<b><font size=4>Unique Features</font></b><br>' + forms.frm_info.unique_features + '<p>'
 	}
 
 	if(forms.frm_info.how_to_use)
 	{
-		html += '<b><font size=4>How To Use It</font></b><br>' + forms.frm_info.how_to_use + '<p>'
+		html += '<b>How To Use It</b><br>' + forms.frm_info.how_to_use + '<p>'
+// 		font tag moved in the css class svyWebCrm-noborder10px
+//		html += '<b><font size=4>How To Use It</font></b><br>' + forms.frm_info.how_to_use + '<p>'
 	}
 
 	html += '</body></html>'
