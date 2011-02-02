@@ -130,13 +130,14 @@ function BtnSort(event, arg1) {
 	SPECIAL THANKS to David Workman of http://www.servoymagazine.com
 	********************************************/
 
+	var ftsort;
 	if (arg1 != null) {
 		var isInitial = arg1;
 		ftsort = false;
 		event = 'details_asc';
 	}
 	if (ftsort == true) {
-		var isInitial = 'initial';
+		isInitial = 'initial';
 		ftsort = false;
 	}
 	else {
@@ -146,7 +147,6 @@ function BtnSort(event, arg1) {
 	//load sort images for all columns
 	var sortImages = new Array('details_asc:::doc_name asc',
 								'details_desc:::doc_name desc');
-	doc_name
 	//form name                            
 	var formName = controller.getName();
 	

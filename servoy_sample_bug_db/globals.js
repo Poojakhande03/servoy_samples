@@ -1,54 +1,76 @@
 /**
+ * @type Number
+ *
  * @properties={typeid:35,uuid:"b465ac0f-bfd5-4c2e-bf54-add5e9a670f8",variableType:4}
  */
 var const_0 = 0;
 
 /**
+ * @type Number
+ *
  * @properties={typeid:35,uuid:"821a85b9-281a-4c72-aed1-88110371cbbf",variableType:4}
  */
 var currCommentID;
 
 /**
+ * @type Number
+ *
  * @properties={typeid:35,uuid:"f6de807c-d60c-4d33-af10-254614855d6f",variableType:4}
  */
 var currCommentReplyID;
 
 /**
+ * @type Number
+ *
  * @properties={typeid:35,uuid:"3e016322-b00b-4b72-adb2-250d1786b98a",variableType:4}
  */
 var currCompanyID;
 
 /**
+ * @type Date
+ *
  * @properties={typeid:35,uuid:"a948ba2c-3966-4370-a89c-91ac9caa8f57",variableType:93}
  */
 var currDateAtMidNight;
 
 /**
+ * @type Number
+ *
  * @properties={typeid:35,uuid:"467e423d-7754-466b-a2e3-24330991ffcf",variableType:4}
  */
 var currDocumentID;
 
 /**
+ * @type Number
+ *
  * @properties={typeid:35,uuid:"add5fc38-b6c8-4caa-a28d-4c4e4ab7a5e8",variableType:4}
  */
 var currFileID;
 
 /**
+ * @type Number
+ *
  * @properties={typeid:35,uuid:"2e5d1006-7fd0-48f8-a54f-94175537ab36",variableType:4}
  */
 var currPersonID;
 
 /**
+ * @type Number
+ *
  * @properties={typeid:35,uuid:"460504da-9dec-49a1-a8f4-659d75a3a3e5",variableType:4}
  */
 var currProjectID;
 
 /**
+ * @type Number
+ *
  * @properties={typeid:35,uuid:"e0266d7b-722a-4526-8e40-9f12b05782ee",variableType:4}
  */
 var currTaskID;
 
 /**
+ * @type Number
+ *
  * @properties={typeid:35,uuid:"e16a8d70-33e6-4573-af7f-e0a3495e458e",variableType:4}
  */
 var currTenantID;
@@ -59,72 +81,100 @@ var currTenantID;
 var currUserCompanyArray;
 
 /**
+ * @type Number
+ *
  * @properties={typeid:35,uuid:"cc633638-63a1-45e8-b630-6b53b6f0ecf7",variableType:4}
  */
 var currUserCompanyID;
 
 /**
+ * @type Number
+ *
  * @properties={typeid:35,uuid:"26d8ec02-9ff8-432b-9c27-c5bb411451a8",variableType:4}
  */
 var currUserID;
 
 /**
+ * @type Number
+ *
  * @properties={typeid:35,uuid:"deaecd6e-3814-4014-8bbd-5284979062e5",variableType:4}
  */
 var currVersionID;
 
 /**
- * @properties={typeid:35,uuid:"6c27adb6-3fa3-496a-8d79-98ba81f8a7f6"}
+ * @type String
+ *
+ * @properties={typeid:35,uuid:"6c27adb6-3fa3-496a-8d79-98ba81f8a7f6",variableType:12}
  */
 var errorText = '';
 
 /**
+ * @type Number
+ *
  * @properties={typeid:35,uuid:"5d38a80f-cb76-4297-a63e-d79f70f1ae52",variableType:4}
  */
 var flagIsNew = 0;
 
 /**
- * @properties={typeid:35,uuid:"bcab4941-28e1-4952-ba40-cb19489ca900"}
+ * @type String
+ *
+ * @properties={typeid:35,uuid:"bcab4941-28e1-4952-ba40-cb19489ca900",variableType:12}
  */
 var htmlHoverStyle = '';
 
 /**
+ * @type Number
+ *
  * @properties={typeid:35,uuid:"3c931134-0e45-4904-89a3-b1ba6ec9b07f",variableType:4}
  */
 var isAdmin = 0;
 
 /**
+ * @type Number
+ *
  * @properties={typeid:35,uuid:"d394788a-d8ab-4aa8-950a-c01fd7a064ca",variableType:4}
  */
 var isDialogOpen = 0;
 
 /**
- * @properties={typeid:35,uuid:"ccaee3b1-a9ee-4a94-a149-e9b52bfaf84a"}
+ * @type String
+ *
+ * @properties={typeid:35,uuid:"ccaee3b1-a9ee-4a94-a149-e9b52bfaf84a",variableType:12}
  */
 var loginDisplay = '';
 
 /**
- * @properties={typeid:35,uuid:"65e36d55-6ef6-49ce-9042-d18722655616"}
+ * @type String
+ *
+ * @properties={typeid:35,uuid:"65e36d55-6ef6-49ce-9042-d18722655616",variableType:12}
  */
 var loginFullName = '';
 
 /**
- * @properties={typeid:35,uuid:"153637ca-791f-4c87-8bb9-c6a8aa5defbc"}
+ * @type String
+ *
+ * @properties={typeid:35,uuid:"153637ca-791f-4c87-8bb9-c6a8aa5defbc",variableType:12}
  */
 var loginMessageText = '';
 
 /**
- * @properties={typeid:35,uuid:"1359536e-c6b2-413c-b0f9-ca494e0c41a0"}
+ * @type String
+ *
+ * @properties={typeid:35,uuid:"1359536e-c6b2-413c-b0f9-ca494e0c41a0",variableType:12}
  */
 var loginTenantName = '';
 
 /**
- * @properties={typeid:35,uuid:"42aa30c6-ad75-43a7-bf6b-875c87246329"}
+ * @type String
+ *
+ * @properties={typeid:35,uuid:"42aa30c6-ad75-43a7-bf6b-875c87246329",variableType:12}
  */
 var loginUserName = '';
 
 /**
- * @properties={typeid:35,uuid:"dd6a7ae9-62e9-4577-b871-25e1c07cb72d"}
+ * @type String
+ *
+ * @properties={typeid:35,uuid:"dd6a7ae9-62e9-4577-b871-25e1c07cb72d",variableType:12}
  */
 var loginUserPass = '';
 
@@ -134,27 +184,37 @@ var loginUserPass = '';
 var SelectMutiplePeopleArray;
 
 /**
+ * @type Number
+ *
  * @properties={typeid:35,uuid:"f82d3c17-30da-450b-b146-ce70e8c5af31",variableType:4}
  */
 var tempChooseInt;
 
 /**
+ * @type Number
+ *
  * @properties={typeid:35,uuid:"f6798ea6-b7cf-497b-999e-94d2b4c9146a",variableType:4}
  */
 var tempInt = 0;
 
 /**
+ * @type Number
+ *
  * @properties={typeid:35,uuid:"5c231fd9-0f56-4dc6-8bc4-88b4fb98874b",variableType:4}
  */
 var tempInt2;
 
 /**
- * @properties={typeid:35,uuid:"f65badcd-5fc2-487e-9d4e-9f6cfabb6414"}
+ * @type String
+ *
+ * @properties={typeid:35,uuid:"f65badcd-5fc2-487e-9d4e-9f6cfabb6414",variableType:12}
  */
 var tempTextDisplay = '';
 
 /**
- * @properties={typeid:35,uuid:"b36fb20f-944c-4540-9c10-491575ec1c70"}
+ * @type String
+ *
+ * @properties={typeid:35,uuid:"b36fb20f-944c-4540-9c10-491575ec1c70",variableType:12}
  */
 var tempTextDisplay2 = '';
 
@@ -391,6 +451,7 @@ function GoDoc()
 
 /**
  * @properties={typeid:24,uuid:"59248159-553c-42b4-902c-0f9acf967334"}
+ * @AllowToRunInFind
  */
 function GoPerson()
 {
@@ -884,19 +945,20 @@ function SetUpDynamicValueLists()
 	MODIFIED: NONE
 	********************************************/
 	//PersonAssignedTo - based on current project
+	var displayValues;
 	if(!globals.currProjectID) // there is no project ID
 	{
 		//Get all values from a custom or database type value list as dataset (with columns displayValue,realValue)
 		//Note:see databaseManager.JSDataSet for full details of dataset
 		var dataset = application.getValueListItems('PersonAssignedToDynamic');
-		var displayValues = dataset.getColumnAsArray(1)
+		displayValues = dataset.getColumnAsArray(1)
 		var realValues = dataset.getColumnAsArray(2)
 	}
 	else
 	{
 		//there is a current project id get the people assigned to the current task
 		var realValues = databaseManager.getFoundSetDataProviderAsArray(gcurrproject_to_project_people, 'ixpeople');
-		var displayValues = new Array()
+		displayValues = new Array()
 		
 		//loop through and get the person's name from the other value list
 		for ( var i = 0 ; i < realValues.length ; i++ )
@@ -915,7 +977,7 @@ function SetUpDynamicValueLists()
 	//task "resolved in" - list of hard coded + version list
 	//reset the list
 	dataset = application.getValueListItems('TaskResolvedInHardCoded');
-	var displayValues = dataset.getColumnAsArray(1)
+	displayValues = dataset.getColumnAsArray(1)
 	var realValues = dataset.getColumnAsArray(2)
 	
 	//get the list of items
@@ -1017,6 +1079,7 @@ function SetUpInitialTabHilights()
 
 /**
  * @properties={typeid:24,uuid:"dd9c14e8-df5f-4553-9b95-7696c9a29ea0"}
+ * @AllowToRunInFind
  */
 function ShowDialogBug()
 {
@@ -1064,6 +1127,7 @@ function ShowDialogBug()
 
 /**
  * @properties={typeid:24,uuid:"c9516076-7de0-463a-8889-62970b07aecf"}
+ * @AllowToRunInFind
  */
 function ShowDialogComment()
 {
@@ -1112,6 +1176,7 @@ function ShowDialogComment()
 
 /**
  * @properties={typeid:24,uuid:"ec8775cd-30ea-4047-85ec-769e03bdd39e"}
+ * @AllowToRunInFind
  */
 function ShowDialogCommentRead()
 {
@@ -1150,6 +1215,7 @@ function ShowDialogCommentRead()
 
 /**
  * @properties={typeid:24,uuid:"04f1a065-2aab-47d5-8c53-0b4961965711"}
+ * @AllowToRunInFind
  */
 function ShowDialogCompany()
 {
@@ -1227,6 +1293,7 @@ function ShowDialogCompanyChooser(arg0)
 
 /**
  * @properties={typeid:24,uuid:"c713fda7-290b-4bcc-8f35-a2695630d199"}
+ * @AllowToRunInFind
  */
 function ShowDialogDocument(arg0, arg1, arg2)
 {
@@ -1272,6 +1339,7 @@ function ShowDialogDocument(arg0, arg1, arg2)
 
 /**
  * @properties={typeid:24,uuid:"40c4db06-ba86-44e1-95e1-782a41d82034"}
+ * @AllowToRunInFind
  */
 function ShowDialogFile()
 {
@@ -1318,6 +1386,7 @@ function ShowDialogFile()
 
 /**
  * @properties={typeid:24,uuid:"4cb71e76-6b35-41ac-8bef-80e6c084a83b"}
+ * @AllowToRunInFind
  */
 function ShowDialogPerson()
 {
@@ -1421,6 +1490,7 @@ function ShowDialogPersonChooser(arg0, arg1)
 
 /**
  * @properties={typeid:24,uuid:"be62ff44-5a02-496a-8937-43debbdcaa64"}
+ * @AllowToRunInFind
  */
 function ShowDialogProject()
 {
@@ -1468,6 +1538,7 @@ function ShowDialogProject()
 
 /**
  * @properties={typeid:24,uuid:"09c48f66-efbc-4043-88f7-862c16a17d06"}
+ * @AllowToRunInFind
  */
 function ShowDialogTask()
 {
@@ -1515,6 +1586,7 @@ function ShowDialogTask()
 
 /**
  * @properties={typeid:24,uuid:"afa2b88a-eae9-4d49-9a48-07df33f53151"}
+ * @AllowToRunInFind
  */
 function ShowDialogVersion()
 {

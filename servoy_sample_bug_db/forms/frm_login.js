@@ -128,7 +128,7 @@ function SubLogin()
 		argn[1] = globals.loginUserPass;
 		argn[2] = 0;
 		argn[3] = 0;
-		var dataset = databaseManager.getDataSetByQuery('bug_db', query, argn, 1);
+		dataset = databaseManager.getDataSetByQuery('bug_db', query, argn, 1);
 		
 		var found2 = dataset.getMaxRowIndex()
 		if(found2 == 1)
