@@ -46,7 +46,7 @@ name:"solution_id"
 allowNull:true,
 creationOrderIndex:3,
 dataType:8,
-length:8,
+length:17,
 name:"sort_order"
 }
 ],

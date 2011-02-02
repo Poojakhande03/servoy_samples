@@ -12,7 +12,7 @@ name:"orderitem_id"
 allowNull:true,
 creationOrderIndex:4,
 dataType:8,
-length:8,
+length:17,
 name:"cost_each"
 },
 {
@@ -38,7 +38,7 @@ name:"description"
 allowNull:true,
 creationOrderIndex:3,
 dataType:8,
-length:8,
+length:17,
 name:"extended_price"
 },
 {
@@ -63,7 +63,7 @@ name:"order_id"
 allowNull:true,
 creationOrderIndex:5,
 dataType:8,
-length:8,
+length:17,
 name:"price_each"
 },
 {

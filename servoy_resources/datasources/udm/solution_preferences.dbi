@@ -33,7 +33,7 @@ name:"preference_value"
 allowNull:true,
 creationOrderIndex:0,
 dataType:8,
-length:8,
+length:17,
 name:"seq"
 },
 {
