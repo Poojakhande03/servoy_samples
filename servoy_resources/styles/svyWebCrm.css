@@ -42,6 +42,12 @@ field.noborder
 {
 	border-width: 0px 0px 0px 0px;
 }
+field.noborder10px
+{
+	border-width: 0px 0px 0px 0px;
+	font-size: 10px;
+}
+
 field.nobordersmall
 {
 	font-size: 9pt;
