@@ -1,25 +1,34 @@
 /**
- * @properties={typeid:35,uuid:"98AFAEFE-CCD6-47D4-B85A-D82014258C17"}
+ * @type String
+ *
+ * @properties={typeid:35,uuid:"98AFAEFE-CCD6-47D4-B85A-D82014258C17",variableType:12}
  */
 var selected_user_uid = null;
 
 /**
- * @properties={typeid:35,uuid:"19ade47b-b781-4e81-ae00-fa8dc1d26410"}
+ * @type String
+ *
+ * @properties={typeid:35,uuid:"19ade47b-b781-4e81-ae00-fa8dc1d26410",variableType:12}
  */
 var heading = '';
 
 /**
- * @properties={typeid:35,uuid:"ed38f152-e865-4e2f-9b7b-d5661773e1dd"}
+ * @type String
+ *
+ * @properties={typeid:35,uuid:"ed38f152-e865-4e2f-9b7b-d5661773e1dd",variableType:12}
  */
 var search = '';
 
 /**
- * @properties={typeid:35,uuid:"BBC3F82A-470D-4AB6-8751-3E335E20ECAF"}
+ * @type String
+ *
+ * @properties={typeid:35,uuid:"BBC3F82A-470D-4AB6-8751-3E335E20ECAF",variableType:12}
  */
 var login_user_uid = null;
 
 /**
  * @properties={typeid:24,uuid:"2cb5c5ac-5a16-45cb-9a8a-862745d9a0b6"}
+ * @AllowToRunInFind
  */
 function selectEntityNode()
 {
@@ -188,6 +197,7 @@ function createElement(element_rec,jsform,vtype)
 
 /**
  * @properties={typeid:24,uuid:"084a7202-dbea-4757-8e7d-5f017bfc5d75"}
+ * @AllowToRunInFind
  */
 function gotoDetail()
 {
@@ -228,6 +238,7 @@ function showFormInDesignMode(event)
  * Recieves the changed solutionModel objects from clientdesign which has to be stored persistent in elements table with a user_uid 
  * so when an enduser logsin again his changes from last time are seen
  * @properties={typeid:24,uuid:"A77BF540-9A7F-49AB-889F-25F22B500969"}
+ * @AllowToRunInFind
  */
 function changedElements(formName,changedElementsArray)
 {
@@ -311,4 +322,20 @@ function changedElements(formName,changedElementsArray)
 		}
 		databaseManager.saveData();
 	}
+}
+
+/**
+ * Callback method for when solution is closed, force boolean argument tells if this is a force (not stopable) close or not.
+ *
+ * @param {Boolean} force if false then solution close can be stopped by returning false
+ *
+ * @returns {Boolean}
+ *
+ * @properties={typeid:24,uuid:"24BB894A-23DC-4286-96ED-CA8050A73A5B"}
+ */
+function onSolutionClose(force) {
+	security.logout();
+	var uid = security.getUserUID(['temp_user_nam']);
+	security.deleteUser(uid);
+	return true;
 }
