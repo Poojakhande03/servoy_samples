@@ -335,7 +335,5 @@ function changedElements(formName,changedElementsArray)
  */
 function onSolutionClose(force) {
 	security.logout();
-	var uid = security.getUserUID(['temp_user_nam']);
-	security.deleteUser(uid);
 	return true;
 }
