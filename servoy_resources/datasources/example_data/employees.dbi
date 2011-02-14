@@ -80,7 +80,7 @@ name:"notes"
 allowNull:true,
 creationOrderIndex:14,
 dataType:-2,
-length:-1,
+length:2147483647,
 name:"photo"
 },
 {

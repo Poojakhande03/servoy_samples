@@ -79,13 +79,14 @@ location:"10,60",
 mediaOptions:14,
 size:"620,350",
 tabSeq:-1,
-text:"<html>This sample shows the flexibility of the Servoy solutionModel (solution blueprint creation/modification) together with client design functionallity.<br><br>
-It will create list and detail forms on the fly, based upon a database description, which can be configured.<br>
-The configuration takes place in the configure mode (is an aministrator function), which tells what an enduser can see, how forms should be looking, etc. (the configuration mode can be left by clicking Edit)<br>
-<br>
-The client design functionallity can be seen in action in the detail forms.<br><br>
-<br>
-You can use any name/password to login, when the same login name is used in subsequential logins, changes done with client design will be shown in the detail forms. (a subsequential login is possible via 'logout\" menu action or new browser start incase of webclient)<br>",
+text:"<html>This sample shows the flexibility of the Servoy solutionModel (solution blueprint creation/modification) together with client design functionallity.<br><br>\r
+It will create list and detail forms on the fly, based upon a database description, which can be configured.<br>\r
+The configuration takes place in the configure mode (is an aministrator function), which tells what an enduser can see, how forms should be looking, etc. (the configuration mode can be left by clicking Edit)<br>\r
+<br>\r
+The client design functionallity can be seen in action in the detail forms.<br><br>\r
+<br>\r
+You can use any username/password that was previously added to 'Administrators' group to login, when the same login name is used in subsequential logins, changes done with client design will be shown in the detail forms.\r
+(a subsequential login is possible via 'logout\" menu action or new browser start incase of webclient)<br>",
 transparent:true,
 typeid:7,
 uuid:"C083738A-5BF4-417B-AD93-020B908A7E54",
@@ -99,7 +100,7 @@ typeid:19,
 uuid:"CA65611F-46EC-4B49-83B7-5C33EBCCD43D"
 }
 ],
-name:"login_copy",
+name:"login",
 navigatorID:"-1",
 paperPrintScale:100,
 showInMenu:true,
