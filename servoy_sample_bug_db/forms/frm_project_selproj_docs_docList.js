@@ -21,7 +21,7 @@ function BtnDeleteDocument()
 	
 	if(numFiles > 0)
 	{
-		var msg = i18n.getI18NMessage('msg.deleteDocumentRecord', new Array(gcurrdocument_to_document.doc_name, numFiles));
+		msg = i18n.getI18NMessage('msg.deleteDocumentRecord', new Array(gcurrdocument_to_document.doc_name, numFiles));
 	}
 	
 	//confirm the delete of the task

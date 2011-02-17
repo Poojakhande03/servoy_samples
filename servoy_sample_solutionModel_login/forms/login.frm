@@ -1,3 +1,4 @@
+defaultPageFormat:"1;595.2755813598633;841.8897399902344;0.0;0.0;595.2755813598633;841.8897399902344;",
 items:[
 {
 anchors:12,
@@ -18,9 +19,9 @@ uuid:"1B0E85B4-1EFA-4641-BB4C-C060D4D02561"
 },
 {
 anchors:12,
-dataProviderID:"username",
+dataProviderID:"user",
 location:"100,420",
-onActionMethodID:"1B6BD13E-E2F5-42B1-A7F6-D5FF7301F3A5",
+onActionMethodID:"-1",
 size:"140,20",
 typeid:4,
 uuid:"1FFFB92C-1C8B-4D1C-9151-635160F9AA8A"
@@ -51,7 +52,7 @@ uuid:"40FF71BC-E2AB-452F-B2B9-9E476BF2BA90"
 anchors:12,
 location:"250,450",
 mediaOptions:14,
-onActionMethodID:"1B6BD13E-E2F5-42B1-A7F6-D5FF7301F3A5",
+onActionMethodID:"E38E2743-A907-4947-B95D-0AA334D79150",
 onDoubleClickMethodID:"-1",
 onRightClickMethodID:"-1",
 size:"80,20",
@@ -72,10 +73,10 @@ uuid:"6FF8D609-D5DD-4E52-8FFA-8AC908D4BFE4"
 },
 {
 anchors:12,
-dataProviderID:"password",
+dataProviderID:"pass",
 displayType:6,
 location:"100,450",
-onActionMethodID:"1B6BD13E-E2F5-42B1-A7F6-D5FF7301F3A5",
+onActionMethodID:"E38E2743-A907-4947-B95D-0AA334D79150",
 size:"140,20",
 typeid:4,
 uuid:"E2FB5482-EA80-4AAF-B55E-A32D3E8A19C3"
@@ -86,24 +87,25 @@ location:"10,60",
 mediaOptions:14,
 size:"620,350",
 tabSeq:-1,
-text:"<html>This sample shows the flexibility of the Servoy solutionModel (solution blueprint creation/modification) together with client design functionallity.<br><br>
-It will create list and detail forms on the fly, based upon a database description, which can be configured.<br>
-The configuration takes place in the configure mode (is an aministrator function), which tells what an enduser can see, how forms should be looking, etc. (the configuration mode can be left by clicking Edit)<br>
-<br>
-The client design functionallity can be seen in action in the detail forms.<br><br>
-<br>
-You can use any name/password to login, when the same login name is used in subsequential logins, changes done with client design will be shown in the detail forms. (a subsequential login is possible via 'logout\" menu action or new browser start incase of webclient)<br>",
+text:"<html>This sample shows the flexibility of the Servoy solutionModel (solution blueprint creation/modification) together with client design functionallity.<br><br>\r
+It will create list and detail forms on the fly, based upon a database description, which can be configured.<br>\r
+The configuration takes place in the configure mode (is an aministrator function), which tells what an enduser can see, how forms should be looking, etc. (the configuration mode can be left by clicking Edit)<br>\r
+<br>\r
+The client design functionallity can be seen in action in the detail forms.<br><br>\r
+<br>\r
+You can use any username/password that was previously added to 'Administrators' group to login, when the same login name is used in subsequential logins, changes done with client design will be shown in the detail forms.\r
+(a subsequential login is possible via 'logout\" menu action or new browser start incase of webclient)<br>",
 transparent:true,
 typeid:7,
 uuid:"FFEA1495-7294-439C-B6C3-9D3E865ACA23",
 verticalAlignment:1
 }
 ],
-name:"login_copy",
+name:"login",
 navigatorID:"-1",
 paperPrintScale:100,
 showInMenu:true,
 size:"640,480",
 styleName:"svyWebCrm",
 typeid:3,
-uuid:"275457A5-23BD-40C6-882A-848376B9C94A"
+uuid:"BBD53C19-F21A-4E76-9B8F-1680167BC2C8"

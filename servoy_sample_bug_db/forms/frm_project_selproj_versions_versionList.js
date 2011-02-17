@@ -21,7 +21,7 @@ function BtnDeleteVersion()
 	
 	if(numFiles > 0)
 	{
-		var msg = i18n.getI18NMessage('msg.deleteVersionRecord', new Array(gcurrversion_to_version.version_name, numFiles))
+		msg = i18n.getI18NMessage('msg.deleteVersionRecord', new Array(gcurrversion_to_version.version_name, numFiles))
 	}
 	
 	//confirm the delete of the task

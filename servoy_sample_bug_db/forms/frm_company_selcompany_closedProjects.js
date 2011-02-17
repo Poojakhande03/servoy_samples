@@ -1,4 +1,6 @@
 /**
+ * @type Boolean
+ *
  * @properties={typeid:35,uuid:"E07560D3-7B9F-49ED-852F-F985C006EDE3",variableType:-4}
  */
 var ftsort = true;
@@ -75,13 +77,14 @@ function BtnSort(event, arg1) {
 	SPECIAL THANKS to David Workman of http://www.servoymagazine.com
 	********************************************/
 	
+	var isInitial;
 	if (arg1 != null) {
-		var isInitial = arg1;
+		isInitial = arg1;
 		ftsort = false;
 		event = 'status_asc';
 	}
 	if (ftsort == true) {
-		var isInitial = 'initial';
+		isInitial = 'initial';
 		ftsort = false;
 	}
 	else {

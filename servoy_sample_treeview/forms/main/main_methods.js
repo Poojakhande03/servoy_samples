@@ -21,13 +21,13 @@ var profession = '';
 /**
  * @properties={typeid:24,uuid:"79a4f55d-7359-4619-b549-b4e25fba793f"}
  */
-function getRowForId()
+function getRowForId(arg0)
 {
 	// find the dataset row for the argument id
 	for (var i = 2; i <= globals.treeviewDataSet.getMaxRowIndex(); i++)
 	{
 		var row = globals.treeviewDataSet.getRowAsArray(i);
-		if(arguments[0] == row[0])
+		if(arg0 == row[0])
 		{
 			return i;
 		}
@@ -80,7 +80,7 @@ function onAdd()
 /**
  * @properties={typeid:24,uuid:"c2a311f1-ac40-4d51-a000-5393c9a5f31f"}
  */
-function onEditFinished()
+function onEditFinished(arg0, arg1, arg2)
 {
 	// find edited row, get changed column, and update the dataset
 	var row = getRowForId(arguments[0]);

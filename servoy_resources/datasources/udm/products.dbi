@@ -31,7 +31,7 @@ name:"creation_user"
 allowNull:true,
 creationOrderIndex:17,
 dataType:12,
-length:-1,
+length:2147483647,
 name:"description"
 },
 {
@@ -52,7 +52,7 @@ name:"image_name"
 allowNull:true,
 creationOrderIndex:9,
 dataType:-2,
-length:-1,
+length:2147483647,
 name:"image_thumbnail"
 },
 {
@@ -85,7 +85,7 @@ name:"modification_user"
 allowNull:true,
 creationOrderIndex:19,
 dataType:12,
-length:-1,
+length:2147483647,
 name:"order_description"
 },
 {
@@ -105,7 +105,7 @@ name:"product_category"
 allowNull:true,
 creationOrderIndex:14,
 dataType:-2,
-length:-1,
+length:2147483647,
 name:"product_image"
 },
 {

@@ -1,55 +1,77 @@
 /**
+ * @type Number
+ *
  * @properties={typeid:35,uuid:"ac4799fb-cb7e-4e65-b9c4-6e0ce74016c8",variableType:4}
  */
 var beepOnNewMessage = 0;
 
 /**
+ * @type Number
+ *
  * @properties={typeid:35,uuid:"124066ef-b58b-45dd-8fb5-589425522e1b",variableType:4}
  */
 var chatFromUserID;
 
 /**
- * @properties={typeid:35,uuid:"e6311ca6-05fb-40a0-80e1-7d4867dfa99e"}
+ * @type String
+ *
+ * @properties={typeid:35,uuid:"e6311ca6-05fb-40a0-80e1-7d4867dfa99e",variableType:12}
  */
 var chatMsg = '';
 
 /**
+ * @type Number
+ *
  * @properties={typeid:35,uuid:"c183d6b6-b668-4abe-a3be-91d47f5dfd0a",variableType:4}
  */
 var chatToUserID;
 
 /**
- * @properties={typeid:35,uuid:"dcd0d84e-f6db-4042-834b-52e391175615"}
+ * @type String
+ *
+ * @properties={typeid:35,uuid:"dcd0d84e-f6db-4042-834b-52e391175615",variableType:12}
  */
 var chatToUserNameDisplay = '';
 
 /**
+ * @type Number
+ *
  * @properties={typeid:35,uuid:"98f08cd8-226d-4c91-ae68-68dedf8b602e",variableType:4}
  */
 var lastChatFromUserID;
 
 /**
- * @properties={typeid:35,uuid:"091b6bd2-059d-4b21-9c1f-233e89b335ca"}
+ * @type String
+ *
+ * @properties={typeid:35,uuid:"091b6bd2-059d-4b21-9c1f-233e89b335ca",variableType:12}
  */
 var localUserName = '';
 
 /**
+ * @type Number
+ *
  * @properties={typeid:35,uuid:"838c5b21-ca95-4e66-914d-c790ae1c963b",variableType:4}
  */
 var loginID;
 
 /**
- * @properties={typeid:35,uuid:"c53cada0-e080-44ef-af5c-c91a597c9af0"}
+ * @type String
+ *
+ * @properties={typeid:35,uuid:"c53cada0-e080-44ef-af5c-c91a597c9af0",variableType:12}
  */
 var received = '';
 
 /**
+ * @type Number
+ *
  * @properties={typeid:35,uuid:"c8c6c661-bda0-490e-8631-341e435a1c07",variableType:4}
  */
 var thisSolutionID = 3;
 
 /**
- * @properties={typeid:35,uuid:"602eabd7-dfab-498f-9856-50927466e2c3"}
+ * @type String
+ *
+ * @properties={typeid:35,uuid:"602eabd7-dfab-498f-9856-50927466e2c3",variableType:12}
  */
 var toIP = '';
 
@@ -108,11 +130,12 @@ function openSolution() {
 
 /**
  * @properties={typeid:24,uuid:"4036fa64-a1fe-4af5-b851-012aab17825a"}
+ * @AllowToRunInFind
  */
 function packetReceived() {
 	if(globals.beepOnNewMessage == 1) 
 		application.beep();
-	var toIP = '';
+	toIP = '';
 	var packet;
 	var fontColor = '#666666';
 	while ( (packet = plugins.udp.getReceivedPacket()) != null) {

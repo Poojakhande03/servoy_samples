@@ -1,25 +1,35 @@
 /**
- * @properties={typeid:35,uuid:"529e99e1-4df8-441a-975f-bd01515e7b3c"}
+ * @type String
+ *
+ * @properties={typeid:35,uuid:"529e99e1-4df8-441a-975f-bd01515e7b3c",variableType:12}
  */
 var cheboxes = '';
 
 /**
- * @properties={typeid:35,uuid:"356a9d6f-67c3-444e-93e3-57d906b385d4"}
+ * @type String
+ *
+ * @properties={typeid:35,uuid:"356a9d6f-67c3-444e-93e3-57d906b385d4",variableType:12}
  */
 var curStyle = "";
 
 /**
- * @properties={typeid:35,uuid:"7a997421-56ee-4dca-bd10-720985f6997a"}
+ * @type String
+ *
+ * @properties={typeid:35,uuid:"7a997421-56ee-4dca-bd10-720985f6997a",variableType:12}
  */
 var fieldData = 'Field Data';
 
 /**
- * @properties={typeid:35,uuid:"7fecc22d-c55d-49c3-9717-e50cd2d10791"}
+ * @type String
+ *
+ * @properties={typeid:35,uuid:"7fecc22d-c55d-49c3-9717-e50cd2d10791",variableType:12}
  */
 var formName = "";
 
 /**
- * @properties={typeid:35,uuid:"406c2a24-a589-4cb8-a263-0d5f8eef582f"}
+ * @type String
+ *
+ * @properties={typeid:35,uuid:"406c2a24-a589-4cb8-a263-0d5f8eef582f",variableType:12}
  */
 var radios = '';
 
@@ -28,7 +38,7 @@ var radios = '';
  */
 function btn_next()
 {
-	var formName = globals.getNextForm(currentcontroller.getName(),'next')
+	formName = globals.getNextForm(currentcontroller.getName(),'next')
 	globals.curStyle = formName
 	globals.goForm()
 }
@@ -38,8 +48,8 @@ function btn_next()
  */
 function btn_prev()
 {
-	var formName = globals.getNextForm(currentcontroller.getName(),'prev')
-	globals.curStyle = formName
+	formName = globals.getNextForm(currentcontroller.getName(),'prev')
+	globals.curStyle = formName;
 	globals.goForm()
 }
 
@@ -79,6 +89,7 @@ function getNextForm()
 			}
 		}
 	}
+	return false;
 }
 
 /**

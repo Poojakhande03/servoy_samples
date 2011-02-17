@@ -79,9 +79,10 @@ function SubLogin()
 	globals.errorText = null;
 	globals.tempInt = 0
 	var server = databaseManager.getServerNames();
+	var query;
 	
 	//search for the user
-	var query = 'SELECT tbl_tenant.tenant_id, tbl_people.ixpeople, tbl_people.profile, tbl_tenant.is_master_tenant, tbl_company.category, tbl_company.ixcompany \
+	query = 'SELECT tbl_tenant.tenant_id, tbl_people.ixpeople, tbl_people.profile, tbl_tenant.is_master_tenant, tbl_company.category, tbl_company.ixcompany \
 				 FROM tbl_tenant, tbl_company, tbl_people, tbl_people_company \
 				 WHERE tbl_tenant.tenant_id = tbl_company.ixtenant \
 				 AND tbl_people_company.ixpeople = tbl_people.ixpeople \
@@ -113,7 +114,7 @@ function SubLogin()
 		globals.errorText = i18n.getI18NMessage('msg.loginError')
 		
 		//try finding without active flag
-		var query = 'SELECT tbl_tenant.tenant_id, tbl_tenant.is_master_tenant \
+		query = 'SELECT tbl_tenant.tenant_id, tbl_tenant.is_master_tenant \
 					 FROM tbl_tenant, tbl_company, tbl_people, tbl_people_company \
 					 WHERE tbl_tenant.tenant_id = tbl_company.ixtenant \
 					 AND tbl_company.ixcompany = tbl_people_company.ixcompany \

@@ -315,7 +315,7 @@ function DialogCheckBeforeClose()
 /**
  * @properties={typeid:24,uuid:"706245f8-3713-4f79-b3fe-b6bae08df133"}
  */
-function DialogCloseCancel()
+function DialogCloseCancel(arguments)
 {
 	/*
 	PURPOSE: Used as a central method for closing a dialog with cancel
@@ -342,7 +342,7 @@ function DialogCloseCancel()
 /**
  * @properties={typeid:24,uuid:"a0eb772d-30e9-46f6-8370-8e49a1973ef9"}
  */
-function DialogCloseOk()
+function DialogCloseOk(arg0)
 {
 	/*
 	PURPOSE: Used as a central method for closing a dialog with save
@@ -354,7 +354,7 @@ function DialogCloseOk()
 	MODIFIED: NONE
 	********************************************/
 	
-	if(arguments[0])
+	if(arg0)
 	{
 		//turn on the auto save, save, then turn off again
 		databaseManager.setAutoSave(true)
@@ -364,14 +364,14 @@ function DialogCloseOk()
 		//set the global so that if they click the "X" close it won't close
 		globals.isDialogOpen = 0
 		
-		application.closeFormDialog(arguments[0])
+		application.closeFormDialog(arg0)
 	}
 }
 
 /**
  * @properties={typeid:24,uuid:"16082873-d29a-46c4-9ab1-68b3e34bf37f"}
  */
-function GoCompany()
+function GoCompany(arg0)
 {
 	/*
 	PURPOSE: Go to this company
@@ -384,7 +384,7 @@ function GoCompany()
 	
 	********************************************/
 	
-	globals.currCompanyID = arguments[0];
+	globals.currCompanyID = arg0;
 	
 	//filter the project lists
 	forms.frm_company_selcompany_activeProjects.FilterProjects();
@@ -852,7 +852,7 @@ function NewRecordTask()
 /**
  * @properties={typeid:24,uuid:"d4c4d6e7-f183-4e8a-b0cd-1578990b5b0d"}
  */
-function NewRecordVersion()
+function NewRecordVersion(arg0)
 {
 	/*
 	PURPOSE: Create new version
@@ -946,18 +946,19 @@ function SetUpDynamicValueLists()
 	********************************************/
 	//PersonAssignedTo - based on current project
 	var displayValues;
+	var realValues;
 	if(!globals.currProjectID) // there is no project ID
 	{
 		//Get all values from a custom or database type value list as dataset (with columns displayValue,realValue)
 		//Note:see databaseManager.JSDataSet for full details of dataset
 		var dataset = application.getValueListItems('PersonAssignedToDynamic');
 		displayValues = dataset.getColumnAsArray(1)
-		var realValues = dataset.getColumnAsArray(2)
+		realValues = dataset.getColumnAsArray(2)
 	}
 	else
 	{
 		//there is a current project id get the people assigned to the current task
-		var realValues = databaseManager.getFoundSetDataProviderAsArray(gcurrproject_to_project_people, 'ixpeople');
+		realValues = databaseManager.getFoundSetDataProviderAsArray(gcurrproject_to_project_people, 'ixpeople');
 		displayValues = new Array()
 		
 		//loop through and get the person's name from the other value list
@@ -978,7 +979,7 @@ function SetUpDynamicValueLists()
 	//reset the list
 	dataset = application.getValueListItems('TaskResolvedInHardCoded');
 	displayValues = dataset.getColumnAsArray(1)
-	var realValues = dataset.getColumnAsArray(2)
+	realValues = dataset.getColumnAsArray(2)
 	
 	//get the list of items
 	dataset = application.getValueListItems('VersionListDynamic');

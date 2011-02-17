@@ -84,6 +84,8 @@ function selectEntityNode()
  */
 function createForm(entity_rec,fname,vtype)
 {
+	var crindex;
+	var jscomponent;
 	var jsform = solutionModel.newForm(fname, entity_rec.entities_to_datasources.server_name, entity_rec.table_name, null, true, 600, 300)
 	var jsbody = jsform.getBodyPart()
 	jsform.navigator = solutionModel.getForm('navigation')
@@ -110,23 +112,23 @@ function createForm(entity_rec,fname,vtype)
 	var total_height = 100;
 	var element_rec = null;
 	globals.selected_user_uid = null; // set to null so we get the NON user specific records
-	for (var crindex = 1; crindex <= entity_rec.entities_to_elements_specific.getSize(); crindex++) 
+	for (crindex = 1; crindex <= entity_rec.entities_to_elements_specific.getSize(); crindex++) 
 	{
 		element_rec = entity_rec.entities_to_elements_specific.getRecord(crindex)
 		if (element_rec.view_type == vtype && element_rec.display_options < 4)
 		{
-			var	jscomponent = createElement(element_rec,jsform,vtype)
+			jscomponent = createElement(element_rec,jsform,vtype)
 			total_height = Math.max(total_height, element_rec.ylocation + element_rec.height + 10)
 		}
 	}
 	
 	//add elements or change user specific element properties
-	for (var crindex = 1; crindex <= entity_rec.entities_to_elements_login_user.getSize(); crindex++) 
+	for (crindex = 1; crindex <= entity_rec.entities_to_elements_login_user.getSize(); crindex++) 
 	{
 		element_rec = entity_rec.entities_to_elements_login_user.getRecord(crindex);
 		if (element_rec.view_type == vtype)
 		{
-			var jscomponent = jsform.getComponent(element_rec.element_name);
+			jscomponent = jsform.getComponent(element_rec.element_name);
 			if (jscomponent == null)
 			{
 				jscomponent = createElement(element_rec,jsform,vtype)
@@ -243,12 +245,13 @@ function showFormInDesignMode(event)
 function changedElements(formName,changedElementsArray)
 {
 	var entity_rec = null;
+	var count;
 	var fs = databaseManager.getFoundSet('user_data', 'entities')
 	if (fs.find())
 	{
 		var search_entity_rec = fs.getRecord(1)
 		search_entity_rec.table_name = forms[formName].controller.getTableName();
-		var count = fs.search();
+		count = fs.search();
 		if (count > 0) entity_rec = fs.getRecord(1)
 	}
 	if (entity_rec != null)
@@ -266,7 +269,7 @@ function changedElements(formName,changedElementsArray)
 					var search_elements_rec = fs.getRecord(1)
 					search_elements_rec.element_name = comp.getName();
 					search_elements_rec.view_type = JSForm.RECORD_VIEW;
-					var count = fs.search();
+					count = fs.search();
 					if (count > 0) 
 					{
 	 					element_rec = fs.getRecord(1)

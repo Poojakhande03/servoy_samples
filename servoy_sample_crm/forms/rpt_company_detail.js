@@ -5,7 +5,7 @@ function sub_buildReport()
 {
 	//setup the report HTML when needed
 	var html = '<html><body>'
-
+	var i;
 	var record = ''
 
 	//build top table
@@ -48,7 +48,7 @@ function sub_buildReport()
 		html += '<tr><td><b>Type</b></td><td><b>Address Line 1</b></td><td><b>Address Line 2</b></td>' +
 		'<td><b>City</b></td><td><b>State</b></td><td><b>Post Code</b></td></tr>'
 
-		for ( var i = 1 ; i <=max ; i++ )
+		for ( i = 1 ; i <=max ; i++ )
 		{
 			record = companies_to_addresses.getRecord(i)
 			html += '<tr>'
@@ -75,7 +75,7 @@ function sub_buildReport()
 		html += '<tr><td><b>Name</b></td><td><b>Title</b></td><td><b>Direct Phone</b></td>' +
 		'<td><b>Email</b></td></tr>'
 
-		for ( var i = 1 ; i <=max ; i++ )
+		for ( i = 1 ; i <=max ; i++ )
 		{
 			record = companies_to_contacts.getRecord(i)
 			html += '<tr>'
@@ -100,7 +100,7 @@ function sub_buildReport()
 		html += '<tr><td><b>Order Num</b></td><td><b>Date</b></td><td><b>Amount</b></td>' +
 		'<td><b>Status</b></td></tr>'
 
-		for ( var i = 1 ; i <=max ; i++ )
+		for ( i = 1 ; i <=max ; i++ )
 		{
 			record = companies_to_orders.getRecord(i)
 			html += '<tr>'

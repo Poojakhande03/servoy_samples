@@ -38,6 +38,7 @@ function ws_create(emp)
  * @returns {Boolean} true for success (http response 200), false for error (http response 404)
  *
  * @properties={typeid:24,uuid:"e2c75337-1174-4286-8a26-026ab0a12287"}
+ * @AllowToRunInFind
  */
 function ws_delete(id)
 {
@@ -68,9 +69,11 @@ function ws_delete(id)
  * @returns {Object} emp employee object or list of employee ids serialized into http response body
  *
  * @properties={typeid:24,uuid:"2b108b10-b103-414f-8baf-7d7bee6c1034"}
+ * @AllowToRunInFind
  */
 function ws_read(id)
 {
+	var i;
 	if (id)
 	{
 		// read 1 employee
@@ -121,6 +124,7 @@ function ws_read(id)
  * @returns {Boolean} true for success (http response 200), false for error (http response 404)
  *
  * @properties={typeid:24,uuid:"0f04bba3-043f-425b-8891-d3900fe862a5"}
+ * @AllowToRunInFind
  */
 function ws_update(emp, id)
 {

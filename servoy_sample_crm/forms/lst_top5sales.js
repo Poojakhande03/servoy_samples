@@ -3,6 +3,7 @@
  */
 function draw_chart()
 {
+	var i;
 	var HTML = '<html><body>'
 
 	var maxReturedRows = 5;
@@ -14,7 +15,7 @@ function draw_chart()
 	"order by 2 desc"
 
 	//clear pieChart
-	for(var i =1 ; i<=5 ; i++)
+	for(i =1 ; i<=5 ; i++)
 	{
 		if(elements['chart_pie'] != null)
 		{
@@ -41,7 +42,7 @@ function draw_chart()
 
 		elements.chart_pie.visible = true;
 
-		for( var i = 1 ; i <= maxRows ; i++ )
+		for( i = 1 ; i <= maxRows ; i++ )
 		{
 			dataset.rowIndex = i;
 			if(dataset[1] != null && dataset[2] != null)

@@ -1,10 +1,13 @@
 /**
+ * @type Boolean
+ *
  * @properties={typeid:35,uuid:"F058A708-638F-46E4-9A02-F61F72FA67B7",variableType:-4}
  */
 var ftsort = true;
 
 /**
  * @properties={typeid:24,uuid:"c7f75705-413c-480e-a4b7-4ff57bc58cae"}
+ * @AllowToRunInFind
  */
 function BtnGoPerson(arg0)
 {
@@ -39,6 +42,7 @@ function BtnGoPerson(arg0)
  * @param {JSEvent} event the event that triggered the action
  *
  * @properties={typeid:24,uuid:"2E74D546-5A09-46DA-935B-8C9820C9B758"}
+ * @AllowToRunInFind
  */
 function BtnSort(event, arg1) {
 	/*
@@ -52,14 +56,14 @@ function BtnSort(event, arg1) {
 	
 	SPECIAL THANKS to David Workman of http://www.servoymagazine.com
 	********************************************/
-	
+	var isInitial;
 	if (arg1 != null) {
-		var isInitial = arg1;
+		isInitial = arg1;
 		ftsort = false;
 		event = 'nickname_asc';
 	}
 	if (ftsort == true) {
-		var isInitial = 'initial';
+		isInitial = 'initial';
 		ftsort = false;
 	}
 	else {

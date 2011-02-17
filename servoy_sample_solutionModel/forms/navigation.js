@@ -67,9 +67,11 @@ function fillTree()
 
 /**
  * @properties={typeid:24,uuid:"ec230d4c-217b-4d90-9938-480ec68907b4"}
+ * @AllowToRunInFind
  */
 function syncronizeWithDB()
 {
+	var i;
 	var datasource_id_to_sync = arguments[0];
 	var tblname_filter = arguments[1];
 	var recreate = arguments[2];
@@ -102,7 +104,7 @@ function syncronizeWithDB()
 				if (entity_rec == null)
 				{
 					//not found create
-					var i = ds_rec.datasources_to_entities.newRecord()
+					i = ds_rec.datasources_to_entities.newRecord()
 					entity_rec = ds_rec.datasources_to_entities.getRecord(i)
 					entity_rec.table_name = tname
 					entity_rec.heading_single = makeSingle(tname)
@@ -146,7 +148,7 @@ function syncronizeWithDB()
 						if (field_rec == null)
 						{
 							//not found create
-							var i = entity_rec.entities_to_elements_all.newRecord()
+							i = entity_rec.entities_to_elements_all.newRecord()
 							field_rec = entity_rec.entities_to_elements_all.getRecord(i)
 							field_rec.view_type = vtype
 							field_rec.label = utils.stringReplace(utils.stringInitCap(cname),"_"," ");
@@ -217,6 +219,7 @@ function makePlural()
 /**
  *
  * @properties={typeid:24,uuid:"4E3362A3-90E4-409F-9ED4-005307CF503F"}
+ * @AllowToRunInFind
  */
 function checkForSampleData()
 {

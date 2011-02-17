@@ -1,110 +1,154 @@
 /**
+ * @type Number
+ *
  * @properties={typeid:35,uuid:"8B5F84A7-45CC-41D6-92CE-D985086F8420",variableType:4}
  */
 var smart_chg = 0;
 
 /**
+ * @type Number
+ *
  * @properties={typeid:35,uuid:"d63336f0-7f12-4bd2-b65d-4ed061b6846d",variableType:4}
  */
 var const_one = 1;
 
 /**
+ * @type Number
+ *
  * @properties={typeid:35,uuid:"a31e0b69-0efd-4814-bcc6-a11a1bada467",variableType:4}
  */
 var const_two = 2;
 
 /**
+ * @type Number
+ *
  * @properties={typeid:35,uuid:"485af478-fbef-4388-8d1f-b7e3afaf2010",variableType:4}
  */
 var curID_company;
 
 /**
+ * @type Number
+ *
  * @properties={typeid:35,uuid:"1a83e330-4535-40ce-aa25-a0a271bc697b",variableType:4}
  */
 var curID_contact;
 
 /**
+ * @type Number
+ *
  * @properties={typeid:35,uuid:"e2cc93b6-7175-4513-8c02-a36eaac1d641",variableType:4}
  */
 var curID_order;
 
 /**
+ * @type Number
+ *
  * @properties={typeid:35,uuid:"4b8a4485-25d2-44a8-94aa-175e65226061",variableType:4}
  */
 var curID_product;
 
 /**
- * @properties={typeid:35,uuid:"29732ca9-062b-4e59-8691-a43a8b63b627"}
+ * @type String
+ *
+ * @properties={typeid:35,uuid:"29732ca9-062b-4e59-8691-a43a8b63b627",variableType:12}
  */
 var default_image_directory = '';
 
 /**
- * @properties={typeid:35,uuid:"e458710a-d3e2-4931-918d-fe327438ce70"}
+ * @type String
+ *
+ * @properties={typeid:35,uuid:"e458710a-d3e2-4931-918d-fe327438ce70",variableType:12}
  */
 var dialog_buttonPressed = '';
 
 /**
- * @properties={typeid:35,uuid:"51b3cd2e-4cb6-464e-b44c-e205c7a4c0fb"}
+ * @type String
+ *
+ * @properties={typeid:35,uuid:"51b3cd2e-4cb6-464e-b44c-e205c7a4c0fb",variableType:12}
  */
 var dialog_instructions01 = '';
 
 /**
- * @properties={typeid:35,uuid:"8a87d0fb-ab71-4097-a36f-04f6a8630319"}
+ * @type String
+ *
+ * @properties={typeid:35,uuid:"8a87d0fb-ab71-4097-a36f-04f6a8630319",variableType:12}
  */
 var dialog_instructions02 = '';
 
 /**
- * @properties={typeid:35,uuid:"6107241d-675f-4b30-b9e1-ccbb24dfe319"}
+ * @type String
+ *
+ * @properties={typeid:35,uuid:"6107241d-675f-4b30-b9e1-ccbb24dfe319",variableType:12}
  */
 var dialog_performMethod = '';
 
 /**
- * @properties={typeid:35,uuid:"52cddad2-0898-4662-876c-ef3b1c35cb95"}
+ * @type String
+ *
+ * @properties={typeid:35,uuid:"52cddad2-0898-4662-876c-ef3b1c35cb95",variableType:12}
  */
 var dialog_text = '';
 
 /**
- * @properties={typeid:35,uuid:"91d80373-3811-4f07-95b8-367eaff687d8"}
+ * @type String
+ *
+ * @properties={typeid:35,uuid:"91d80373-3811-4f07-95b8-367eaff687d8",variableType:12}
  */
 var nav_itemName = '';
 
 /**
+ * @type Number
+ *
  * @properties={typeid:35,uuid:"226fe763-1a5f-4bb8-a3c0-062818923dd6",variableType:4}
  */
 var nav_node = 1;
 
 /**
- * @properties={typeid:35,uuid:"5261cd46-d762-403b-89da-0dcce2a9061d"}
+ * @type String
+ *
+ * @properties={typeid:35,uuid:"5261cd46-d762-403b-89da-0dcce2a9061d",variableType:12}
  */
 var nav_search = '';
 
 /**
- * @properties={typeid:35,uuid:"0e1fcd8b-27a9-4e2b-ad37-5e5a7d915735"}
+ * @type String
+ *
+ * @properties={typeid:35,uuid:"0e1fcd8b-27a9-4e2b-ad37-5e5a7d915735",variableType:12}
  */
 var nav_solution = '';
 
 /**
+ * @type Number
+ *
  * @properties={typeid:35,uuid:"27a6a53e-adae-41b7-9a3f-9a7c3dd4a55a",variableType:4}
  */
 var okToCommit = 1;
 
 /**
- * @properties={typeid:35,uuid:"e91fefcc-7922-4191-94f2-525824466186"}
+ * @type String
+ *
+ * @properties={typeid:35,uuid:"e91fefcc-7922-4191-94f2-525824466186",variableType:12}
  */
 var record_status = '';
 
 /**
- * @properties={typeid:35,uuid:"c2139aac-c505-4472-9c6b-19a67ad6805c"}
+ * @type String
+ *
+ * @properties={typeid:35,uuid:"c2139aac-c505-4472-9c6b-19a67ad6805c",variableType:12}
  */
 var tempHTML = '';
 
 /**
+ * @type Number
+ *
  * @properties={typeid:35,uuid:"f69d2b05-72e1-40aa-8a30-ee227f8d8445",variableType:4}
  */
 var thisSolution_ID = 2;
 
 /**
- * @properties={typeid:35,uuid:"442205bc-2c0d-4262-8716-ed2c9e244997"}
+ * @type String
+ *
+ * @properties={typeid:35,uuid:"442205bc-2c0d-4262-8716-ed2c9e244997",variableType:12}
  */
 var vl_editName = null;
 
@@ -227,10 +271,10 @@ function openSolution()
 /**
  * @properties={typeid:24,uuid:"9ed894f8-ee2b-4234-8634-3ef4a85b78db"}
  */
-function printRoutine()
+function printRoutine(formname, rec)
 {
-	var frm = arguments[0]
-	var oneRecord = arguments[1]
+	var frm = formname;
+	var oneRecord = rec;
 
 	if(!oneRecord) oneRecord = false
 
@@ -484,7 +528,7 @@ function migrateToOneValueListTable()
 	var vl_ds = forms.lst_valuelists.controller.getDataSource();
 	var vl_fs = databaseManager.getFoundSet(vl_ds);
 	var serverName = databaseManager.getDataSourceServerName(vl_ds);
-	
+	var index;
 	var fs = null;
 	var table_name = null;
 	
@@ -493,7 +537,7 @@ function migrateToOneValueListTable()
 	if (fs != null)
 	{
 		fs.loadAllRecords();
-		for (var index = 1; index <= fs.getSize(); index++) 
+		for (index = 1; index <= fs.getSize(); index++) 
 		{
 			fs.setSelectedIndex(index);
 			vl_fs.newRecord()
@@ -508,7 +552,7 @@ function migrateToOneValueListTable()
 	if (fs != null)
 	{
 		fs.loadAllRecords();
-		for (var index = 1; index <= fs.getSize(); index++) 
+		for (index = 1; index <= fs.getSize(); index++) 
 		{
 			fs.setSelectedIndex(index);
 			vl_fs.newRecord()
@@ -523,7 +567,7 @@ function migrateToOneValueListTable()
 	if (fs != null)
 	{
 		fs.loadAllRecords();
-		for (var index = 1; index <= fs.getSize(); index++) 
+		for (index = 1; index <= fs.getSize(); index++) 
 		{
 			fs.setSelectedIndex(index);
 			vl_fs.newRecord()
@@ -538,22 +582,22 @@ function migrateToOneValueListTable()
 	if (fs != null)
 	{
 		fs.loadAllRecords();
-		for (var index = 1; index <= fs.getSize(); index++) 
+		for (index = 1; index <= fs.getSize(); index++) 
 		{
 			fs.setSelectedIndex(index);
 			vl_fs.newRecord()
 			vl_fs.valuelist_name = table_name;
-			vl_fs.value_id = fs.contact_type_id
-			vl_fs.value1 = fs.description
+			vl_fs.value_id = fs.contact_type_id;
+			vl_fs.value1 = fs.description;
 		}
 	}
-	
+
 	table_name = 'country_types'
 	fs = databaseManager.getFoundSet(serverName,table_name);
 	if (fs != null)
 	{
 		fs.loadAllRecords();
-		for (var index = 1; index <= fs.getSize(); index++) 
+		for (index = 1; index <= fs.getSize(); index++) 
 		{
 			fs.setSelectedIndex(index);
 			vl_fs.newRecord()
@@ -569,7 +613,7 @@ function migrateToOneValueListTable()
 	if (fs != null)
 	{
 		fs.loadAllRecords();
-		for (var index = 1; index <= fs.getSize(); index++) 
+		for (index = 1; index <= fs.getSize(); index++) 
 		{
 			fs.setSelectedIndex(index);
 			vl_fs.newRecord()

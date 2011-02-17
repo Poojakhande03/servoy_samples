@@ -16,11 +16,12 @@ function btn_performSQL()
 	//if only a part of the query is hilighted - then use that
 	if(elements.sqlQuery.getSelectedText()) query = elements.sqlQuery.getSelectedText();
 	
-
 	//there is a query - so try to run it
 	//Get a dataset based on query
 	var maxReturnedRows = 1000;//useful to limit number of rows
-	var dataset = databaseManager.getDataSetByQuery(controller.getServerName(), query, null, maxReturnedRows);
+	var sname = controller.getDataSource();
+	var srvname = sname.split('/');
+	var dataset = databaseManager.getDataSetByQuery(srvname[1], query, null, maxReturnedRows);
 	var err = dataset.getException()
 
 	if(err != null && err.getMessage() != undefined)

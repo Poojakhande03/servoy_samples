@@ -33,7 +33,7 @@ function btn_cancel()
 	{
 		if(globals.isEditing()) globals.cancelEditing()
 	}
-	application.closeFormDialog("Dialog")
+	application.closeFormDialog("Dialog");
 	globals.enableBgElements();
 }
 

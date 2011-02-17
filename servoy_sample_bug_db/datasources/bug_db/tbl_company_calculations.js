@@ -124,9 +124,9 @@ function display_dt_created()
  */
 function display_dt_modified()
 {
-	if(dt_modified) {
+	if(dt_modififed) {
 		var person = application.getValueListDisplayValue('PeopleLoginInternalOnly', ix_personmodified)
-		var dateFormatted = utils.dateFormat(dt_modified, i18n.getDefaultDateFormat())
+		var dateFormatted = utils.dateFormat(dt_modififed, i18n.getDefaultDateFormat())
 		
 		if(application.getApplicationType() == 5) { //web client
 			return  globals.htmlHoverStyle  + '<span class="text">' +  dateFormatted + ' / ' + 

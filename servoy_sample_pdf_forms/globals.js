@@ -1,49 +1,69 @@
 /**
- * @properties={typeid:35,uuid:"be1ee73c-2aa5-4172-94ac-dd072cf14f9e"}
+ * @type String
+ *
+ * @properties={typeid:35,uuid:"be1ee73c-2aa5-4172-94ac-dd072cf14f9e",variableType:12}
  */
 var appType_forError = '';
 
 /**
+ * @type Number
+ *
  * @properties={typeid:35,uuid:"d1a87378-c99b-4ace-a2ed-0e6861aaea5c",variableType:4}
  */
 var curID_form;
 
 /**
+ * @type Number
+ *
  * @properties={typeid:35,uuid:"45a787fe-d779-445e-9c34-08edcd3bf150",variableType:4}
  */
 var curID_template;
 
 /**
- * @properties={typeid:35,uuid:"beea0c12-ab33-4fbd-b1b8-6adc76bd526b"}
+ * @type String
+ *
+ * @properties={typeid:35,uuid:"beea0c12-ab33-4fbd-b1b8-6adc76bd526b",variableType:12}
  */
 var dialog_performMethod = '';
 
 /**
- * @properties={typeid:35,uuid:"4b4db217-13cb-4a95-b8b1-70bd5623d76d"}
+ * @type String
+ *
+ * @properties={typeid:35,uuid:"4b4db217-13cb-4a95-b8b1-70bd5623d76d",variableType:12}
  */
 var nav_itemName = '';
 
 /**
+ * @type Number
+ *
  * @properties={typeid:35,uuid:"d02d2175-80b1-4a75-8c17-57aa0ad68eca",variableType:4}
  */
 var nav_node = 1;
 
 /**
- * @properties={typeid:35,uuid:"cce99e1a-7424-463e-ab0b-0c2ee6712a07"}
+ * @type String
+ *
+ * @properties={typeid:35,uuid:"cce99e1a-7424-463e-ab0b-0c2ee6712a07",variableType:12}
  */
 var nav_search = '';
 
 /**
- * @properties={typeid:35,uuid:"83eff97a-d939-4c59-80d1-5eb86e1dcb05"}
+ * @type String
+ *
+ * @properties={typeid:35,uuid:"83eff97a-d939-4c59-80d1-5eb86e1dcb05",variableType:12}
  */
 var nav_solution = '';
 
 /**
- * @properties={typeid:35,uuid:"1fb777fa-3e43-4941-a107-36c13147c087"}
+ * @type String
+ *
+ * @properties={typeid:35,uuid:"1fb777fa-3e43-4941-a107-36c13147c087",variableType:12}
  */
 var record_status = '';
 
 /**
+ * @type Number
+ *
  * @properties={typeid:35,uuid:"983e1d56-9af2-43ce-aa53-ae08176c2fe1",variableType:4}
  */
 var thisSolutionID = 4;
@@ -81,11 +101,11 @@ function btn_delete()
 /**
  * @properties={typeid:24,uuid:"4916a21e-2774-4593-8164-1af9785fac80"}
  */
-function btn_viewPDF()
+function btn_viewPDF(arg0, arg1, arg2)
 {
-	var type = arguments[0];
-	var template_id = arguments[1];
-	var actionType = arguments[2];
+	var type = arg0;
+	var template_id = arg1;
+	var actionType = arg2;
 
 	if(!actionType) actionType = 0 //view
 

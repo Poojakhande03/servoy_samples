@@ -265,11 +265,12 @@ function rpt_company_detail()
 {
 	forms.rpt_company_detail.foundset.selectRecord(company_id)
 	forms.rpt_company_detail.sub_buildReport();
-	globals.printRoutine('rpt_company_detail', true)
+	globals.printRoutine('rpt_company_detail', true);
 }
 
 /**
  * @properties={typeid:24,uuid:"3bc58b48-645c-4aac-bf28-51582e77f574"}
+ * @AllowToRunInFind
  */
 function rpt_company_list()
 {
