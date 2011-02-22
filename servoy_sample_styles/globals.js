@@ -48,18 +48,22 @@ function btn_next()
  */
 function btn_prev()
 {
-	formName = globals.getNextForm(currentcontroller.getName(),'prev')
+	formName = globals.getNextForm(controller.getName(),'prev')
 	globals.curStyle = formName;
 	globals.goForm()
 }
 
 /**
+ * @param {String} arg0 //current formname
+ * 
+ * @param {String} arg1 //direction
+ * 
  * @properties={typeid:24,uuid:"de81118a-6501-49cd-bd9a-6e6a65d3b2bc"}
  */
-function getNextForm()
+function getNextForm(arg0, arg1)
 {
-	var curForm = arguments[0]
-	var direction = arguments[1]
+	var curForm = arg0;
+	var direction = arg1;
 	var myForms = forms.allnames.sort()
 	for (var i=0; i<myForms.length; i++)
 	{

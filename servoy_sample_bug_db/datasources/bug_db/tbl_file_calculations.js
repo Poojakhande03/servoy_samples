@@ -131,6 +131,7 @@ function display_fileDetails()
 			if(fileDesc.length > 35) {
 				fileDesc = utils.stringLeft(fileDesc, 35) + '...<br>';
 			}
+
 			var htmlMethod = '<a href="media:///servoy_blobloader?servername=' + currentcontroller.getServerName() + 
 			'&tablename=tbl_file&dataprovider=file_data&rowid1=' + ixfile + '&rnd=' + Math.random() + '" target="' + Math.random() + '">'
 
@@ -151,7 +152,7 @@ function display_fileDetails()
 	}
 	else
 	{
-		return null;
+		return undefined;
 	}
 }
 
@@ -173,9 +174,9 @@ function display_fileName()
 		{
 			return '<html><body><span style="font-size:11pt;">' + fName + '</span></body></html>'
 		}
-	}
+	}	
 	else {
-		return null;
+		return undefined;
 	}
 }
 

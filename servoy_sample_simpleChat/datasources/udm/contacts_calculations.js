@@ -31,20 +31,20 @@ else
 /**
  * @properties={type:12,typeid:36,uuid:"0f0697df-8811-4352-86ff-7a9552e7e845"}
  */
-function name_fl()
-{
-if(name_first && name_last)
-{
-	return name_first + " " + name_last
-}
-else if(name_last)
-{
-	return name_last
-}
-else if(name_first)
-{
-	return name_first
-}
+function name_fl() {
+	if(name_first && name_last)
+	{
+		return name_first + " " + name_last
+	}
+	else if(name_last)
+	{
+		return name_last
+	}
+	else if(name_first)
+	{
+		return name_first
+	}
+	return null;
 }
 
 /**

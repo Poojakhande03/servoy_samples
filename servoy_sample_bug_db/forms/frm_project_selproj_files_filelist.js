@@ -20,7 +20,7 @@ function BtnEditFile()
 	MODIFIED: NONE
 	
 	********************************************/
-	BtnGoFile();
+	BtnGoFile(undefined);
 	globals.ShowDialogFile(null,ixfile); 
 }
 

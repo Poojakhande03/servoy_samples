@@ -189,11 +189,13 @@ function syncronizeWithDB()
 }
 
 /**
+ * @param {String} arg0 // name
+ * 
  * @properties={typeid:24,uuid:"be382e9b-7520-48c6-a40c-116332f9eb00"}
  */
-function makeSingle()
+function makeSingle(arg0)
 {
-	var name = arguments[0]
+	var name = arg0;
 	if (name.charAt(name.length-1) == 's')
 	{
 		name = name.substring(0, name.length-1)
@@ -203,16 +205,18 @@ function makeSingle()
 }
 
 /**
+ * @param {String} arg0 // name
+ * 
  * @properties={typeid:24,uuid:"d21bab25-9f23-4b10-8394-636111d7c9c6"}
  */
-function makePlural()
+function makePlural(arg0)
 {
-	var name = arguments[0]
+	var name = arg0;
 	if (name.charAt(name.length-1) != 's')
 	{
-		name = name + 's'
+		name = name + 's';
 	}
-	name = utils.stringReplace(name, '_', ' ')
+	name = utils.stringReplace(name, '_', ' ');
 	return utils.stringInitCap(name);
 }
 

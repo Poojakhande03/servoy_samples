@@ -529,9 +529,11 @@ function GoProject()
 }
 
 /**
+ * @param {Number} arg0
+ * 
  * @properties={typeid:24,uuid:"512a7ff5-af92-4553-8536-1bb7428421a3"}
  */
-function GoTask()
+function GoTask(arg0)
 {
 	/*
 	PURPOSE: Go to this task
@@ -1339,10 +1341,16 @@ function ShowDialogDocument(arg0, arg1, arg2)
 }
 
 /**
+ * @param {String} arg0 // File title 
+ * 
+ * @param {Number} arg1 // fileId
+ * 
+ * @param {Number} arg2 // isNew
+ * 
  * @properties={typeid:24,uuid:"40c4db06-ba86-44e1-95e1-782a41d82034"}
  * @AllowToRunInFind
  */
-function ShowDialogFile()
+function ShowDialogFile(arg0, arg1, arg2)
 {
 	/*
 	PURPOSE: Shows the dialog for editing profile/adding a person
@@ -1356,9 +1364,9 @@ function ShowDialogFile()
 	MODIFIED: NONE
 	********************************************/
 	
-	var title = arguments[0]
-	var fileID = arguments[1]
-	var isNew = arguments[2]
+	var title = arg0;
+	var fileID = arg1;
+	var isNew = arg2;
 	
 	if(isNew) {
 		globals.flagIsNew = 1

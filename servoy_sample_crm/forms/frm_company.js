@@ -355,4 +355,5 @@ function validate_beforeDelete()
 	{
 		return 0
 	}
+	return null;
 }

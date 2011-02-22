@@ -36,6 +36,7 @@ function BtnSort(event, arg1) {
 	
 	SPECIAL THANKS to David Workman of http://www.servoymagazine.com
 	********************************************/
+	var ftsort;
 	var isInitial;
 	if (arg1 != null) {
 		isInitial = arg1;

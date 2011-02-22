@@ -14,15 +14,15 @@
  */
 function ws_create(emp)
 {
-	var index = foundset.newRecord()
-	var record = foundset.getRecord(index)
-	record.firstname = emp.firstName
-	record.lastname = emp.lastName
+	var index = foundset.newRecord();
+	var record = foundset.getRecord(index);
+	record.firstname = emp.firstName;
+	record.lastname = emp.lastName;
 	if (databaseManager.saveData(record))
 	{
-		var ret = new Object()
-		ret.id = record.employeeid
-		return ret // response body
+		var ret = new Object();
+		ret.id = record.employeeid;
+		return ret; // response body
 	}
 	return null;
 }

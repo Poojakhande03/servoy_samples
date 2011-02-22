@@ -16,8 +16,7 @@ function OnShow()
 	//switch the tabpanel in attached files to the second one
 	
 	forms.frm_attached_files.elements.tabs_files.tabIndex = 3
-	
 	if(gcurrproject_to_file && gcurrproject_to_file.getSize() > 0) {
-		forms.frm_project_selproj_files_filelist.BtnGoFile();
+		forms.frm_project_selproj_files_filelist.BtnGoFile(undefined);
 	}
 }

@@ -99,6 +99,12 @@ function btn_delete()
 }
 
 /**
+ * @param {String} arg0 // Type
+ * 
+ * @param {Number} arg1  //template_id
+ * 
+ * @param {Number} arg2  //actionType
+ * 
  * @properties={typeid:24,uuid:"4916a21e-2774-4593-8164-1af9785fac80"}
  */
 function btn_viewPDF(arg0, arg1, arg2)
@@ -385,16 +391,29 @@ function showErrorDialog()
 }
 
 /**
+ * @param {String} arg0 // msg
+ * 
+ * @param {String} arg1 // method
+ * 
+ * @param {String} arg2 // btn
+ * 
+ * @param {String} arg3 // btn
+ * 
+ * @param {String} arg4 // btn
+ * 
+ * @param {String} arg5 // btn
+ * 
+ * 
  * @properties={typeid:24,uuid:"4a7c7b14-eceb-4dfd-9a81-9a94a3bc05e9"}
  */
-function showWarningDialog()
+function showWarningDialog(arg0, arg1, arg2, arg3, arg4, arg5)
 {
-	var msg = arguments[0]  //accept the error message as an argument
-	var methd = arguments[1] //method to execute after dialog closes
-	var btn1 = arguments[2]
-	var btn2 = arguments[3]
-	var btn3 = arguments[4]
-	var btn4 = arguments[5]
+	var msg = arg0;  //accept the error message as an argument
+	var methd = arg1; //method to execute after dialog closes
+	var btn1 = arg2;
+	var btn2 = arg3;
+	var btn3 = arg4;
+	var btn4 = arg5;
 
 	//disable all the background elements when showing the dialog
 	globals.disableBgElements()
