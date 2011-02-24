@@ -39,7 +39,7 @@ function BtnEditComment()
 	********************************************/
 	
 	globals.currCommentID = ixcomment
-	globals.ShowDialogComment(null, globals.currCommentID);
+	globals.ShowDialogComment(null, globals.currCommentID, null, null);
 }
 
 /**
@@ -91,6 +91,7 @@ function BtnShowComment(arg0, arg1)
 
 /**
  * @properties={typeid:24,uuid:"13440d55-1919-4ec1-831f-01b51e225db4"}
+ * @AllowToRunInFind
  */
 function OnShow()
 {
@@ -106,6 +107,6 @@ function OnShow()
  */
 function BtnNewComment()
 {
-	forms.frm_project_selproj_task_detail_comments.BtnShowComment();
+	forms.frm_project_selproj_task_detail_comments.BtnShowComment(undefined, undefined);
 	OnShow();
 }

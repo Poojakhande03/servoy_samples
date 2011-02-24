@@ -3,7 +3,7 @@ dataSource:"db:/user_data/entities",
 items:[
 {
 dataProviderID:"datasource_id",
-location:"250,600",
+location:"248,603",
 size:"140,20",
 typeid:4,
 uuid:"02d6b571-e763-413b-b1d2-38c19c544733"
@@ -179,7 +179,7 @@ typeid:7,
 uuid:"95CB41FD-CCAF-4BAC-AB2C-1C6F9CD5FCE0"
 },
 {
-height:550,
+height:633,
 partType:5,
 typeid:19,
 uuid:"9f5fdb3d-15e2-4ecc-a15b-7e6d5dbd3f13"
@@ -313,7 +313,7 @@ uuid:"f35bbb98-71cf-44bd-9e38-96a0a96aff8d"
 name:"configure_entities",
 navigatorID:"00348be3-0058-4443-a9a8-334c7bde12e4",
 paperPrintScale:100,
-size:"550,550",
+size:"550,633",
 styleName:"svyWebCrm",
 typeid:3,
 uuid:"938d1cde-170a-4fe0-9877-c881ffe2c88d"

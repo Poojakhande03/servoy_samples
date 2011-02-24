@@ -100,5 +100,6 @@ MODIFIED: NONE
 	//set the global so that if they click the "X" close it won't close
 	globals.isDialogOpen = 0
 	
-	application.closeFormDialog('personChooser')
+//	application.closeFormDialog('personChooser')
+	application.getWindow('personChooser').close();
 }

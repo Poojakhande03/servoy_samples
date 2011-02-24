@@ -23,8 +23,8 @@ function draw_chart()
 			elements.chart_pie.setValues(i-1, 0, 0)
 		}
 	}
-
-	var dataset = databaseManager.getDataSetByQuery(controller.getServerName(), query, null, maxReturedRows);
+	var ds = controller.getDataSource().split('/');
+	var dataset = databaseManager.getDataSetByQuery(ds[1], query, null, maxReturedRows);
 	var maxRows = dataset.getMaxRowIndex()
 
 	if(maxRows == 0)

@@ -95,7 +95,7 @@ function btn_delete()
 	var methd = 'forms.' + frm + '.sub_doDelete()'
 
 	//show the tabpanel "dialog"
-	globals.showWarningDialog(msg, methd, 'Cancel', 'Delete');
+	globals.showWarningDialog(msg, methd, 'Cancel', 'Delete', null, null);
 }
 
 /**
@@ -313,20 +313,31 @@ function setupRecordStatus()
 }
 
 /**
- * @properties={typeid:24,uuid:"4728bb29-9b80-4695-8a71-434b8dd97298"}
+ * @param {Object} arg0 // TODO generated, please specify type and doc
+ * @param {Object} arg1 // TODO generated, please specify type and doc
+ * @param {Object} arg2 // TODO generated, please specify type and doc
+ * @param {Object} arg3 // TODO generated, please specify type and doc
+ * @param {Object} arg4 // TODO generated, please specify type and doc
+ * @param {Object} arg5 // TODO generated, please specify type and doc
+ * @param {Object} arg6 // TODO generated, please specify type and doc
+ * @param {Object} arg7 // TODO generated, please specify type and doc
+ * @param {Object} arg8 // TODO generated, please specify type and doc
+ * @param {Object} arg9 // TODO generated, please specify type and doc
+ *
+ * @properties={typeid:24,uuid:"5D8FF029-A439-45EC-8962-5CF85167DBE1"}
  */
-function showDialog()
+function showDialog(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9)
 {
-	var title = arguments[0]
-	var whatTab = arguments[1]
-	var showCancelBtnOnly = arguments[2] //anything that is not null is a vaid value
-	var cancelBtnLabel = arguments[3]
-	var showBtn3 = arguments[4] //anything that is not null is valid value
-	var btn3Label = arguments[5]
-	var x = arguments[6]
-	var y = arguments[7]
-	var width = arguments[8]
-	var height = arguments[9]
+	var title = arg0;
+	var whatTab = arg1;
+	var showCancelBtnOnly = arg2; //anything that is not null is a vaid value
+	var cancelBtnLabel = arg3;
+	var showBtn3 = arg4; //anything that is not null is valid value
+	var btn3Label = arg5;
+	var x = arg6;
+	var y = arg7;
+	var width = arg8;
+	var height = arg9;
 
 	if(showCancelBtnOnly)
 	{
@@ -372,16 +383,23 @@ function showDialog()
 }
 
 /**
- * @properties={typeid:24,uuid:"f0e8c67a-273e-4b90-bf0f-5762160967c0"}
+ * @param {Object} arg0 // TODO generated, please specify type and doc
+ * @param {Object} arg1 // TODO generated, please specify type and doc
+ * @param {Object} arg2 // TODO generated, please specify type and doc
+ * @param {Object} arg3 // TODO generated, please specify type and doc
+ * @param {Object} arg4 // TODO generated, please specify type and doc
+ * @param {Object} arg5 // TODO generated, please specify type and doc
+ *
+ * @properties={typeid:24,uuid:"32B2FBDB-28EA-4F58-85AD-8BB689C6B280"}
  */
-function showErrorDialog()
+function showErrorDialog(arg0, arg1, arg2, arg3, arg4, arg5)
 {
-	var msg = arguments[0]  //accept the error message as an argument
-	var methd = arguments[1] //method to execute after dialog closes
-	var btn1 = arguments[2]
-	var btn2 = arguments[3]
-	var btn3 = arguments[4]
-	var btn4 = arguments[5]
+	var msg = arg0;  //accept the error message as an argument
+	var methd = arg1; //method to execute after dialog closes
+	var btn1 = arg2;
+	var btn2 = arg3;
+	var btn3 = arg4;
+	var btn4 = arg5;
 
 	//disable all the background elements when showing the dialog
 	globals.disableBgElements()
@@ -391,20 +409,14 @@ function showErrorDialog()
 }
 
 /**
- * @param {String} arg0 // msg
- * 
- * @param {String} arg1 // method
- * 
- * @param {String} arg2 // btn
- * 
- * @param {String} arg3 // btn
- * 
- * @param {String} arg4 // btn
- * 
- * @param {String} arg5 // btn
- * 
- * 
- * @properties={typeid:24,uuid:"4a7c7b14-eceb-4dfd-9a81-9a94a3bc05e9"}
+ * @param {Object} arg0 // TODO generated, please specify type and doc
+ * @param {Object} arg1 // TODO generated, please specify type and doc
+ * @param {Object} arg2 // TODO generated, please specify type and doc
+ * @param {Object} arg3 // TODO generated, please specify type and doc
+ * @param {Object} arg4 // TODO generated, please specify type and doc
+ * @param {Object} arg5 // TODO generated, please specify type and doc
+ *
+ * @properties={typeid:24,uuid:"F1C01973-843B-4EF2-9BD7-BC88B610BACA"}
  */
 function showWarningDialog(arg0, arg1, arg2, arg3, arg4, arg5)
 {

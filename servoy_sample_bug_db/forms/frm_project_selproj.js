@@ -27,12 +27,12 @@ function BtnDeleteProject()
 		var msg = i18n.getI18NMessage('msg.deleteProjectRecord', new Array(proj_name, numTasks, numComments, numFiles))
 		
 		//confirm the delete of the task
-		globals.core_showWcGenericDialog(i18n.getI18NMessage('lbl.deleteProject'), msg, 'forms.frm_project_selproj.DoDelete(0)', 'warning', i18n.getI18NMessage('lbl.ok'), i18n.getI18NMessage('lbl.cancel'));
+		globals.core_showWcGenericDialog(i18n.getI18NMessage('lbl.deleteProject'), msg, 'forms.frm_project_selproj.DoDelete(0)', 'warning', i18n.getI18NMessage('lbl.ok'), i18n.getI18NMessage('lbl.cancel'), null, null);
 	
 	}
 	else
 	{
-			globals.core_showWcGenericDialog( i18n.getI18NMessage('lbl.error'), i18n.getI18NMessage('servoy.foundSet.error.noDeleteAccess'), null, 'error', i18n.getI18NMessage('lbl.ok'));
+			globals.core_showWcGenericDialog( i18n.getI18NMessage('lbl.error'), i18n.getI18NMessage('servoy.foundSet.error.noDeleteAccess'), null, 'error', i18n.getI18NMessage('lbl.ok'), null, null, null);
 	}
 }
 
@@ -52,7 +52,7 @@ function BtnDeleteTask()
 	********************************************/
 	
 	//confirm the delete of the task
-	globals.core_showWcGenericDialog(i18n.getI18NMessage('lbl.deleteTask'), i18n.getI18NMessage('msg.deleteRecord', new Array('task',gcurrtask_to_task.task_name)), 'forms.frm_project_selproj.DoDelete(1)', 'warning', i18n.getI18NMessage('lbl.ok'), i18n.getI18NMessage('lbl.cancel'));
+	globals.core_showWcGenericDialog(i18n.getI18NMessage('lbl.deleteTask'), i18n.getI18NMessage('msg.deleteRecord', new Array('task',gcurrtask_to_task.task_name)), 'forms.frm_project_selproj.DoDelete(1)', 'warning', i18n.getI18NMessage('lbl.ok'), i18n.getI18NMessage('lbl.cancel'), null, null);
 }
 
 /**
@@ -71,7 +71,7 @@ function BtnEditProject()
 	
 	********************************************/
 	
-	globals.ShowDialogProject( null, globals.currProjectID);
+	globals.ShowDialogProject( null, globals.currProjectID, null);
 }
 
 /**
@@ -90,9 +90,9 @@ function BtnEditTask()
 	********************************************/
 	//changing to allow for bug edit screen
 	if (gcurrtask_to_task.label == 1)
-		globals.ShowDialogBug(null, globals.currTaskID);
+		globals.ShowDialogBug(null, globals.currTaskID, null);
 	else
-		globals.ShowDialogTask(null, globals.currTaskID);
+		globals.ShowDialogTask(null, globals.currTaskID, null);
 }
 
 /**

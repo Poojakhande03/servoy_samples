@@ -1,5 +1,6 @@
 /**
  * @properties={typeid:24,uuid:"a0c21699-fea8-4445-81e4-8494edb62c56"}
+ * @AllowToRunInFind
  */
 function btn_search()
 {
@@ -66,7 +67,7 @@ function btn_search()
 			//there is no numeric or date data - so show dialog
 			if(dataType != 'str')
 			{
-				globals.showErrorDialog('There is no numeric or date data to find in customers.', null, 'OK');
+				globals.showErrorDialog('There is no numeric or date data to find in customers.', null, 'OK', null, null, null);
 				elements.fld_search.selectAll()
 				return
 			}
@@ -94,7 +95,7 @@ function btn_search()
 			//there is no numeric or date data - so show dialog
 			if(dataType != 'str')
 			{
-				globals.showErrorDialog('There is no numeric or date data to find in contacts.', null, 'OK');
+				globals.showErrorDialog('There is no numeric or date data to find in contacts.', null, 'OK', null, null, null);
 				elements.fld_search.selectAll()
 				return
 			}
@@ -196,7 +197,7 @@ function btn_search()
 		//see if anything was found
 		if(found == 0)
 		{
-			globals.showErrorDialog('No records were found matching your search request.')
+			globals.showErrorDialog('No records were found matching your search request.', null, null, null, null, null)
 			forms[frm].controller.loadAllRecords()
 		}
 		else

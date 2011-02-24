@@ -65,7 +65,8 @@ function BtnOk()
 	//set the global so that if they click the "X" close it won't close
 	globals.isDialogOpen = 0
 	
-	application.closeFormDialog('project')
+//	application.closeFormDialog('project')
+	application.getWindow('project').close();
 	
 	if(globals.flagIsNew == 1) { //show the add people dialog
 		globals.currProjectID = ixproject

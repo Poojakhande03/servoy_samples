@@ -232,16 +232,23 @@ function showDialog()
 }
 
 /**
- * @properties={typeid:24,uuid:"0ac0223f-59b2-44d0-9187-78661cb4747f"}
+ * @param {Object} arg0 // TODO generated, please specify type and doc
+ * @param {Object} arg1 // TODO generated, please specify type and doc
+ * @param {Object} arg2 // TODO generated, please specify type and doc
+ * @param {Object} arg3 // TODO generated, please specify type and doc
+ * @param {Object} arg4 // TODO generated, please specify type and doc
+ * @param {Object} arg5 // TODO generated, please specify type and doc
+ *
+ * @properties={typeid:24,uuid:"CA6F82E3-0C06-488B-9DD9-17240ADA07B1"}
  */
-function showErrorDialog()
+function showErrorDialog(arg0, arg1, arg2, arg3, arg4, arg5)
 {
-	var msg = arguments[0];  //accept the error message as an argument
-	var methd = arguments[1]; //method to execute after dialog closes
-	var btn1 = arguments[2];
-	var btn2 = arguments[3];
-	var btn3 = arguments[4];
-	var btn4 = arguments[5];
+	var msg = arg0;  //accept the error message as an argument
+	var methd = arg1; //method to execute after dialog closes
+	var btn1 = arg2;
+	var btn2 = arg3;
+	var btn3 = arg4;
+	var btn4 = arg5;
 
 	//disable all the background elements when showing the dialog
 	globals.disableBgElements();

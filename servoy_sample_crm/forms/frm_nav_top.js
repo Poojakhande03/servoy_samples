@@ -69,7 +69,7 @@ function evt_find()
  */
 function showDialog()
 {
-	globals.showDialog('Test')
+	globals.showDialog('Test', null, null, null, null, null, null, null, null, null);
 }
 
 /**
@@ -78,7 +78,7 @@ function showDialog()
 function showError()
 {
 	globals.core_dlg_elementDisableEnable = new Array('forms.frm_nav_main.elements.tabs_recList','forms.frm_nav_main.elements.tabs_solNav')
-	globals.core_showWcGenericDialog('Error', 'There has been a TERRIBLE error!!','error');	
+	globals.core_showWcGenericDialog('Error', 'There has been a TERRIBLE error!!','error', null, null, null, null, null);	
 }
 
 /**

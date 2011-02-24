@@ -29,7 +29,7 @@ function btn_save()
 	}
 	else
 	{
-		globals.showErrorDialog('You must fill in the template.', null, 'OK');
+		globals.showErrorDialog('You must fill in the template.', null, 'OK', null, null, null);
 	}
 }
 
@@ -38,7 +38,7 @@ function btn_save()
  */
 function btn_viewPDF()
 {
-	globals.btn_viewPDF('doc', template_id)
+	globals.btn_viewPDF('doc', template_id, null)
 }
 
 /**
@@ -48,7 +48,7 @@ function doEdit()
 {
 	databaseManager.startTransaction()
 
-	var allNames = elements.allnames
+	var allNames = elements.allnames;
 
 	for ( var i = 0 ; i < allNames.length ; i++ )
 	{

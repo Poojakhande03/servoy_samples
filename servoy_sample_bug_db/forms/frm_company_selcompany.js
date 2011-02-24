@@ -20,7 +20,7 @@ function BtnDeleteCompany()
 	}
 	else
 	{
-		globals.core_showWcGenericDialog( i18n.getI18NMessage('lbl.error'), i18n.getI18NMessage('servoy.foundSet.error.noDeleteAccess'), null, 'error', i18n.getI18NMessage('lbl.ok'));
+		globals.core_showWcGenericDialog( i18n.getI18NMessage('lbl.error'), i18n.getI18NMessage('servoy.foundSet.error.noDeleteAccess'), null, 'error', i18n.getI18NMessage('lbl.ok'), null, null, null);
 	}
 }
 
@@ -39,7 +39,7 @@ function BtnEditCompany()
 	MODIFIED: NONE
 	********************************************/
 	
-	globals.ShowDialogCompany(null,globals.currCompanyID);
+	globals.ShowDialogCompany(null, globals.currCompanyID, null);
 }
 
 /**
@@ -57,5 +57,5 @@ function BtnNewCompany()
 	MODIFIED: NONE
 	********************************************/
 	
-	globals.NewRecordCompany();
+	globals.NewRecordCompany(null);
 }

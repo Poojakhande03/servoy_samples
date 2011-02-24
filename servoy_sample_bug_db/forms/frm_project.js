@@ -14,7 +14,7 @@ function BtnNewProject()
 	********************************************/
 	
 	//new record
-	globals.NewRecordProject();
+	globals.NewRecordProject(null, null);
 }
 
 /**

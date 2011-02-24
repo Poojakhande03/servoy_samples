@@ -39,7 +39,7 @@ function btn_delete()
 	var methd = 'forms.' + frm + '.sub_doDelete()'
 
 	//show the tabpanel "dialog"
-	globals.showWarningDialog(msg, methd, 'Cancel', 'Delete');
+	globals.showWarningDialog(msg, methd, 'Cancel', 'Delete', null, null);
 }
 
 /**
@@ -75,6 +75,7 @@ function btn_print()
 
 /**
  * @properties={typeid:24,uuid:"108bc665-1370-4db2-bb62-de30e0fcfd80"}
+ * @AllowToRunInFind
  */
 function btn_showAll()
 {

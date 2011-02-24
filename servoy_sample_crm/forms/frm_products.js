@@ -112,7 +112,7 @@ function btn_deleteImage()
 	if(product_image)
 	{
 		//show a warning dialog
-		globals.showWarningDialog('Are you sure you want to delete this image?', 'forms.frm_products.sub_clearImage()','Cancel','Delete')
+		globals.showWarningDialog('Are you sure you want to delete this image?', 'forms.frm_products.sub_clearImage()','Cancel','Delete', null, null)
 	}
 }
 
@@ -223,6 +223,7 @@ function onShow()
 
 /**
  * @properties={typeid:24,uuid:"f38670d4-151c-41e7-ae8b-537fbad4b81d"}
+ * @AllowToRunInFind
  */
 function print_default()
 {
@@ -231,7 +232,7 @@ function print_default()
 
 	//sort for the subsummary report
 	forms.rpt_products_list.controller.sort('description asc')
-	globals.printRoutine('rpt_products_list')
+	globals.printRoutine('rpt_products_list', null);
 }
 
 /**
@@ -290,7 +291,8 @@ function sub_showProductOrders()
 
 	//Get a dataset based on query
 	var maxReturnedRows = 500;//useful to limit number of rows
-	var dataset = databaseManager.getDataSetByQuery(controller.getServerName(), query, null, maxReturnedRows);
+	var ds = controller.getDataSource().split('/');
+	var dataset = databaseManager.getDataSetByQuery(ds[1], query, null, maxReturnedRows);
 
 	if(dataset.getMaxRowIndex() > 0)
 	{
@@ -317,7 +319,7 @@ function validate_beforeDelete()
 		//there are orders that use this item - so don't allow the delete
 		//show dialog and return 1
 		//show the tabpanel "dialog"
-		globals.showErrorDialog("You can't delete a product that has orders.\n\nDelete all the order items on the orders first.", 'forms.frm_products.sub_showProductOrders()','OK');
+		globals.showErrorDialog("You can't delete a product that has orders.\n\nDelete all the order items on the orders first.", 'forms.frm_products.sub_showProductOrders()','OK', null, null, null);
 		return 1
 	}
 	else

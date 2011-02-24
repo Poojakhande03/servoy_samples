@@ -9,7 +9,7 @@ typeid:19,
 uuid:"0657efcd-6d2e-44f2-869a-82b09893cba1"
 },
 {
-height:77,
+height:156,
 partType:5,
 typeid:19,
 uuid:"5850b983-2e6e-4820-9725-b645380ad3a6"
@@ -53,7 +53,7 @@ uuid:"ee5f667e-fff2-4ffd-9ca4-ef1c0a35f211"
 name:"datasources",
 navigatorID:"00348be3-0058-4443-a9a8-334c7bde12e4",
 paperPrintScale:100,
-size:"440,77",
+size:"440,156",
 styleName:"svyWebCrm",
 typeid:3,
 uuid:"4d92b815-df5b-4762-8141-80affc8e0268"

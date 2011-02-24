@@ -13,7 +13,7 @@ function BtnEditComment()
 	MODIFIED: NONE
 	********************************************/
 	
-	globals.ShowDialogComment(null, ixcomment);
+	globals.ShowDialogComment(null, ixcomment, null, null);
 }
 
 /**

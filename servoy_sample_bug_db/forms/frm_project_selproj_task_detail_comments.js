@@ -39,7 +39,7 @@ function BtnEditComment()
 	********************************************/
 	
 	globals.currCommentID = ixcomment
-	globals.ShowDialogComment(null, globals.currCommentID);
+	globals.ShowDialogComment(null, globals.currCommentID, null, null);
 }
 
 /**
@@ -71,6 +71,7 @@ function BtnShowComment(arg0, arg1)
 
 /**
  * @properties={typeid:24,uuid:"abc3e879-25c1-4bd4-b631-2022f47a5025"}
+ * @AllowToRunInFind
  */
 function OnShow()
 {

@@ -53,13 +53,13 @@ function btn_newOrder()
 	{
 		//show error
 		var mthd = 'forms.lst_company_orders.sub_continueCreateAddr()'
-		globals.showErrorDialog('There needs to be at least one address defined for this customer before you can create an order.',mthd,'OK')
+		globals.showErrorDialog('There needs to be at least one address defined for this customer before you can create an order.',mthd,'OK', null, null, null)
 	}
 	else if(contCnt == 0)
 	{
 		//show error
 		var mthd = 'forms.lst_company_orders.sub_continueCreateContact()'
-		globals.showErrorDialog('There needs to be at least one contact defined for this customer before you can create an order.',mthd,'OK')
+		globals.showErrorDialog('There needs to be at least one contact defined for this customer before you can create an order.',mthd,'OK', null, null, null)
 	}
 }
 

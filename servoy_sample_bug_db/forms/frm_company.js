@@ -13,5 +13,5 @@ function BtnNewCompany()
 	MODIFIED: NONE
 	********************************************/
 	
-	globals.NewRecordCompany();
+	globals.NewRecordCompany(null);
 }

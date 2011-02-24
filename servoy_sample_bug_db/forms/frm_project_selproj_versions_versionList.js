@@ -25,7 +25,7 @@ function BtnDeleteVersion()
 	}
 	
 	//confirm the delete of the task
-	globals.core_showWcGenericDialog(i18n.getI18NMessage('lbl.deleteVersion'), msg, 'forms.frm_project_selproj_versions_versionList.DoDelete()', 'warning', i18n.getI18NMessage('lbl.ok'), i18n.getI18NMessage('lbl.cancel'));
+	globals.core_showWcGenericDialog(i18n.getI18NMessage('lbl.deleteVersion'), msg, 'forms.frm_project_selproj_versions_versionList.DoDelete()', 'warning', i18n.getI18NMessage('lbl.ok'), i18n.getI18NMessage('lbl.cancel'), null, null);
 }
 
 /**
@@ -51,7 +51,7 @@ function BtnShowVersion()
 		globals.currVersionID = ixversion
 	}
 	
-	globals.ShowDialogVersion(null, globals.currVersionID);
+	globals.ShowDialogVersion(null, globals.currVersionID, null);
 }
 
 /**
@@ -91,7 +91,8 @@ function DoDelete()
 		
 		forms.frm_project_selproj_versions.OnShow();
 		
-		application.closeFormDialog('version')
+//		application.closeFormDialog('version');
+		application.getWindow('version').close();
 		
 		//reset value list
 		globals.SetUpDynamicValueLists();

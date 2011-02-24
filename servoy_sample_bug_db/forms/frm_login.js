@@ -251,11 +251,13 @@ function SubNewTenant()
 }
 
 /**
- * @properties={typeid:24,uuid:"04b6d960-337b-4253-b4a0-1bcbca82d9ae"}
+ * @param {Object} arg0 // TODO generated, please specify type and doc
+ *
+ * @properties={typeid:24,uuid:"CEF64FDC-6172-4ECA-91D9-1FD8278345E4"}
  */
-function SubShowNewTenantFields()
+function SubShowNewTenantFields(arg0)
 {
-	var shouldShow = arguments[0]
+	var shouldShow = arg0;
 
 	elements.fld_companyName.visible = shouldShow
 	elements.fld_fullName.visible = shouldShow

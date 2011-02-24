@@ -66,7 +66,9 @@ function setupHTML()
 
 		if(forms.frm_info.thumbnail)
 		{
-			var src = 'media:///servoy_blobloader?servername=' + currentcontroller.getServerName()+'&tablename='+forms.frm_info.controller.getTableName() +
+			var ds = controller.getDataSource().split('/');
+			var ds1 = forms.frm_info.controller.getDataSource().split('/');
+			var src = 'media:///servoy_blobloader?servername=' + ds[1] +'&tablename='+ds1[2] +
 			'&dataprovider=thumbnail&rowid1='+ forms.frm_info.info_id + "&rnd=" + (Math.random() * 100000000).toFixed(0)
 			src = '<td align=right><img height=212 width=312 src=' + src + ' border=0></td>'
 		}

@@ -55,7 +55,7 @@ function BtnOk()
 	}
 	else {
 		//no file type - show error
-		globals.core_showWcGenericDialog( i18n.getI18NMessage('lbl.error'), i18n.getI18NMessage('msg.missingFileType'), null, 'error', i18n.getI18NMessage('lbl.ok'));
+		globals.core_showWcGenericDialog( i18n.getI18NMessage('lbl.error'), i18n.getI18NMessage('msg.missingFileType'), null, 'error', i18n.getI18NMessage('lbl.ok'), null, null, null);
 	}
 }
 

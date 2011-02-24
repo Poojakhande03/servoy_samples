@@ -31,7 +31,7 @@ function BtnNewCompany()
 	MODIFIED: NONE
 	********************************************/
 	
-	globals.ShowDialogCompany(i18n.getI18NMessage('lbl.newCompany'));
+	globals.ShowDialogCompany(i18n.getI18NMessage('lbl.newCompany'), null, null);
 }
 
 /**
@@ -71,5 +71,6 @@ function BtnOk()
 	//set the global so that if they click the "X" close it won't close
 	globals.isDialogOpen = 0
 	
-	application.closeFormDialog('companyChooser')
+//	application.closeFormDialog('companyChooser')
+	application.getWindow('companyChooser').close();
 }

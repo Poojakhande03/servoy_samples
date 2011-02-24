@@ -3,7 +3,8 @@
  */
 function btn_closeDialog()
 {
-	application.closeFormDialog('welcome');
+//	application.closeFormDialog('welcome'); closeFormDialog is deprecated
+	application.getWindow('welcome').close();
 	forms.frm_login.elements.login_user_name.requestFocus();
 }
 

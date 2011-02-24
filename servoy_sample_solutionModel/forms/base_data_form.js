@@ -16,6 +16,7 @@ function deleteRecord()
 
 /**
  * @properties={typeid:24,uuid:"fa241b87-52df-49c8-aed1-19053fffb802"}
+ * @AllowToRunInFind
  */
 function loadAllRecords()
 {
@@ -24,6 +25,7 @@ function loadAllRecords()
 
 /**
  * @properties={typeid:24,uuid:"5d285df9-536e-4d0b-9155-dcf91e190879"}
+ * @AllowToRunInFind
  */
 function onShow()
 {
@@ -32,8 +34,9 @@ function onShow()
 	if (fs.find())
 	{
 		var search_rec = fs.getRecord(1)
-		search_rec.table_name = controller.getTableName()
-		search_rec.entities_to_datasources.server_name = controller.getServerName()
+		var ds = controller.getDataSource().split('/');
+		search_rec.table_name = ds[2];
+		search_rec.entities_to_datasources.server_name = ds[1];
 		var count = fs.search();
 		if (count > 0) entity_rec = fs.getRecord(1)
 	}
@@ -65,13 +68,14 @@ function onShow()
 
 /**
  * @properties={typeid:24,uuid:"818ef877-70bb-4c67-a761-b8622cfbe59a"}
+ * @AllowToRunInFind
  */
 function search()
 {
 			application.output('search '+globals.search)
 	if (globals.search != null && globals.search != '')
 	{
-		var jstable = databaseManager.getTable(controller.getServerName(),controller.getTableName())
+		var jstable = databaseManager.getTable(controller.getDataSource());
 		if (controller.find())
 		{
 			var columnnames = jstable.getColumnNames();

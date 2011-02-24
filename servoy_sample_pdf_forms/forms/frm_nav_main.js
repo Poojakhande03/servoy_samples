@@ -1,5 +1,6 @@
 /**
  * @properties={typeid:24,uuid:"c734e9f3-ef0e-4dbe-9993-56f7cc7a5e37"}
+ * @AllowToRunInFind
  */
 function btn_search()
 {
@@ -71,11 +72,11 @@ function btn_search()
 			}
 			else if(dataType == 'number')
 			{
-				globals.showErrorDialog('There is no numeric data to search by in the templates table.',null,'OK')
+				globals.showErrorDialog('There is no numeric data to search by in the templates table.',null,'OK', null, null, null)
 			}
 			else if(dataType == 'date')
 			{
-				globals.showErrorDialog('There is no date data to search by in the templates table.',null,'OK')
+				globals.showErrorDialog('There is no date data to search by in the templates table.',null,'OK', null, null, null)
 			}
 			else //string
 			{
@@ -99,11 +100,11 @@ function btn_search()
 			}
 			else if(dataType == 'number')
 			{
-				globals.showErrorDialog('There is no numeric data to search by in the forms table.',null,'OK')
+				globals.showErrorDialog('There is no numeric data to search by in the forms table.',null,'OK', null, null, null)
 			}
 			else if(dataType == 'date')
 			{
-				globals.showErrorDialog('There is no date data to search by in the forms table.',null,'OK')
+				globals.showErrorDialog('There is no date data to search by in the forms table.',null,'OK', null, null, null)
 			}
 			else //string
 			{
@@ -119,7 +120,7 @@ function btn_search()
 		//see if anything was found
 		if(found == 0)
 		{
-			globals.showErrorDialog('No records were found matching your search request.')
+			globals.showErrorDialog('No records were found matching your search request.', null, null, null, null, null)
 			forms[frm].controller.loadAllRecords()
 		}
 		else

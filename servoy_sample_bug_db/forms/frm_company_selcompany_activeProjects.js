@@ -46,9 +46,10 @@ function FilterProjects()
 	
 	//Get a dataset based on query
 	var maxReturnedRows = 1000;//useful to limit number of rows
-	var args = new Array()
-	args[0] = globals.currCompanyID
-	var dataset = databaseManager.getDataSetByQuery(controller.getServerName(), query, args, maxReturnedRows);
+	var args = new Array();
+	args[0] = globals.currCompanyID;
+	var ds = controller.getDataSource().split('/');
+	var dataset = databaseManager.getDataSetByQuery(ds[1], query, args, maxReturnedRows);
 	
 	controller.loadRecords(dataset)
 	

@@ -1,5 +1,6 @@
 /**
  * @properties={typeid:24,uuid:"9d7cd50b-e76d-42db-945c-c563036b8bba"}
+ * @AllowToRunInFind
  */
 function btn_login_logOut() {
 	//see if we're already logged in
@@ -32,7 +33,7 @@ function btn_login_logOut() {
 			forms.lst_chatUsers.controller.loadRecords(mylogin_not_equal_chat_users)
 		}
 		else {
-			globals.showErrorDialog('You need to specify a user name before logging in.', null, 'OK')
+			globals.showErrorDialog('You need to specify a user name before logging in.', null, 'OK', null, null, null)
 		}
 	}
 	else {

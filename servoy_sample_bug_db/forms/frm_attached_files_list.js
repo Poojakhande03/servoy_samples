@@ -60,7 +60,7 @@ function BtnViewFile()
 	
 	if(application.getApplicationType() == 5) //web client
 	{
-		globals.ShowDialogFile(null, ixfile);
+		globals.ShowDialogFile(null, ixfile, null);
 	}
 	else if(application.getApplicationType() == 2 || application.getApplicationType() == 3) //client or developer
 	{

@@ -52,7 +52,7 @@ function btn_save()
 	}
 	else
 	{
-		globals.showErrorDialog('You must fill in the template name.', null, 'OK');
+		globals.showErrorDialog('You must fill in the template name.', null, 'OK', null, null, null);
 	}
 }
 
@@ -61,7 +61,7 @@ function btn_save()
  */
 function btn_viewTemplate()
 {
-	globals.btn_viewPDF('template', template_id)
+	globals.btn_viewPDF('template', template_id, Number.NaN);
 }
 
 /**
@@ -244,7 +244,7 @@ function validate_beforeDelete()
 	{
 		var msg = 'There are filled out forms that require this template. ' +
 		'To delete this template, first delete all the existing filled-in forms that use this template.'
-		globals.showErrorDialog(msg, null, 'OK');
+		globals.showErrorDialog(msg, null, 'OK', null, null, null);
 		return 1;
 	}
 	else

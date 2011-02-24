@@ -66,15 +66,20 @@ function fillTree()
 }
 
 /**
- * @properties={typeid:24,uuid:"ec230d4c-217b-4d90-9938-480ec68907b4"}
  * @AllowToRunInFind
+ * 
+ * @param {Object} arg0 // TODO generated, please specify type and doc
+ * @param {Object} arg1 // TODO generated, please specify type and doc
+ * @param {Object} arg2 // TODO generated, please specify type and doc
+ *
+ * @properties={typeid:24,uuid:"C1D12BB7-5B88-43F4-9F58-940A500E7B5D"}
  */
-function syncronizeWithDB()
+function syncronizeWithDB(arg0, arg1, arg2)
 {
 	var i;
-	var datasource_id_to_sync = arguments[0];
-	var tblname_filter = arguments[1];
-	var recreate = arguments[2];
+	var datasource_id_to_sync = arg0;
+	var tblname_filter = arg1;
+	var recreate = arg2;
 	var fs = foundset.duplicateFoundSet();
 	if (fs.find())
 	{
@@ -234,6 +239,6 @@ function checkForSampleData()
 		server_name = 'example_data';
 		databaseManager.saveData();
 		
-		syncronizeWithDB(datasource_id)
+		syncronizeWithDB(datasource_id, null, null);
 	}
 }

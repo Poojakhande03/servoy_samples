@@ -30,12 +30,12 @@ function btn_goContact()
 function btn_save()
 {
 	//check to make sure all the fields are filled out
-	if(!bill_address_id){globals.showErrorDialog('You must choose a billing address.'); return;}
-	if(!ship_address_id) {globals.showErrorDialog('You must choose a shipping address.'); return;}
-	if(!contact_id) {globals.showErrorDialog('You must choose a contact.'); return;}
-	if(!company_id) {globals.showErrorDialog('You must choose a company.'); return;}
-	if(!order_number) {globals.showErrorDialog('There must be an order number.'); return;}
-	if(!order_date) {globals.showErrorDialog('There must be an order date.'); return;}
+	if(!bill_address_id){globals.showErrorDialog('You must choose a billing address.', null, null, null, null, null); return;}
+	if(!ship_address_id) {globals.showErrorDialog('You must choose a shipping address.', null, null, null, null, null); return;}
+	if(!contact_id) {globals.showErrorDialog('You must choose a contact.', null, null, null, null, null); return;}
+	if(!company_id) {globals.showErrorDialog('You must choose a company.', null, null, null, null, null); return;}
+	if(!order_number) {globals.showErrorDialog('There must be an order number.', null, null, null, null, null); return;}
+	if(!order_date) {globals.showErrorDialog('There must be an order date.', null, null, null, null, null); return;}
 
 	_super.btn_save()
 
@@ -56,7 +56,7 @@ function btn_showBillAddr()
 	globals.dialog_text = orders_to_companies.company_name + '\n' + orders_billaddr_to_addresses.address_display_calc
 	globals.dialog_instructions01 = null
 	globals.dialog_instructions02 = 'You can select the text and copy it to the clipboard'
-	globals.showDialog('Order ' + order_number + ' Bill Address', 2, true, 'Done')
+	globals.showDialog('Order ' + order_number + ' Bill Address', 2, true, 'Done', null, null, null, null, null, null);
 }
 
 /**
@@ -68,7 +68,7 @@ function btn_showShipAddr()
 	globals.dialog_text = orders_to_companies.company_name + '\n' + orders_shipaddr_to_addresses.address_display_calc
 	globals.dialog_instructions01 = null
 	globals.dialog_instructions02 = 'You can select the text and copy it to the clipboard'
-	globals.showDialog('Order ' + order_number + ' Ship Address', 2, true, 'Done')
+	globals.showDialog('Order ' + order_number + ' Ship Address', 2, true, 'Done', null, null, null, null, null, null);
 }
 
 /**
@@ -168,9 +168,8 @@ function hide_btn_reset_fields()
 function onLoad()
 {
 	//replace some valuelist "-" stuff if we're in the web client
-	if(application.getApplicationType() == 5)
-	{
-		globals.setupWcValueList('order_shipVia')
+	if(application.getApplicationType() == 5) {
+		globals.setupWcValueList('order_shipVia');
 	}
 }
 
@@ -256,7 +255,7 @@ function rpt_printOrderReport()
 
 	forms.rpt_order_month.controller.sort('order_month_year asc, orders_to_companies.company_name asc')
 
-	globals.printRoutine('rpt_order_form')
+	globals.printRoutine('rpt_order_form', null);
 }
 
 /**
@@ -267,7 +266,7 @@ function rpt_printThisOrder()
 	//load the related items for this order
 	forms.rpt_order_form.controller.loadRecords(orders_to_order_items)
 
-	globals.printRoutine('rpt_order_form')
+	globals.printRoutine('rpt_order_form', null)
 }
 
 /**
@@ -285,7 +284,8 @@ function sub_setNewOrderNumber()
 	{
 		//sql query to get the highest invoice number = then add 1
 		var query = 'select order_number from orders order by order_number desc'
-		var dataset = databaseManager.getDataSetByQuery(controller.getServerName(), query, null, 1)
+		var ds = controller.getDataSource().split('/');
+		var dataset = databaseManager.getDataSetByQuery(ds[1], query, null, 1)
 		order_number = dataset.getValue(1, 1) + 1
 	}
 }

@@ -25,7 +25,7 @@ function BtnDeleteDocument()
 	}
 	
 	//confirm the delete of the task
-	globals.core_showWcGenericDialog(i18n.getI18NMessage('lbl.deleteDocument'), msg, 'forms.frm_project_selproj_docs_docList.DoDelete()', 'warning', i18n.getI18NMessage('lbl.ok'), i18n.getI18NMessage('lbl.cancel'));
+	globals.core_showWcGenericDialog(i18n.getI18NMessage('lbl.deleteDocument'), msg, 'forms.frm_project_selproj_docs_docList.DoDelete()', 'warning', i18n.getI18NMessage('lbl.ok'), i18n.getI18NMessage('lbl.cancel'), null, null);
 }
 
 /**
@@ -52,7 +52,7 @@ function BtnShowDocument()
 		globals.currDocumentID = ixdocument;
 //	}
 	
-	globals.ShowDialogDocument(null, globals.currDocumentID);
+	globals.ShowDialogDocument(null, globals.currDocumentID, null);
 }
 
 /**
@@ -88,7 +88,7 @@ function DoDelete()
 /**
  * @properties={typeid:24,uuid:"1f2c4b48-ab24-4231-a1ce-c46f2eb3a5a1"}
  */
-function GoDocument(arg0)
+function GoDocument()
 {
 	/*
 	PURPOSE: Need this for the web client to set the cur doc id

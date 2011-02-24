@@ -1,5 +1,7 @@
 /**
- * @properties={typeid:35,uuid:"92727947-D459-4BF8-8900-50004A945D0B"}
+ * @type String
+ *
+ * @properties={typeid:35,uuid:"92727947-D459-4BF8-8900-50004A945D0B",variableType:12}
  */
 var labelText = null;
 
@@ -8,6 +10,6 @@ var labelText = null;
  */
 function okAction()
 {
-	_super.okAction();
+	_super.okAction(null);
 	callback(labelText);
 }

@@ -13,7 +13,7 @@ function BtnSort(event) {
 	var btn = elements[event.getElementName()].text
 
 	//close the form in dialog
-	application.closeFormDialog("Dialog")
+	application.getWindow("Dialog").close();
 
 	//we also set a global - just in case you need it later
 	globals.mod_dialog_buttonPressed = btn
@@ -41,14 +41,19 @@ function hide_allIcons()
 }
 
 /**
- * @properties={typeid:24,uuid:"fa22d5fc-af1e-4e17-a0c9-38a1b4db7ba1"}
+ * @param {Object} arg0 // TODO generated, please specify type and doc
+ * @param {Object} arg1 // TODO generated, please specify type and doc
+ * @param {Object} arg2 // TODO generated, please specify type and doc
+ * @param {Object} arg3 // TODO generated, please specify type and doc
+ *
+ * @properties={typeid:24,uuid:"020ABB8B-260A-40F6-97D3-0A3CA2CB8FAC"}
  */
-function setup_buttons()
+function setup_buttons(arg0, arg1, arg2, arg3)
 {
-	var btn1 = arguments[0]
-	var btn2 = arguments[1]
-	var btn3 = arguments[2]
-	var btn4 = arguments[3]
+	var btn1 = arg0;
+	var btn2 = arg1;
+	var btn3 = arg2;
+	var btn4 = arg3;
 
 	if(btn1 != undefined)
 	{

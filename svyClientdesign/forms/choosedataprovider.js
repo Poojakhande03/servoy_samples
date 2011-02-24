@@ -1,9 +1,13 @@
 /**
- * @properties={typeid:35,uuid:"C670ED3C-9D3D-4081-A50F-7EF94DA24A74"}
+ * @type String
+ *
+ * @properties={typeid:35,uuid:"C670ED3C-9D3D-4081-A50F-7EF94DA24A74",variableType:12}
  */
 var dataprovider = null;
 
 /**
+ * @type Number
+ *
  * @properties={typeid:35,uuid:"3719ABA0-124D-43CC-8235-95D60C2F5F15",variableType:4}
  */
 var fieldtype = null;
@@ -17,7 +21,7 @@ function show(formname, callback)
 {
 	var array = forms[formname].alldataproviders;
 	array = array.concat(forms[formname].allvariables);
-	
+		
 	application.setValueListItems("dataproviders",array);
 
 	_super.show(callback)
@@ -28,7 +32,7 @@ function show(formname, callback)
  */
 function okAction()
 {
-	_super.okAction();
+	_super.okAction(null);
 	callback(dataprovider,fieldtype);
 }
 

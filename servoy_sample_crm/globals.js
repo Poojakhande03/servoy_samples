@@ -269,10 +269,13 @@ function openSolution()
 }
 
 /**
+ * @param {String} formname //formname
+ * 
+ * @param {Object} rec //record
+ * 
  * @properties={typeid:24,uuid:"9ed894f8-ee2b-4234-8634-3ef4a85b78db"}
  */
-function printRoutine(formname, rec)
-{
+function printRoutine(formname, rec) {
 	var frm = formname;
 	var oneRecord = rec;
 
@@ -339,12 +342,14 @@ function setupRecordStatus()
 }
 
 /**
- * @properties={typeid:24,uuid:"a5254fae-24e6-4c5e-ae3b-3ae6bfd62e77"}
+ * @param {String} arg0 // TODO generated, please specify type and doc
+ *
+ * @properties={typeid:24,uuid:"009F7810-B4F2-4DB6-891A-7E4D90E0EAFB"}
  */
-function setupWcValueList()
+function setupWcValueList(arg0)
 {
 	//this routine will examine a value list for "-" items - and remove them
-	var listName = arguments[0]
+	var listName = arg0
 	if(!listName) return;
 
 	var dataset = application.getValueListItems(listName)
@@ -366,20 +371,31 @@ function setupWcValueList()
 }
 
 /**
- * @properties={typeid:24,uuid:"d639f9c2-5cb6-4a65-ab17-bbdac0253c73"}
+ * @param {Object} arg0 // TODO generated, please specify type and doc
+ * @param {Object} arg1 // TODO generated, please specify type and doc
+ * @param {Object} arg2 // TODO generated, please specify type and doc
+ * @param {Object} arg3 // TODO generated, please specify type and doc
+ * @param {Object} arg4 // TODO generated, please specify type and doc
+ * @param {Object} arg5 // TODO generated, please specify type and doc
+ * @param {Object} arg6 // TODO generated, please specify type and doc
+ * @param {Object} arg7 // TODO generated, please specify type and doc
+ * @param {Object} arg8 // TODO generated, please specify type and doc
+ * @param {Object} arg9 // TODO generated, please specify type and doc
+ *
+ * @properties={typeid:24,uuid:"82E763A8-2B55-42C6-AC01-C3AA450B9FA4"}
  */
-function showDialog()
+function showDialog(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9)
 {
-	var title = arguments[0]
-	var whatTab = arguments[1]
-	var showCancelBtnOnly = arguments[2] //anything that is not null is a vaid value
-	var cancelBtnLabel = arguments[3]
-	var showBtn3 = arguments[4] //anything that is not null is valid value
-	var btn3Label = arguments[5]
-	var x = arguments[6]
-	var y = arguments[7]
-	var width = arguments[8]
-	var height = arguments[9]
+	var title = arg0;
+	var whatTab = arg1;
+	var showCancelBtnOnly = arg2; //anything that is not null is a vaid value
+	var cancelBtnLabel = arg3;
+	var showBtn3 = arg4; //anything that is not null is valid value
+	var btn3Label = arg5;
+	var x = arg6;
+	var y = arg7;
+	var width = arg8;
+	var height = arg9;
 
 	if(showCancelBtnOnly)
 	{
@@ -416,16 +432,23 @@ function showDialog()
 }
 
 /**
- * @properties={typeid:24,uuid:"a7dbcfca-8a24-4468-8680-c62f173f9d7b"}
+ * @param {Object} arg0 // TODO generated, please specify type and doc
+ * @param {Object} arg1 // TODO generated, please specify type and doc
+ * @param {Object} arg2 // TODO generated, please specify type and doc
+ * @param {Object} arg3 // TODO generated, please specify type and doc
+ * @param {Object} arg4 // TODO generated, please specify type and doc
+ * @param {Object} arg5 // TODO generated, please specify type and doc
+ *
+ * @properties={typeid:24,uuid:"21624B08-1BFF-4F28-898C-C731023B3D0D"}
  */
-function showErrorDialog()
+function showErrorDialog(arg0, arg1, arg2, arg3, arg4, arg5)
 {
-	var msg = arguments[0]  //accept the error message as an argument
-	var methd = arguments[1] //method to execute after dialog closes
-	var btn1 = arguments[2]
-	var btn2 = arguments[3]
-	var btn3 = arguments[4]
-	var btn4 = arguments[5]
+	var msg = arg0;  //accept the error message as an argument
+	var methd = arg1; //method to execute after dialog closes
+	var btn1 = arg2;
+	var btn2 = arg3;
+	var btn3 = arg4;
+	var btn4 = arg5;
 
 	//disable all the background elements when showing the dialog
 	globals.disableBgElements()
@@ -435,16 +458,23 @@ function showErrorDialog()
 }
 
 /**
- * @properties={typeid:24,uuid:"128c1c44-ec93-42f5-9012-0b6bb7e28722"}
+ * @param {Object} arg0 // TODO generated, please specify type and doc
+ * @param {Object} arg1 // TODO generated, please specify type and doc
+ * @param {Object} arg2 // TODO generated, please specify type and doc
+ * @param {Object} arg3 // TODO generated, please specify type and doc
+ * @param {Object} arg4 // TODO generated, please specify type and doc
+ * @param {Object} arg5 // TODO generated, please specify type and doc
+ *
+ * @properties={typeid:24,uuid:"6B7FB335-F2E4-4368-B825-754F5E2C1FE4"}
  */
-function showForbiddenDialog()
+function showForbiddenDialog(arg0, arg1, arg2, arg3, arg4, arg5)
 {
-	var msg = arguments[0]  //accept the error message as an argument
-	var methd = arguments[1] //method to execute after dialog closes
-	var btn1 = arguments[2]
-	var btn2 = arguments[3]
-	var btn3 = arguments[4]
-	var btn4 = arguments[5]
+	var msg = arg0;  //accept the error message as an argument
+	var methd = arg1; //method to execute after dialog closes
+	var btn1 = arg2;
+	var btn2 = arg3;
+	var btn3 = arg4;
+	var btn4 = arg5;
 
 	//disable all the background elements when showing the dialog
 	globals.disableBgElements()
@@ -454,16 +484,23 @@ function showForbiddenDialog()
 }
 
 /**
- * @properties={typeid:24,uuid:"87be16c7-25f5-4610-9907-ecacc0d76981"}
+ * @param {Object} arg0 // TODO generated, please specify type and doc
+ * @param {Object} arg1 // TODO generated, please specify type and doc
+ * @param {Object} arg2 // TODO generated, please specify type and doc
+ * @param {Object} arg3 // TODO generated, please specify type and doc
+ * @param {Object} arg4 // TODO generated, please specify type and doc
+ * @param {Object} arg5 // TODO generated, please specify type and doc
+ *
+ * @properties={typeid:24,uuid:"024CDF49-8D98-4AC5-94AB-262B3E34181B"}
  */
-function showInfoDialog()
+function showInfoDialog(arg0, arg1, arg2, arg3, arg4, arg5)
 {
-	var msg = arguments[0]  //accept the error message as an argument
-	var methd = arguments[1] //method to execute after dialog closes
-	var btn1 = arguments[2]
-	var btn2 = arguments[3]
-	var btn3 = arguments[4]
-	var btn4 = arguments[5]
+	var msg = arg0;  //accept the error message as an argument
+	var methd = arg1; //method to execute after dialog closes
+	var btn1 = arg2;
+	var btn2 = arg3;
+	var btn3 = arg4;
+	var btn4 = arg5;
 
 	//disable all the background elements when showing the dialog
 	globals.disableBgElements()
@@ -473,16 +510,23 @@ function showInfoDialog()
 }
 
 /**
- * @properties={typeid:24,uuid:"7721b557-837b-4828-aafa-f691296d3837"}
+ * @param {Object} arg0 // TODO generated, please specify type and doc
+ * @param {Object} arg1 // TODO generated, please specify type and doc
+ * @param {Object} arg2 // TODO generated, please specify type and doc
+ * @param {Object} arg3 // TODO generated, please specify type and doc
+ * @param {Object} arg4 // TODO generated, please specify type and doc
+ * @param {Object} arg5 // TODO generated, please specify type and doc
+ *
+ * @properties={typeid:24,uuid:"9434859F-9015-49F1-9383-312B21ECAC81"}
  */
-function showQuestionDialog()
+function showQuestionDialog(arg0, arg1, arg2, arg3, arg4, arg5)
 {
-	var msg = arguments[0]  //accept the error message as an argument
-	var methd = arguments[1] //method to execute after dialog closes
-	var btn1 = arguments[2]
-	var btn2 = arguments[3]
-	var btn3 = arguments[4]
-	var btn4 = arguments[5]
+	var msg = arg0;  //accept the error message as an argument
+	var methd = arg1; //method to execute after dialog closes
+	var btn1 = arg2;
+	var btn2 = arg3;
+	var btn3 = arg4;
+	var btn4 = arg5;
 
 	//disable all the background elements when showing the dialog
 	globals.disableBgElements()
@@ -492,16 +536,23 @@ function showQuestionDialog()
 }
 
 /**
- * @properties={typeid:24,uuid:"b352be74-f8ad-4c82-93c0-9cf7e9629d45"}
+ * @param {Object} arg0 // TODO generated, please specify type and doc
+ * @param {Object} arg1 // TODO generated, please specify type and doc
+ * @param {Object} arg2 // TODO generated, please specify type and doc
+ * @param {Object} arg3 // TODO generated, please specify type and doc
+ * @param {Object} arg4 // TODO generated, please specify type and doc
+ * @param {Object} arg5 // TODO generated, please specify type and doc
+ *
+ * @properties={typeid:24,uuid:"67BDE28A-FA0E-4682-A979-ABC8B5581409"}
  */
-function showWarningDialog()
+function showWarningDialog(arg0, arg1, arg2, arg3, arg4, arg5)
 {
-	var msg = arguments[0]  //accept the error message as an argument
-	var methd = arguments[1] //method to execute after dialog closes
-	var btn1 = arguments[2]
-	var btn2 = arguments[3]
-	var btn3 = arguments[4]
-	var btn4 = arguments[5]
+	var msg = arg0;  //accept the error message as an argument
+	var methd = arg1; //method to execute after dialog closes
+	var btn1 = arg2;
+	var btn2 = arg3;
+	var btn3 = arg4;
+	var btn4 = arg5;
 
 	//disable all the background elements when showing the dialog
 	globals.disableBgElements()

@@ -24,7 +24,8 @@ function ws_create(emp)
 		ret.id = record.employeeid;
 		return ret; // response body
 	}
-	return null;
+//	return null;
+	return Number.NaN;
 }
 
 /**

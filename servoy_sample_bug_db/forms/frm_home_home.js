@@ -1,5 +1,6 @@
 /**
  * @properties={typeid:24,uuid:"b79de579-4e67-45ba-8aaa-654bd1005ee3"}
+ * @AllowToRunInFind
  */
 function BtnEditProfile()
 {
@@ -20,6 +21,6 @@ function BtnEditProfile()
 	
 	if(found != 0)
 	{
-		globals.ShowDialogPerson()
+		globals.ShowDialogPerson(null, null, null);
 	}
 }

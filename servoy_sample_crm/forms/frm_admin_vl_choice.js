@@ -20,7 +20,7 @@ function btn_delete()
 	globals.core_dlg_methodToExecute = 'forms.frm_admin_vl_choice.sub_doDelete()'
 	
 	//show the warning dialog
-	globals.showWarningDialog('Are you sure you want to permanently delete this value list value?', globals.core_dlg_methodToExecute, 'Cancel', 'Delete')
+	globals.showWarningDialog('Are you sure you want to permanently delete this value list value?', globals.core_dlg_methodToExecute, 'Cancel', 'Delete', null, null);
 }
 
 /**

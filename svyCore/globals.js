@@ -225,7 +225,16 @@ function core_setupAppType()
 }
 
 /**
- * @properties={typeid:24,uuid:"fde4dfbe-b730-4547-9881-01661f8ae705"}
+ * @param {Object} arg0 // TODO generated, please specify type and doc
+ * @param {Object} arg1 // TODO generated, please specify type and doc
+ * @param {Object} arg2 // TODO generated, please specify type and doc
+ * @param {Object} arg3 // TODO generated, please specify type and doc
+ * @param {Object} arg4 // TODO generated, please specify type and doc
+ * @param {Object} arg5 // TODO generated, please specify type and doc
+ * @param {Object} arg6 // TODO generated, please specify type and doc
+ * @param {Object} arg7 // TODO generated, please specify type and doc
+ *
+ * @properties={typeid:24,uuid:"5137D3CC-20F4-4348-BD2C-88152BA5048B"}
  */
 function core_showWcGenericDialog(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7)
 {

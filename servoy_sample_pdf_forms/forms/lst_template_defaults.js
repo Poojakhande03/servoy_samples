@@ -10,7 +10,7 @@ function btn_addValue()
 	forms.dlg_template_values.template_id = forms.frm_templates.template_id
 
 	//show the dialog
-	globals.showDialog('Add New Default Value')
+	globals.showDialog('Add New Default Value', null, null, null, null, null, null, null, null, null);
 
 	forms.dlg_template_values.controller.focusFirstField()
 }
@@ -27,7 +27,7 @@ function btn_editValue()
 	if(!databaseManager.hasTransaction()) databaseManager.startTransaction();
 
 	//show the dialog
-	globals.showDialog('Edit Default Value', 1, null,null,true,'Delete Value');
+	globals.showDialog('Edit Default Value', 1, null,null,true,'Delete Value', null, null, null, null);
 
 	forms.dlg_template_values.controller.focusFirstField();
 }

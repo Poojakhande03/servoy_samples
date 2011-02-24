@@ -17,7 +17,7 @@ function btn_newAddress()
 	databaseManager.saveData();
 
 	//show the "fake" dialog
-	globals.showDialog('New Address')
+	globals.showDialog('New Address', null, null, null, null, null, null, null, null, null);
 
 	//go first field
 	forms.dlg_address.controller.focusFirstField()
@@ -38,7 +38,7 @@ function btn_showAddress()
 	globals.dialog_performMethod = 'forms.lst_company_addresses.sub_deleteAddressItem()'
 
 	//show the "fake" dialog
-	globals.showDialog('Edit Address', 1, null, null, true, 'Delete Item')
+	globals.showDialog('Edit Address', 1, null, null, true, 'Delete Item', null, null, null, null);
 }
 
 /**
@@ -61,7 +61,7 @@ function sub_deleteAddressItem()
 			//there are orders that use this address
 			var msg = 'There are orders that use this address as a shipping or billing address.' +
 			' Change the orders to a new address, then you can delete this address.'
-			globals.showErrorDialog(msg,'forms.frm_company.sub_showCompanyOrders()','OK')
+			globals.showErrorDialog(msg,'forms.frm_company.sub_showCompanyOrders()','OK', null, null, null)
 		}
 	}
 }

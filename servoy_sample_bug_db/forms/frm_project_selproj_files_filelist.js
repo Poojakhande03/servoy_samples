@@ -21,7 +21,7 @@ function BtnEditFile()
 	
 	********************************************/
 	BtnGoFile(undefined);
-	globals.ShowDialogFile(null,ixfile); 
+	globals.ShowDialogFile(null,ixfile, null); 
 }
 
 /**

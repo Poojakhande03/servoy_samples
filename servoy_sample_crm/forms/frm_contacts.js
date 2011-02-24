@@ -151,6 +151,7 @@ function print_default()
 
 /**
  * @properties={typeid:24,uuid:"b2f85ad0-9e20-4157-abf0-c663b97914f6"}
+ * @AllowToRunInFind
  */
 function rpt_contacts_list()
 {
@@ -158,7 +159,7 @@ function rpt_contacts_list()
 
 	forms.rpt_contacts_list.controller.sort('contacts_to_companies.company_name asc, name_last asc, name_first asc')
 
-	globals.printRoutine('rpt_contacts_list')
+	globals.printRoutine('rpt_contacts_list', null)
 }
 
 /**
@@ -192,7 +193,7 @@ function validate_beforeDelete()
 	{
 		//show dialog and return 1
 		//show the tabpanel "dialog"
-		globals.showErrorDialog("You can't delete a contact is referenced on one or more orders.\n\nChange the contact on the orders first.", 'forms.frm_contacts.sub_showContactOrders()','OK');
+		globals.showErrorDialog("You can't delete a contact is referenced on one or more orders.\n\nChange the contact on the orders first.", 'forms.frm_contacts.sub_showContactOrders()','OK', null, null, null);
 		return 1
 	}
 	else

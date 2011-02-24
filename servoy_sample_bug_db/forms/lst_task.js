@@ -20,11 +20,11 @@ function BtnGoTask()
 	MODIFIED: NONE
 	********************************************/
 	
-	GoTask(ixtask, ixproject);
+	GoTask();
 }
 
 /**
- * @properties={typeid:24,uuid:"7d6bfa74-e988-4a99-8d7a-87d17af01f44"}
+ * @properties={typeid:24,uuid:"B34B75FE-D313-4641-A5DC-502091BB3AE8"}
  */
 function GoTask()
 {

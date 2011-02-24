@@ -23,11 +23,10 @@ function BtnDeletePerson()
 			msg = i18n.getI18NMessage('msg.deletePersonRecord', new Array(name_full, assignedTasks))
 		}
 		
-		globals.core_showWcGenericDialog(i18n.getI18NMessage('lbl.deleteTask'), msg, 'forms.frm_people_selperson.DoDelete()', 'warning', i18n.getI18NMessage('lbl.ok'), i18n.getI18NMessage('lbl.cancel'));
+		globals.core_showWcGenericDialog(i18n.getI18NMessage('lbl.deleteTask'), msg, 'forms.frm_people_selperson.DoDelete()', 'warning', i18n.getI18NMessage('lbl.ok'), i18n.getI18NMessage('lbl.cancel'), '', '');
 	}
-	else
-	{
-			globals.core_showWcGenericDialog( i18n.getI18NMessage('lbl.error'), i18n.getI18NMessage('servoy.foundSet.error.noDeleteAccess'), null, 'error', i18n.getI18NMessage('lbl.ok'));
+	else {
+			globals.core_showWcGenericDialog( i18n.getI18NMessage('lbl.error'), i18n.getI18NMessage('servoy.foundSet.error.noDeleteAccess'), null, 'error', i18n.getI18NMessage('lbl.ok'), null, null, null);
 	}
 }
 
@@ -46,7 +45,7 @@ function BtnEditPerson()
 	MODIFIED: NONE
 	********************************************/
 	
-	globals.ShowDialogPerson(null, globals.currPersonID);
+	globals.ShowDialogPerson(null, globals.currPersonID, null);
 }
 
 /**
@@ -65,7 +64,7 @@ function BtnNewProject()
 	********************************************/
 	
 	//new record
-	globals.NewRecordProject(1);
+	globals.NewRecordProject(1, null);
 }
 
 /**

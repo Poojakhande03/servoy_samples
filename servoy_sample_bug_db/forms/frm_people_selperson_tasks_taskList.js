@@ -23,7 +23,7 @@ function BtnGoTask()
 	
 	globals.currTaskID = ixtask
 	
-	globals.ShowDialogTask(null, ixtask);
+	globals.ShowDialogTask(null, ixtask, null);
 }
 
 /**

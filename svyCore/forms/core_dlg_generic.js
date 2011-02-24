@@ -11,14 +11,19 @@ function hide_allIcons()
 }
 
 /**
- * @properties={typeid:24,uuid:"cf0dd9fd-3a92-4f93-86e3-f949ee44178d"}
+ * @param {Object} arg0 // TODO generated, please specify type and doc
+ * @param {Object} arg1 // TODO generated, please specify type and doc
+ * @param {Object} arg2 // TODO generated, please specify type and doc
+ * @param {Object} arg3 // TODO generated, please specify type and doc
+ *
+ * @properties={typeid:24,uuid:"5DA845ED-05D5-466F-85DC-0DFA3B9D2750"}
  */
-function setup_buttons()
+function setup_buttons(arg0, arg1, arg2, arg3)
 {
-	var btn1 = arguments[0]
-	var btn2 = arguments[1]
-	var btn3 = arguments[2]
-	var btn4 = arguments[3]
+	var btn1 = arg0;
+	var btn2 = arg1;
+	var btn3 = arg2;
+	var btn4 = arg3;
 
 	if(btn1 != undefined)
 	{
@@ -115,7 +120,8 @@ function close(event) {
 	globals.core_dlg_buttonPressed = elements[event.getElementName()].text;
 
 	//close the form in dialog
-	application.closeFormDialog("Dialog");
+//	application.closeFormDialog("Dialog");
+	application.getWindow('Dialog').close();
 
 	globals.enableBgElements();
 

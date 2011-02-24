@@ -313,9 +313,11 @@ function DialogCheckBeforeClose()
 }
 
 /**
- * @properties={typeid:24,uuid:"706245f8-3713-4f79-b3fe-b6bae08df133"}
+ * @param {Object} arg0 // TODO generated, please specify type and doc
+ *
+ * @properties={typeid:24,uuid:"E0641756-609A-4F48-B6FE-8ABD856FFC99"}
  */
-function DialogCloseCancel(arguments)
+function DialogCloseCancel(arg0)
 {
 	/*
 	PURPOSE: Used as a central method for closing a dialog with cancel
@@ -327,7 +329,7 @@ function DialogCloseCancel(arguments)
 	MODIFIED: NONE
 	********************************************/
 	
-	if(arguments[0])
+	if(arg0)
 	{
 		//rollback edited record
 		databaseManager.rollbackEditedRecords()
@@ -335,7 +337,8 @@ function DialogCloseCancel(arguments)
 		//set the global so that if they click the "X" close it won't close
 		globals.isDialogOpen = 0
 		
-		application.closeFormDialog(arguments[0])
+//		application.closeFormDialog(arguments[0])
+		application.getWindow(arg0).close();
 	}
 }
 
@@ -357,14 +360,14 @@ function DialogCloseOk(arg0)
 	if(arg0)
 	{
 		//turn on the auto save, save, then turn off again
-		databaseManager.setAutoSave(true)
-		databaseManager.saveData()
-		databaseManager.setAutoSave(false)
+		databaseManager.setAutoSave(true);
+		databaseManager.saveData();
+		databaseManager.setAutoSave(false);
 		
 		//set the global so that if they click the "X" close it won't close
-		globals.isDialogOpen = 0
+		globals.isDialogOpen = 0;
 		
-		application.closeFormDialog(arg0)
+		application.getWindow(arg0).close();
 	}
 }
 
@@ -450,10 +453,12 @@ function GoDoc()
 }
 
 /**
+ * @param {Number} arg0 // ixpeople
+ * 
  * @properties={typeid:24,uuid:"59248159-553c-42b4-902c-0f9acf967334"}
  * @AllowToRunInFind
  */
-function GoPerson()
+function GoPerson(arg0)
 {
 	/*
 	PURPOSE: Go to this person
@@ -466,7 +471,7 @@ function GoPerson()
 	
 	********************************************/
 	
-	globals.currPersonID = arguments[0]
+	globals.currPersonID = arg0;
 	
 	//find the right row
 	forms.frm_people_selperson.controller.find()
@@ -489,9 +494,11 @@ function GoPerson()
 }
 
 /**
+ * @param {Number} arg0 //ProjectId
+ * 
  * @properties={typeid:24,uuid:"5b727c3c-4218-4c93-806b-f6382502ff85"}
  */
-function GoProject()
+function GoProject(arg0)
 {
 	/*
 	PURPOSE: Go to a specified project
@@ -586,9 +593,19 @@ function Logout()
 }
 
 /**
+ * @param {Number} arg0 //Arg0
+ * 
+ * @param {String} arg1 //Arg1
+ * 
+ * @param {Number} arg2 //Arg2
+ * 
+ * @param {Number} arg3 //Arg3
+ * 
+ * @param {Number} arg4 //Arg4
+ * 
  * @properties={typeid:24,uuid:"365f2042-3634-46a9-aad8-417fdf2ef9f6"}
  */
-function NewRecordAction()
+function NewRecordAction(arg0, arg1, arg2, arg3, arg4)
 {
 	/*
 	PURPOSE: Create a new tracking action
@@ -605,11 +622,11 @@ function NewRecordAction()
 	MODIFIED: NONE
 	********************************************/
 	
-	var actionType = arguments[0]
-	var actionText = arguments[1]
-	var projectID = arguments[2]
-	var taskID = arguments[3]
-	var companyID = arguments[4]
+	var actionType = arg0;
+	var actionText = arg1;
+	var projectID = arg2;
+	var taskID = arg3
+	var companyID = arg4;
 	
 	forms.z_tbl_action.controller.newRecord(true)
 	forms.z_tbl_action.action_text = actionText
@@ -660,7 +677,9 @@ function NewRecordBug()
 }
 
 /**
- * @properties={typeid:24,uuid:"0aab2af3-aea9-4158-bbb0-15d7e72a848c"}
+ * @param {Object} arg0 // TODO generated, please specify type and doc
+ *
+ * @properties={typeid:24,uuid:"FAAFF399-AA24-4A9F-98A4-C653A0FC4005"}
  */
 function NewRecordCompany(arg0)
 {
@@ -694,7 +713,7 @@ function NewRecordCompany(arg0)
 	}
 	else
 	{
-			globals.core_showWcGenericDialog( i18n.getI18NMessage('lbl.error'), i18n.getI18NMessage('servoy.foundSet.error.noCreateAccess'), null, 'error', i18n.getI18NMessage('lbl.ok'));
+			globals.core_showWcGenericDialog( i18n.getI18NMessage('lbl.error'), i18n.getI18NMessage('servoy.foundSet.error.noCreateAccess'), null, 'error', i18n.getI18NMessage('lbl.ok'), null, null, null);
 	}
 }
 
@@ -764,12 +783,15 @@ function NewRecordPerson(arg0)
 	}
 	else
 	{
-			globals.core_showWcGenericDialog( i18n.getI18NMessage('lbl.error'), i18n.getI18NMessage('servoy.foundSet.error.noCreateAccess'), null, 'error', i18n.getI18NMessage('lbl.ok'));
+			globals.core_showWcGenericDialog( i18n.getI18NMessage('lbl.error'), i18n.getI18NMessage('servoy.foundSet.error.noCreateAccess'), null, 'error', i18n.getI18NMessage('lbl.ok'), null, null, null);
 	}
 }
 
 /**
- * @properties={typeid:24,uuid:"929a9b5d-a3c6-4d26-951d-9c1cfa07dadd"}
+ * @param {Object} arg0 // TODO generated, please specify type and doc
+ * @param {Object} arg1 // TODO generated, please specify type and doc
+ *
+ * @properties={typeid:24,uuid:"2421FCF2-D457-4BA9-B7EF-5AC223223ADA"}
  */
 function NewRecordProject(arg0, arg1)
 {
@@ -810,7 +832,7 @@ function NewRecordProject(arg0, arg1)
 	}
 	else
 	{
-			globals.core_showWcGenericDialog( i18n.getI18NMessage('lbl.error'), i18n.getI18NMessage('servoy.foundSet.error.noCreateAccess'), null, 'error', i18n.getI18NMessage('lbl.ok'));
+			globals.core_showWcGenericDialog( i18n.getI18NMessage('lbl.error'), i18n.getI18NMessage('servoy.foundSet.error.noCreateAccess'), null, 'error', i18n.getI18NMessage('lbl.ok'), null, null, null);
 	}
 }
 
@@ -1081,10 +1103,15 @@ function SetUpInitialTabHilights()
 }
 
 /**
- * @properties={typeid:24,uuid:"dd9c14e8-df5f-4553-9b95-7696c9a29ea0"}
  * @AllowToRunInFind
+ * 
+ * @param {Object} arg0 // TODO generated, please specify type and doc
+ * @param {Object} arg1 // TODO generated, please specify type and doc
+ * @param {Object} arg2 // TODO generated, please specify type and doc
+ *
+ * @properties={typeid:24,uuid:"52D2D8DC-4030-4243-A414-B4C7E7F2BC24"}
  */
-function ShowDialogBug()
+function ShowDialogBug(arg0, arg1, arg2)
 {
 	/*
 	PURPOSE: Shows the dialog for editing/adding a bug
@@ -1098,9 +1125,9 @@ function ShowDialogBug()
 	MODIFIED: NONE
 	********************************************/
 	
-	var title = arguments[0]
-	var bugID = arguments[1]
-	var isNew = arguments[2]
+	var title = arg0;
+	var bugID = arg1;
+	var isNew = arg2;
 	
 	if(isNew) {
 		globals.flagIsNew = 1
@@ -1129,10 +1156,16 @@ function ShowDialogBug()
 }
 
 /**
- * @properties={typeid:24,uuid:"c9516076-7de0-463a-8889-62970b07aecf"}
  * @AllowToRunInFind
+ * 
+ * @param {Object} arg0 // TODO generated, please specify type and doc
+ * @param {Object} arg1 // TODO generated, please specify type and doc
+ * @param {Object} arg2 // TODO generated, please specify type and doc
+ * @param {Object} arg3 // TODO generated, please specify type and doc
+ *
+ * @properties={typeid:24,uuid:"872C8626-86E0-4BDB-B0F0-97DDF21B2BF2"}
  */
-function ShowDialogComment()
+function ShowDialogComment(arg0, arg1, arg2, arg3)
 {
 	/*
 	PURPOSE: Shows the dialog for editing profile/adding a person
@@ -1147,10 +1180,10 @@ function ShowDialogComment()
 	MODIFIED: NONE
 	********************************************/
 	
-	var title = arguments[0]
-	var commentID = arguments[1]
-	var replyTaskID = arguments[2]
-	var isNew = arguments[3]
+	var title = arg0;
+	var commentID = arg1;
+	var replyTaskID = arg2;
+	var isNew = arg3;
 	
 	if(isNew) {
 		globals.flagIsNew = 1
@@ -1178,10 +1211,14 @@ function ShowDialogComment()
 }
 
 /**
- * @properties={typeid:24,uuid:"ec8775cd-30ea-4047-85ec-769e03bdd39e"}
  * @AllowToRunInFind
+ * 
+ * @param {Object} arg0 // TODO generated, please specify type and doc
+ * @param {Object} arg1 // TODO generated, please specify type and doc
+ *
+ * @properties={typeid:24,uuid:"AC75D380-2241-4740-AB7C-476E6942A1EC"}
  */
-function ShowDialogCommentRead()
+function ShowDialogCommentRead(arg0, arg1)
 {
 	/*
 	PURPOSE: Shows the dialog for editing profile/adding a person
@@ -1195,8 +1232,8 @@ function ShowDialogCommentRead()
 	MODIFIED: NONE
 	********************************************/
 	
-	var title = arguments[0]
-	var commentID = arguments[1]
+	var title = arg0;
+	var commentID = arg1;
 	
 	if(commentID)
 	{
@@ -1217,10 +1254,15 @@ function ShowDialogCommentRead()
 }
 
 /**
- * @properties={typeid:24,uuid:"04f1a065-2aab-47d5-8c53-0b4961965711"}
  * @AllowToRunInFind
+ * 
+ * @param {Object} arg0 // TODO generated, please specify type and doc
+ * @param {Object} arg1 // TODO generated, please specify type and doc
+ * @param {Object} arg2 // TODO generated, please specify type and doc
+ *
+ * @properties={typeid:24,uuid:"4B230E61-3C96-43E7-AAAD-35ED1C52BFAB"}
  */
-function ShowDialogCompany()
+function ShowDialogCompany(arg0, arg1, arg2)
 {
 	/*
 	PURPOSE: Shows the dialog for editing/adding a company
@@ -1234,9 +1276,9 @@ function ShowDialogCompany()
 	MODIFIED: NONE
 	********************************************/
 	
-	var title = arguments[0]
-	var companyID = arguments[1]
-	var isNew = arguments[2]
+	var title = arg0;
+	var companyID = arg1;
+	var isNew = arg2;
 	
 	if(isNew) {
 		globals.flagIsNew = 1
@@ -1295,8 +1337,13 @@ function ShowDialogCompanyChooser(arg0)
 }
 
 /**
- * @properties={typeid:24,uuid:"c713fda7-290b-4bcc-8f35-a2695630d199"}
  * @AllowToRunInFind
+ * 
+ * @param {Object} arg0 // TODO generated, please specify type and doc
+ * @param {Object} arg1 // TODO generated, please specify type and doc
+ * @param {Object} arg2 // TODO generated, please specify type and doc
+ *
+ * @properties={typeid:24,uuid:"0CDF0029-ACEF-463E-B307-AB342D72C70C"}
  */
 function ShowDialogDocument(arg0, arg1, arg2)
 {
@@ -1341,14 +1388,13 @@ function ShowDialogDocument(arg0, arg1, arg2)
 }
 
 /**
- * @param {String} arg0 // File title 
- * 
- * @param {Number} arg1 // fileId
- * 
- * @param {Number} arg2 // isNew
- * 
- * @properties={typeid:24,uuid:"40c4db06-ba86-44e1-95e1-782a41d82034"}
  * @AllowToRunInFind
+ * 
+ * @param {Object} arg0 // TODO generated, please specify type and doc
+ * @param {Object} arg1 // TODO generated, please specify type and doc
+ * @param {Object} arg2 // TODO generated, please specify type and doc
+ *
+ * @properties={typeid:24,uuid:"5E0C186C-CBE8-4CB0-B1BD-79C7CB786C87"}
  */
 function ShowDialogFile(arg0, arg1, arg2)
 {
@@ -1394,10 +1440,15 @@ function ShowDialogFile(arg0, arg1, arg2)
 }
 
 /**
- * @properties={typeid:24,uuid:"4cb71e76-6b35-41ac-8bef-80e6c084a83b"}
  * @AllowToRunInFind
+ * 
+ * @param {Object} arg0 // TODO generated, please specify type and doc
+ * @param {Object} arg1 // TODO generated, please specify type and doc
+ * @param {Object} arg2 // TODO generated, please specify type and doc
+ *
+ * @properties={typeid:24,uuid:"92AC6625-6AE7-4734-8B8B-9A90DB04C517"}
  */
-function ShowDialogPerson()
+function ShowDialogPerson(arg0, arg1, arg2)
 {
 	/*
 	PURPOSE: Shows the dialog for editing profile/adding a person
@@ -1414,9 +1465,9 @@ function ShowDialogPerson()
 	if(globals.isAdmin)
 	{
 	
-		var title = arguments[0]
-		var personID = arguments[1]
-		var isNew = arguments[2]
+		var title = arg0;
+		var personID = arg1;
+		var isNew = arg2;
 		
 		if(isNew) {
 			globals.flagIsNew = 1
@@ -1444,7 +1495,7 @@ function ShowDialogPerson()
 	}
 	else
 	{
-			globals.core_showWcGenericDialog( i18n.getI18NMessage('lbl.error'), i18n.getI18NMessage('servoy.foundSet.error.noCreateAccess'), null, 'error', i18n.getI18NMessage('lbl.ok'));
+			globals.core_showWcGenericDialog( i18n.getI18NMessage('lbl.error'), i18n.getI18NMessage('servoy.foundSet.error.noCreateAccess'), null, 'error', i18n.getI18NMessage('lbl.ok'), null, null, null);
 	}
 }
 
@@ -1492,16 +1543,21 @@ function ShowDialogPersonChooser(arg0, arg1)
 	}
 	else
 	{
-			globals.core_showWcGenericDialog( i18n.getI18NMessage('lbl.error'), i18n.getI18NMessage('servoy.foundSet.error.noCreateAccess'), null, 'error', i18n.getI18NMessage('lbl.ok'));
+			globals.core_showWcGenericDialog( i18n.getI18NMessage('lbl.error'), i18n.getI18NMessage('servoy.foundSet.error.noCreateAccess'), null, 'error', i18n.getI18NMessage('lbl.ok'), null, null, null);
 	}
 	
 }
 
 /**
- * @properties={typeid:24,uuid:"be62ff44-5a02-496a-8937-43debbdcaa64"}
  * @AllowToRunInFind
+ * 
+ * @param {Object} arg0 // TODO generated, please specify type and doc
+ * @param {Object} arg1 // TODO generated, please specify type and doc
+ * @param {Object} arg2 // TODO generated, please specify type and doc
+ *
+ * @properties={typeid:24,uuid:"946480AD-1F50-4268-88EC-E1F77AE0EE17"}
  */
-function ShowDialogProject()
+function ShowDialogProject(arg0, arg1, arg2)
 {
 	/*
 	PURPOSE: Shows the dialog for editing/adding a project
@@ -1515,9 +1571,9 @@ function ShowDialogProject()
 	MODIFIED: NONE
 	********************************************/
 	
-	var title = arguments[0]
-	var projectID = arguments[1]
-	var isNew = arguments[2]
+	var title = arg0;
+	var projectID = arg1;
+	var isNew = arg2;
 	
 	if(isNew) {
 		globals.flagIsNew = 1
@@ -1546,10 +1602,15 @@ function ShowDialogProject()
 }
 
 /**
- * @properties={typeid:24,uuid:"09c48f66-efbc-4043-88f7-862c16a17d06"}
  * @AllowToRunInFind
+ * 
+ * @param {Object} arg0 // TODO generated, please specify type and doc
+ * @param {Object} arg1 // TODO generated, please specify type and doc
+ * @param {Object} arg2 // TODO generated, please specify type and doc
+ *
+ * @properties={typeid:24,uuid:"A1F304DD-5188-4258-96D4-B20A6096C15E"}
  */
-function ShowDialogTask()
+function ShowDialogTask(arg0, arg1, arg2)
 {
 	/*
 	PURPOSE: Shows the dialog for editing/adding a project
@@ -1563,9 +1624,9 @@ function ShowDialogTask()
 	MODIFIED: NONE
 	********************************************/
 	
-	var title = arguments[0]
-	var taskID = arguments[1]
-	var isNew = arguments[2]
+	var title = arg0;
+	var taskID = arg1;
+	var isNew = arg2;
 	
 	if(isNew) {
 		globals.flagIsNew = 1
@@ -1594,10 +1655,15 @@ function ShowDialogTask()
 }
 
 /**
- * @properties={typeid:24,uuid:"afa2b88a-eae9-4d49-9a48-07df33f53151"}
  * @AllowToRunInFind
+ * 
+ * @param {Object} arg0 // TODO generated, please specify type and doc
+ * @param {Object} arg1 // TODO generated, please specify type and doc
+ * @param {Object} arg2 // TODO generated, please specify type and doc
+ *
+ * @properties={typeid:24,uuid:"AEC76022-96E7-4BA5-940E-E2CC019BB742"}
  */
-function ShowDialogVersion()
+function ShowDialogVersion(arg0, arg1, arg2)
 {
 	/*
 	PURPOSE: Shows the dialog for editing profile/adding a version
@@ -1611,9 +1677,9 @@ function ShowDialogVersion()
 	MODIFIED: NONE
 	********************************************/
 	
-	var title = arguments[0];
-	var versID = arguments[1];
-	var isNew = arguments[2];
+	var title = arg0;
+	var versID = arg1;
+	var isNew = arg2;
 	
 	if(isNew) {
 		globals.flagIsNew = 1;
@@ -1757,9 +1823,13 @@ function SolutionOpen()
 }
 
 /**
- * @properties={typeid:24,uuid:"524cbdd9-11dd-4e00-ba1f-fd02513bd223"}
+ * @param {Object} arg0 // TODO generated, please specify type and doc
+ * @param {Object} arg1 // TODO generated, please specify type and doc
+ * @param {Object} arg2 // TODO generated, please specify type and doc
+ *
+ * @properties={typeid:24,uuid:"322548D0-E441-4C1B-A26A-E4DAF1CDDE9E"}
  */
-function SortColumns()
+function SortColumns(arg0, arg1, arg2)
 {
 	/*
 	PURPOSE: Master sorting routine show the graphics as well
@@ -1773,9 +1843,9 @@ function SortColumns()
 	SPECIAL THANKS to David Workman of http://www.servoymagazine.com
 	********************************************/
 	
-	var sortImages = arguments[0];
-	var formName = arguments[1];
-	var columnNum = arguments[2];
+	var sortImages = arg0;
+	var formName = arg1;
+	var columnNum = arg2;
 	
 	var displayImages = new Array();
 	var tempString = new Array();
@@ -1815,16 +1885,20 @@ function SortColumns()
 }
 
 /**
- * @properties={typeid:24,uuid:"63fe8531-1a09-4de8-850d-3752e44eb900"}
+ * @param {Object} arg0 // TODO generated, please specify type and doc
+ *
+ * @properties={typeid:24,uuid:"39A474C7-0D57-46D8-A1D8-799451564FF1"}
  */
-function ValidateUserName()
+function ValidateUserName(arg0)
 {
-	var userName = arguments[0]
+	var userName = arg0;
 	
 	var query = 'SELECT login_name FROM tbl_people WHERE login_name = ?'
 	var args = new Array();
-	args[0] = userName
-	var dataset = databaseManager.getDataSetByQuery(currentcontroller.getServerName(), query, args, 1);
+	args[0] = userName;
+	getDataSource().split('/');
+	var ds = controller.getDataSource().split('/');
+	var dataset = databaseManager.getDataSetByQuery(ds[1], query, args, 1);
 	
 	return dataset.getMaxRowIndex() == 0
 }

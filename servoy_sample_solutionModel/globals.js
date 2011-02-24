@@ -27,12 +27,15 @@ var search = '';
 var login_user_uid = null;
 
 /**
- * @properties={typeid:24,uuid:"2cb5c5ac-5a16-45cb-9a8a-862745d9a0b6"}
  * @AllowToRunInFind
+ * 
+ * @param {Number} arg0 // TODO generated, please specify type and doc
+ *
+ * @properties={typeid:24,uuid:"F3E0506D-1AE9-44F3-88A5-4D6F1E905A14"}
  */
-function selectEntityNode()
+function selectEntityNode(arg0)
 {
-	var e_id = arguments[0];
+	var e_id = arg0;
 
 	var entity_rec = null;
 	var fs = databaseManager.getFoundSet('user_data', 'entities')
@@ -207,8 +210,9 @@ function gotoDetail()
 	var fs = databaseManager.getFoundSet('user_data', 'entities')
 	if (fs.find())
 	{
-		var search_entity_rec = fs.getRecord(1)
-		search_entity_rec.table_name = currentcontroller.getTableName()
+		var search_entity_rec = fs.getRecord(1);
+		var ds = controller.getDataSource().split('/');
+		search_entity_rec.table_name = ds[2];
 		var count = fs.search();
 		if (count > 0) entity_rec = fs.getRecord(1)
 	}
@@ -249,8 +253,9 @@ function changedElements(formName,changedElementsArray)
 	var fs = databaseManager.getFoundSet('user_data', 'entities')
 	if (fs.find())
 	{
-		var search_entity_rec = fs.getRecord(1)
-		search_entity_rec.table_name = forms[formName].controller.getTableName();
+		var search_entity_rec = fs.getRecord(1);
+		var ds = forms[formName].controller.getDataSource().split('/');
+		search_entity_rec.table_name = ds[2];
 		count = fs.search();
 		if (count > 0) entity_rec = fs.getRecord(1)
 	}

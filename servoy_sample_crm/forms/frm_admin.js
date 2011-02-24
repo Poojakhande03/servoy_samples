@@ -6,7 +6,7 @@ function btn_performSQL()
 	if(! globals.core_sql_sqlQuery)
 	{
 		//no query entered
-		globals.showErrorDialog('No SQL query entered.',null,'OK')
+		globals.showErrorDialog('No SQL query entered.',null,'OK', null, null, null);
 		return
 	}
 
@@ -26,7 +26,7 @@ function btn_performSQL()
 
 	if(err != null && err.getMessage() != undefined)
 	{
-		globals.showErrorDialog('An error occurred with your query:\n\n' + err.getMessage(),null,'OK')
+		globals.showErrorDialog('An error occurred with your query:\n\n' + err.getMessage(),null,'OK', null, null, null)
 		return
 	}
 

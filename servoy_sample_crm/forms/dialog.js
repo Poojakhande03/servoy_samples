@@ -10,7 +10,7 @@ function btn_3rdBtn()
 	{
 		if(globals.isEditing()) globals.saveEdits()
 	}
-	application.closeFormDialog("Dialog")
+	application.getWindow('Dialog').close();
 	globals.enableBgElements();
 	
 	if(globals.dialog_performMethod)
@@ -33,7 +33,7 @@ function btn_cancel()
 	{
 		if(globals.isEditing()) globals.cancelEditing()
 	}
-	application.closeFormDialog("Dialog");
+	application.getWindow('Dialog').close();
 	globals.enableBgElements();
 }
 
@@ -52,6 +52,6 @@ function btn_ok()
 	
 	databaseManager.saveData();
 	
-	application.closeFormDialog("Dialog")
+	application.getWindow('Dialog').close();
 	globals.enableBgElements();
 }

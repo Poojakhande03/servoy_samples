@@ -48,7 +48,7 @@ function btn_goForm()
  */
 function btn_showDialog()
 {
-	globals.showDialog('Bob Tester')
+	globals.showDialog('Bob Tester', null, null, null, null, null, null, null, null, null);
 }
 
 /**
@@ -60,7 +60,7 @@ function btn_showNewErrorDialog()
 	
 	//globals.showIconDialog2('Error', 'There has been a TERRIBLE error!!','error');
 	
-	globals.core_showWcGenericDialog('Error', 'There has been a TERRIBLE error!','error', 'Cancel', 'OK');
+	globals.core_showWcGenericDialog('Error', 'There has been a TERRIBLE error!','error', 'Cancel', 'OK', null, null, null);
 }
 
 /**

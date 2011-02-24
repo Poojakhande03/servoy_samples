@@ -28,7 +28,8 @@ function OnShow()
 	
 	//Get a dataset based on query
 	var maxReturnedRows = 1000;//useful to limit number of rows
-	var dataset = databaseManager.getDataSetByQuery(controller.getServerName(), query, args, maxReturnedRows);
+	var ds = controller.getDataSource().split('/');
+	var dataset = databaseManager.getDataSetByQuery(ds[1], query, args, maxReturnedRows);
 	
 	forms.lst_project.controller.loadRecords(dataset)
 	

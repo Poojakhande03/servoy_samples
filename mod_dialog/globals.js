@@ -1,25 +1,35 @@
 /**
+ * @type Number
+ *
  * @properties={typeid:35,uuid:"a2b80e73-92b9-476b-9dd4-db60a8b78d09",variableType:4}
  */
 var mod_dialog_appTypeInt;
 
 /**
- * @properties={typeid:35,uuid:"67a0346c-dca8-4dd2-83c2-7a3018cf48c8"}
+ * @type String
+ *
+ * @properties={typeid:35,uuid:"67a0346c-dca8-4dd2-83c2-7a3018cf48c8",variableType:12}
  */
 var mod_dialog_appTypeWords = '';
 
 /**
- * @properties={typeid:35,uuid:"369cdb3c-039c-463a-ab81-631c6cc5758d"}
+ * @type String
+ *
+ * @properties={typeid:35,uuid:"369cdb3c-039c-463a-ab81-631c6cc5758d",variableType:12}
  */
 var mod_dialog_buttonPressed = '';
 
 /**
- * @properties={typeid:35,uuid:"3634ad5d-0ac4-4e67-8208-10f7107c1307"}
+ * @type String
+ *
+ * @properties={typeid:35,uuid:"3634ad5d-0ac4-4e67-8208-10f7107c1307",variableType:12}
  */
 var mod_dialog_methodToExecute = '';
 
 /**
- * @properties={typeid:35,uuid:"6762bb7e-aa00-4d41-809c-dd8cd5a4bbe7"}
+ * @type String
+ *
+ * @properties={typeid:35,uuid:"6762bb7e-aa00-4d41-809c-dd8cd5a4bbe7",variableType:12}
  */
 var mod_dialog_msg = '';
 
@@ -53,18 +63,27 @@ function core_setupAppType()
 }
 
 /**
- * @properties={typeid:24,uuid:"cbf93c2f-7fdf-43c0-84bb-ff43a2b6cd45"}
+ * @param {Object} arg0 // TODO generated, please specify type and doc
+ * @param {Object} arg1 // TODO generated, please specify type and doc
+ * @param {Object} arg2 // TODO generated, please specify type and doc
+ * @param {Object} arg3 // TODO generated, please specify type and doc
+ * @param {Object} arg4 // TODO generated, please specify type and doc
+ * @param {Object} arg5 // TODO generated, please specify type and doc
+ * @param {Object} arg6 // TODO generated, please specify type and doc
+ * @param {Object} arg7 // TODO generated, please specify type and doc
+ *
+ * @properties={typeid:24,uuid:"AF25FA3C-400B-4FB2-9E25-C01E35A6F892"}
  */
-function core_showWcGenericDialog()
+function core_showWcGenericDialog(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7)
 {
-	var title = arguments[0]
-	var msg = arguments[1]
-	var mthd = arguments[2] //method to execute after the dialog closes
-	var icon = arguments[3] //can be 'error, info, question, warning, forbidden'
-	var btn1 = arguments[4] //btn1
-	var btn2 = arguments[5] //btn2
-	var btn3 = arguments[6] //btn3
-	var btn4 = arguments[7] //btn4
+	var title = arg0;
+	var msg = arg1;
+	var mthd = arg2; //method to execute after the dialog closes
+	var icon = arg3; //can be 'error, info, question, warning, forbidden'
+	var btn1 = arg4; //btn1
+	var btn2 = arg5; //btn2
+	var btn3 = arg6; //btn3
+	var btn4 = arg7; //btn4
 
 	if(!btn1) btn1 = 'OK'
 	if(!btn2) btn2 = null
@@ -93,9 +112,8 @@ function core_showWcGenericDialog()
 		//setup buttons
 		forms.mod_dialog_frm_generic.setup_buttons(btn1, btn2, btn3, btn4)
 		
-		if(!title || title == undefined) title = ''
-		if(!msg || msg == undefined) msg = ''
-		
+		if(!title || title == undefined) title = '';
+		if(!msg || msg == undefined) msg = '';
 		
 		forms.mod_dialog_frm_generic.hide_allIcons();
 		

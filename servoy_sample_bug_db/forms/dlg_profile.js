@@ -72,7 +72,7 @@ function evt_loginName_onDataChange(arg0, arg1)
 	if(!isValidName)
 	{
 		login_name = prevValue
-		globals.core_showWcGenericDialog( i18n.getI18NMessage('lbl.error'), "That username is already in use.  Please try another.", null, 'error', i18n.getI18NMessage('lbl.ok'));
+		globals.core_showWcGenericDialog( i18n.getI18NMessage('lbl.error'), "That username is already in use.  Please try another.", null, 'error', i18n.getI18NMessage('lbl.ok'), null, null, null);
 	}
 
 	return true

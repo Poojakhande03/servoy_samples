@@ -1,5 +1,6 @@
 /**
  * @properties={typeid:24,uuid:"5dbad6e3-a04e-4092-9826-efd68cc774b9"}
+ * @AllowToRunInFind
  */
 function LoadPeople()
 {
@@ -23,7 +24,8 @@ function LoadPeople()
 		var questionMarks = globals.ReturnSqlWhereQuestionMarks(globals.currUserCompanyArray);
 		var query = 'SELECT a.ixpeople FROM tbl_people a, tbl_people_company b ' +
 					'WHERE a.ixpeople = b.ixpeople AND b.ixcompany IN (' + questionMarks + ')'
-		var dataset = databaseManager.getDataSetByQuery(controller.getServerName(), query, args, maxReturnedRows);
+		var ds = controller.getDataSource().split('/');
+		var dataset = databaseManager.getDataSetByQuery(ds[1], query, args, maxReturnedRows);
 		
 		forms.lst_people.controller.loadRecords(dataset)
 	

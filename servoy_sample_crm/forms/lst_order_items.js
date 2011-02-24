@@ -13,7 +13,7 @@ function btn_newOrderItem()
 	forms.dlg_orderItem.order_id = forms.frm_orders.order_id
 
 	//show the "fake" dialog
-	globals.showDialog('Edit Order Item', 3)
+	globals.showDialog('Edit Order Item', 3, null, null, null, null, null, null, null, null);
 }
 
 /**
@@ -33,13 +33,13 @@ function btn_showProductDetails()
 		globals.dialog_performMethod = 'forms.lst_order_items.sub_deleteOrderItem()'
 
 		//show the "fake" dialog
-		globals.showDialog('Edit Order Item', 3, null, null, true, 'Delete Item')
+		globals.showDialog('Edit Order Item', 3, null, null, true, 'Delete Item', null, null, null, null);
 
 	}
 	else if(application.getApplicationType() == 5) //web client
 	{
 		//show a dialog to tell them what's going on
-		globals.showForbiddenDialog('You can\'t edit order items without editing the entire order.\n\nClick the "Edit" button in the upper right to edit this order.', null, 'OK')
+		globals.showForbiddenDialog('You can\'t edit order items without editing the entire order.\n\nClick the "Edit" button in the upper right to edit this order.', null, 'OK', null, null, null)
 	}
 }
 

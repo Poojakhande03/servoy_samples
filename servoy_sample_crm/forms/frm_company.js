@@ -108,7 +108,7 @@ function btn_tabTop5()
 		else
 		{
 			//show dialog
-			globals.showInfoDialog('There are no orders for this company.')
+			globals.showInfoDialog('There are no orders for this company.', null, null, null, null, null)
 			btn_tabOrders();
 		}
 	}
@@ -278,7 +278,7 @@ function rpt_company_list()
 
 	forms.rpt_company_list.controller.sort('company_name asc')
 
-	globals.printRoutine('rpt_company_list')
+	globals.printRoutine('rpt_company_list', null)
 }
 
 /**
@@ -339,7 +339,7 @@ function validate_beforeDelete()
 		{
 			//show dialog and return 1
 			//show the tabpanel "dialog"
-			globals.showErrorDialog("You can't delete a company that has orders.\n\nDelete all the orders first.", 'forms.frm_company.sub_showCompanyOrders()','OK');
+			globals.showErrorDialog("You can't delete a company that has orders.\n\nDelete all the orders first.", 'forms.frm_company.sub_showCompanyOrders()','OK', null, null, null);
 			return 1
 		}
 
@@ -347,7 +347,7 @@ function validate_beforeDelete()
 		{
 			//show dialog
 			//show the tabpanel "dialog"
-			globals.showErrorDialog("You can't delete a company that has contacts related to it.\n\nDelete all the related contacts first.", 'forms.frm_company.sub_showCompanyContacts()','OK');
+			globals.showErrorDialog("You can't delete a company that has contacts related to it.\n\nDelete all the related contacts first.", 'forms.frm_company.sub_showCompanyContacts()','OK', null, null, null);
 			return 1
 		}
 	}
