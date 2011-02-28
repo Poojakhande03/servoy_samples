@@ -9,12 +9,16 @@ var callbackFunction = null;
 var changedElements = null;
 
 /**
+ * @type Number
+ *
  * @properties={typeid:35,uuid:"186CA2D8-D560-4CF4-98F4-49AE59A895FE",variableType:4}
  */
 var newComponentsCounter = 0;
 
 /**
- * @properties={typeid:35,uuid:"DFD5679D-501D-4F45-A0DA-3BE220EAE2AF"}
+ * @type String
+ *
+ * @properties={typeid:35,uuid:"DFD5679D-501D-4F45-A0DA-3BE220EAE2AF",variableType:12}
  */
 var selectedDesignFormName = null;
 

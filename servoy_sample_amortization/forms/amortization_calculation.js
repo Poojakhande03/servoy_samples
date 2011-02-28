@@ -7,7 +7,7 @@ function updateAmortizationSchedule()
 	// Get a new amortization calculation.
 	var c = plugins.amortization.newCalculation();
 
-	plugins.agent.show();
+	plugins.agent.setVisible(true);
 
 	// Sanity checks
 	if (!(globals.loan_amount > 0))

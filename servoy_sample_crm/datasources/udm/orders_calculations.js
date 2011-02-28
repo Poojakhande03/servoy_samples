@@ -112,7 +112,7 @@ else
 function order_month_year_display()
 {
 var monthNames = new Array('January','February','March','April','May','June','July','August','September','October','November','December')
-var year = order_date.getYear() + 1900
+var year = order_date.getFullYear();
 
 return monthNames[order_date.getMonth()] + ' ' + year
 }

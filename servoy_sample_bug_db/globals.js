@@ -1896,7 +1896,6 @@ function ValidateUserName(arg0)
 	var query = 'SELECT login_name FROM tbl_people WHERE login_name = ?'
 	var args = new Array();
 	args[0] = userName;
-	getDataSource().split('/');
 	var ds = controller.getDataSource().split('/');
 	var dataset = databaseManager.getDataSetByQuery(ds[1], query, args, 1);
 	

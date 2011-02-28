@@ -1,20 +1,28 @@
 /**
- * @properties={typeid:35,uuid:"76cde0f3-5f9e-4718-b00c-200fd701a41c"}
+ * @type String
+ *
+ * @properties={typeid:35,uuid:"76cde0f3-5f9e-4718-b00c-200fd701a41c",variableType:12}
  */
 var age = '';
 
 /**
- * @properties={typeid:35,uuid:"871459f0-4ef9-4f3b-aeb2-7d101483cf45"}
+ * @type String
+ *
+ * @properties={typeid:35,uuid:"871459f0-4ef9-4f3b-aeb2-7d101483cf45",variableType:12}
  */
 var name = '';
 
 /**
- * @properties={typeid:35,uuid:"5f25fb2a-028b-4194-b828-8435a2e781f7"}
+ * @type String
+ *
+ * @properties={typeid:35,uuid:"5f25fb2a-028b-4194-b828-8435a2e781f7",variableType:12}
  */
 var note = '';
 
 /**
- * @properties={typeid:35,uuid:"b49587c9-2711-4b73-914c-f54e6085a1b4"}
+ * @type String
+ *
+ * @properties={typeid:35,uuid:"b49587c9-2711-4b73-914c-f54e6085a1b4",variableType:12}
  */
 var profession = '';
 
@@ -42,6 +50,7 @@ function getRowForId(arg0)
 function initTreeview()
 {
 	elements.treeview.setDataSet(globals.createDataSet());
+	
 	//apply css style
 	elements.treeview.setStyleSheet(globals.myStyle);
 	

@@ -3,7 +3,8 @@
  */
 function btn_addTemplate()
 {
-	var fname = application.showFileOpenDialog();
+	application.getWindow()
+	var fname = plugins.file.showFileOpenDialog();
 	if(fname)
 	{
 		var filedata = plugins.file.readFile(fname);

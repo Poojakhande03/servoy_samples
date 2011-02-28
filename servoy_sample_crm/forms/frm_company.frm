@@ -1,5 +1,6 @@
 borderType:"EmptyBorder,0,0,0,0",
 dataSource:"db:/udm/companies",
+defaultPageFormat:"1;936.0;792.0;72.0;72.0;792.0;648.0;",
 extendsFormID:"FE1D302C-1FBE-42D6-A882-48D180403532",
 items:[
 {
