@@ -1755,9 +1755,11 @@ MODIFIED: NONE
 }
 
 /**
- * @properties={typeid:24,uuid:"10aa7c8f-6f99-4741-b0e7-131c1068c488"}
+ * @param {Object} arg0 // TODO generated, please specify type and doc
+ *
+ * @properties={typeid:24,uuid:"C8ADF899-8A6A-4F37-8C06-D558378F540D"}
  */
-function SolutionOnError()
+function SolutionOnError(arg0)
 {
 	/*
 	PURPOSE: This method runs when the solution is opened
@@ -1770,14 +1772,17 @@ function SolutionOnError()
 	********************************************/
 	
 	//this sample script should be attached to onError method handler in the solution settings
-	var e = arguments[0];
-	application.output("Exception Object: "+e)
-	application.output("MSG: "+e.getMessage())
-	if (e.isServoyException)
+	var e = arg0;
+	/** @type ServoyException */
+    var ex = e;
+	application.output("MSG: "+ex.getMessage())
+	if (ex.isServoyException)
 	{
+	
+	application.output("Exception Object: "+ex)
 		application.output("is a ServoyException")
-		application.output("Errorcode: "+e.getErrorCode())
-	  if (e.getErrorCode() == ServoyException.SAVE_FAILED)
+		application.output("Errorcode: "+ex.getErrorCode())
+	  if (ex.getErrorCode() == ServoyException.SAVE_FAILED)
 	  {
 		  plugins.dialogs.showErrorDialog( "Error",  "It seems you did not fill in a required field", 'OK');
 		  

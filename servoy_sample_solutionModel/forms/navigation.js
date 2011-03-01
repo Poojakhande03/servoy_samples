@@ -47,12 +47,12 @@ function initTree()
 {
 	//Create a binding object for a database table used to set data bindings for nodes
 	var binding = elements.treeview.createBinding('user_data', 'datasources');
-	binding.setMethodToCallOnClick(selectDatasourceNode, 'datasource_id')
-	binding.setTextDataprovider('server_name')
-	binding.setNRelationDataprovider('child_relation_name')
+	binding.setCallBackInfo(selectDatasourceNode, 'datasource_id');
+	binding.setTextDataprovider('server_name');
+	binding.setNRelationDataprovider('child_relation_name');
 	binding = elements.treeview.createBinding('user_data', 'entities');
-	binding.setMethodToCallOnClick(globals.selectEntityNode, 'entity_id')
-	binding.setTextDataprovider('table_name')
+	binding.setCallBackInfo(globals.selectEntityNode, 'entity_id');
+	binding.setTextDataprovider('table_name');
 	fillTree();
 }
 

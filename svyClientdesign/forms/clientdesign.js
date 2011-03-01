@@ -259,6 +259,7 @@ function onDrop( event )
 	// walk through all the dropped elements and copy there current location in the solution model elements.
 	for (var index = 0; index < eventElements.length; index++)
 	{
+		/** @type BaseComponent */ 
 		var droppedRuntimeElement = eventElements[index];
 		
 		var X = droppedRuntimeElement.getLocationX();

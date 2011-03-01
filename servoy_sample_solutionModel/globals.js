@@ -281,7 +281,9 @@ function changedElements(formName,changedElementsArray)
 						if (form.getComponent(comp.getName()) == null)
 						{
 							//is deleted and found new/modified record
-							element_rec.deleteRecord();
+//							element_rec.deleteRecord();
+							element_rec.foundset.deleteRecord();
+							
 							continue;
 						}
 					}

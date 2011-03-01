@@ -56,7 +56,7 @@ function btn_login_logOut() {
 
 		//send a "logged out" message to the person they are chatting with
 		var packet = plugins.udp.createNewPacket()
-		msg = '<font color="#990000">-- ' + globals.localUserName + ' logged out -- </font>'
+		var msg = '<font color="#990000">-- ' + globals.localUserName + ' logged out -- </font>'
 		packet.writeUTF(msg)
 		plugins.udp.sendPacket(globals.toIP,packet)
 		elements.fld_login.enabled = true

@@ -16,7 +16,7 @@ function initTreeView()
 		binding.setTextDataprovider('label_text');
 
 		//set the method to call and dataprovider value to pass when node clicked
-		binding.setMethodToCallOnClick(globals.node_selected,'node_id');
+		binding.setCallBackInfo(globals.node_selected,'node_id');
 
 		refreshTreeView();
 		globals.didTreeViewInit = 1
