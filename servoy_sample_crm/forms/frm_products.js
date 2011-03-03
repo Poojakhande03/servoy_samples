@@ -6,6 +6,7 @@ function btn_addImage()
 	databaseManager.setAutoSave(false);
 	
 	//Shows a file open dialog, by default files and folders can be selected
+	/** @type JSFile */ 
 	var file = plugins.file.showFileOpenDialog(0,globals.default_image_directory);
 	
 	//if they didn't "cancel" this dialog

@@ -1,5 +1,7 @@
 /**
- * @properties={typeid:35,uuid:"0765D33B-66C4-42E1-AD76-3336B013307B",variableType:-4}
+ * @type Object
+ *
+ * @properties={typeid:35,uuid:"366B6F4D-8A95-424E-93AC-12CCD4E5E298",variableType:-4}
  */
 var callback;
 

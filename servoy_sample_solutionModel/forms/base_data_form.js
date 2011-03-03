@@ -30,6 +30,7 @@ function loadAllRecords()
 function onShow()
 {
 	var entity_rec = null;
+	/** @type JSFoundset<db:/user_data/entities> */
 	var fs = databaseManager.getFoundSet('user_data', 'entities')
 	if (fs.find())
 	{

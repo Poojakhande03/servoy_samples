@@ -23,7 +23,7 @@ var newComponentsCounter = 0;
 var selectedDesignFormName = null;
 
 /**
- * @properties={typeid:35,uuid:"02B4793C-3C18-411F-A328-06FDDD471FEC",variableType:-4}
+ * @properties={typeid:35,uuid:"EC163553-E996-46BF-99BD-C5B55D481E10",variableType:-4}
  */
 var eventElements = null;
 
@@ -348,7 +348,14 @@ function exchangeFieldPositions( smForm, smField1, smField2)
 }
 
 /**
- * @properties={typeid:24,uuid:"CEADA319-A140-4B7C-9BFF-4D5356D041DC"}
+ * @param {JSForm} smForm // TODO generated, please specify type and doc
+ * @param {JSComponent} ignoreComponent // TODO generated, please specify type and doc
+ * @param {Number} x // TODO generated, please specify type and doc
+ * @param {Number} y // TODO generated, please specify type and doc
+ * @param {Number} w // TODO generated, please specify type and doc
+ * @param {Number} h // TODO generated, please specify type and doc
+ *
+ * @properties={typeid:24,uuid:"00B32936-992A-4E4D-BDBB-E74C48A8F255"}
  */
 function getIntersectsFields( smForm,ignoreComponent, x, y, w, h)
 {
@@ -400,11 +407,12 @@ function onResize( event )
 	// take the form out of the solution model
 	var form = solutionModel.getForm ( selectedDesignFormName );
 	// event.data is an array of the resized elements.
+	
 	eventElements = event.data;
-
 	// walk through all the resized elements and copy there current width and height in the solution model.
 	for (var index = 0; index < eventElements.length; index++)
 	{
+		/** @type BaseComponent */ 
 		var element = eventElements[index];
 		if ( element.getName() != null )
 		{
@@ -430,6 +438,7 @@ function onResize( event )
 function deleteElements(event) 
 {
 	var form = solutionModel.getForm ( selectedDesignFormName );
+	
 	if (eventElements != null)
 	{
 		for (var index = 0; index < eventElements.length; index++)

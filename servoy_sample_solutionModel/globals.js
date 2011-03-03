@@ -83,7 +83,11 @@ function selectEntityNode(arg0)
 }
 
 /**
- * @properties={typeid:24,uuid:"cb254c25-3eea-4523-bc30-c4b931d0c1dd"}
+ * @param {JSRecord} entity_rec // TODO generated, please specify type and doc
+ * @param {Object} fname // TODO generated, please specify type and doc
+ * @param {Object} vtype // TODO generated, please specify type and doc
+ *
+ * @properties={typeid:24,uuid:"F7FD68DC-4CF4-486F-A908-1DFE9DFB1327"}
  */
 function createForm(entity_rec,fname,vtype)
 {
@@ -250,6 +254,7 @@ function changedElements(formName,changedElementsArray)
 {
 	var entity_rec = null;
 	var count;
+	/** @type JSFoundset<db:/user_data/entities> */
 	var fs = databaseManager.getFoundSet('user_data', 'entities')
 	if (fs.find())
 	{

@@ -41,8 +41,8 @@ function BtnOk()
 	}
 	
 	//update the modified of the document
-	dt_modified = new Date()
-	ixmodifiedperson = globals.currUserID
+	dt_modified = new Date();
+	ixmodifiedperson = globals.currUserID;
 	
 	globals.DialogCloseOk('version');
 }

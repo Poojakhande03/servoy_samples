@@ -1776,7 +1776,7 @@ function SolutionOnError(arg0)
 	/** @type ServoyException */
     var ex = e;
 	application.output("MSG: "+ex.getMessage())
-	if (ex.isServoyException)
+	if (ex instanceof ServoyException)
 	{
 	
 	application.output("Exception Object: "+ex)
@@ -1792,7 +1792,7 @@ function SolutionOnError(arg0)
 		  {
 			  var record = array[i];
 			  application.output(record.exception);
-			  if (record.exception.isDataException)
+			  if (record.exception instanceof DataException)
 			  {
 				  application.output("SQL: "+record.exception.getSQL())
 				  application.output("SQLState: "+record.exception.getSQLState())
