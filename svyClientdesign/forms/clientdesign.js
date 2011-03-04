@@ -16,14 +16,13 @@ var changedElements = null;
 var newComponentsCounter = 0;
 
 /**
- * @type String
- *
- * @properties={typeid:35,uuid:"DFD5679D-501D-4F45-A0DA-3BE220EAE2AF",variableType:12}
+ * @properties={typeid:35,uuid:"0EFA5A50-E787-4B69-B435-4CB08028C25D",variableType:-4}
  */
 var selectedDesignFormName = null;
 
 /**
- * @properties={typeid:35,uuid:"EC163553-E996-46BF-99BD-C5B55D481E10",variableType:-4}
+ * @type Array
+ * @properties={typeid:35,uuid:"8E71FBEB-8F43-4A6B-BC19-249089008FDB",variableType:-4}
  */
 var eventElements = null;
 
@@ -443,6 +442,8 @@ function deleteElements(event)
 	{
 		for (var index = 0; index < eventElements.length; index++)
 		{
+			
+			/** @type BaseComponent */
 			var element = eventElements[index];
 			if ( element.getName() != null )
 			{
