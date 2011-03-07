@@ -36,8 +36,9 @@ function onShow()
 	}
 
 	//	filter
-	var ids = databaseManager.getFoundSetDataProviderAsArray(filter, 'ixpeople');
-	controller.loadRecords(databaseManager.convertToDataSet(ids));
+//	var ids = databaseManager.getFoundSetDataProviderAsArray(filter, 'ixpeople');
+//	databaseManager.convertToDataSet(filter, 'ixpeople')
+	controller.loadRecords(databaseManager.convertToDataSet(filter, 'ixpeople'));
 	controller.invertRecords();
 	databaseManager.recalculate(foundset);
 }
@@ -69,6 +70,7 @@ function toggleSelection(arg0, arg1)
  * Perform the element default action.
  *
  * @param {JSEvent} event the event that triggered the action
+ * @param {Object} arg1
  *
  * @properties={typeid:24,uuid:"E7095D80-46F2-4EEE-BF23-87E3A33EB701"}
  */

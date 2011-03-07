@@ -28,12 +28,12 @@ function btn_toggleList()
 	if(lh > 23)
 	{
 		//expanded - so make smaller
-		elements.btn_triangle.setImageURL('media:///arrow_closed.gif')
+//		elements.btn_triangle.setImageURL('media:///arrow_closed.gif')
 	}
 	else
 	{
 		//not expanded - so make bigger
-		elements.btn_triangle.setImageURL('media:///arrow_open.gif')
+//		elements.btn_triangle.setImageURL('media:///arrow_open.gif')
 	}
 	
 	forms.frm_nav_main.sub_toggleRecList();

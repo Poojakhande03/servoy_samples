@@ -59,6 +59,7 @@ function GoTask()
  * Perform the element default action.
  *
  * @param {JSEvent} event the event that triggered the action
+ * @param {Object} arg1
  *
  * @properties={typeid:24,uuid:"FA59FF33-6760-4D20-A8B3-41E1D0AE8C32"}
  */

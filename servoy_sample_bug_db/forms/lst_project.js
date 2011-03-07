@@ -28,6 +28,7 @@ function BtnGoProject()
  * Perform the element default action.
  *
  * @param {JSEvent} event the event that triggered the action
+ * @param {Object} arg1
  *
  * @properties={typeid:24,uuid:"A3BA1096-2191-4CB3-B674-AF811200DC35"}
  */

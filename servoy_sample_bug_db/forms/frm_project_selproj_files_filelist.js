@@ -51,6 +51,7 @@ function BtnGoFile(arg0)
  * Perform the element default action.
  *
  * @param {JSEvent} event the event that triggered the action
+ * @param {Object} arg1
  *
  * @properties={typeid:24,uuid:"97D2C1BF-C28B-4040-B3D0-2C665D1D3AD2"}
  */

@@ -40,6 +40,7 @@ function BtnGoPerson(arg0)
  * Perform the element default action.
  *
  * @param {JSEvent} event the event that triggered the action
+ * @param {Object} arg1
  *
  * @properties={typeid:24,uuid:"2E74D546-5A09-46DA-935B-8C9820C9B758"}
  * @AllowToRunInFind

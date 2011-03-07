@@ -114,6 +114,7 @@ function GoDocument()
  * Perform the element default action.
  *
  * @param {JSEvent} event the event that triggered the action
+ * @param {Object} arg1
  *
  * @properties={typeid:24,uuid:"684B4B7A-D78A-4329-A36A-98E5547F6941"}
  */

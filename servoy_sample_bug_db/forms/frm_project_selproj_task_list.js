@@ -40,6 +40,7 @@ function BtnGoTaskDetail()
  * Perform the element default action.
  *
  * @param {JSEvent} event the event that triggered the action
+ * @param {Object} arg1
  *
  * @properties={typeid:24,uuid:"26B5ED0A-59BF-4E21-8946-DD534B459EA7"}
  */

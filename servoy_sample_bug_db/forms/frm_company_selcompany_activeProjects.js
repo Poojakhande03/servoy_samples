@@ -62,7 +62,8 @@ function FilterProjects()
  * Perform the element default action.
  *
  * @param {JSEvent} event the event that triggered the action
- *
+ * @param {Object} arg1
+ * 
  * @properties={typeid:24,uuid:"483C26AB-872C-46EC-A9FB-7A5BA0F2F0A1"}
  */
 function BtnSort(event, arg1) {

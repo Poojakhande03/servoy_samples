@@ -29,7 +29,8 @@ function BtnChooseCompany()
  * Perform the element default action.
  *
  * @param {JSEvent} event the event that triggered the action
- *
+ * @param {Object} arg1
+ * 
  * @properties={typeid:24,uuid:"FC18738A-1064-4BF7-963F-14DB206138E8"}
  */
 function BtnSort(event, arg1) {

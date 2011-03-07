@@ -45,6 +45,7 @@ function GoCompany(arg0)
  * Perform the element default action.
  *
  * @param {JSEvent} event the event that triggered the action
+ * @param {Object} arg1
  *
  * @properties={typeid:24,uuid:"FBF8A0B8-C448-4E28-A2E7-D93843706BA4"}
  */

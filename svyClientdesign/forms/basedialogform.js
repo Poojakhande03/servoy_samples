@@ -31,12 +31,11 @@ function cancelAction(event)
 }
 
 /**
- * @return {Boolean} true if the dialog wasnt canceled.
- * 
  * @properties={typeid:24,uuid:"0DD2B7CF-D859-461D-954A-BBD5ED9B479F"}
  */
 function show(callbackFunction)
 {
 	callback = callbackFunction;
-	controller.show("dialog",true);
+	var w = application.createWindow("dialog", JSWindow.MODAL_DIALOG);
+	controller.show(w);
 }

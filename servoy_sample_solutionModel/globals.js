@@ -179,10 +179,16 @@ function createForm(entity_rec,fname,vtype)
 }
 
 /**
- * @properties={typeid:24,uuid:"F25C48F2-7A32-4E2D-8168-DD55C13F5470"}
+ * // TODO generated, please specify type and doc for the params
+ * @param {Object} element_rec
+ * @param {JSForm} jsform
+ * @param {Object} vtype
+ *
+ * @properties={typeid:24,uuid:"A5FEC540-4EF5-4FA5-AA83-5A154D4AD0E9"}
  */
 function createElement(element_rec,jsform,vtype)
 {
+	var jscomponent;
 	if (element_rec.element_type == 0)
 	{
 		jscomponent = jsform.newField(element_rec.dataprovider_id, element_rec.field_type, element_rec.xlocation, element_rec.ylocation, element_rec.width, element_rec.height)
@@ -214,6 +220,7 @@ function gotoDetail()
 	var fs = databaseManager.getFoundSet('user_data', 'entities')
 	if (fs.find())
 	{
+		/** @type {JSRecord}*/
 		var search_entity_rec = fs.getRecord(1);
 		var ds = controller.getDataSource().split('/');
 		search_entity_rec.table_name = ds[2];
@@ -247,10 +254,14 @@ function showFormInDesignMode(event)
 /**
  * Recieves the changed solutionModel objects from clientdesign which has to be stored persistent in elements table with a user_uid 
  * so when an enduser logsin again his changes from last time are seen
+ * 
+ * @param {Object} formName
+ * @param {Array} changedElementsArray
+ * 
  * @properties={typeid:24,uuid:"A77BF540-9A7F-49AB-889F-25F22B500969"}
  * @AllowToRunInFind
  */
-function changedElements(formName,changedElementsArray)
+function changedElements(formName, changedElementsArray)
 {
 	var entity_rec = null;
 	var count;
@@ -271,6 +282,8 @@ function changedElements(formName,changedElementsArray)
 		fs = entity_rec.entities_to_elements_login_user;
 		for (var index = 0; index < changedElementsArray.length; index++)
 		{
+			
+			/**  @type {BaseComponent}   */
 			var comp = changedElementsArray[index]
 			if ( comp != null )
 			{

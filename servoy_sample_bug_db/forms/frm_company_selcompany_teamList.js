@@ -63,7 +63,7 @@ function onShow()
  * Perform the element default action.
  *
  * @param {JSEvent} event the event that triggered the action
- *
+ * @param {Object} arg1
  * @properties={typeid:24,uuid:"F7DDDF52-6C52-4DBF-AE92-35292918F589"}
  */
 function BtnSort(event, arg1) {

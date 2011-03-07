@@ -28,7 +28,7 @@ function BtnGoProject()
  * Perform the element default action.
  *
  * @param {JSEvent} event the event that triggered the action
- *
+ * @param {Object} arg1
  * @properties={typeid:24,uuid:"EAE2332E-56D8-40FD-BA0D-61AF352B806E"}
  */
 function BtnSort(event, arg1) {

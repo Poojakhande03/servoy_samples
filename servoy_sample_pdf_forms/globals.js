@@ -285,30 +285,33 @@ function setupRecordStatus()
 		}
 
 		globals.record_status += '</html>'
-
+		solutionModel.newCalculation (code, type, datasource)
+		
 		if(cr == 1) //current record 1 - so hide the "previous" button
 		{
-			forms[frm].elements.btn_prev.visible = false
+			
+			forms[frm].elements['btn_prev'].visible = false
 		}
 		else
 		{
-			forms[frm].elements.btn_prev.visible = true
+			forms[frm].elements['btn_prev'].visible = true
 		}
 
 		if(cr == fs || cr == tc) //current is last one - so hide the "next" button
 		{
-			forms[frm].elements.btn_next.visible = false
+			forms[frm].elements['btn_next'].visible = false
 		}
 		else
 		{
-			forms[frm].elements.btn_next.visible = true
+			forms[frm].elements['btn_next'].visible = true
 		}
 	}
 	else
 	{
 		globals.record_status = '<html><b>No Records</b>'
-		forms[frm].elements.btn_next.visible = false
-		forms[frm].elements.btn_prev.visible = false
+			
+		forms[frm].elements['btn_next'].visible = false
+		forms[frm].elements['btn_prev'].visible = false
 	}
 }
 

@@ -206,8 +206,10 @@ function SubNewTenant()
 	else
 	{
 		//add a tenant record
+		/** @type JSFoundset<db:/bug_db/tbl_tenant> */
 		var tenantFS = databaseManager.getFoundSet('bug_db', 'tbl_tenant')
-		tenantFS.clear()
+		tenantFS.clear();
+		/** @type JSRecord */
 		var tenantRec = tenantFS.getRecord(tenantFS.newRecord(true, true))
 		tenantRec.tenant_name = globals.loginTenantName
 		globals.currTenantID = tenantRec.tenant_id
@@ -215,7 +217,9 @@ function SubNewTenant()
 			tenantRec.is_active = 1;
 		
 		//add a company record
+		/** @type JSFoundset<db:/bug_db/tbl_company> */
 		var companyFS = databaseManager.getFoundSet('bug_db', 'tbl_company')
+		/** @type JSRecord */
 		var companyRec = companyFS.getRecord(companyFS.newRecord(true, true))
 		companyFS.clear()
 		companyRec.company_name = globals.loginTenantName
@@ -225,8 +229,10 @@ function SubNewTenant()
 		globals.currCompanyID = companyRec.ixcompany
 		
 		//add a person record
+		/** @type JSFoundset<db:/bug_db/tbl_people> */
 		var personFS = databaseManager.getFoundSet('bug_db', 'tbl_people')
 		personFS.clear()
+		/** @type {JSRecord}  */
 		var personRec = personFS.getRecord(personFS.newRecord(true, true))
 		personRec.login_name = globals.loginUserName
 		personRec.login_pw = globals.loginUserPass
