@@ -283,9 +283,8 @@ function setupRecordStatus()
 			globals.record_status += " - SEARCH TERM: '" + globals.nav_search + "'"
 			globals.nav_search = ''
 		}
-
+		var datasource = forms[frm].foundset.getDataSource(); 
 		globals.record_status += '</html>'
-		solutionModel.newCalculation (code, type, datasource)
 		
 		if(cr == 1) //current record 1 - so hide the "previous" button
 		{

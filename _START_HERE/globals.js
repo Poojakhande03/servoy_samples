@@ -66,7 +66,7 @@ function setupHTML()
 
 		if(forms.frm_info.thumbnail)
 		{
-			var ds = controller.getDataSource().split('/');
+			var ds = currentcontroller.getDataSource().split('/');
 			var ds1 = forms.frm_info.controller.getDataSource().split('/');
 			var src = 'media:///servoy_blobloader?servername=' + ds[1] +'&tablename='+ds1[2] +
 			'&dataprovider=thumbnail&rowid1='+ forms.frm_info.info_id + "&rnd=" + (Math.random() * 100000000).toFixed(0)

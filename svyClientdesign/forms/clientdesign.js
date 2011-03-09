@@ -48,8 +48,6 @@ function loadForms()
  * @param {Object} oldValue old value
  * @param {Object} newValue new value
  *
- * @returns {Boolean} valid value
- *
  * @properties={typeid:24,uuid:"B09C4094-F3D4-4D9A-93E3-E879596029D4"}
  */
 function _showFormInDesign()
@@ -67,7 +65,6 @@ function _showFormInDesign()
 	elements.designTab.addTab ( form );
 	controller.show();
 	form.controller.setDesignMode ( onDrag, onDrop, onSelect, onResize );
-	return;
 }
 
 /**
@@ -174,11 +171,14 @@ function newLabelImpl( label )
 }
 
 /**
- * @properties={typeid:24,uuid:"5D80CE5D-1471-4910-940D-000B530E3269"}
+ * // TODO generated, please specify type and doc for the params
+ * @param {JSForm} form
+ * @param {Object} prefix
+ *
+ * @properties={typeid:24,uuid:"E10B14F9-013C-45D8-9B67-04565A53C54D"}
  */
 function getNewComponentName(form, prefix)
 {
-	
 	var n = prefix + newComponentsCounter++;
 	while ( form.getComponent(n) != null)
 	{
@@ -208,7 +208,9 @@ function newFieldImpl( dataprovider, fieldtype )
 	if ( dataprovider != null && fieldtype != null )
 	{
 		// if a dataprovider is given get the design/solution model form.
+		/** @type {JSForm} */
 		var form = solutionModel.getForm ( selectedDesignFormName );
+		/** @type {JSField} */
 		var field = form.newField ( dataprovider, forms.choosedataprovider.fieldtype, 50, 100, 80, 20 );
 		// give it a name so that you can move/change it later on.
 		field.name = getNewComponentName(form,"field_");
@@ -298,7 +300,12 @@ function onDrop( event )
 }
 
 /**
- * @properties={typeid:24,uuid:"359DB058-D25A-4BD4-BFC4-C05BF18EF40D"}
+ * // TODO generated, please specify type and doc for the params
+ * @param {JSForm} smForm
+ * @param {JSComponent} smField1
+ * @param {JSField} smField2
+ *
+ * @properties={typeid:24,uuid:"91F49D5F-B04C-42E9-A3BA-971EF6451722"}
  */
 function exchangeFieldPositions( smForm, smField1, smField2)
 {

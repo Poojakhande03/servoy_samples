@@ -2,6 +2,10 @@ groups:[
 "Administrators"
 ],
 usergroups:{
-
+Administrators:[
+"D3B98D6B-30C2-4427-89D6-F046D1FEF60A"
+]
 },
-users:[]
+users:[
+{name:"user",password_hash:"7hHLsZBS5AsHqsDKBgwj7g==",user_uid:"D3B98D6B-30C2-4427-89D6-F046D1FEF60A"}
+]

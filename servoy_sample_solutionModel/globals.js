@@ -83,7 +83,7 @@ function selectEntityNode(arg0)
 }
 
 /**
- * @param {JSRecord} entity_rec // TODO generated, please specify type and doc
+ * @param {JSComponent} entity_rec // TODO generated, please specify type and doc
  * @param {Object} fname // TODO generated, please specify type and doc
  * @param {Object} vtype // TODO generated, please specify type and doc
  *
@@ -222,10 +222,13 @@ function gotoDetail()
 	{
 		/** @type {JSRecord}*/
 		var search_entity_rec = fs.getRecord(1);
-		var ds = controller.getDataSource().split('/');
+		var ds = currentcontroller.getDataSource().split('/');
+		
 		search_entity_rec.table_name = ds[2];
 		var count = fs.search();
-		if (count > 0) entity_rec = fs.getRecord(1)
+		if (count > 0) { 
+			/** @type JSRecord*/
+			entity_rec = fs.getRecord(1);}
 	}
 	if (entity_rec != null)
 	{
@@ -282,9 +285,8 @@ function changedElements(formName, changedElementsArray)
 		fs = entity_rec.entities_to_elements_login_user;
 		for (var index = 0; index < changedElementsArray.length; index++)
 		{
-			
-			/**  @type {BaseComponent}   */
-			var comp = changedElementsArray[index]
+			/** @type BaseComponent*/
+			var comp = changedElementsArray[index];
 			if ( comp != null )
 			{
 				if (fs.find())

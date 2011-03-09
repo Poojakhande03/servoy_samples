@@ -24,7 +24,6 @@ function btn_toggleList()
 	//zoom the record list open and closed
 	//make the rec list bigger or smaller
 	var lh = forms.frm_nav_main.elements.tabs_recList.getHeight()
-	
 	if(lh > 23)
 	{
 		//expanded - so make smaller

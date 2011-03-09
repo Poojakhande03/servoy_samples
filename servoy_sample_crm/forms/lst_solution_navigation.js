@@ -7,12 +7,14 @@ function btn_goForm()
 	if (action_method == null)
 	{
 		//incase having old db, fill with correct data
-		var name =item_name.toLocaleLowerCase();
+		if (item_name != null)
+			var name = item_name.toLocaleLowerCase();
 		if (name == 'customers') name = 'company'
 		action_method = name;
 	}
 	
 	forms['frm_'+action_method].controller.show()
+	
 	var tabCount = forms.frm_nav_main.elements.tabs_recList.getMaxTabIndex();
 	for (var index = 1; index <= tabCount; index++) 
 	{
@@ -78,9 +80,11 @@ function nav()
 function setupNav()
 {
 	//get all the rows of the current foundset
-	var dataset = databaseManager.getFoundSetDataProviderAsArray(foundset, 'item_name')
-	var dataset2 = databaseManager.getFoundSetDataProviderAsArray(foundset, 'icon_name')
-	var max = dataset.length
+	/** @type {JSDataSet}*/
+	var dataset = databaseManager.convertToDataSet(foundset, 'item_name');
+	/** @type {JSDataSet}*/
+	var dataset2 = databaseManager.convertToDataSet(foundset, 'icon_name');
+	var max = dataset.getMaxRowIndex();
 	var item = ''
 	var html = '<html><body>'
 

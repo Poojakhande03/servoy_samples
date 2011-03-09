@@ -45,7 +45,7 @@ function cmd_printPreview()
  */
 function cmd_search()
 {
-	forms.frm_nav_main.elements.fld_search.requestFocus(false)
+	forms.frm_nav_main.elements.fld_search.requestFocus(false);
 }
 
 /**

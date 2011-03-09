@@ -83,12 +83,16 @@ function syncronizeWithDB(arg0, arg1, arg2)
 	var fs = foundset.duplicateFoundSet();
 	if (fs.find())
 	{
+		/** @type JSRelationItem */
 		var ds_rec = fs.getRecord(1)
 		ds_rec.datasource_id = datasource_id_to_sync;
+
 		if (fs.search() > 0)
 		{
 			ds_rec = fs.getRecord(1)
-			var servername = ds_rec.server_name;
+			var srv_ar = ds_rec.getDataSource().split('/');
+			globals.gotoDetail(); 
+			var servername = srv_ar[1];
 			var tablenames = databaseManager.getTableNames(servername);
 			for (var tindex = 0; tindex < tablenames.length; tindex++) 
 			{

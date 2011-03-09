@@ -1790,6 +1790,7 @@ function SolutionOnError(arg0)
 		  var array = databaseManager.getFailedRecords()
 		  for( var i = 0 ; i < array.length ; i++ )
 		  {
+			  /** @type JSRecord*/
 			  var record = array[i];
 			  application.output(record.exception);
 			  if (record.exception instanceof DataException)

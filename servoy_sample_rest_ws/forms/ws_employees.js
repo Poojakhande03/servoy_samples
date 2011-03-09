@@ -6,9 +6,9 @@
  * the post body is expected to be an object with firstName and lastName properties:
  * {"firstName":"John","lastName":"Doe"}
  *
- * @param {Object} emp employee object deserialized from http body
+ * @param {JSRecord} emp employee object deserialized from http body
  *
- * @returns {Number} employee id to be put in http response body
+ * @returns {Object} employee id to be put in http response body
  *
  * @properties={typeid:24,uuid:"c5bb446b-f1da-4bec-83fb-797e6cba8dcf"}
  */
@@ -24,8 +24,7 @@ function ws_create(emp)
 		ret.id = record.employeeid;
 		return ret; // response body
 	}
-//	return null;
-	return Number.NaN;
+	return null;
 }
 
 /**

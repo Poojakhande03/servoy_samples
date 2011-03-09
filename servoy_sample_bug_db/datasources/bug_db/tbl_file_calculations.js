@@ -131,8 +131,9 @@ function display_fileDetails()
 			if(fileDesc.length > 35) {
 				fileDesc = utils.stringLeft(fileDesc, 35) + '...<br>';
 			}
-			
-			var htmlMethod = '<a href="media:///servoy_blobloader?servername=' + currentcontroller.getServerName() + 
+			var ds = getDataSource();
+			var srv_ar = ds.split('/');
+			var htmlMethod = '<a href="media:///servoy_blobloader?servername=' + srv_ar[1] + 
 			'&tablename=tbl_file&dataprovider=file_data&rowid1=' + ixfile + '&rnd=' + Math.random() + '" target="' + Math.random() + '">'
 
 			return globals.htmlHoverStyle + htmlMethod + '<b>' + fName + '</b></a><br>' +
@@ -192,7 +193,9 @@ function display_fileName_bold()
 		}
 		if(application.getApplicationType() == 5) //web client
 		{
-			var htmlMethod = '<a href="media:///servoy_blobloader?servername=' + currentcontroller.getServerName() + 
+			var ds = getDataSource();
+			var srv_ar = ds.split('/');
+			var htmlMethod = '<a href="media:///servoy_blobloader?servername=' + srv_ar[1] + 
 			'&tablename=tbl_file&dataprovider=file_data&rowid1=' + ixfile + '&rnd=' + Math.random() + '" target="' + Math.random() + '">'
 
 			return globals.htmlHoverStyle + htmlMethod + '<b class="text">' + fName + '</b></a></body></html>';
