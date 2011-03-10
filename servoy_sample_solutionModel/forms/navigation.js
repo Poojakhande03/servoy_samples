@@ -83,7 +83,7 @@ function syncronizeWithDB(arg0, arg1, arg2)
 	var fs = foundset.duplicateFoundSet();
 	if (fs.find())
 	{
-		/** @type JSRelationItem */
+		/** @type JSRecord */
 		var ds_rec = fs.getRecord(1)
 		ds_rec.datasource_id = datasource_id_to_sync;
 

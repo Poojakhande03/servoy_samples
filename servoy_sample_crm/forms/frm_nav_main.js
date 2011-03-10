@@ -4,6 +4,7 @@
  */
 function btn_search()
 {
+	/** @type String */
 	var frm = currentcontroller.getName();
 	var search = globals.nav_search
 
@@ -77,17 +78,17 @@ function btn_search()
 			}
 
 			//on the companies form
-			forms[frm].company_name = searchStr
+			forms[frm]['company_name'] = searchStr
 			forms[frm].controller.newRecord()
-			forms[frm].company_industry = searchStr
+			forms[frm]['company_industry'] = searchStr
 			forms[frm].controller.newRecord()
-			forms[frm].company_email = searchStr
+			forms[frm]['company_email'] = searchStr
 			forms[frm].controller.newRecord()
-			forms[frm].company_description = searchStr
+			forms[frm]['company_description'] = searchStr
 			forms[frm].controller.newRecord()
-			forms[frm].company_category = searchStr
+			forms[frm]['company_category'] = searchStr
 			forms[frm].controller.newRecord()
-			forms[frm].company_id = search
+			forms[frm]['company_id'] = search
 		}
 		//CONTACTS FIND
 		else if(frm.indexOf('contacts') >= 0)
@@ -104,21 +105,21 @@ function btn_search()
 				if (!forms[frm].controller.find()) return; //cannot enter find, previous edits can't be saved?
 			}
 
-			forms[frm].name_first = searchStr
+			forms[frm]['name_first'] = searchStr
 			forms[frm].controller.newRecord()
-			forms[frm].name_last = searchStr
+			forms[frm]['name_last'] = searchStr
 			forms[frm].controller.newRecord()
-			forms[frm].name_middle = searchStr
+			forms[frm]['name_middle'] = searchStr
 			forms[frm].controller.newRecord()
-			forms[frm].phone_cell = searchStr
+			forms[frm]['phone_cell'] = searchStr
 			forms[frm].controller.newRecord()
-			forms[frm].phone_direct = searchStr
+			forms[frm]['phone_direct'] = searchStr
 			forms[frm].controller.newRecord()
-			forms[frm].fax_direct = searchStr
+			forms[frm]['fax_direct'] = searchStr
 			forms[frm].controller.newRecord()
-			forms[frm].job_title = searchStr
+			forms[frm]['job_title'] = searchStr
 			forms[frm].controller.newRecord()
-			forms[frm].contacts_to_companies.company_name = searchStr
+			forms[frm]['contacts_to_companies'].company_name = searchStr
 
 		}
 		//ORDERS FIND
@@ -128,32 +129,32 @@ function btn_search()
 
 			if(dataType == 'int')
 			{
-				forms[frm].order_number = searchStr
+				forms[frm]['order_number'] = searchStr
 			}
 			else if(dataType == 'number')
 			{
-				forms[frm].order_total = searchStr
+				forms[frm]['order_total'] = searchStr
 			}
 			else if(dataType == 'date')
 			{
-				forms[frm].order_date = searchStr
+				forms[frm]['order_date'] = searchStr
 				forms[frm].controller.newRecord()
-				forms[frm].shippeddate = searchStr
+				forms[frm]['shippeddate'] = searchStr
 			}
 			else //string
 			{
 				forms[frm].controller.newRecord()
-				forms[frm].notes = searchStr
+				forms[frm]['notes'] = searchStr
 				forms[frm].controller.newRecord()
-				forms[frm].notes_internal = searchStr
+				forms[frm]['notes_internal'] = searchStr
 				forms[frm].controller.newRecord()
-				forms[frm].paid_number = searchStr
+				forms[frm]['paid_number'] = searchStr
 				forms[frm].controller.newRecord()
-				forms[frm].terms = searchStr
+				forms[frm]['terms'] = searchStr
 				forms[frm].controller.newRecord()
-				forms[frm].orders_to_companies.company_name = searchStr
+				forms[frm]['orders_to_companies'].company_name = searchStr
 				forms[frm].controller.newRecord()
-				forms[frm].po_number = searchStr
+				forms[frm]['po_number'] = searchStr
 			}
 		}
 		//PRODUCTS FIND
@@ -163,31 +164,31 @@ function btn_search()
 
 			if(dataType == 'int')
 			{
-				forms[frm].product_id = searchStr
+				forms[frm]['product_id'] = searchStr
 				forms[frm].controller.newRecord()
-				forms[frm].product_number = searchStr
+				forms[frm]['product_number'] = searchStr
 			}
 			else if(dataType == 'number' && (search.indexOf("cost ") != -1 || search.indexOf("cost ea") != -1))
 			{
-				forms[frm].cost_each = search
+				forms[frm]['cost_each'] = search
 			}
 			else if(dataType == 'number' && (search.indexOf("price ") != -1 || search.indexOf("price ea") != -1))
 			{
-				forms[frm].price_each = search
+				forms[frm]['price_each'] = search
 			}
 			else if(dataType == 'number')
 			{
-				forms[frm].cost_each = search
+				forms[frm]['cost_each'] = search
 				forms[frm].controller.newRecord()
-				forms[frm].price_each = search
+				forms[frm]['price_each'] = search
 			}
 			else
 			{
-				forms[frm].product_name = searchStr
+				forms[frm]['product_name'] = searchStr
 				forms[frm].controller.newRecord()
-				forms[frm].description = searchStr
+				forms[frm]['description'] = searchStr
 				forms[frm].controller.newRecord()
-				forms[frm].order_description = searchStr
+				forms[frm]['order_description'] = searchStr
 			}
 		}
 

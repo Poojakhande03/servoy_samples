@@ -982,7 +982,7 @@ function SetUpDynamicValueLists()
 	else
 	{
 		//there is a current project id get the people assigned to the current task
-		realValues = databaseManager.getFoundSetDataProviderAsArray(gcurrproject_to_project_people, 'ixpeople');
+		realValues = databaseManager.convertToDataSet(gcurrproject_to_project_people, 'ixpeople');
 		displayValues = new Array()
 		
 		//loop through and get the person's name from the other value list

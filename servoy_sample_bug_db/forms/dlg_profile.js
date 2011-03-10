@@ -46,16 +46,6 @@ function BtnOk()
 		//set the global so that if they click the "X" close it won't close
 		globals.isDialogOpen = 1;
 		application.showFormInDialog(forms.dlg_company, -1,-1,-1,-1, "i18n:lbl.company", false, false, 'company', true);
-
-/**
-		var win = application.createWindow("company", JSWindow.MODAL_DIALOG);
-		win.setInitialBounds(-1, -1, -1, -1);
-		win.setTitle("i18n:lbl.company");
-		controller.show(win);
-		// create and show a non-modal dialog with default initial bounds/
-		var nmd = application.createWindow("nonModalDialogName", JSWindow.DIALOG);
-		controller.showRecords(forms.dlg_company.foundset, win); // 15 is a single-number pk in
-		*/
 	}
 	else
 	{

@@ -93,6 +93,8 @@ function createForm(entity_rec,fname,vtype)
 {
 	var crindex;
 	var jscomponent;
+	
+	/** @type {JSForm}*/
 	var jsform = solutionModel.newForm(fname, entity_rec.entities_to_datasources.server_name, entity_rec.table_name, null, true, 600, 300)
 	var jsbody = jsform.getBodyPart()
 	jsform.navigator = solutionModel.getForm('navigation')
@@ -124,6 +126,7 @@ function createForm(entity_rec,fname,vtype)
 		element_rec = entity_rec.entities_to_elements_specific.getRecord(crindex)
 		if (element_rec.view_type == vtype && element_rec.display_options < 4)
 		{
+			/**@type JSComponent*/
 			jscomponent = createElement(element_rec,jsform,vtype)
 			total_height = Math.max(total_height, element_rec.ylocation + element_rec.height + 10)
 		}
