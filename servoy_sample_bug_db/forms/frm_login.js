@@ -174,7 +174,7 @@ function SubLogin()
 			//continue to login
 			globals.SolutionAfterLogin();
 			
-			globals.currUserCompanyArray = databaseManager.getFoundSetDataProviderAsArray(gcurruser_to_people_company.foundset, 'ixcompany')
+			globals.currUserCompanyArray = databaseManager.convertToDataSet(gcurruser_to_people_company, 'ixcompany');
 			gcurruser_to_people.last_login = new Date()
 			globals.loginDisplay = '<html><body><align="right">Logged in as <b>' + gcurruser_to_people.name_full + '</b></align></body></html>'
 		

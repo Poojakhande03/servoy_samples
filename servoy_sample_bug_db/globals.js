@@ -935,7 +935,7 @@ function ReturnSqlWhereQuestionMarks(arg0)
 	CREATED: 04/22/08 BC
 	MODIFIED: NONE
 	********************************************/
-	
+	/** @type Array*/
 	var myArray = arg0;
 	var output = null;
 	

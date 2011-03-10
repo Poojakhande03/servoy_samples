@@ -41,11 +41,11 @@ function BtnOk()
 	//if there it's the initial load - open the company window
 	if(globals.tempInt == 1)
 	{
-		globals.tempInt = 0
+		globals.tempInt = 0;
 		
 		//set the global so that if they click the "X" close it won't close
-		globals.isDialogOpen = 1
-		application.showFormInDialog(forms.dlg_company, -1,-1,-1,-1, "i18n:lbl.company", false, false, 'company', true)
+		globals.isDialogOpen = 1;
+		application.showFormInDialog(forms.dlg_company, -1,-1,-1,-1, "i18n:lbl.company", false, false, 'company', true);
 
 /**
 		var win = application.createWindow("company", JSWindow.MODAL_DIALOG);

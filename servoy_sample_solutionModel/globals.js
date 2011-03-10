@@ -83,7 +83,7 @@ function selectEntityNode(arg0)
 }
 
 /**
- * @param {JSComponent} entity_rec // TODO generated, please specify type and doc
+ * @param {JSRecord} entity_rec // TODO generated, please specify type and doc
  * @param {Object} fname // TODO generated, please specify type and doc
  * @param {Object} vtype // TODO generated, please specify type and doc
  *

@@ -43,8 +43,7 @@ function cmd_printPreview()
 /**
  * @properties={typeid:24,uuid:"8e2ca382-20f8-4309-b687-017765500cc4"}
  */
-function cmd_search()
-{
+function cmd_search() {
 	forms.frm_nav_main.elements.fld_search.requestFocus(false);
 }
 
