@@ -245,12 +245,15 @@ function SubNewTenant()
 		globals.currUserID = personRec.ixpeople
 		
 		//add a person_company record
+		/** @type {JSFoundset}*/
 		var pcFS = databaseManager.getFoundSet('bug_db', 'tbl_people_company')
 		pcFS.clear()
+		
+		/** @type {JSRecord}*/
 		var pcRec = pcFS.getRecord(pcFS.newRecord(true, true))
-		pcRec.ixcompany = globals.currCompanyID
-		pcRec.ixpeople = globals.currPersonID
-			pcRec.ixtenant = globals.currTenantID;
+		pcRec['ixcompany'] = globals.currCompanyID
+		pcRec['ixpeople'] = globals.currPersonID
+			pcRec['ixtenant'] = globals.currTenantID;
 		
 		databaseManager.saveData()
 	}

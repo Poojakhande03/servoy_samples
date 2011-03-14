@@ -42,14 +42,16 @@ function selectEntityNode(arg0)
 	if (fs.find())
 	{
 		var search_entity_rec = fs.getRecord(1)
-		search_entity_rec.entity_id = e_id
+		search_entity_rec['entity_id'] = e_id
 		var count = fs.search();
-		if (count > 0) entity_rec = fs.getRecord(1)
+		if (count > 0)
+			/** @type {JSRecord}*/
+			entity_rec = fs.getRecord(1)
 	}
 
 	if (entity_rec != null)
 	{
-		var fname = entity_rec.table_name+'_tableview'
+		var fname = entity_rec['table_name'] +'_tableview'
 
 		if (currentcontroller.getName() == "configure_entities")
 		{
@@ -59,7 +61,7 @@ function selectEntityNode(arg0)
 			history.removeForm(fname)
 			solutionModel.removeForm(fname)
 			
-			fname = entity_rec.table_name+'_recordview'
+			fname = entity_rec['table_name']+'_recordview'
 			
 			history.removeForm(fname)
 			solutionModel.removeForm(fname)
@@ -95,7 +97,7 @@ function createForm(entity_rec,fname,vtype)
 	var jscomponent;
 	
 	/** @type {JSForm}*/
-	var jsform = solutionModel.newForm(fname, entity_rec.entities_to_datasources.server_name, entity_rec.table_name, null, true, 600, 300)
+	var jsform = solutionModel.newForm(fname, entity_rec['entities_to_datasources'].server_name, entity_rec['table_name'], null, true, 600, 300)
 	var jsbody = jsform.getBodyPart()
 	jsform.navigator = solutionModel.getForm('navigation')
 	jsform.view = vtype;
@@ -108,54 +110,55 @@ function createForm(entity_rec,fname,vtype)
 		button.showClick = false
 		button.transparent = true
 	}
-	if (entity_rec.allow_new_rec == 0)
+	if (entity_rec['allow_new_rec'] == 0)
 	{
-		jsform.setOnNewRecordCmdMethod(SM_DEFAULTS.NONE);
+		jsform.onNewRecordCmd = SM_DEFAULTS.NONE;
 	}
-	if (entity_rec.allow_del_rec == 0)
+	if (entity_rec['allow_del_rec'] == 0)
 	{
-		jsform.setOnDeleteRecordCmdMethod(SM_DEFAULTS.NONE);
-		jsform.setOnDeleteAllRecordsCmdMethod(SM_DEFAULTS.NONE);
+		SM_DEFAULTS.NONE
+		jsform.onDeleteRecordCmd = SM_DEFAULTS.NONE;
+		jsform.onDeleteAllRecordsCmd = SM_DEFAULTS.NONE;
 	}
 
 	var total_height = 100;
 	var element_rec = null;
 	globals.selected_user_uid = null; // set to null so we get the NON user specific records
-	for (crindex = 1; crindex <= entity_rec.entities_to_elements_specific.getSize(); crindex++) 
+	for (crindex = 1; crindex <= entity_rec['entities_to_elements_specific'].getSize(); crindex++) 
 	{
-		element_rec = entity_rec.entities_to_elements_specific.getRecord(crindex)
+		element_rec = entity_rec['entities_to_elements_specific'].getRecord(crindex)
 		if (element_rec.view_type == vtype && element_rec.display_options < 4)
 		{
-			/**@type JSComponent*/
+			/**@type {JSComponent}*/
 			jscomponent = createElement(element_rec,jsform,vtype)
-			total_height = Math.max(total_height, element_rec.ylocation + element_rec.height + 10)
+			total_height = Math.max(total_height, element_rec.ylocation + element_rec['height'] + 10)
 		}
 	}
 	
 	//add elements or change user specific element properties
-	for (crindex = 1; crindex <= entity_rec.entities_to_elements_login_user.getSize(); crindex++) 
+	for (crindex = 1; crindex <= entity_rec['entities_to_elements_login_user'].getSize(); crindex++) 
 	{
-		element_rec = entity_rec.entities_to_elements_login_user.getRecord(crindex);
+		element_rec = entity_rec['entities_to_elements_login_user'].getRecord(crindex);
 		if (element_rec.view_type == vtype)
 		{
-			jscomponent = jsform.getComponent(element_rec.element_name);
+			jscomponent = jsform.getComponent(element_rec['element_name']);
 			if (jscomponent == null)
 			{
 				jscomponent = createElement(element_rec,jsform,vtype)
 			}
 			if (jscomponent != null)
 			{
-				if (element_rec.xlocation != null) jscomponent.x = element_rec.xlocation
-				if (element_rec.ylocation != null) jscomponent.y = element_rec.ylocation
-				if (element_rec.width != null) jscomponent.width = element_rec.width
-				if (element_rec.height != null) jscomponent.height = element_rec.height
+				if (element_rec.xlocation != null) jscomponent.x = element_rec['xlocation'];
+				if (element_rec.ylocation != null) jscomponent.y = element_rec['ylocation'];
+				if (element_rec.width != null) jscomponent.width = element_rec['width'];
+				if (element_rec.height != null) jscomponent.height = element_rec['height'];
 				//TODO handle more properties
 			}
 			if (element_rec.display_options == 4)//is deleted by user but not by admin
 			{
 				jsform.removeComponent(jscomponent.getName());
 			}
-			total_height = Math.max(total_height, element_rec.ylocation + element_rec.height + 10)
+			total_height = Math.max(total_height, element_rec.ylocation + element_rec['height'] + 10)
 		}
 	}
 	
@@ -165,9 +168,10 @@ function createForm(entity_rec,fname,vtype)
 		var smFields = jsform.getFields();
 		for (var index = 0; index < smFields.length; index++) 
 		{
+			/** @type {JSField}*/
 			var field = smFields[index];
 
-			var jslabel = jsform.newLabel(field.text, field.x - 110, field.y, 100, field.height,null);
+			var jslabel = jsform.newLabel(field['text'], field.x - 110, field.y, 100, field.height,null);
 			jslabel.name = 'lbl_'+field.name;
 			jslabel.labelFor = field.name;
 			jslabel.transparent = true
@@ -194,18 +198,19 @@ function createElement(element_rec,jsform,vtype)
 	var jscomponent;
 	if (element_rec.element_type == 0)
 	{
-		jscomponent = jsform.newField(element_rec.dataprovider_id, element_rec.field_type, element_rec.xlocation, element_rec.ylocation, element_rec.width, element_rec.height)
+		/** @type {JSComponent}*/ 
+		jscomponent = jsform.newField(element_rec['dataprovider_id'], element_rec['field_type'], element_rec['xlocation'], element_rec['ylocation'], element_rec['width'], element_rec['height'])
 		if (element_rec.display_options == 1) jscomponent.editable = false;
 	}
 	else if (element_rec.element_type == 1)
 	{
-		jscomponent = jsform.newLabel(element_rec.label, element_rec.xlocation, element_rec.ylocation, element_rec.width, element_rec.height,null);
+		jscomponent = jsform.newLabel(element_rec['label'], element_rec['xlocation'], element_rec['ylocation'], element_rec['width'], element_rec['height'], null);
 		jscomponent.transparent = true
 	}
 	//TODO handle more new elements
 
-	jscomponent.name = element_rec.element_name;
-	jscomponent.text = element_rec.label;
+	jscomponent.name = element_rec['element_name'];
+	jscomponent.titleText = element_rec['label'];
 	if (vtype == JSForm.LOCKED_TABLE_VIEW) 
 	{
 		jscomponent.anchors = (SM_ANCHOR.NORTH+SM_ANCHOR.EAST+SM_ANCHOR.WEST);
@@ -227,7 +232,7 @@ function gotoDetail()
 		var search_entity_rec = fs.getRecord(1);
 		var ds = currentcontroller.getDataSource().split('/');
 		
-		search_entity_rec.table_name = ds[2];
+		search_entity_rec['table_name'] = ds[2];
 		var count = fs.search();
 		if (count > 0) { 
 			/** @type JSRecord*/
@@ -235,7 +240,7 @@ function gotoDetail()
 	}
 	if (entity_rec != null)
 	{
-		var fname = entity_rec.table_name+'_recordview'
+		var fname = entity_rec['table_name']+'_recordview'
 		if (!forms[fname] && solutionModel.getForm(fname) == null)
 		{
 			createForm(entity_rec,fname,JSForm.RECORD_VIEW)
@@ -288,7 +293,7 @@ function changedElements(formName, changedElementsArray)
 		fs = entity_rec.entities_to_elements_login_user;
 		for (var index = 0; index < changedElementsArray.length; index++)
 		{
-			/** @type BaseComponent*/
+			/** @type {BaseComponent}*/
 			var comp = changedElementsArray[index];
 			if ( comp != null )
 			{
@@ -325,17 +330,17 @@ function changedElements(formName, changedElementsArray)
 							continue;
 						}
 
-						if (comp.dataProviderID)
+						if (comp['dataProviderID'])
 						{
-							element_rec.dataprovider_id = comp.dataProviderID;
+							element_rec.dataprovider_id = comp['dataProviderID'];
 						}
-						if (comp.text)
+						if (comp['text'])
 						{
-							element_rec.label = comp.text;
+							element_rec.label = comp['text'];
 						}
-						if (comp.displayType)
+						if (comp['displayType'])
 						{
-							element_rec.field_type = comp.displayType
+							element_rec.field_type = comp['displayType'];
 						}
 						if (comp instanceof JSLabel)
 						{

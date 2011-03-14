@@ -233,7 +233,7 @@ function ArrayIsInArray(arg0, arg1)
 	CREATED: 04/19/08 BC
 	MODIFIED: NONE
 	********************************************/
-	
+	/** @type {Array} */
 	var myArray = arg0;
 	var value = arg1;
 	
@@ -268,7 +268,7 @@ function ArrayRemoveFromArray()
 	CREATED: 04/19/08 BC
 	MODIFIED: NONE
 	********************************************/
-	
+	/** @type {Array} */
 	var myArray = arguments[0]
 	var value = arguments[1]
 	var returnArray = new Array()
@@ -439,11 +439,11 @@ function GoDoc()
 		forms.frm_submain.elements.tabs_main.tabIndex = 6
 	}
 	
-	if(forms.frm_project_selproj.elements.tab_documents.bgcolor != '#ffffff')
+	if(forms.frm_project_selproj.elements.tab_documents['bgcolor'] != '#ffffff')
 	{
 		forms.frm_project_selproj.TabsAllTransparent();
 		
-		forms.frm_project_selproj.elements.tab_documents.bgcolor = '#ffffff'
+		forms.frm_project_selproj.elements.tab_documents['bgcolor'] = '#ffffff'
 	}
 	
 	if(forms.frm_project_selproj.elements.tabs_main.tabIndex != 3)
@@ -527,7 +527,7 @@ function GoProject(arg0)
 	}
 	
 	forms.frm_project_selproj.TabsAllTransparent();
-	forms.frm_project_selproj.elements.tab_overview.bgcolor = '#ffffff'
+	forms.frm_project_selproj.elements.tab_overview['bgcolor'] = '#ffffff'
 	
 	if(forms.frm_project_selproj.elements.tabs_main.tabIndex != 1)
 	{
@@ -705,8 +705,8 @@ function NewRecordCompany(arg0)
 		forms.dlg_company.controller.newRecord(true);
 		forms.dlg_company.ixcreatedperson = globals.currUserID;
 		forms.dlg_company.dt_created = new Date();
-		forms.dlg_company.ixmodifiedperson = null;
-		forms.dlg_company.dt_modififed = null;
+		forms.dlg_company['ixmodifiedperson'] = null;
+		forms.dlg_company['dt_modififed'] = null;
 		forms.dlg_company.category = 0;
 		
 		globals.ShowDialogCompany(i18n.getI18NMessage('lbl.newCompany'), null, 1);
@@ -1773,7 +1773,7 @@ function SolutionOnError(arg0)
 	
 	//this sample script should be attached to onError method handler in the solution settings
 	var e = arg0;
-	/** @type ServoyException */
+	/** @type {ServoyException}*/
     var ex = e;
 	application.output("MSG: "+ex.getMessage())
 	if (ex instanceof ServoyException)
@@ -1848,7 +1848,7 @@ function SortColumns(arg0, arg1, arg2)
 	
 	SPECIAL THANKS to David Workman of http://www.servoymagazine.com
 	********************************************/
-	
+	/** @type {Array} */
 	var sortImages = arg0;
 	var formName = arg1;
 	var columnNum = arg2;

@@ -176,6 +176,7 @@ function core_enableDisableElements()
 {
 	if(globals.core_dlg_elementDisableEnable)
 	{
+		/** @type {Array} */
 		var myArray = globals.core_dlg_elementDisableEnable
 		if(myArray.length > 0)
 		{

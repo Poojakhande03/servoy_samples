@@ -3,15 +3,16 @@
  */
 function btn_3() {
 	//set a global to the text of the button pressed
-	globals.dialog_buttonPressed = elements.btn_3.text
+//	globals.dialog_buttonPressed = elements.btn_3.text - the global is not used anywhere
 
 	btn_ok();
-
+/**    -  The method is not defined
 	if(globals.dialog_performMethod) {
 		//perform whatever method is in the global
 		eval(globals.dialog_performMethod)
 		globals.dialog_performMethod = null
 	}
+	*/
 }
 
 /**

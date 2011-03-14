@@ -6,8 +6,8 @@
  * @properties={typeid:24,uuid:"09CD048F-A462-4537-96E5-BDD98CF78653"}
  */
 function BtnSort(event) {
-		var frm = globals.core_dlg_formName
-	var elmt = globals.core_dlg_elementName
+	var frm = globals.core_dlg_formName;
+	var elmt = globals.core_dlg_elementName;
 
 	//set the global to the text of the pressed button
 	var btn = elements[event.getElementName()].text

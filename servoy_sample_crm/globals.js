@@ -577,13 +577,15 @@ function migrateToOneValueListTable()
 {
 	//migrate some old data, incase someone imports ontop of existing db/solution 
 	var vl_ds = forms.lst_valuelists.controller.getDataSource();
+	/** @type {JSFoundset}*/
 	var vl_fs = databaseManager.getFoundSet(vl_ds);
 	var serverName = databaseManager.getDataSourceServerName(vl_ds);
 	var index;
 	var fs = null;
 	var table_name = null;
 	
-	table_name = 'address_types'
+	table_name = 'address_types';
+	/** @type {JSFoundset}*/
 	fs = databaseManager.getFoundSet(serverName,table_name);
 	if (fs != null)
 	{
@@ -592,9 +594,10 @@ function migrateToOneValueListTable()
 		{
 			fs.setSelectedIndex(index);
 			vl_fs.newRecord()
-			vl_fs.valuelist_name = table_name;
-			vl_fs.value_id = fs.address_type_id
-			vl_fs.value1 = fs.description
+			/** @type {JSFoundset}*/
+			vl_fs['valuelist_name'] = table_name;
+			vl_fs['value_id'] = fs['address_type_id'];
+			vl_fs['value1'] = fs['description']
 		}
 	}
 
@@ -608,8 +611,8 @@ function migrateToOneValueListTable()
 			fs.setSelectedIndex(index);
 			vl_fs.newRecord()
 			vl_fs.valuelist_name = table_name;
-			vl_fs.value_id = fs.category_type_id
-			vl_fs.value1 = fs.description
+			vl_fs.value_id = fs['category_type_id'];
+			vl_fs.value1 = fs['description'];
 		}
 	}
 	
@@ -623,8 +626,8 @@ function migrateToOneValueListTable()
 			fs.setSelectedIndex(index);
 			vl_fs.newRecord()
 			vl_fs.valuelist_name = table_name;
-			vl_fs.value_id = fs.company_type_id
-			vl_fs.value1 = fs.description
+			vl_fs.value_id = fs['company_type_id'];
+			vl_fs.value1 = fs['description'];
 		}
 	}
 	
@@ -638,8 +641,8 @@ function migrateToOneValueListTable()
 			fs.setSelectedIndex(index);
 			vl_fs.newRecord()
 			vl_fs.valuelist_name = table_name;
-			vl_fs.value_id = fs.contact_type_id;
-			vl_fs.value1 = fs.description;
+			vl_fs.value_id = fs['contact_type_id'];
+			vl_fs.value1 = fs['description'];
 		}
 	}
 
@@ -653,9 +656,9 @@ function migrateToOneValueListTable()
 			fs.setSelectedIndex(index);
 			vl_fs.newRecord()
 			vl_fs.valuelist_name = table_name;
-			vl_fs.value_id = fs.country_type_id
-			vl_fs.value1 = fs.country_name
-			vl_fs.value2 = fs.country
+			vl_fs.value_id = fs['country_type_id'];
+			vl_fs.value1 = fs['country_name'];
+			vl_fs['value2'] = fs['country'];
 		}
 	}
 	
@@ -669,8 +672,8 @@ function migrateToOneValueListTable()
 			fs.setSelectedIndex(index);
 			vl_fs.newRecord()
 			vl_fs.valuelist_name = table_name;
-			vl_fs.value_id = fs.product_type_id
-			vl_fs.value1 = fs.description
+			vl_fs.value_id = fs['product_type_id'];
+			vl_fs.value1 = fs['description'];
 		}
 	}
 	

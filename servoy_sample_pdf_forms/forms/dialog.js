@@ -4,7 +4,7 @@
 function btn_3()
 {
 	//set a global to the text of the button pressed
-	globals.dialog_buttonPressed = elements.btn_3.text
+//	globals.dialog_buttonPressed = elements.btn_3.text - the global variable is not used anywhere
 	
 	btn_ok();
 	

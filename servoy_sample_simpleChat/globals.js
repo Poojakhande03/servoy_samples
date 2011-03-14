@@ -1,4 +1,18 @@
 /**
+ * @type String
+ *
+ * @properties={typeid:35,uuid:"D4A3A8BE-D6BE-4D60-AC9E-DBB768E1E5AB",variableType:12}
+ */
+var nav_itemName = null;
+
+/**
+ * @type Number
+ *
+ * @properties={typeid:35,uuid:"8C3399C9-3414-4BD2-AD78-50B3C26E8983",variableType:8}
+ */
+var lastChatUserIP = null;
+
+/**
  * @type Number
  *
  * @properties={typeid:35,uuid:"ac4799fb-cb7e-4e65-b9c4-6e0ce74016c8",variableType:4}

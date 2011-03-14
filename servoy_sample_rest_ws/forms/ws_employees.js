@@ -16,8 +16,8 @@ function ws_create(emp)
 {
 	var index = foundset.newRecord();
 	var record = foundset.getRecord(index);
-	record.firstname = emp.firstName;
-	record.lastname = emp.lastName;
+	record.firstname = emp['firstName'];
+	record.lastname = emp['lastName'];
 	if (databaseManager.saveData(record))
 	{
 		var ret = new Object();
@@ -135,9 +135,9 @@ function ws_update(emp, id)
 		if (foundset.search() == 1)
 		{
 			var record = foundset.getRecord(1);
-			if (emp.id && id != emp.id) record.employeeid = emp.id
-			if (emp.firstName) record.firstname = emp.firstName
-			if (emp.lastName) record.lastname = emp.lastName
+			if (emp.id && id != emp['id']) record.employeeid = emp['id'];
+			if (emp.firstName) record.firstname = emp['firstName'];
+			if (emp.lastName) record.lastname = emp['lastName'];
 			return databaseManager.saveData(record) // response code 200/404
 		}
 	}

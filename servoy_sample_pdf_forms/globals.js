@@ -249,7 +249,7 @@ function openSolution()
 	//check for pdf plugin if we arent in web client or headless client
 	if(!(application.getApplicationType() == 5) || (!(application.getApplicationType() == 4)))
 	{
-		if(plugins.pdf_forms)
+		if(plugins.pdf_output)
 		{
 			//plug-in NOT installed - can't use solution
 			forms.frm_noplug.controller.show()

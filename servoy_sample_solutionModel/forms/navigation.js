@@ -85,7 +85,7 @@ function syncronizeWithDB(arg0, arg1, arg2)
 	{
 		/** @type JSRecord */
 		var ds_rec = fs.getRecord(1)
-		ds_rec.datasource_id = datasource_id_to_sync;
+		ds_rec['datasource_id'] = datasource_id_to_sync;
 
 		if (fs.search() > 0)
 		{
@@ -101,9 +101,9 @@ function syncronizeWithDB(arg0, arg1, arg2)
 				
 				var jstable = databaseManager.getTable(servername,tname)
 				var entity_rec = null;
-				for (var trindex = 1; trindex <= ds_rec.datasources_to_entities.getSize(); trindex++) 
+				for (var trindex = 1; trindex <= ds_rec['datasources_to_entities'].getSize(); trindex++) 
 				{
-					entity_rec = ds_rec.datasources_to_entities.getRecord(trindex)
+					entity_rec = ds_rec['datasources_to_entities'].getRecord(trindex)
 					if (entity_rec.table_name == tname)
 					{
 						break;
@@ -113,8 +113,8 @@ function syncronizeWithDB(arg0, arg1, arg2)
 				if (entity_rec == null)
 				{
 					//not found create
-					i = ds_rec.datasources_to_entities.newRecord()
-					entity_rec = ds_rec.datasources_to_entities.getRecord(i)
+					i = ds_rec['datasources_to_entities'].newRecord()
+					entity_rec = ds_rec['datasources_to_entities'].getRecord(i)
 					entity_rec.table_name = tname
 					entity_rec.heading_single = makeSingle(tname)
 					entity_rec.heading_plural = makePlural(tname)
@@ -128,7 +128,7 @@ function syncronizeWithDB(arg0, arg1, arg2)
 				
 				if (recreate)
 				{
-					entity_rec.entities_to_elements_all.deleteAllRecords()
+					entity_rec['entities_to_elements_all'].deleteAllRecords()
 				}
 				var x = 40;
 				var y = 60;
@@ -145,9 +145,9 @@ function syncronizeWithDB(arg0, arg1, arg2)
 						var jscolumn = jstable.getColumn(cname)
 						var column_dataprovider_id = jscolumn.getDataProviderID()
 						var field_rec = null;
-						for (var crindex = 1; crindex <= entity_rec.entities_to_elements_all.getSize(); crindex++) 
+						for (var crindex = 1; crindex <= entity_rec['entities_to_elements_all'].getSize(); crindex++) 
 						{
-							field_rec = entity_rec.entities_to_elements_all.getRecord(crindex)
+							field_rec = entity_rec['entities_to_elements_all'].getRecord(crindex)
 							if (field_rec.dataprovider_id == column_dataprovider_id && field_rec.view_type == vtype)
 							{
 								break;
@@ -158,7 +158,7 @@ function syncronizeWithDB(arg0, arg1, arg2)
 						{
 							//not found create
 							i = entity_rec.entities_to_elements_all.newRecord()
-							field_rec = entity_rec.entities_to_elements_all.getRecord(i)
+							field_rec = entity_rec['entities_to_elements_all'].getRecord(i)
 							field_rec.view_type = vtype
 							field_rec.label = utils.stringReplace(utils.stringInitCap(cname),"_"," ");
 							field_rec.dataprovider_id = column_dataprovider_id;

@@ -41,6 +41,7 @@ function OnHide()
 	********************************************/
 	
 	//hide edit task button
+	
 	forms.frm_project_selproj.elements.btn_editTask.visible = false
 	forms.frm_project_selproj.elements.grc_editTask.visible = false
 	forms.frm_project_selproj.elements.lbl_editTask.visible = false

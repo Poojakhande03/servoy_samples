@@ -81,7 +81,7 @@ function doEdit()
 		{
 			//if it's a field - then change color and make editable
 			elements[allNames[i]].bgcolor = '#feffe4';
-			elements[allNames[i]].readOnly = false;
+			elements[allNames[i]]['readOnly'] = false;
 		}
 	}
 
@@ -112,7 +112,7 @@ function hide_btn_reset_fields()
 		{
 			//if it's a field - then change color and make editable
 			elements[allNames[i]].bgcolor = '#f0f0f0'
-			elements[allNames[i]].readOnly = true
+			elements[allNames[i]]['readOnly'] = true
 		}
 	}
 

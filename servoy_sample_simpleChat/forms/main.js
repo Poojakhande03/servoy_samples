@@ -3,7 +3,7 @@
  */
 function cmd_deleteRecord()
 {
-	forms.frm_buttons.btn_delete();
+//	forms.frm_buttons.btn_delete(); - The form does not exist
 }
 
 /**
@@ -11,7 +11,7 @@ function cmd_deleteRecord()
  */
 function cmd_find()
 {
-	forms.frm_nav_main.elements.fld_search.requestFocus(false)
+	forms.frm_nav_main.elements['fld_search'].requestFocus(false)
 }
 
 /**
@@ -19,7 +19,7 @@ function cmd_find()
  */
 function cmd_newRecord()
 {
-	forms.frm_buttons.btn_add();
+//	forms.frm_buttons.btn_add(); - The form does not exist
 }
 
 /**
@@ -27,7 +27,7 @@ function cmd_newRecord()
  */
 function cmd_showAll()
 {
-	forms.frm_buttons.btn_showAll();
+//	forms.frm_buttons.btn_showAll(); - The form does not exist
 }
 
 /**

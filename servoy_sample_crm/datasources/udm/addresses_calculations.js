@@ -5,7 +5,7 @@ function address_csz()
 {
 var address = ''
 
-if(city || state || zip)
+if(city || state || zipcode)
 {
 	if(city && state)
 	{
@@ -71,7 +71,7 @@ else if(line_5 && !address)
 	address = line_5
 }
 
-if(city || state || zip) address += '\n' + address_csz
+if(city || state || zipcode) address += '\n' + address_csz
 
 return address
 }

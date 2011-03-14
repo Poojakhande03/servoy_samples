@@ -68,7 +68,7 @@ function btn_search()
 
 			if(dataType == 'int')
 			{
-				forms[frm].template_id = searchStr
+				forms[frm]['template_id'] = searchStr
 			}
 			else if(dataType == 'number')
 			{
@@ -80,13 +80,13 @@ function btn_search()
 			}
 			else //string
 			{
-				forms[frm].category = searchStr
+				forms[frm]['category'] = searchStr
+				forms[frm]['controller'].newRecord()
+				forms[frm]['description'] = searchStr
 				forms[frm].controller.newRecord()
-				forms[frm].description = searchStr
+				forms[frm]['filename'] = searchStr
 				forms[frm].controller.newRecord()
-				forms[frm].filename = searchStr
-				forms[frm].controller.newRecord()
-				forms[frm].template_name = searchStr
+				forms[frm]['template_name'] = searchStr
 			}
 		}
 		//FORMS FIND
@@ -96,7 +96,7 @@ function btn_search()
 
 			if(dataType == 'int')
 			{
-				forms[frm].form_id = searchStr
+				forms[frm]['form_id'] = searchStr
 			}
 			else if(dataType == 'number')
 			{
@@ -108,7 +108,7 @@ function btn_search()
 			}
 			else //string
 			{
-				forms[frm].note = searchStr
+				forms[frm]['note'] = searchStr
 				forms[frm].controller.newRecord()
 				forms.frm_forms.pdf_forms_to_pdf_templates.template_name = searchStr
 			}

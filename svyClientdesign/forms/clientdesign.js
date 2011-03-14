@@ -45,9 +45,6 @@ function loadForms()
 /**
  * Handle changed data.
  *
- * @param {Object} oldValue old value
- * @param {Object} newValue new value
- *
  * @properties={typeid:24,uuid:"B09C4094-F3D4-4D9A-93E3-E879596029D4"}
  */
 function _showFormInDesign()
@@ -214,7 +211,7 @@ function newFieldImpl( dataprovider, fieldtype )
 		var field = form.newField ( dataprovider, forms.choosedataprovider.fieldtype, 50, 100, 80, 20 );
 		// give it a name so that you can move/change it later on.
 		field.name = getNewComponentName(form,"field_");
-		field.text = field.dataProviderID;
+		field.titleText = field.dataProviderID;
 		// recreate the ui of the runtime instance
 		forms[selectedDesignFormName].controller.recreateUI();
 	}
