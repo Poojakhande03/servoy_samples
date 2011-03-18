@@ -25,14 +25,15 @@ function BtnGoTaskDetail()
 	
 	if(forms.frm_project_selproj.elements.tab_tasks['bgcolor'] != '#ffffff')
 	{
-		TabsAllTransparent();
+//	if(forms.frm_project_selproj.elements.tab_tasks.bgcolor = ['bgcolor'] != '#ffffff')
+//		TabsAllTransparent();
 		
 		forms.frm_project_selproj.elements.tab_tasks['bgcolor'] = '#ffffff'
 	}
 	
-	if(forms.frm_project_selproj.elements.tabs_main.tabIndex != 6)
+	if(forms.frm_project_selproj.elements.tabs_main['tabIndex'] != 6)
 	{
-		forms.frm_project_selproj.elements.tabs_main.tabIndex = 6
+		forms.frm_project_selproj.elements.tabs_main['tabIndex'] = 6
 	}
 }
 

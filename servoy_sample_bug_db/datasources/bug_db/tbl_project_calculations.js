@@ -154,25 +154,24 @@ else
 /**
  * @properties={type:12,typeid:36,uuid:"c17dc04d-03b0-4386-9e64-fbdace277ab7"}
  */
-function display_project_bold()
-{
-if(proj_name)
-{
-	var proj = proj_name
-}
-else
-{
-	var proj = "Untitled Project"
-}
-
-if(application.getApplicationType() == 5) //web client
-{
-	return globals.htmlHoverStyle + '<a href="javascript:globals.GoProject(\'' + ixproject + '\');"><b>' + proj + '</b></a></body></html>';
-}
-else
-{
-	return '<html><body><span style="font-size:11pt;"><b>' + proj + '</b></span></body></html>'
-}return 1;
+function display_project_bold() {
+	if(proj_name)
+	{
+		var proj = proj_name
+	}
+	else
+	{
+		var proj = "Untitled Project"
+	}
+	
+	if(application.getApplicationType() == 5) //web client
+	{
+		return globals.htmlHoverStyle + '<a href="javascript:globals.GoProject(\'' + ixproject + '\');"><b>' + proj + '</b></a></body></html>';
+	}
+	else
+	{
+		return '<html><body><span style="font-size:11pt;"><b>' + proj + '</b></span></body></html>'
+	}
 }
 
 /**

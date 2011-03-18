@@ -246,7 +246,8 @@ function openSolution()
 		//we're on the mac - exchange style sheets
 		application.overrideStyle('svyWebCrm', 'svyWebCrm_mac')
 	}
-
+	globals.callback = globals.enableBgElements;
+	
 	//setup the admin global settings
 	if (gconst2_to_solution_preferences.getSize() > 0)
 	{
@@ -428,7 +429,11 @@ function showDialog(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9)
 	globals.disableBgElements()
 
 	//show the tabpanel "dialog"
-	application.showFormInDialog(forms.dialog,  -1,-1, -1,-1,  "Dialog",  false,  false,  "Dialog",  true)
+//	application.showFormInDialog(forms.dialog,  -1,-1, -1,-1,  "Dialog",  false,  false,  "Dialog",  true)
+	var win = application.createWindow("Dialog", JSWindow.MODAL_DIALOG);
+	win.setInitialBounds(-1, -1, -1, -1);
+	win.title= "Dialog";
+	win.show(forms.dialog);
 }
 
 /**

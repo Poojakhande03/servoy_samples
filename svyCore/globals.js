@@ -170,6 +170,13 @@ var core_sql_sqlResult = '';
 var core_sql_sqlResultSet;
 
 /**
+ * @type {Function}
+ * 
+ * @properties={typeid:35,uuid:"C7183094-E0CA-4CDD-BF35-E1B01F03FF25",variableType:-4}
+ */
+var callback = null;
+
+/**
  * @properties={typeid:24,uuid:"34f62467-b721-40cf-8a5d-dbf4ce868e75"}
  */
 function core_enableDisableElements()
@@ -309,6 +316,20 @@ function core_showWcGenericDialog(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7
 		//disable any elements behind the dialog
 		globals.core_enableDisableElements();
 		
-		application.showFormInDialog(forms.core_dlg_generic, -1,-1,-1,-1,  title,  false, false, "Dialog", true)
+//		application.showFormInDialog(forms.core_dlg_generic, -1,-1,-1,-1,  title,  false, false, "Dialog", true)
+		var win = application.createWindow("Dialog", JSWindow.MODAL_DIALOG);
+		win.setInitialBounds(-1, -1, -1, -1);
+		win.title= title;
+		win.show(forms.core_dlg_generic);
 	}
+}
+
+/**
+ * // TODO generated, please specify type and doc for the params
+ * @param {Function} funct
+ *
+ * @properties={typeid:24,uuid:"434F78BB-DE9A-432F-9859-73A7B488350D"}
+ */
+function callback_BgElements(funct) {
+	callback = funct();
 }

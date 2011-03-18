@@ -157,7 +157,7 @@ function syncronizeWithDB(arg0, arg1, arg2)
 						if (field_rec == null)
 						{
 							//not found create
-							i = entity_rec.entities_to_elements_all.newRecord()
+							i = entity_rec['entities_to_elements_all'].newRecord()
 							field_rec = entity_rec['entities_to_elements_all'].getRecord(i)
 							field_rec.view_type = vtype
 							field_rec.label = utils.stringReplace(utils.stringInitCap(cname),"_"," ");

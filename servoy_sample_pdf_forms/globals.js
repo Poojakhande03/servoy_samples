@@ -249,7 +249,7 @@ function openSolution()
 	//check for pdf plugin if we arent in web client or headless client
 	if(!(application.getApplicationType() == 5) || (!(application.getApplicationType() == 4)))
 	{
-		if(plugins.pdf_output)
+		if(!plugins.pdf_output)
 		{
 			//plug-in NOT installed - can't use solution
 			forms.frm_noplug.controller.show()
@@ -361,7 +361,8 @@ function showDialog(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9)
 	}
 
 	var screenWidth = forms.main.elements.tabs_main.getWidth()
-	var screenHeight = forms.main.elements.tabs_main.getHeight()
+	var screenHeight = forms.main.elements.tabs_main.getHeight();
+	
 	var dlgWidth = forms.main.elements.tabs_dialog.getWidth()
 	var dlgHeight = forms.main.elements.tabs_dialog.getHeight()
 

@@ -103,7 +103,6 @@ function display_versionDetails()
 			'<font class="xsmtext">' + fileDesc +
 			 'created: ' + utils.dateFormat(dt_created, i18n.getDefaultDateFormat()) + 
 			'; by: ' + person + '</font></body></html>';
-			application.output(htmlMethod);
 		}
 		else
 		{

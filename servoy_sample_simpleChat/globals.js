@@ -153,7 +153,7 @@ function packetReceived() {
 	var packet;
 	var fontColor = '#666666';
 	while ( (packet = plugins.udp.getReceivedPacket()) != null) {
-		var msg = packet.readUTF();
+		var msg = packet.readUTF(packet.getLength());
 		var fromUser = packet.getHost();
 
 		if(fromUser != globals.toIP) 

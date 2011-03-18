@@ -41,20 +41,19 @@ function OnHide()
 	********************************************/
 	
 	//hide edit task button
-	
-	forms.frm_project_selproj.elements.btn_editTask.visible = false
-	forms.frm_project_selproj.elements.grc_editTask.visible = false
-	forms.frm_project_selproj.elements.lbl_editTask.visible = false
+	forms.frm_project_selproj.elements.btn_editTask['visible'] = false
+	forms.frm_project_selproj.elements.grc_editTask['visible'] = false
+	forms.frm_project_selproj.elements.lbl_editTask['visible'] = false
 	
 	//hide delete task button
-	forms.frm_project_selproj.elements.btn_deleteTask.visible = false
-	forms.frm_project_selproj.elements.grc_deleteTask.visible = false
-	forms.frm_project_selproj.elements.lbl_deleteTask.visible = false
+	forms.frm_project_selproj.elements.btn_deleteTask['visible'] = false
+	forms.frm_project_selproj.elements.grc_deleteTask['visible'] = false
+	forms.frm_project_selproj.elements.lbl_deleteTask['visible'] = false
 	
 	//show delete project button
-	forms.frm_project_selproj.elements.btn_deleteProject.visible = true
-	forms.frm_project_selproj.elements.grc_deleteProject.visible = true
-	forms.frm_project_selproj.elements.lbl_deleteProject.visible = true
+	forms.frm_project_selproj.elements.btn_deleteProject['visible'] = true
+	forms.frm_project_selproj.elements.grc_deleteProject['visible'] = true
+	forms.frm_project_selproj.elements.lbl_deleteProject['visible'] = true
 }
 
 /**
@@ -76,19 +75,19 @@ function OnShow()
 	globals.SetUpDynamicValueLists();
 	
 	//hide delete project button
-	forms.frm_project_selproj.elements.btn_deleteProject.visible = false
-	forms.frm_project_selproj.elements.grc_deleteProject.visible = false
-	forms.frm_project_selproj.elements.lbl_deleteProject.visible = false
+	forms.frm_project_selproj.elements.btn_deleteProject['visible'] = false
+	forms.frm_project_selproj.elements.grc_deleteProject['visible'] = false
+	forms.frm_project_selproj.elements.lbl_deleteProject['visible'] = false
 	
 	//show edit task button
-	forms.frm_project_selproj.elements.btn_editTask.visible = true
-	forms.frm_project_selproj.elements.grc_editTask.visible = true
-	forms.frm_project_selproj.elements.lbl_editTask.visible = true
+	forms.frm_project_selproj.elements.btn_editTask['visible'] = true
+	forms.frm_project_selproj.elements.grc_editTask['visible'] = true
+	forms.frm_project_selproj.elements.lbl_editTask['visible'] = true
 	
 	//show delete task button
-	forms.frm_project_selproj.elements.btn_deleteTask.visible = true
-	forms.frm_project_selproj.elements.grc_deleteTask.visible = true
-	forms.frm_project_selproj.elements.lbl_deleteTask.visible = true
+	forms.frm_project_selproj.elements.btn_deleteTask['visible'] = true
+	forms.frm_project_selproj.elements.grc_deleteTask['visible'] = true
+	forms.frm_project_selproj.elements.lbl_deleteTask['visible'] = true
 	
 	//switch the tabpanel in attached files to the first one
 	forms.frm_attached_files.elements.tabs_files.tabIndex = 1

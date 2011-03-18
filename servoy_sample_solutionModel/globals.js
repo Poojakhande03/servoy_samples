@@ -156,7 +156,7 @@ function createForm(entity_rec,fname,vtype)
 			}
 			if (element_rec.display_options == 4)//is deleted by user but not by admin
 			{
-				jsform.removeComponent(jscomponent.getName());
+				jsform.removeComponent(jscomponent.name);
 			}
 			total_height = Math.max(total_height, element_rec.ylocation + element_rec['height'] + 10)
 		}
@@ -351,8 +351,8 @@ function changedElements(formName, changedElementsArray)
 							element_rec.element_type = 2
 						}
 	 				}
-					element_rec.xlocation = comp.getX();
-					element_rec.ylocation = comp.getY();
+					element_rec.xlocation = comp.getLocationX();
+					element_rec.ylocation = comp.getLocationY();
 					element_rec.width = comp.getWidth();
 					element_rec.height = comp.getHeight();
 				}

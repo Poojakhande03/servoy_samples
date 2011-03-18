@@ -36,7 +36,7 @@ function btn_addImage()
 				//there will be no display
 				image_thumbnail = null;
 				//show error message!
-				globals.svyCore_dlg_warning('<html>This is<b> NOT an image file!</b><br>Please select a different file.</html>','','OK')
+//				globals.svyCore_dlg_warning('<html>This is<b> NOT an image file!</b><br>Please select a different file.</html>','','OK') - the method is not defined
 				return;
 			}
 
@@ -79,7 +79,7 @@ function product_image_dataChange() {
 				//there will be no display
 				image_thumbnail = null;
 				//show error message!
-				globals.svyCore_dlg_warning('<html>This is<b> NOT an image file!</b><br>Please select a different file.</html>','','OK')
+//				globals.svyCore_dlg_warning('<html>This is<b> NOT an image file!</b><br>Please select a different file.</html>','','OK') - the method is not defined
 				return;
 			}
 			image_type = ext;

@@ -1,4 +1,6 @@
 /**
+ * @type {Function}
+ * 
  * @properties={typeid:35,uuid:"6AC0FFEC-DEE1-4A49-A4CD-2D702A03233E",variableType:-4}
  */
 var callbackFunction = null;
@@ -16,9 +18,11 @@ var changedElements = null;
 var newComponentsCounter = 0;
 
 /**
- * @properties={typeid:35,uuid:"0EFA5A50-E787-4B69-B435-4CB08028C25D",variableType:-4}
+ * @type String
+ *
+ * @properties={typeid:35,uuid:"8F4E61FF-4B52-490B-98DD-C7637B327CA6",variableType:12}
  */
-var selectedDesignFormName = null;
+var selectedDesignFormName = '';
 
 /**
  * @type Array

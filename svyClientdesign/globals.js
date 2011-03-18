@@ -4,5 +4,5 @@
  */
 function createShortcut()
 {
-	plugins.window.createShortcut("control 1",forms.clientdesign.show);
+	plugins.window.createShortcut('control 1','forms.clientdesign');
 }

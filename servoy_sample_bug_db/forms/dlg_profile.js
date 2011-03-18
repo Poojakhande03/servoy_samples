@@ -45,7 +45,11 @@ function BtnOk()
 		
 		//set the global so that if they click the "X" close it won't close
 		globals.isDialogOpen = 1;
-		application.showFormInDialog(forms.dlg_company, -1,-1,-1,-1, "i18n:lbl.company", false, false, 'company', true);
+//		application.showFormInDialog(forms.dlg_company, -1,-1,-1,-1, "i18n:lbl.company", false, false, 'company', true);
+		var win = application.createWindow("company", JSWindow.MODAL_DIALOG);
+		win.setInitialBounds(-1, -1, -1, -1);
+		win.title= "i18n:lbl.company";
+		win.show(forms.dlg_company);
 	}
 	else
 	{

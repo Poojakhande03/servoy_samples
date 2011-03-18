@@ -4,7 +4,7 @@ items:[
 {
 formIndex:10700,
 imageMediaID:"d0439976-a2b0-49b6-b0ed-f91691fb42fc",
-location:"40,3",
+location:"22,3",
 mediaOptions:14,
 name:"btn_showAll",
 onActionMethodID:"df22eef4-7f25-48bd-bfce-327c5267aade",
@@ -20,7 +20,7 @@ uuid:"03dd144c-7f3a-4517-a8c4-fe27a1ba1f52"
 {
 formIndex:10000,
 imageMediaID:"183788ed-ed4b-4865-8971-ceebdc8a2174",
-location:"107,3",
+location:"89,3",
 mediaOptions:14,
 name:"btn_add",
 onActionMethodID:"039c405f-79d7-4008-ad3b-be8d1eae4d3a",
@@ -35,7 +35,7 @@ uuid:"19be8540-17fb-4bb8-a79e-59124a4159a4"
 },
 {
 formIndex:10300,
-location:"92,26",
+location:"74,26",
 mediaOptions:14,
 name:"lbl_add",
 size:"50,17",
@@ -55,7 +55,7 @@ uuid:"406e3dad-02c9-47dd-af9d-365af2032160"
 },
 {
 formIndex:10800,
-location:"22,26",
+location:"4,26",
 mediaOptions:14,
 name:"lbl_showAll",
 size:"52,17",
@@ -68,7 +68,7 @@ uuid:"63724dc7-7877-4bea-ba99-5e9ba1aa0fe9"
 },
 {
 formIndex:10500,
-location:"187,26",
+location:"169,26",
 mediaOptions:14,
 showClick:false,
 showFocus:false,
@@ -84,7 +84,7 @@ uuid:"8fa0b384-6472-4d6b-8aa7-bef9c1534049"
 borderType:"SpecialMatteBorder,0.0,0.0,0.0,1.0,#ffffff,#ffffff,#ffffff,#ffffff,0.0,",
 formIndex:10600,
 horizontalAlignment:4,
-location:"87,1",
+location:"69,1",
 mediaOptions:14,
 name:"lbl_divLine",
 size:"2,37",
@@ -96,7 +96,7 @@ uuid:"a89a8a96-db07-49ee-aedf-60da752b0dc7"
 {
 formIndex:10200,
 imageMediaID:"eb7d5f0e-950e-49d6-8b67-67d48159efce",
-location:"154,3",
+location:"136,3",
 mediaOptions:14,
 name:"btn_edit",
 onActionMethodID:"dd51b40b-160d-4e2d-a67b-8a50b251906c",
@@ -111,7 +111,7 @@ uuid:"d802cbed-da2c-4f7b-85a3-5f9b63fa72dc"
 },
 {
 formIndex:10400,
-location:"137,26",
+location:"119,26",
 mediaOptions:14,
 size:"50,17",
 styleClass:"whtctr",
@@ -124,7 +124,7 @@ uuid:"db43d775-6f08-41c9-9b28-52acf6172d29"
 {
 formIndex:10100,
 imageMediaID:"c21f59df-fadc-45d7-8218-f6b0981b23ec",
-location:"198,3",
+location:"180,3",
 mediaOptions:14,
 name:"btn_delete",
 onActionMethodID:"1e18949b-bf32-4345-b5de-8700d1dd7fe0",
@@ -145,7 +145,7 @@ onRecordSelectionMethodID:"-1",
 onShowMethodID:"48ca7fef-4617-49e6-80f7-e9154722ce75",
 paperPrintScale:100,
 scrollbars:36,
-size:"240,43",
+size:"225,43",
 styleName:"servoy_sample_auto_pdf",
 typeid:3,
 uuid:"a152835b-c4b4-4c4c-a999-41ef352d4b0a"

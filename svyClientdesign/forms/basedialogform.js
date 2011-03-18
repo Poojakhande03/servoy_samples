@@ -1,5 +1,5 @@
 /**
- * @type Object
+ * @type {Function}
  *
  * @properties={typeid:35,uuid:"366B6F4D-8A95-424E-93AC-12CCD4E5E298",variableType:-4}
  */

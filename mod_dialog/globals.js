@@ -141,6 +141,10 @@ function core_showWcGenericDialog(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7
 			case 'forbidden': forms.mod_dialog_frm_generic.show_iconForbidden(); break;
 			default: forms.mod_dialog_frm_generic.show_iconInfo();
 		}
-		application.showFormInDialog(forms.mod_dialog_frm_generic, -1,-1,-1,-1,  title,  false, false, "Dialog", true)
+//		application.showFormInDialog(forms.mod_dialog_frm_generic, -1,-1,-1,-1, title,  false, false, "Dialog", true)
+		var win = application.createWindow("Dialog", JSWindow.MODAL_DIALOG);
+		win.setInitialBounds(-1, -1, -1, -1);
+		win.title= title;
+		win.show(forms.mod_dialog_frm_generic);
 	}
 }

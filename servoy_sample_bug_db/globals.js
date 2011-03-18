@@ -743,7 +743,7 @@ function NewRecordDocument(arg0)
 	forms.dlg_document.ixcreatedperson = globals.currUserID;
 	forms.dlg_document.dt_created = new Date();
 	forms.dlg_document.ixmodifiedperson = null;
-	forms.dlg_document.dt_modififed = null;
+	forms.dlg_document['dt_modififed'] = null;
 	forms.dlg_document.ixproject = globals.currProjectID;
 	//forms.dlg_document.ixtenant = globals.currTenantID
 	
@@ -1152,7 +1152,11 @@ function ShowDialogBug(arg0, arg1, arg2)
 	//set the global so that if they click the "X" close it won't close
 	globals.isDialogOpen = 1
 	
-	application.showFormInDialog(forms.dlg_bug, -1,-1,-1,-1, title, false, false, 'bug', true)
+//	application.showFormInDialog(forms.dlg_bug, -1,-1,-1,-1, title, false, false, 'bug', true);
+	var win = application.createWindow("bug", JSWindow.MODAL_DIALOG);
+	win.setInitialBounds(-1, -1, -1, -1);
+	win.title= title;
+	win.show(forms.dlg_bug);
 }
 
 /**
@@ -1207,7 +1211,11 @@ function ShowDialogComment(arg0, arg1, arg2, arg3)
 	//set the global so that if they click the "X" close it won't close
 	globals.isDialogOpen = 1
 	
-	application.showFormInDialog(forms.dlg_comment, -1,-1,-1,-1, title, false, false, 'comment', true)
+//	application.showFormInDialog(forms.dlg_comment, -1,-1,-1,-1, title, false, false, 'comment', true)
+	var win = application.createWindow("comment", JSWindow.MODAL_DIALOG);
+	win.setInitialBounds(-1, -1, -1, -1);
+	win.title= title;
+	win.show(forms.dlg_comment);
 }
 
 /**
@@ -1250,7 +1258,11 @@ function ShowDialogCommentRead(arg0, arg1)
 	//set the global so that if they click the "X" close it won't close
 	globals.isDialogOpen = 1
 	
-	application.showFormInDialog(forms.dlg_comment_read, -1,-1,-1,-1, title, false, false, 'comment_read', true)
+//	application.showFormInDialog(forms.dlg_comment_read, -1,-1,-1,-1, title, false, false, 'comment_read', true)
+	var win = application.createWindow("comment_read", JSWindow.MODAL_DIALOG);
+	win.setInitialBounds(-1, -1, -1, -1);
+	win.title= title;
+	win.show(forms.dlg_comment_read);
 }
 
 /**
@@ -1303,7 +1315,11 @@ function ShowDialogCompany(arg0, arg1, arg2)
 	//set the global so that if they click the "X" close it won't close
 	globals.isDialogOpen = 1
 	
-	application.showFormInDialog(forms.dlg_company, -1,-1,-1,-1, title, false, false, 'company', true)
+//	application.showFormInDialog(forms.dlg_company, -1,-1,-1,-1, title, false, false, 'company', true)
+	var win = application.createWindow("company", JSWindow.MODAL_DIALOG);
+	win.setInitialBounds(-1, -1, -1, -1);
+	win.title= title;
+	win.show(forms.dlg_company);
 }
 
 /**
@@ -1333,7 +1349,11 @@ function ShowDialogCompanyChooser(arg0)
 	//set the global so that if they click the "X" close it won't close
 	globals.isDialogOpen = 1
 	
-	application.showFormInDialog(forms.dlg_chooseCompany, -1,-1,-1,-1, title, false, false, 'companyChooser', true)
+//	application.showFormInDialog(forms.dlg_chooseCompany, -1,-1,-1,-1, title, false, false, 'companyChooser', true)
+	var win = application.createWindow("companyChooser", JSWindow.MODAL_DIALOG);
+	win.setInitialBounds(-1, -1, -1, -1);
+	win.title= title;
+	win.show(forms.dlg_chooseCompany);
 }
 
 /**
@@ -1384,7 +1404,11 @@ function ShowDialogDocument(arg0, arg1, arg2)
 	//set the global so that if they click the "X" close it won't close
 	globals.isDialogOpen = 1;
 	
-	application.showFormInDialog(forms.dlg_document, -1,-1,-1,-1, title, false, false, 'document', true);
+//	application.showFormInDialog(forms.dlg_document, -1,-1,-1,-1, title, false, false, 'document', true);
+	var win = application.createWindow("document", JSWindow.MODAL_DIALOG);
+	win.setInitialBounds(-1, -1, -1, -1);
+	win.title= title;
+	win.show(forms.dlg_document);
 }
 
 /**
@@ -1436,7 +1460,11 @@ function ShowDialogFile(arg0, arg1, arg2)
 	//set the global so that if they click the "X" close it won't close
 	globals.isDialogOpen = 1
 	
-	application.showFormInDialog(forms.dlg_file, -1,-1,-1,-1, title, false, false, 'file', true)
+//	application.showFormInDialog(forms.dlg_file, -1,-1,-1,-1, title, false, false, 'file', true)
+	var win = application.createWindow("file", JSWindow.MODAL_DIALOG);
+	win.setInitialBounds(-1, -1, -1, -1);
+	win.title= title;
+	win.show(forms.dlg_file);
 }
 
 /**
@@ -1491,7 +1519,11 @@ function ShowDialogPerson(arg0, arg1, arg2)
 		//set the global so that if they click the "X" close it won't close
 		globals.isDialogOpen = 1
 		
-		application.showFormInDialog(forms.dlg_profile, -1,-1,-1,-1, title, false, false, 'profile', true)
+//		application.showFormInDialog(forms.dlg_profile, -1,-1,-1,-1, title, false, false, 'profile', true);
+		var win = application.createWindow("profile", JSWindow.MODAL_DIALOG);
+		win.setInitialBounds(-1, -1, -1, -1);
+		win.title= title;
+		win.show(forms.dlg_profile);
 	}
 	else
 	{
@@ -1539,7 +1571,11 @@ function ShowDialogPersonChooser(arg0, arg1)
 		//set the global so that if they click the "X" close it won't close
 		globals.isDialogOpen = 1
 		
-		application.showFormInDialog(forms.dlg_choosePerson, -1,-1,-1,-1, title, false, false, 'personChooser', true)
+//		application.showFormInDialog(forms.dlg_choosePerson, -1,-1,-1,-1, title, false, false, 'personChooser', true)
+		var win = application.createWindow("personChooser", JSWindow.MODAL_DIALOG);
+		win.setInitialBounds(-1, -1, -1, -1);
+		win.title= title;
+		win.show(forms.dlg_choosePerson);
 	}
 	else
 	{
@@ -1598,7 +1634,11 @@ function ShowDialogProject(arg0, arg1, arg2)
 	//set the global so that if they click the "X" close it won't close
 	globals.isDialogOpen = 1
 	
-	application.showFormInDialog(forms.dlg_project, -1,-1,-1,-1, title, false, false, 'project', true)
+//	application.showFormInDialog(forms.dlg_project, -1,-1,-1,-1, title, false, false, 'project', true)
+	var win = application.createWindow("project", JSWindow.MODAL_DIALOG);
+	win.setInitialBounds(-1, -1, -1, -1);
+	win.title= title;
+	win.show(forms.dlg_project);
 }
 
 /**
@@ -1651,7 +1691,11 @@ function ShowDialogTask(arg0, arg1, arg2)
 	//set the global so that if they click the "X" close it won't close
 	globals.isDialogOpen = 1
 	
-	application.showFormInDialog(forms.dlg_task, -1,-1,-1,-1, title, false, false, 'task', true)
+//	application.showFormInDialog(forms.dlg_task, -1,-1,-1,-1, title, false, false, 'task', true)
+	var win = application.createWindow("task", JSWindow.MODAL_DIALOG);
+	win.setInitialBounds(-1, -1, -1, -1);
+	win.title= title;
+	win.show(forms.dlg_task);
 }
 
 /**
@@ -1702,7 +1746,11 @@ function ShowDialogVersion(arg0, arg1, arg2)
 	//set the global so that if they click the "X" close it won't close
 	globals.isDialogOpen = 1;
 	
-	application.showFormInDialog(forms.dlg_version, -1,-1,-1,-1, title, false, false, 'version', true);
+//	application.showFormInDialog(forms.dlg_version, -1,-1,-1,-1, title, false, false, 'version', true);
+	var win = application.createWindow("version", JSWindow.MODAL_DIALOG);
+	win.setInitialBounds(-1, -1, -1, -1);
+	win.title= title;
+	win.show(forms.dlg_version);
 }
 
 /**
@@ -1795,9 +1843,9 @@ function SolutionOnError(arg0)
 			  application.output(record.exception);
 			  if (record.exception instanceof DataException)
 			  {
-				  application.output("SQL: "+record.exception.getSQL())
-				  application.output("SQLState: "+record.exception.getSQLState())
-				  application.output("VendorErrorCode: "+record.exception.getVendorErrorCode())
+				  application.output("SQL: "+record['exception'].getSQL())
+				  application.output("SQLState: "+record['exception'].getSQLState())
+				  application.output("VendorErrorCode: "+record['exception'].getVendorErrorCode())
 			  }
 		  }
 	  }
@@ -1825,7 +1873,11 @@ function SolutionOpen()
 	'a:hover{color:blue;text-decoration:underline;}smtext{font-size: 9pt;} xsmtext{font-size: 8pt;}</style></head><body>'
 	
 	//comment out - or delete the line below to supress the opening dialog
-	application.showFormInDialog(forms._welcome,-1,-1,-1,-1,'Welcome',false,false,"welcome",true)
+//	application.showFormInDialog(forms._welcome,-1,-1,-1,-1,'Welcome',false,false,"welcome",true)
+	var win = application.createWindow("welcome", JSWindow.MODAL_DIALOG);
+	win.setInitialBounds(-1, -1, -1, -1);
+	win.title= "Welcome";
+	win.show(forms._welcome);
 }
 
 /**

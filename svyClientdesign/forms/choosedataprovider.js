@@ -14,7 +14,7 @@ var fieldtype = null;
 
 /**
  * @param {String} formname The formname for which this dataprovider should be called.
- * @param {Object} callback // TODO generated, please specify type and doc
+ * @param {Function} callback // TODO generated, please specify type and doc
  *
  * @properties={typeid:24,uuid:"7A4DCE15-D591-4C38-8718-69587F3B2F9E"}
  */
