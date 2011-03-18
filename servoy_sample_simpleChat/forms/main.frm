@@ -15,7 +15,7 @@ uuid:"8be9775c-6cc4-4b5d-a170-e32556b2b186"
 location:"0,0",
 name:"tabs_nav",
 printable:false,
-size:"195,602",
+size:"197,602",
 tabOrientation:-1,
 typeid:16,
 uuid:"4e1420b1-1eef-4fd1-a3f0-8ba09fbbf678"
