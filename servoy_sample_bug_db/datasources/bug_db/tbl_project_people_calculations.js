@@ -71,15 +71,15 @@ function display_person()
 /**
  * @properties={type:12,typeid:36,uuid:"13cbd350-8262-4359-9fe3-3744fbad4caa"}
  */
-function display_project()
-{
+function display_project() {
+	var proj;
 	if(project_people_to_project && project_people_to_project.proj_name)
 	{
-		var proj = project_people_to_project.proj_name
+		proj = project_people_to_project.proj_name
 	}
 	else
 	{
-		var proj = "Untitled Project"
+		proj = "Untitled Project"
 	}
 
 	if(application.getApplicationType() == 5) //web client
@@ -95,15 +95,15 @@ function display_project()
 /**
  * @properties={type:12,typeid:36,uuid:"d7e5a3be-77c1-4cf9-b902-cf51283bd87a"}
  */
-function display_project_bold()
-{
+function display_project_bold() {
+	var proj;
 	if(project_people_to_project && project_people_to_project.proj_name)
 	{
-		var proj = project_people_to_project.proj_name
+		proj = project_people_to_project.proj_name
 	}
 	else
 	{
-		var proj = "Untitled Project"
+		proj = "Untitled Project"
 	}
 
 	if(application.getApplicationType() == 5) //web client
@@ -119,15 +119,15 @@ function display_project_bold()
 /**
  * @properties={type:12,typeid:36,uuid:"67200564-12c8-4458-82d6-1da123861388"}
  */
-function display_status()
-{
+function display_status() {
+	var mystatus
 	if(project_people_to_project && project_people_to_project.status)
 	{
-		var mystatus = application.getValueListDisplayValue('ProjectStatus', project_people_to_project.status)
+		mystatus = application.getValueListDisplayValue('ProjectStatus', project_people_to_project.status)
 	}
 	else
 	{
-		var mystatus = 'UNKNOWN'
+		mystatus = 'UNKNOWN'
 	}
 
 	if(application.getApplicationType() == 5) //web client

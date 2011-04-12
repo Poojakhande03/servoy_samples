@@ -78,7 +78,7 @@ function BtnSort(event, arg1) {
 	
 	SPECIAL THANKS to David Workman of http://www.servoymagazine.com
 	********************************************/
-	
+	var btnName;
 	var isInitial;
 	if (arg1 != null) {
 		isInitial = arg1;
@@ -104,9 +104,9 @@ function BtnSort(event, arg1) {
 	
 	//column number
 	if (arg1 != null)
-		var btnName = event;
+		btnName = event;
 	else
-		var btnName = event.getElementName();
+		btnName = event.getElementName();
 	var columnNum = utils.stringRight(btnName, 2);
 	
 	if (columnNum.charAt(0) == '_')

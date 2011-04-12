@@ -13,6 +13,7 @@ CREATED: 04/14/08 BC
 MODIFIED: NONE
 ********************************************/
 
+var taskID;
 if(application.getApplicationType() == 5) //web client
 {
 	forms.dlg_file.controller.newRecord(true)
@@ -59,11 +60,11 @@ else
 		//see what tabindex is showing and set appropriate keys //1=task, 2=document
 		if(elements.tabs_files.tabIndex == 1) {
 			forms.dlg_file.ixtask = globals.currTaskID
-			var taskID = globals.currTaskID
+			taskID = globals.currTaskID
 		}
 		else if(elements.tabs_files.tabIndex == 2) {
 			forms.dlg_file.ixdocument = globals.currDocumentID
-			var taskID = null
+			taskID = null
 		}
 		
 		//show the dialog for the description
@@ -81,6 +82,5 @@ else
 		databaseManager.saveData()
 		databaseManager.setAutoSave(false)
 	}
-
 }
 }

@@ -295,6 +295,7 @@ function sub_setNewOrderNumber()
  */
 function sub_slideLabels()
 {
+	var i, x, y;
 	//if the order is closed (is_active == 1) - don't show the add or edit buttons
 	if(!globals.isEditing() || is_active == 0)
 	{
@@ -308,10 +309,10 @@ function sub_slideLabels()
 			if(forms.lst_order_items.elements.lbl_1.getLocationX() == 29)
 			{
 				//move all labels to the left by 25px
-				for ( var i = 1 ; i <= 5 ; i++ )
+				for (i = 1 ; i <= 5 ; i++ )
 				{
-					var x = forms.lst_order_items.elements['lbl_' + i].getLocationX()-25
-					var y = forms.lst_order_items.elements['lbl_' + i].getLocationY()
+					x = forms.lst_order_items.elements['lbl_' + i].getLocationX()-25
+					y = forms.lst_order_items.elements['lbl_' + i].getLocationY()
 					forms.lst_order_items.elements['lbl_' + i].setLocation(x,y)
 				}
 
@@ -330,10 +331,10 @@ function sub_slideLabels()
 			if(forms.lst_order_items.elements.lbl_1.getLocationX() == 4)
 			{
 				//move all labels to the left by 25px
-				for ( var i = 1 ; i <= 5 ; i++ )
+				for (i = 1 ; i <= 5 ; i++ )
 				{
-					var x = forms.lst_order_items.elements['lbl_' + i].getLocationX()+25
-					var y = forms.lst_order_items.elements['lbl_' + i].getLocationY()
+					x = forms.lst_order_items.elements['lbl_' + i].getLocationX()+25
+					y = forms.lst_order_items.elements['lbl_' + i].getLocationY()
 					forms.lst_order_items.elements['lbl_' + i].setLocation(x,y)
 				}
 

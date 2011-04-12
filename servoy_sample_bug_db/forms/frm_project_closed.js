@@ -14,14 +14,15 @@ function OnShow()
 	********************************************/
 	
 	//perform a find for open projects that user is a member of the project team - or ALL for admin			
-	var args = new Array()
+	var args = new Array();
+	var query;
 	
 	if(globals.isAdmin == 1) {
-		var query = 'select a.ixproject from tbl_project a where a.status = 7 and a.ixtenant = ?'; 
+		query = 'select a.ixproject from tbl_project a where a.status = 7 and a.ixtenant = ?'; 
 		args[0] = globals.currTenantID;
 	}
 	else {
-		var query = 'select a.ixproject from tbl_project_people a, tbl_project b ' +
+		query = 'select a.ixproject from tbl_project_people a, tbl_project b ' +
 					'where a.ixproject = b.ixproject and a.ixpeople = ? and b.status = 7'
 		args[0] = globals.currUserID
 	}

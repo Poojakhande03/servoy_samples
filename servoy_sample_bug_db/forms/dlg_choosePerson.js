@@ -49,7 +49,7 @@ OUTPUTS: NONE
 CREATED: 04/19/08 BC
 MODIFIED: NONE
 ********************************************/
-
+	var id;
 	//turn off autosave
 	databaseManager.setAutoSave(true)
 	
@@ -61,7 +61,7 @@ MODIFIED: NONE
 	
 		//	iterate by selected people
 		for(i in globals.SelectMutiplePeopleArray){
-			var id = i.substring(1);
+			id = i.substring(1);
 			//	make the related row - for a project
 			forms.z_tbl_projectPeople.controller.newRecord(true)
 			forms.z_tbl_projectPeople.ixproject = globals.currProjectID
@@ -79,7 +79,7 @@ MODIFIED: NONE
 	
 		//	iterate by selected people
 		for(i in globals.SelectMutiplePeopleArray){
-			var id = i.substring(1);
+			id = i.substring(1);
 	
 			//	make the related row - for a company
 			forms.z_tbl_peopleCompany.controller.newRecord(true)

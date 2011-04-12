@@ -1904,6 +1904,7 @@ function SortColumns(arg0, arg1, arg2)
 	var sortImages = arg0;
 	var formName = arg1;
 	var columnNum = arg2;
+	var j;
 	
 	var displayImages = new Array();
 	var tempString = new Array();
@@ -1922,7 +1923,7 @@ function SortColumns(arg0, arg1, arg2)
 	{
 	    forms[formName].controller.sort(columnAsc[1]);
 	
-	    for ( var j = 0 ; j < displayImages.length ; j++ )
+	    for ( j = 0 ; j < displayImages.length ; j++ )
 	    {
 	        forms[formName].elements[displayImages[j]].visible = false
 	    }
@@ -1933,7 +1934,7 @@ function SortColumns(arg0, arg1, arg2)
 	{
 	    forms[formName].controller.sort(columnDesc[1]);
 	
-	    for ( var j = 0 ; j < displayImages.length ; j++ )
+	    for ( j = 0 ; j < displayImages.length ; j++ )
 	    {
 	        forms[formName].elements[displayImages[j]].visible = false
 	    }

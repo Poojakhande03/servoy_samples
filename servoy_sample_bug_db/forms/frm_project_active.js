@@ -1,8 +1,7 @@
 /**
  * @properties={typeid:24,uuid:"43d82238-f15f-437f-8536-9812bb82bdfe"}
  */
-function OnShow()
-{
+function OnShow() {
 	/*
 	PURPOSE: This method runs when the active projects form is shown
 	
@@ -12,17 +11,17 @@ function OnShow()
 	CREATED: 04/16/08 BC
 	MODIFIED: NONE
 	********************************************/
-	
+	var query;	
 	//perform a find for open projects that user is a member of the project team - or ALL for admin
 	var args = new Array()
 	
 	if(globals.isAdmin == 1) {
 		//var query = 'select a.ixproject from tbl_project a where a.status < 7' 
-		var query = 'select a.ixproject from tbl_project a where a.status < 7 and a.ixtenant = ?'; 
+		query = 'select a.ixproject from tbl_project a where a.status < 7 and a.ixtenant = ?'; 
 		args[0] = globals.currTenantID;
 	}
 	else {
-		var query = 'select a.ixproject from tbl_project_people a, tbl_project b ' +
+		query = 'select a.ixproject from tbl_project_people a, tbl_project b ' +
 					'where a.ixproject = b.ixproject and a.ixpeople = ? and b.status < 7'
 		args[0] = globals.currUserID
 	}

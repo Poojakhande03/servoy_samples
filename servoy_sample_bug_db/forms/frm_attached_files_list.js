@@ -12,17 +12,17 @@ function BtnDelete()
 	CREATED: 04/16/08 BC
 	MODIFIED: NONE
 	********************************************/
-	
+	var action;
 	//see what tabindex is showing and set appropriate keys //1=task, 2=document
 	if(forms.frm_attached_files.elements.tabs_files.tabIndex == 1) {
-		var action = 'Deleted file "' + file_name +	'" from task "' + file_to_task.task_name + '"'
+		action = 'Deleted file "' + file_name +	'" from task "' + file_to_task.task_name + '"'
 		
 		//update the modified of the task
 		gcurrtask_to_task.dt_modified = new Date()
 		gcurrtask_to_task.ixmodifiedperson = globals.currUserID
 	}
 	else if(forms.frm_attached_files.elements.tabs_files.tabIndex == 2) {
-		var action = 'Deleted file "' + file_name +	'" from document "' + file_to_document.doc_name + '"'
+		action = 'Deleted file "' + file_name +	'" from document "' + file_to_document.doc_name + '"'
 		
 		//update the modified of the document
 		gcurrdocument_to_document.dt_modified = new Date()

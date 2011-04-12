@@ -79,7 +79,7 @@ function SubLogin()
 	globals.errorText = null;
 	globals.tempInt = 0
 	var server = databaseManager.getServerNames();
-	var query;
+	var query, success;
 	
 	//search for the user
 	query = 'SELECT tbl_tenant.tenant_id, tbl_people.ixpeople, tbl_people.profile, tbl_tenant.is_master_tenant, tbl_company.category, tbl_company.ixcompany \
@@ -154,9 +154,9 @@ function SubLogin()
 		//filter tables by tenant
 		var isMasterAdmin = dataset.getValue(1, 4)
 		if(isMasterAdmin)
-			var success = true
+			success = true;
 		else
-			var success = databaseManager.addTableFilterParam('bug_db', null, 'ixtenant', '=', globals.currTenantID)
+			success = databaseManager.addTableFilterParam('bug_db', null, 'ixtenant', '=', globals.currTenantID)
 		
 		if(success)
 		{

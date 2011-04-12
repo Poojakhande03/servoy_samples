@@ -26,25 +26,25 @@ else
 /**
  * @properties={type:12,typeid:36,uuid:"bda51415-345d-4d94-98d5-43deb5eaad5b"}
  */
-function display_company()
-{
-if(project_to_company)
-{
-	var company = project_to_company.company_name
-}
-else
-{
-	var company = i18n.getI18NMessage('lbl.unassigned')
-}
-
-if(application.getApplicationType() == 5) //web client
-{
-	return globals.htmlHoverStyle + '<a href="javascript:globals.GoCompany(\'' + ixcompany + '\');">' + company + '</a></body></html>';
-}
-else
-{
-	return '<html><body><span style="font-size:11pt;">' + company + '</span></body></html>'
-}
+function display_company() {
+	var company;
+	if(project_to_company)
+	{
+		company = project_to_company.company_name
+	}
+	else
+	{
+		company = i18n.getI18NMessage('lbl.unassigned')
+	}
+	
+	if(application.getApplicationType() == 5) //web client
+	{
+		return globals.htmlHoverStyle + '<a href="javascript:globals.GoCompany(\'' + ixcompany + '\');">' + company + '</a></body></html>';
+	}
+	else
+	{
+		return '<html><body><span style="font-size:11pt;">' + company + '</span></body></html>'
+	}
 }
 
 /**
@@ -130,38 +130,39 @@ else {
 /**
  * @properties={type:12,typeid:36,uuid:"3dfc9d3c-efc4-4481-810a-f95143ceb6ab"}
  */
-function display_project()
-{
-if(proj_name)
-{
-	var proj = proj_name
-}
-else
-{
-	var proj = "Untitled Project"
-}
-
-if(application.getApplicationType() == 5) //web client
-{
-	return globals.htmlHoverStyle + '<a href="javascript:BtnGoProject(\'' + ixproject + '\');">' + proj + '</a></body></html>';
-}
-else
-{
-	return '<html><body><span style="font-size:11pt;">' + proj + '</span></body></html>'
-}
+function display_project() {
+	var proj;
+	if(proj_name)
+	{
+		proj = proj_name
+	}
+	else
+	{
+		proj = "Untitled Project"
+	}
+	
+	if(application.getApplicationType() == 5) //web client
+	{
+		return globals.htmlHoverStyle + '<a href="javascript:BtnGoProject(\'' + ixproject + '\');">' + proj + '</a></body></html>';
+	}
+	else
+	{
+		return '<html><body><span style="font-size:11pt;">' + proj + '</span></body></html>'
+	}
 }
 
 /**
  * @properties={type:12,typeid:36,uuid:"c17dc04d-03b0-4386-9e64-fbdace277ab7"}
  */
 function display_project_bold() {
+	var proj;
 	if(proj_name)
 	{
-		var proj = proj_name
+		proj = proj_name
 	}
 	else
 	{
-		var proj = "Untitled Project"
+		proj = "Untitled Project"
 	}
 	
 	if(application.getApplicationType() == 5) //web client
@@ -177,24 +178,24 @@ function display_project_bold() {
 /**
  * @properties={type:12,typeid:36,uuid:"345662ba-d934-4c54-82c2-2030f0458264"}
  */
-function display_status()
-{
-if(status)
-{
-	var mystatus = application.getValueListDisplayValue('ProjectStatus', status)
-}
-else
-{
-	var mystatus = i18n.getI18NMessage('lbl.undefined')
-}
-
-
-if(application.getApplicationType() == 5) //web client
-{
-	return globals.htmlHoverStyle + '<a href="javascript:BtnGoProject(\'' + ixproject + '\');">' + mystatus + '</a></body></html>';
-}
-else
-{
-	return '<html><body><span style="font-size:11pt;">' + mystatus + '</span></body></html>'
-}
+function display_status() {
+	var mystatus;
+	if(status)
+	{
+		mystatus = application.getValueListDisplayValue('ProjectStatus', status)
+	}
+	else
+	{
+		mystatus = i18n.getI18NMessage('lbl.undefined')
+	}
+	
+	
+	if(application.getApplicationType() == 5) //web client
+	{
+		return globals.htmlHoverStyle + '<a href="javascript:BtnGoProject(\'' + ixproject + '\');">' + mystatus + '</a></body></html>';
+	}
+	else
+	{
+		return '<html><body><span style="font-size:11pt;">' + mystatus + '</span></body></html>'
+	}
 }

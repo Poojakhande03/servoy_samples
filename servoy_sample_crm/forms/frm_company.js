@@ -17,8 +17,7 @@ function btn_openURL()
 /**
  * @properties={typeid:24,uuid:"97a89a42-cb31-4cc1-8ffa-c07a6c90d9f0"}
  */
-function btn_save()
-{
+function btn_save() {
 	_super.btn_save()
 
 	//do sort and hilight the newly added (edited) record

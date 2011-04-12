@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <buildpath>
-	<buildpathentry kind="src" path=""/>
+	<buildpathentry excluding=".stp/|medias/" kind="src" path=""/>
 	<buildpathentry exported="true" kind="prj" path="/servoy_sample_solutionModel_auth"/>
 	<buildpathentry exported="true" kind="prj" path="/servoy_sample_solutionModel_login"/>
 	<buildpathentry exported="true" kind="prj" path="/svyClientdesign"/>

@@ -43,29 +43,29 @@ else
 /**
  * @properties={type:12,typeid:36,uuid:"00c84f5c-d300-41ae-9136-9e7a92639aed"}
  */
-function list_display()
-{
-if(product_number && product_name)
-{
-	var txt = product_number + ' - ' + product_name
-}
-else if(product_number)
-{
-	return product_number
-}
-else if(product_name)
-{
-	var txt = product_name
-}
-
-if(txt.length > 24)
-{
-	return txt.substr(0,22) + '...'
-}
-else
-{
-	return txt
-}
+function list_display() {
+	var txt;
+	if(product_number && product_name)
+	{
+		txt = product_number + ' - ' + product_name
+	}
+	else if(product_number)
+	{
+		return product_number
+	}
+	else if(product_name)
+	{
+		txt = product_name
+	}
+	
+	if(txt.length > 24)
+	{
+		return txt.substr(0,22) + '...'
+	}
+	else
+	{
+		return txt
+	}
 }
 
 /**

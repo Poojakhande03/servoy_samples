@@ -16,6 +16,7 @@ function btn_goOrder()
  */
 function btn_newOrder()
 {
+	var mthd;
 	//make sure the company has at least ONE address & ONE contact
 	var addrCnt = forms.frm_company.companies_to_addresses.getSize()
 	var contCnt = forms.frm_company.companies_to_contacts.getSize()
@@ -52,13 +53,13 @@ function btn_newOrder()
 	else if(addrCnt == 0)
 	{
 		//show error
-		var mthd = 'forms.lst_company_orders.sub_continueCreateAddr()'
+		mthd = 'forms.lst_company_orders.sub_continueCreateAddr()'
 		globals.showErrorDialog('There needs to be at least one address defined for this customer before you can create an order.',mthd,'OK', null, null, null)
 	}
 	else if(contCnt == 0)
 	{
 		//show error
-		var mthd = 'forms.lst_company_orders.sub_continueCreateContact()'
+		mthd = 'forms.lst_company_orders.sub_continueCreateContact()'
 		globals.showErrorDialog('There needs to be at least one contact defined for this customer before you can create an order.',mthd,'OK', null, null, null)
 	}
 }

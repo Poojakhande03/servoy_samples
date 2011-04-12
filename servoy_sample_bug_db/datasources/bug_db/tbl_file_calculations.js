@@ -213,15 +213,15 @@ function display_fileName_bold()
 /**
  * @properties={type:12,typeid:36,uuid:"22c05f2d-4131-4b0b-a495-bf11d68b8b48"}
  */
-function display_status()
-{
+function display_status() {
+	var mystatus;
 	if(status != null && status != '')
 	{
-		var mystatus = application.getValueListDisplayValue('TaskStatus', status)
+		mystatus = application.getValueListDisplayValue('TaskStatus', status)
 	}
 	else
 	{
-		var mystatus = i18n.getI18NMessage('lbl.undefinedQ')
+		mystatus = i18n.getI18NMessage('lbl.undefinedQ')
 	}
 	if(application.getApplicationType() == 5) //web client
 	{
