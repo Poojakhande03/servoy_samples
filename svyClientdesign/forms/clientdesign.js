@@ -174,7 +174,7 @@ function newLabelImpl( label )
 /**
  * // TODO generated, please specify type and doc for the params
  * @param {JSForm} form
- * @param {Object} prefix
+ * @param {String} prefix
  *
  * @properties={typeid:24,uuid:"E10B14F9-013C-45D8-9B67-04565A53C54D"}
  */
@@ -261,7 +261,7 @@ function onDrop( event )
 	// walk through all the dropped elements and copy there current location in the solution model elements.
 	for (var index = 0; index < eventElements.length; index++)
 	{
-		/** @type BaseComponent */ 
+		/** @type RuntimeComponent */ 
 		var droppedRuntimeElement = eventElements[index];
 		
 		var X = droppedRuntimeElement.getLocationX();
@@ -419,7 +419,7 @@ function onResize( event )
 	// walk through all the resized elements and copy there current width and height in the solution model.
 	for (var index = 0; index < eventElements.length; index++)
 	{
-		/** @type BaseComponent */ 
+		/** @type RuntimeComponent */ 
 		var element = eventElements[index];
 		if ( element.getName() != null )
 		{
@@ -451,7 +451,7 @@ function deleteElements(event)
 		for (var index = 0; index < eventElements.length; index++)
 		{
 			
-			/** @type BaseComponent */
+			/** @type RuntimeComponent */
 			var element = eventElements[index];
 			if ( element.getName() != null )
 			{
