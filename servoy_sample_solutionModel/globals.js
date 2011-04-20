@@ -86,7 +86,7 @@ function selectEntityNode(arg0)
 
 /**
  * @param {JSRecord} entity_rec // TODO generated, please specify type and doc
- * @param {Object} fname // TODO generated, please specify type and doc
+ * @param {String} fname // TODO generated, please specify type and doc
  * @param {Object} vtype // TODO generated, please specify type and doc
  *
  * @properties={typeid:24,uuid:"F7FD68DC-4CF4-486F-A908-1DFE9DFB1327"}
@@ -266,7 +266,7 @@ function showFormInDesignMode(event)
  * Recieves the changed solutionModel objects from clientdesign which has to be stored persistent in elements table with a user_uid 
  * so when an enduser logsin again his changes from last time are seen
  * 
- * @param {Object} formName
+ * @param {String} formName
  * @param {Array} changedElementsArray
  * 
  * @properties={typeid:24,uuid:"A77BF540-9A7F-49AB-889F-25F22B500969"}
@@ -274,10 +274,11 @@ function showFormInDesignMode(event)
  */
 function changedElements(formName, changedElementsArray)
 {
+	/** @type JSRecord<db:/user_data/entities> */
 	var entity_rec = null;
 	var count;
 	/** @type JSFoundset<db:/user_data/entities> */
-	var fs = databaseManager.getFoundSet('user_data', 'entities')
+	var fs = databaseManager.getFoundSet('user_data', 'entities'); 
 	if (fs.find())
 	{
 		var search_entity_rec = fs.getRecord(1);
@@ -293,20 +294,20 @@ function changedElements(formName, changedElementsArray)
 		fs = entity_rec.entities_to_elements_login_user;
 		for (var index = 0; index < changedElementsArray.length; index++)
 		{
-			/** @type {BaseComponent}*/
+			/** @type {JSComponent}*/
 			var comp = changedElementsArray[index];
 			if ( comp != null )
 			{
 				if (fs.find())
 				{
 					var search_elements_rec = fs.getRecord(1)
-					search_elements_rec.element_name = comp.getName();
+					search_elements_rec.element_name = comp.name;
 					search_elements_rec.view_type = JSForm.RECORD_VIEW;
 					count = fs.search();
 					if (count > 0) 
 					{
 	 					element_rec = fs.getRecord(1)
-						if (form.getComponent(comp.getName()) == null)
+						if (form.getComponent(comp.name) == null)
 						{
 							//is deleted and found new/modified record
 //							element_rec.deleteRecord();
@@ -320,10 +321,10 @@ function changedElements(formName, changedElementsArray)
 						//new element
 						var idx = fs.newRecord();
 						element_rec = fs.getRecord(idx);
-						element_rec.element_name = comp.getName();
+						element_rec.element_name = comp.name;
 						element_rec.user_uid = security.getUserUID()
 						element_rec.view_type = JSForm.RECORD_VIEW;
-						if (form.getComponent(comp.getName()) == null)
+						if (form.getComponent(comp.name) == null)
 						{
 							//is deleted no custom record found, insert as hidden
 							element_rec.display_options = 4;
@@ -351,10 +352,10 @@ function changedElements(formName, changedElementsArray)
 							element_rec.element_type = 2
 						}
 	 				}
-					element_rec.xlocation = comp.getLocationX();
-					element_rec.ylocation = comp.getLocationY();
-					element_rec.width = comp.getWidth();
-					element_rec.height = comp.getHeight();
+					element_rec.xlocation = comp.x;
+					element_rec.ylocation = comp.y;
+					element_rec.width = comp.width;
+					element_rec.height = comp.height;
 				}
 			}
 		}
