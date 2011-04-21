@@ -24,7 +24,6 @@ function show(formname, callback)
 	array = array.concat(forms[formname].allvariables);
 		
 	application.setValueListItems("dataproviders",array);
-	fillFieldType();
 	
 	_super.show(callback)
 }
