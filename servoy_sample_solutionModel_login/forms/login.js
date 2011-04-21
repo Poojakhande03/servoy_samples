@@ -21,4 +21,5 @@ var user = null;
  */
 function login(event) {
 	security.authenticate('servoy_sample_solutionModel_auth', 'auth', [user, pass]);
+	globals.login_user_uid = security.getUserUID();
 }

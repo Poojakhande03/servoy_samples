@@ -20,13 +20,6 @@ var heading = '';
 var search = '';
 
 /**
- * @type String
- *
- * @properties={typeid:35,uuid:"BBC3F82A-470D-4AB6-8751-3E335E20ECAF",variableType:12}
- */
-var login_user_uid = null;
-
-/**
  * @AllowToRunInFind
  * 
  * @param {Number} arg0 // TODO generated, please specify type and doc
@@ -201,16 +194,17 @@ function createElement(element_rec,jsform,vtype)
 		/** @type {JSComponent}*/ 
 		jscomponent = jsform.newField(element_rec['dataprovider_id'], element_rec['field_type'], element_rec['xlocation'], element_rec['ylocation'], element_rec['width'], element_rec['height'])
 		if (element_rec.display_options == 1) jscomponent.editable = false;
+		jscomponent.titleText = element_rec['label'];
 	}
 	else if (element_rec.element_type == 1)
 	{
 		jscomponent = jsform.newLabel(element_rec['label'], element_rec['xlocation'], element_rec['ylocation'], element_rec['width'], element_rec['height'], null);
 		jscomponent.transparent = true
+		jscomponent.text = element_rec['label'];
 	}
 	//TODO handle more new elements
 
 	jscomponent.name = element_rec['element_name'];
-	jscomponent.titleText = element_rec['label'];
 	if (vtype == JSForm.LOCKED_TABLE_VIEW) 
 	{
 		jscomponent.anchors = (SM_ANCHOR.NORTH+SM_ANCHOR.EAST+SM_ANCHOR.WEST);
@@ -291,22 +285,22 @@ function changedElements(formName, changedElementsArray)
 	{
 		var form = solutionModel.getForm(formName);
 		var element_rec = null;
-		fs = entity_rec.entities_to_elements_login_user;
+		var relatedFs = entity_rec.entities_to_elements_login_user;
 		for (var index = 0; index < changedElementsArray.length; index++)
 		{
 			/** @type {JSComponent}*/
 			var comp = changedElementsArray[index];
 			if ( comp != null )
 			{
-				if (fs.find())
+				if (relatedFs.find())
 				{
-					var search_elements_rec = fs.getRecord(1)
+					var search_elements_rec = relatedFs.getRecord(1)
 					search_elements_rec.element_name = comp.name;
 					search_elements_rec.view_type = JSForm.RECORD_VIEW;
-					count = fs.search();
+					count = relatedFs.search();
 					if (count > 0) 
 					{
-	 					element_rec = fs.getRecord(1)
+	 					element_rec = relatedFs.getRecord(1);
 						if (form.getComponent(comp.name) == null)
 						{
 							//is deleted and found new/modified record
@@ -319,8 +313,8 @@ function changedElements(formName, changedElementsArray)
 					else
 					{
 						//new element
-						var idx = fs.newRecord();
-						element_rec = fs.getRecord(idx);
+						var idx = relatedFs.newRecord();
+						element_rec = relatedFs.getRecord(idx);
 						element_rec.element_name = comp.name;
 						element_rec.user_uid = security.getUserUID()
 						element_rec.view_type = JSForm.RECORD_VIEW;
