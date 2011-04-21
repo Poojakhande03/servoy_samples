@@ -24,7 +24,8 @@ function show(formname, callback)
 	array = array.concat(forms[formname].allvariables);
 		
 	application.setValueListItems("dataproviders",array);
-
+	fillFieldType();
+	
 	_super.show(callback)
 }
 
@@ -38,7 +39,7 @@ function okAction()
 }
 
 /**
- * Callback method when form is (re)loaded.
+ * fills the fieldtype valuelist
  *
  * @properties={typeid:24,uuid:"E27CFFA0-FD76-4BA4-9D37-F29E8A42119B"}
  */
@@ -66,7 +67,7 @@ function fillFieldType()
 	real[real.length] = JSField.TEXT_AREA;
 	display[display.length] = "TextField";
 	real[real.length] = JSField.TEXT_FIELD;
-	display[display.length0] = "TypeAhead";
+	display[display.length] = "TypeAhead";
 	real[real.length] = JSField.TYPE_AHEAD;
 	application.setValueListItems("fieldtype",display,real);
 }
