@@ -4,7 +4,9 @@
 function btn_add()
 {
 	//see what form is front-most
-	var frm = forms.main.elements.tabs_main.getTabFormNameAt(forms.main.elements.tabs_main.tabIndex)
+	/** @type Number*/
+	var idx = forms.main.elements.tabs_main.tabIndex
+	var frm = forms.main.elements.tabs_main.getTabFormNameAt(idx);
 
 	//if there's no transaction, start one - so they can "cancel"
 	if(!databaseManager.hasTransaction()) databaseManager.startTransaction()
@@ -28,7 +30,9 @@ function btn_add()
 function btn_delete()
 {
 	//see what form is front-most
-	var frm = forms.main.elements.tabs_main.getTabFormNameAt(forms.main.elements.tabs_main.tabIndex)
+	/** @type Number*/
+	var idx = forms.main.elements.tabs_main.tabIndex;
+	var frm = forms.main.elements.tabs_main.getTabFormNameAt(idx);
 	if(forms[frm].validate_beforeDelete() != 0) return;
 
 	var msg = forms[frm].delete_text
@@ -51,7 +55,9 @@ function btn_edit()
 	if(!databaseManager.hasTransaction())
 	{
 		//see what form is front-most
-		var frm = forms.main.elements.tabs_main.getTabFormNameAt(forms.main.elements.tabs_main.tabIndex)
+		/** @type Number*/
+		var idx = forms.main.elements.tabs_main.tabIndex;
+		var frm = forms.main.elements.tabs_main.getTabFormNameAt(idx);
 
 		//ALL forms must have a method "doEdit" for this to work
 		forms[frm].doEdit()
@@ -68,7 +74,9 @@ function btn_edit()
 function btn_showAll()
 {
 	//see what form is front-most
-	var frm = forms.main.elements.tabs_main.getTabFormNameAt(forms.main.elements.tabs_main.tabIndex)
+	/** @type Number*/
+	var idx = forms.main.elements.tabs_main.tabIndex;
+	var frm = forms.main.elements.tabs_main.getTabFormNameAt(idx);
 	var frm2 = utils.stringReplace(frm, 'frm', 'lst_pdf')
 
 	//load all records
@@ -104,7 +112,9 @@ function sub_doDelete()
 	//see what button text was pressed and then delete if necessary
 	if(globals.core_dlg_buttonPressed == 'Delete')
 	{
-		var frm = forms.main.elements.tabs_main.getTabFormNameAt(forms.main.elements.tabs_main.tabIndex)
+		/** @type Number*/
+		var idx = forms.main.elements.tabs_main.tabIndex;
+		var frm = forms.main.elements.tabs_main.getTabFormNameAt(idx);
 		forms[frm].controller.deleteRecord()
 
 		//clear out global - so we don't accidentally delete something

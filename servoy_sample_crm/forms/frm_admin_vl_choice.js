@@ -3,7 +3,9 @@
  */
 function btn_add()
 {
-	var frm = elements.tabs_lists.getTabFormNameAt(elements.tabs_lists.tabIndex)
+	/** @type Number*/
+	var idx = elements.tabs_lists.tabIndex;
+	var frm = elements.tabs_lists.getTabFormNameAt(idx);
 	
 	forms[frm].controller.newRecord(false)
 	
@@ -54,7 +56,9 @@ function sub_doDelete()
 {
 	if(globals.core_dlg_buttonPressed == 'Delete')
 	{
-		var frm = elements.tabs_lists.getTabFormNameAt(elements.tabs_lists.tabIndex)
+		/** @type Number*/
+		var idx = elements.tabs_lists.tabIndex;
+		var frm = elements.tabs_lists.getTabFormNameAt(idx);
 		
 		forms[frm].controller.deleteRecord()
 	}

@@ -200,7 +200,7 @@ function createElement(element_rec,jsform,vtype)
 	{
 		jscomponent = jsform.newLabel(element_rec['label'], element_rec['xlocation'], element_rec['ylocation'], element_rec['width'], element_rec['height'], null);
 		jscomponent.transparent = true
-		jscomponent.text = element_rec['label'];
+		jscomponent.titleText = element_rec['label'];
 	}
 	//TODO handle more new elements
 

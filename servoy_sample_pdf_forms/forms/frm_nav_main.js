@@ -4,7 +4,10 @@
  */
 function btn_search()
 {
-	var frm = forms.main.elements.tabs_main.getTabFormNameAt(forms.main.elements.tabs_main.tabIndex)
+	/** @type Number */
+	var idx = forms.main.elements.tabs_main.tabIndex;
+	var frm = forms.main.elements.tabs_main.getTabFormNameAt(idx);
+	/** @type String */ 
 	var search = globals.nav_search
 
 	if(search)
@@ -57,7 +60,7 @@ function btn_search()
 		else if(!isNaN(parseInt(search)) && search.indexOf('.') == -1)
 		{
 			dataType = 'int' //probably an integer
-			search = parseInt(search)
+			search = parseInt(search, 10);
 			searchStr = op + search
 		}
 

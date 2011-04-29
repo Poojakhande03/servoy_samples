@@ -83,6 +83,7 @@ function BtnViewFile()
 		}
 		
 		//create tempfile
+		/** @param {Object} tmpfile */
 		var tmpfile = plugins.file.createTempFile('temp', '.' + ext)
 		
 		//write data to the temp file
@@ -95,7 +96,7 @@ function BtnViewFile()
 		//FreeBSD or Linux
 		else if(utils.stringMiddle(application.getOSName(),1,7) == "FreeBSD"||utils.stringMiddle(application.getOSName(),1,5) == "Linux")
 		{
-		   application.executeProgram('mozilla', tmpfile)
+		   application.executeProgram('mozilla', tmpfile);
 		}
 		//Mac OSX
 		else if(application.getOSName().match("Mac"))

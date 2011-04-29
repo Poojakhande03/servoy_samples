@@ -153,6 +153,7 @@ function packetReceived() {
 	var packet;
 	var fontColor = '#666666';
 	while ( (packet = plugins.udp.getReceivedPacket()) != null) {
+		
 		var msg = packet.readUTF(packet.getLength());
 		var fromUser = packet.getHost();
 
@@ -186,20 +187,31 @@ function packetReceived() {
 }
 
 /**
+ * @param {String} arg0
+ * @param {Number} arg1
+ * @param {Boolean} arg2
+ * @param {Boolean} arg3
+ * @param {Boolean} arg4
+ * @param {String} arg5
+ * @param {Number} arg6
+ * @param {Number} arg7
+ * @param {Number} arg8
+ * @param {Number} arg9
+ * 
  * @properties={typeid:24,uuid:"ee070c23-b2e7-46fd-b496-46a544e9630e"}
  */
-function showDialog()
+function showDialog(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9)
 {
-	var title = arguments[0];
-	var whatTab = arguments[1];
-	var showCancelBtnOnly = arguments[2]; //anything that is not null is a vaid value
-	var cancelBtnLabel = arguments[3];
-	var showBtn3 = arguments[4]; //anything that is not null is valid value
-	var btn3Label = arguments[5];
-	var x = arguments[6];
-	var y = arguments[7];
-	var width = arguments[8];
-	var height = arguments[9];
+	var title = arg0;
+	var whatTab = arg1;
+	var showCancelBtnOnly = arg2; //anything that is not null is a vaid value
+	var cancelBtnLabel = arg3;
+	var showBtn3 = arg4; //anything that is not null is valid value
+	var btn3Label = arg5;
+	var x = arg6;
+	var y = arg7;
+	var width = arg8;
+	var height = arg9;
 
 	if(showCancelBtnOnly)
 	{

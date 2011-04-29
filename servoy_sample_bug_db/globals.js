@@ -703,7 +703,7 @@ function NewRecordCompany(arg0)
 		
 		//new record
 		forms.dlg_company.controller.newRecord(true);
-		forms.dlg_company.ixcreatedperson = globals.currUserID;
+//		forms.dlg_company.ixcreatedperson = globals.currUserID;
 		forms.dlg_company.dt_created = new Date();
 		forms.dlg_company['ixmodifiedperson'] = null;
 		forms.dlg_company['dt_modififed'] = null;
@@ -896,10 +896,10 @@ function NewRecordVersion(arg0)
 	
 	//new record
 	forms.dlg_version.controller.newRecord(true);
-	forms.dlg_version.ixcreatedperson = globals.currUserID;
+	forms.dlg_version.ixpersoncreated = globals.currUserID;
 	forms.dlg_version.dt_created = new Date();
-	forms.dlg_version.ixmodifiedperson = null;
-	forms.dlg_version.dt_modififed = null;
+	forms.dlg_version.ixpersonmodified = null;
+	forms.dlg_version.dt_modified = null;
 	forms.dlg_version.ixproject = globals.currProjectID;
 	//forms.dlg_version.ixtenant = globals.currTenantID
 	forms.dlg_version.status = 0;

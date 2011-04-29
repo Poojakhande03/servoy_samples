@@ -84,7 +84,9 @@ function _dev_temp()
 function btn_delete()
 {
 	//see what form is front-most
-	var frm = forms.main.elements.tabs_main.getTabFormNameAt(forms.main.elements.tabs_main.tabIndex)
+	/** @type Number*/
+	var idx = forms.main.elements.tabs_main.tabIndex;
+	var frm = forms.main.elements.tabs_main.getTabFormNameAt(idx);
 	if(forms[frm].validate_beforeDelete() != 0) return;
 
 	var msg = forms[frm].delete_text
@@ -204,7 +206,9 @@ function getTopHTML()
 function nav_nextRecord()
 {
 	//see what form is front-most
-	var frm = forms.main.elements.tabs_main.getTabFormNameAt(forms.main.elements.tabs_main.tabIndex)
+	/** @type Number*/
+	var idx = forms.main.elements.tabs_main.tabIndex;
+	var frm = forms.main.elements.tabs_main.getTabFormNameAt(idx);
 
 	forms[frm].controller.setSelectedIndex(forms[frm].controller.getSelectedIndex() + 1)
 }
@@ -215,7 +219,9 @@ function nav_nextRecord()
 function nav_prevRecord()
 {
 	//see what form is front-most
-	var frm = forms.main.elements.tabs_main.getTabFormNameAt(forms.main.elements.tabs_main.tabIndex)
+	/** @type Number*/
+	var idx = forms.main.elements.tabs_main.tabIndex;
+	var frm = forms.main.elements.tabs_main.getTabFormNameAt(idx);
 
 	forms[frm].controller.setSelectedIndex(forms[frm].controller.getSelectedIndex() - 1)
 }
@@ -263,7 +269,9 @@ function openSolution()
 function setupRecordStatus()
 {
 	//see what form is front-most
-	var frm = forms.main.elements.tabs_main.getTabFormNameAt(forms.main.elements.tabs_main.tabIndex)
+	/** @type Number*/
+	var idx = forms.main.elements.tabs_main.tabIndex;
+	var frm = forms.main.elements.tabs_main.getTabFormNameAt(idx);
 
 	var fs = databaseManager.getFoundSetCount(forms[frm].foundset)
 	var tc = databaseManager.getTableCount(forms[frm].foundset)
@@ -336,7 +344,9 @@ function showDialog(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9)
 	var cancelBtnLabel = arg3;
 	var showBtn3 = arg4; //anything that is not null is valid value
 	var btn3Label = arg5;
+	/** @type {Number}*/
 	var x = arg6;
+	/** @type {Number}*/
 	var y = arg7;
 	var width = arg8;
 	var height = arg9;

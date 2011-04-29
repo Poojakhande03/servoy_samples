@@ -142,7 +142,9 @@ function doEdit()
 	//for web client - disable the form showing in the tabpanel at the bottom
 	if(application.getApplicationType() == 5)
 	{
-		var frm =  elements.tabs_mainPanel.getTabFormNameAt(elements.tabs_mainPanel.tabIndex)
+		/** @type Number*/
+		var idx = elements.tabs_mainPanel.tabIndex;
+		var frm =  elements.tabs_mainPanel.getTabFormNameAt(idx)
 		forms[frm].controller.enabled = false
 		forms[frm].controller.readOnly = true
 	}
@@ -177,7 +179,9 @@ function hide_btn_reset_fields()
 	//for web client - enable the form showing in the tabpanel at the bottom
 	if(application.getApplicationType() == 5)
 	{
-		var frm =  elements.tabs_mainPanel.getTabFormNameAt(elements.tabs_mainPanel.tabIndex)
+		/** @type Number*/
+		var idx = elements.tabs_mainPanel.tabIndex;
+		var frm =  elements.tabs_mainPanel.getTabFormNameAt(idx);
 		forms[frm].controller.enabled = true
 		forms[frm].controller.readOnly = false
 	}

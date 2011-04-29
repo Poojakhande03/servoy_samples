@@ -6,6 +6,7 @@ function btn_search()
 {
 	/** @type String */
 	var frm = currentcontroller.getName();
+	/** @type String */
 	var search = globals.nav_search
 
 	if(search)
@@ -52,13 +53,13 @@ function btn_search()
 		else if(search.indexOf('.') != -1 && !isNaN(parseFloat(search)))
 		{
 			dataType = 'number' //probably a number
-			search = parseFloat(search)
+			search = parseFloat(search);
 			searchStr = op + search
 		}
 		else if(!isNaN(parseInt(search)) && search.indexOf('.') == -1)
 		{
 			dataType = 'int' //probably an integer
-			search = parseInt(search)
+			search = parseInt(search, 10);
 			searchStr = op + search
 		}
 

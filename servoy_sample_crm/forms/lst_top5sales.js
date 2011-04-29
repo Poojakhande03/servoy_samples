@@ -58,9 +58,10 @@ function draw_chart()
 		}
 
 		//put total line at bottom
+		/** @type String */
 		var totalLine = dataset.getColumnAsArray(2)
 		totalLine = totalLine.join('+')
-		totalLine = eval(totalLine)
+		totalLine = eval(totalLine);
 		HTML += '<tr><td nowrap colspan=2 align="right" class="body"><b>Total: '+
 		utils.numberFormat(totalLine, '$###,###,###.00') + "</b></td></tr>"
 		HTML += '</table>\n'+'</body>\n' //+'</html>'
