@@ -15,8 +15,10 @@ function btn_goForm()
 		if (name == 'customers') name = 'company'
 		action_method = name;
 	}
-	
+	try {
 	forms['frm_'+action_method].controller.show()
+	}
+	catch (e) {}
 	
 	var tabCount = forms.frm_nav_main.elements.tabs_recList.getMaxTabIndex();
 	for (var index = 1; index <= tabCount; index++) 
@@ -29,6 +31,7 @@ function btn_goForm()
 		}
 	}
 
+	if (item_name != null)
 	if (item_name.indexOf('Admin') == -1)
 	{
 		//update the record information
