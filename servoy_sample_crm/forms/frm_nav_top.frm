@@ -61,11 +61,11 @@ uuid:"63A1CC00-B4DA-47B3-8317-EB2539E6349D"
 {
 anchors:3,
 borderType:"EmptyBorder,0,0,0,0",
-formIndex:15300,
+formIndex:0,
 items:[
 {
 containsFormID:"b6b144ba-fd42-485d-b231-058bf28ef61e",
-location:"528,26",
+location:"527,14",
 text:"frm_nav_buttons",
 typeid:15,
 uuid:"0D5D3E54-7EB7-4F2D-9CD0-34B6DC180ECE"

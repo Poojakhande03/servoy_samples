@@ -3,12 +3,15 @@
  */
 function btn_goForm()
 {
+	var name = '';
 	//switch tabs in the main form - and the list form
+
 	if (action_method == null)
 	{
 		//incase having old db, fill with correct data
 		if (item_name != null)
-			var name = item_name.toLocaleLowerCase();
+			name = item_name.toLocaleLowerCase();
+		else name = 'company';
 		if (name == 'customers') name = 'company'
 		action_method = name;
 	}

@@ -16,7 +16,7 @@ typeid:7,
 uuid:"0dca4d93-342a-4eaa-9d74-5fe8b1f065e1"
 },
 {
-height:599,
+height:640,
 partType:5,
 typeid:19,
 uuid:"1a2b9863-f061-4b3e-bb04-a5566a5906e3"
@@ -38,7 +38,7 @@ uuid:"c2d4a55a-726a-45e3-85da-91fa8c5f9a7b"
 location:"0,399",
 name:"tabs_solNav",
 printable:false,
-size:"200,200",
+size:"200,240",
 tabOrientation:-1,
 typeid:16,
 uuid:"90bb5bdf-1dba-4502-a10c-c6e2840bf4a1"
@@ -137,7 +137,7 @@ onRecordSelectionMethodID:"-1",
 onShowMethodID:"-1",
 paperPrintScale:100,
 scrollbars:36,
-size:"200,599",
+size:"200,640",
 styleName:"svyWebCrm",
 typeid:3,
 uuid:"e6a4c8a0-9d4f-4100-be67-2d2b63e66ae3",

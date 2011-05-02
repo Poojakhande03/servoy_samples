@@ -181,6 +181,7 @@ uuid:"f614e2db-abe2-4e8b-b659-340e0b98a526"
 ],
 name:"frm_nav_buttons",
 navigatorID:"-1",
+onHideMethodID:"-1",
 onLoadMethodID:"-1",
 onRecordSelectionMethodID:"-1",
 onShowMethodID:"59d82235-78c2-4567-b3f3-ea732c1e7424",
