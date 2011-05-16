@@ -604,13 +604,6 @@ uuid:"9880fd17-b99f-4b18-9827-ecd6f0f285ac",
 valuelistID:"c47f61ff-6939-461d-9cf5-af5ba79076c5"
 },
 {
-borderType:"EmptyBorder,0,0,0,0",
-customProperties:"override:\"frm_nav_top\"",
-formIndex:0,
-typeid:16,
-uuid:"99775F0F-2BFD-4E29-9425-05065B44BD23"
-},
-{
 formIndex:13400,
 location:"20,318",
 mediaOptions:14,
