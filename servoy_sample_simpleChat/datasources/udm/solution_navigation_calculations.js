@@ -49,16 +49,16 @@ return HTML + '</td></tr></table></html>'
 }
 
 /**
- * @properties={type:12,typeid:36,uuid:"2dff88cb-3678-4847-a0a4-3cee20bafce8"}
+ * // TODO generated, please specify type and doc for the params
+ * @param {Number} index
+ * @param {Boolean} selected
+ *
+ * @properties={typeid:36,uuid:"A6043BC1-339F-4EAC-9DFE-AA81C36E2CFA"}
  */
-function rowBgcolor_ltgrey()
-{
-var index    = arguments[0];
-var selected = arguments[1];
-
-if (selected){
-   return "#f0f0f0"; // light grey for the selected row
-}else{ 
-	return "#FFFFFF"; //white
-}
+function rowBgcolor_ltgrey(index, selected) {
+	if (selected){
+	   return "#f0f0f0"; // light grey for the selected row
+	}else{ 
+		return "#FFFFFF"; //white
+	}
 }

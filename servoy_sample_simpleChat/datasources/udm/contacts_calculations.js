@@ -1,16 +1,19 @@
 /**
- * @properties={type:12,typeid:36,uuid:"251d8fbf-b5be-49ec-a530-97fd5a893141"}
+ * // TODO generated, please specify type and doc for the params
+ * @param {Number} index
+ * @param {Boolean} selected
+ *
+ * @properties={typeid:36,uuid:"A7EF96B4-6D00-4FB3-ADCF-AE6B6624C596"}
  */
-function bgRowcolor_ltgrey()
-{
-var index    = arguments[0];
-var selected = arguments[1];
-
-if (selected){
-   return "#f0f0f0"; // light grey for the selected row
-}else{ 
-	return "#FFFFFF"; //white
-}
+function bgRowcolor_ltgrey(index, selected) {
+//	var index    = arguments[0];
+//	var selected = arguments[1];
+	
+	if (selected){
+	   return "#f0f0f0"; // light grey for the selected row
+	}else{ 
+		return "#FFFFFF"; //white
+	}
 }
 
 /**
