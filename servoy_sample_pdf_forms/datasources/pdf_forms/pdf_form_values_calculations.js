@@ -1,14 +1,14 @@
 /**
- * @properties={type:12,typeid:36,uuid:"6070ba95-0ef7-4281-a943-1c6fbd61b040"}
+ * // TODO generated, please specify type and doc for the params
+ * @param {Object} index
+ * @param {Object} selected
+ *
+ * @properties={typeid:36,uuid:"E0BA5378-E0EF-42F1-8A69-2F92A177382A"}
  */
-function bgRowColor_ltGrey()
-{
-var index    = arguments[0];
-var selected = arguments[1];
-
-if (selected){
-   return "#f0f0f0"; // light grey for the selected row
-}else{ 
-	return "#FFFFFF"; //white
-}
+function bgRowColor_ltGrey(index, selected) {
+	if (selected){
+	   return "#f0f0f0"; // light grey for the selected row
+	}else{ 
+		return "#FFFFFF"; //white
+	}
 }

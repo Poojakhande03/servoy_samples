@@ -1,16 +1,16 @@
 /**
- * @properties={type:12,typeid:36,uuid:"04748193-8901-4082-9719-2b575ea4d98c"}
+ * // TODO generated, please specify type and doc for the params
+ * @param {Number} index
+ * @param {Boolean} selected
+ *
+ * @properties={typeid:36,uuid:"94482335-831B-456F-85A7-7CC9DF0BD19B"}
  */
-function bgRowColor_ltGrey()
-{
-var index    = arguments[0];
-var selected = arguments[1];
-
-if (selected){
-   return "#f0f0f0"; // light grey for the selected row
-}else{ 
-	return "#FFFFFF"; //white
-}
+function bgRowColor_ltGrey(index, selected) {
+	if (selected){
+	   return "#f0f0f0"; // light grey for the selected row
+	}else{ 
+		return "#FFFFFF"; //white
+	}
 }
 
 /**

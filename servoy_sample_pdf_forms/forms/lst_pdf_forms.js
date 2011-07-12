@@ -11,8 +11,8 @@ function btn_goRec()
  */
 function btn_sortAsc()
 {
-	elements.btn_sortAsc.setImageURL('media:///sort_asc_blk.gif')
-	elements.btn_sortDesc.setImageURL('media:///sort_desc_grey.gif')
+	elements.btn_sortAsc.imageURL = 'media:///sort_asc_blk.gif';
+	elements.btn_sortDesc.imageURL = 'media:///sort_desc_grey.gif';
 	controller.sort("company_name asc")
 }
 
@@ -21,8 +21,8 @@ function btn_sortAsc()
  */
 function btn_sortDesc()
 {
-	elements.btn_sortAsc.setImageURL('media:///sort_asc_grey.gif')
-	elements.btn_sortDesc.setImageURL('media:///sort_desc_blk.gif')
+	elements.btn_sortAsc.imageURL = 'media:///sort_asc_grey.gif';
+	elements.btn_sortDesc.imageURL = 'media:///sort_desc_blk.gif';
 	controller.sort("company_name desc")
 }
 
