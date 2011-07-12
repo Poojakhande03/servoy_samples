@@ -107,11 +107,11 @@ function onRecordSelect()
 	//setup or dim the buttons on the form based on field contents
 	if(email)
 	{
-		elements.btn_sendEmail.setImageURL('media:///sm_contract_whiteBg.gif')
+		elements.btn_sendEmail.imageURL = 'media:///sm_contract_whiteBg.gif';
 	}
 	else
 	{
-		elements.btn_sendEmail.setImageURL('media:///nav_right_grey_whiteBg.gif')
+		elements.btn_sendEmail.imageURL = 'media:///nav_right_grey_whiteBg.gif';
 	}
 }
 

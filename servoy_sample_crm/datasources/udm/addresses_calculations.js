@@ -77,16 +77,19 @@ return address
 }
 
 /**
- * @properties={type:12,typeid:36,uuid:"a2ecd4ad-ceee-4836-a34c-3fee416aa51a"}
+ * // TODO generated, please specify type and doc for the params
+ * @param {Number} index
+ * @param {Boolean} selected
+ *
+ * @properties={typeid:36,uuid:"B1F3AB54-299C-4711-982D-26EE7B5FA158"}
  */
-function bgRowcolor_ltgrey()
-{
-var index    = arguments[0];
-var selected = arguments[1];
-
-if (selected){
-   return globals.core_color_bgRowColor; // light grey for the selected row
-}else{ 
-	return globals.core_color_defaultBgColor; //white
-}
+function bgRowcolor_ltgrey(index, selected) {
+//	var index    = arguments[0];
+//	var selected = arguments[1];
+	
+	if (selected){
+	   return globals.core_color_bgRowColor; // light grey for the selected row
+	}else{ 
+		return globals.core_color_defaultBgColor; //white
+	}
 }

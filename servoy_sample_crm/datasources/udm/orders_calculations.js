@@ -163,18 +163,18 @@ else
 }
 
 /**
- * @properties={type:12,typeid:36,uuid:"efa22497-030a-4d44-9a85-5d7488c2aa06"}
+ * // TODO generated, please specify type and doc for the params
+ * @param {Number} index
+ * @param {Boolean} selected
+ *
+ * @properties={typeid:36,uuid:"3D28D789-A928-497A-A860-FCE782D4853D"}
  */
-function rowbgcolor_ltgrey()
-{
-var index    = arguments[0];
-var selected = arguments[1];
-
-if (selected){
-   return globals.core_color_bgRowColor; // light grey for the selected row
-}else{ 
-	return globals.core_color_defaultBgColor; //white
-}
+function rowbgcolor_ltgrey(index, selected) {
+	if (selected){
+	   return globals.core_color_bgRowColor; // light grey for the selected row
+	}else{ 
+		return globals.core_color_defaultBgColor; //white
+	}
 }
 
 /**

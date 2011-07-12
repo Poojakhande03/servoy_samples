@@ -211,22 +211,22 @@ function onRecordSelect()
 	//setup or dim the buttons on the form based on field contents
 	if(company_url)
 	{
-		elements.btn_openURL.setImageURL('media:///sm_earth.gif')
+		elements.btn_openURL.imageURL = 'media:///sm_earth.gif';
 	}
 	else
 	{
-		elements.btn_openURL.setImageURL('media:///nav_right_grey_whiteBg.gif')
+		elements.btn_openURL.imageURL = 'media:///nav_right_grey_whiteBg.gif';
 	}
 
 	if(company_email)
 	{
-		elements.btn_sendEmail.setImageURL('media:///sm_contract_whiteBg.gif')
+		elements.btn_sendEmail.imageURL = 'media:///sm_contract_whiteBg.gif';
 	}
 	else
 	{
-		elements.btn_sendEmail.setImageURL('media:///nav_right_grey_whiteBg.gif')
+		elements.btn_sendEmail.imageURL = 'media:///nav_right_grey_whiteBg.gif';
 	}
-
+	
 	//see if we're on the last tab and no orders - then jump to the orders tab
 	if(companies_to_orders.getSize() == 0 && elements.tabs_mainPanel.tabIndex == 4)
 	{

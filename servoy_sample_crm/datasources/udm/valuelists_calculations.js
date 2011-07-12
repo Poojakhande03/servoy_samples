@@ -1,12 +1,11 @@
 /**
+ * // TODO generated, please specify type and doc for the params
+ * @param {Number} index
+ * @param {Boolean} selected
  *
- * @properties={type:12,typeid:36,uuid:"70E853BC-24F9-4888-AC5D-028889864E3A"}
+ * @properties={typeid:36,uuid:"8CE4E3F9-786E-4B3D-A096-AF91D18CF11A"}
  */
-function bgRowColor_ltGrey()
-{
-	var index    = arguments[0];
-	var selected = arguments[1];
-	
+function bgRowColor_ltGrey(index, selected) {
 	if (selected){
 	   return globals.core_color_bgRowColor; // light grey for the selected row
 	}else{ 

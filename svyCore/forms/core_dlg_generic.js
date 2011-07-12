@@ -121,7 +121,7 @@ function close(event) {
 
 	//close the form in dialog
 //	application.closeFormDialog("Dialog");
-	application.getWindow('Dialog').close();
+	application.getWindow('Dialog').hide();
 
 	globals.callback_BgElements(globals.callback);
 //	globals.enableBgElements()
