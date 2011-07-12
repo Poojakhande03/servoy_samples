@@ -16,7 +16,7 @@ function BtnToggleSummary()
 	if(elements.tabs_summary.visible)
 	{
 		//need to "hide" it and move the "works for" up
-		elements.btn_arrowSummary.setImageURL('media:///arrow_closed.gif')
+		elements.btn_arrowSummary.imageURL = 'media:///arrow_closed.gif';
 		elements.tabs_summary.visible = false
 		elements.lbl_worksFor.setLocation(710,29)
 		elements.btn_linkCompany.setLocation(959,33)
@@ -25,7 +25,7 @@ function BtnToggleSummary()
 	else
 	{
 		//need to "show" it and move the "works for" down
-		elements.btn_arrowSummary.setImageURL('media:///arrow_open.gif')
+		elements.btn_arrowSummary.imageURL = 'media:///arrow_open.gif';
 		elements.lbl_worksFor.setLocation(710,279)
 		elements.btn_linkCompany.setLocation(959,283)
 		elements.tabs_worksFor.setLocation(710,303)

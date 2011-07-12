@@ -13,7 +13,7 @@ function BtnSort(event) {
 	var btn = elements[event.getElementName()].text
 
 	//close the form in dialog
-	application.getWindow("Dialog").close();
+	application.getWindow("Dialog").hide();
 
 	//we also set a global - just in case you need it later
 	globals.mod_dialog_buttonPressed = btn

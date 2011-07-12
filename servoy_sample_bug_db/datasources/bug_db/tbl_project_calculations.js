@@ -1,26 +1,26 @@
 /**
- * @properties={type:12,typeid:36,uuid:"730a1594-cc4e-40a6-a0a9-0506cd665d67"}
+ * // TODO generated, please specify type and doc for the params
+ * @param {Number} index
+ * @param {Boolean} selected
+ *
+ * @properties={typeid:36,uuid:"52331771-E837-4C06-B423-E18BA1BAA7B2"}
  */
-function background_rowColor()
-{
-var index = arguments[0]; // gets the index of the record
-var selected = arguments[1]; //checks if this record is currently selected
-
-if(application.getApplicationType() == 5) //web client
-{
-	if (index % 2 == 0) //odd row
+function background_rowColor(index, selected) {
+	if(application.getApplicationType() == 5) //web client
 	{
-		return '#ffffff'
+		if (index % 2 == 0) //odd row
+		{
+			return '#ffffff'
+		}
+		else
+		{
+			return '#f0f0f0'
+		}
 	}
 	else
 	{
-		return '#f0f0f0'
+		return '#ffffff'
 	}
-}
-else
-{
-	return '#ffffff'
-}
 }
 
 /**

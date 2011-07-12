@@ -72,5 +72,5 @@ function BtnOk()
 	globals.isDialogOpen = 0
 	
 //	application.closeFormDialog('companyChooser')
-	application.getWindow('companyChooser').close();
+	application.getWindow('companyChooser').hide();
 }

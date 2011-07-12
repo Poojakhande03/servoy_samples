@@ -1,11 +1,11 @@
 /**
- * @properties={type:12,typeid:36,uuid:"d7c2ab4b-fb5d-4c77-b9ef-664165e2bed5"}
+ * // TODO generated, please specify type and doc for the params
+ * @param {Number} index
+ * @param {Boolean} selected
+ *
+ * @properties={typeid:36,uuid:"46B385C3-E7C4-464A-9180-7B7365DC5303"}
  */
-function background_rowColor()
-{
-	var index = arguments[0]; // gets the index of the record
-	var selected = arguments[1]; //checks if this record is currently selected
-
+function background_rowColor(index, selected) {
 	if(application.getApplicationType() == 5) //web client
 	{
 		if (index % 2 == 0) //odd row

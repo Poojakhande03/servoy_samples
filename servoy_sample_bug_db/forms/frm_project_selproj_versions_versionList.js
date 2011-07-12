@@ -92,7 +92,7 @@ function DoDelete()
 		forms.frm_project_selproj_versions.OnShow();
 		
 //		application.closeFormDialog('version');
-		application.getWindow('version').close();
+		application.getWindow('version').hide();
 		
 		//reset value list
 		globals.SetUpDynamicValueLists();

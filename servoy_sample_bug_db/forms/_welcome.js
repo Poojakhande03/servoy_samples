@@ -4,7 +4,7 @@
 function btn_closeDialog()
 {
 //	application.closeFormDialog('welcome'); closeFormDialog is deprecated
-	application.getWindow('welcome').close();
+	application.getWindow('welcome').hide();
 	forms.frm_login.elements.login_user_name.requestFocus();
 }
 

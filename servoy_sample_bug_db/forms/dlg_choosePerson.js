@@ -101,5 +101,5 @@ MODIFIED: NONE
 	globals.isDialogOpen = 0
 	
 //	application.closeFormDialog('personChooser')
-	application.getWindow('personChooser').close();
+	application.getWindow('personChooser').hide();
 }

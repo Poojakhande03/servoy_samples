@@ -338,7 +338,7 @@ function DialogCloseCancel(arg0)
 		globals.isDialogOpen = 0
 		
 //		application.closeFormDialog(arguments[0])
-		application.getWindow(arg0).close();
+		application.getWindow(arg0).hide();
 	}
 }
 
@@ -367,7 +367,7 @@ function DialogCloseOk(arg0)
 		//set the global so that if they click the "X" close it won't close
 		globals.isDialogOpen = 0;
 		
-		application.getWindow(arg0).close();
+		application.getWindow(arg0).hide();
 	}
 }
 
