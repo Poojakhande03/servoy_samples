@@ -20,6 +20,12 @@ var user = null;
  * @properties={typeid:24,uuid:"E38E2743-A907-4947-B95D-0AA334D79150"}
  */
 function login(event) {
-	security.authenticate('servoy_sample_solutionModel_auth', 'auth', [user, pass]);
-	globals.login_user_uid = security.getUserUID();
+	if (security.authenticate('servoy_sample_solutionModel_auth', 'auth', [user, pass]))
+	{
+		globals.login_user_uid = security.getUserUID();
+	}
+	else 
+	{
+		plugins.dialogs.showWarningDialog("Could not login","Please check if the users does exists");
+	}
 }
