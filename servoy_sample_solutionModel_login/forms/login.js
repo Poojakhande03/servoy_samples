@@ -1,12 +1,12 @@
 /**
- * @type String
+ * @type {String}
  *
  * @properties={typeid:35,uuid:"86BB4BA4-7BBF-4E22-93DB-C9E6E94DA24F",variableType:12}
  */
 var pass = null;
 
 /**
- * @type String
+ * @type {String}
  *
  * @properties={typeid:35,uuid:"432E3478-9C69-4273-A79C-AFAE020B75F9",variableType:12}
  */

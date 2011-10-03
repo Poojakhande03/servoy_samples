@@ -27,7 +27,7 @@ function okAction(event)
 function cancelAction(event)
 {
 //	application.closeFormDialog("dialog");
-	application.getWindow('dialog').hide();
+	application.getWindow('dialog').destroy();
 }
 
 /**

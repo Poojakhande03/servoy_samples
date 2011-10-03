@@ -177,7 +177,7 @@ function syncronizeWithDB(arg0, arg1, arg2)
 							field_rec.width = 150;
 							field_rec.height = 20
 
-							if (jscolumn.isRowIdentifier())
+							if (jscolumn.getRowIdentifierType() != JSColumn.NONE)
 							{
 								field_rec.display_options = 1;
 								field_rec.label = 'ID'
