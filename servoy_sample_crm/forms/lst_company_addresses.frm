@@ -202,7 +202,6 @@ valuelistID:"bfe92878-60c3-49b5-adda-b0d45e11d6e6"
 name:"lst_company_addresses",
 onShowMethodID:"-1",
 paperPrintScale:100,
-rowBGColorCalculation:"bgRowcolor_ltgrey",
 scrollbars:33,
 size:"758,195",
 styleName:"svyWebCrm",

@@ -31,3 +31,17 @@ function btn_editValue()
 
 	forms.dlg_template_values.controller.focusFirstField();
 }
+
+/**
+ * Perform the element default action.
+ *
+ * @param {JSEvent} event the event that triggered the action
+ *
+ * @properties={typeid:24,uuid:"B6A587B1-2096-45B2-A7CC-C2F5DC883E32"}
+ */
+function onAction(event) {
+	/** @type {RuntimeTextField} */
+	var source = event.getSource();
+	var sourceDataProvider = source.getDataProviderID();
+	controller.setSelectedIndex(sourceDataProvider);
+}

@@ -67,7 +67,6 @@ uuid:"f972a93b-7d0f-4dd9-a576-9b05fea5b857"
 name:"frm_people_selperson_tasks",
 navigatorID:"-1",
 paperPrintScale:100,
-rowBGColorCalculation:"background_rowColor",
 scrollbars:36,
 size:"982,449",
 styleName:"svyWebCrm",

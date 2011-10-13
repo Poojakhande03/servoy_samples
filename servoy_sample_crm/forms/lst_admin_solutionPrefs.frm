@@ -72,7 +72,6 @@ uuid:"d54acc72-cf5b-487e-a4e5-2d63c67208ff"
 ],
 name:"lst_admin_solutionPrefs",
 paperPrintScale:100,
-rowBGColorCalculation:"bgRowColor_ltGrey",
 scrollbars:33,
 size:"288,85",
 styleName:"svyWebCrm",

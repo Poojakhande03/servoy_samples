@@ -86,7 +86,6 @@ uuid:"EB7CED89-6430-4027-9696-87A5D3EE7EC1"
 ],
 name:"lst_valuelists",
 paperPrintScale:100,
-rowBGColorCalculation:"bgRowColor_ltGrey",
 scrollbars:33,
 size:"280,80",
 styleName:"svyWebCrm",

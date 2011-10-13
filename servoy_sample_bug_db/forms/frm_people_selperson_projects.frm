@@ -67,7 +67,6 @@ uuid:"dbb24662-2e6a-4c03-b35d-dd9a0f312bb1"
 name:"frm_people_selperson_projects",
 navigatorID:"-1",
 paperPrintScale:100,
-rowBGColorCalculation:"background_rowColor",
 scrollbars:36,
 size:"982,449",
 styleName:"svyWebCrm",

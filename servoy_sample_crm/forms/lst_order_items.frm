@@ -193,7 +193,6 @@ uuid:"fd257522-5b63-4384-8bb4-b00bad4c799c"
 name:"lst_order_items",
 onShowMethodID:"-1",
 paperPrintScale:100,
-rowBGColorCalculation:"bgRowColor_ltGrey",
 scrollbars:33,
 size:"758,115",
 styleName:"svyWebCrm",

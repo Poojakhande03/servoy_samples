@@ -47,3 +47,19 @@ function btn_toggleList()
 
 	forms.frm_nav_main.sub_toggleRecList();
 }
+
+/**
+ * Perform the element default action.
+ *
+ * @param {JSEvent} event the event that triggered the action
+ *
+ * @properties={typeid:24,uuid:"A8F2CC59-9686-406A-B665-D07B1B6AE731"}
+ */
+function onAction(event) {
+	/** @type {RuntimeTextField} */
+	var source = event.getSource();
+	application.output('event.getSource():' + event.getSource());
+	application.output('source.getDataProviderID():' + source.getDataProviderID());
+	var sourceDataProvider = source.getDataProviderID();
+	controller.setSelectedIndex(sourceDataProvider);
+}

@@ -26,10 +26,21 @@ field.oheader
 	color: #eb7c12;
 }
 field.combo
-{
+{}
 
-
+odd {
+ 	background-color: #FFFFFF;
 }
+
+even {
+	background-color: #FFFFFF
+}
+
+selected {
+	background-color: #F0F0F0;
+	color:#000000; 
+}
+
 field.navlist
 {
 	font-size: 11pt;

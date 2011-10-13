@@ -243,7 +243,6 @@ uuid:"fdc8bdbd-69f9-4ef4-817f-09faa252d05f"
 name:"lst_company_orders",
 onShowMethodID:"-1",
 paperPrintScale:100,
-rowBGColorCalculation:"rowbgcolor_ltgrey",
 scrollbars:33,
 size:"758,195",
 styleName:"svyWebCrm",

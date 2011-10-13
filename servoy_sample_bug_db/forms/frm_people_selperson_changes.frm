@@ -46,7 +46,6 @@ uuid:"d35de2e0-d4a5-4fd9-8a7c-513606f12fb8"
 name:"frm_people_selperson_changes",
 navigatorID:"-1",
 paperPrintScale:100,
-rowBGColorCalculation:"background_rowColor",
 scrollbars:12,
 size:"982,449",
 styleName:"svyWebCrm",
