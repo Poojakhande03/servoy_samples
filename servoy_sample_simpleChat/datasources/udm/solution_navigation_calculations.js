@@ -47,18 +47,3 @@ else if(item_name)
 
 return HTML + '</td></tr></table></html>'
 }
-
-/**
- * // TODO generated, please specify type and doc for the params
- * @param {Number} index
- * @param {Boolean} selected
- *
- * @properties={typeid:36,uuid:"A6043BC1-339F-4EAC-9DFE-AA81C36E2CFA"}
- */
-function rowBgcolor_ltgrey(index, selected) {
-	if (selected){
-	   return "#f0f0f0"; // light grey for the selected row
-	}else{ 
-		return "#FFFFFF"; //white
-	}
-}

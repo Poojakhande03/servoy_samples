@@ -11,18 +11,3 @@ function paid_display() {
 		return "<HTML><font color='#cc0000'>&nbsp;&nbsp;PENDING</font></HTML>"
 	}
 }
-
-/**
- * // TODO generated, please specify type and doc for the params
- * @param {Number} index
- * @param {Boolean} selected
- *
- * @properties={typeid:36,uuid:"9C455C89-AAEE-48E5-AB83-B9A65D42034E"}
- */
-function rowbgcolor_ltgrey(index, selected) {
-	if (selected){
-	   return "#f0f0f0"; // light grey for the selected row
-	}else{ 
-		return "#FFFFFF"; //white
-	}
-}
