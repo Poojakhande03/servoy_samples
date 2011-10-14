@@ -1,22 +1,4 @@
 /**
- * // TODO generated, please specify type and doc for the params
- * @param {Number} index
- * @param {Boolean} selected
- *
- * @properties={typeid:36,uuid:"5DB7DB25-ED9E-4FD9-A255-B856FB6BD68D"}
- */
-function bgRowcolor_ltgrey(index, selected) {
-//	var index    = arguments[0];
-//	var selected = arguments[1];
-	
-	if (selected){
-	   return "#f0f0f0"; // light grey for the selected row
-	}else{ 
-		return "#FFFFFF"; //white
-	}
-}
-
-/**
  * @properties={type:12,typeid:36,uuid:"a2278d1d-5e73-4ea0-80cd-7bd047bf01cd"}
  */
 function email_link() {

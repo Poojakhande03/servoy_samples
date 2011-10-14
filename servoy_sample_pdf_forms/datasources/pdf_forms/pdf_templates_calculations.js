@@ -1,19 +1,4 @@
 /**
- * // TODO generated, please specify type and doc for the params
- * @param {Number} index
- * @param {Boolean} selected
- *
- * @properties={typeid:36,uuid:"94482335-831B-456F-85A7-7CC9DF0BD19B"}
- */
-function bgRowColor_ltGrey(index, selected) {
-	if (selected){
-	   return "#f0f0f0"; // light grey for the selected row
-	}else{ 
-		return "#FFFFFF"; //white
-	}
-}
-
-/**
  * @properties={type:12,typeid:36,uuid:"8de03910-6522-4674-89f3-0fc32010fee7"}
  */
 function delete_text()
