@@ -1,29 +1,4 @@
 /**
- * // TODO generated, please specify type and doc for the params
- * @param {Number} index
- * @param {Boolean} selected
- *
- * @properties={typeid:36,uuid:"5EFF2304-AF90-4EC2-876B-26066F8A6E39"}
- */
-function background_rowColor(index, selected) {
-	if(application.getApplicationType() == 5) //web client
-	{
-		if (index % 2 == 0) //odd row
-		{
-			return '#ffffff'
-		}
-		else
-		{
-			return '#f0f0f0'
-		}
-	}
-	else
-	{
-		return '#ffffff'
-	}
-}
-
-/**
  * @properties={type:12,typeid:36,uuid:"81903c94-20e5-4fad-a99a-d389cf94bb81"}
  */
 function display_peopleListRawHTML()

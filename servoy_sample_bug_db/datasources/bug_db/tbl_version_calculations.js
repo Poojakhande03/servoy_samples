@@ -1,29 +1,4 @@
 /**
- * // TODO generated, please specify type and doc for the params
- * @param {Number} index
- * @param {Boolean} selected
- *
- * @properties={typeid:36,uuid:"832EA797-CD3E-402F-984B-951741A23F6E"}
- */
-function background_rowColor(index, selected) {
-	if(application.getApplicationType() == 5) //web client
-	{
-		if (index % 2 == 0) //odd row
-		{
-			return '#ffffff'
-		}
-		else
-		{
-			return '#f0f0f0'
-		}
-	}
-	else
-	{
-		return '#ffffff'
-	}
-}
-
-/**
  * @properties={type:12,typeid:36,uuid:"916a55de-c64f-4e34-bcf4-df1f91703177"}
  */
 function display_dt_created()
