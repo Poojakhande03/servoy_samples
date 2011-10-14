@@ -163,21 +163,6 @@ else
 }
 
 /**
- * // TODO generated, please specify type and doc for the params
- * @param {Number} index
- * @param {Boolean} selected
- *
- * @properties={typeid:36,uuid:"3D28D789-A928-497A-A860-FCE782D4853D"}
- */
-function rowbgcolor_ltgrey(index, selected) {
-	if (selected){
-	   return globals.core_color_bgRowColor; // light grey for the selected row
-	}else{ 
-		return globals.core_color_defaultBgColor; //white
-	}
-}
-
-/**
  * @properties={type:12,typeid:36,uuid:"f14f952f-1978-4a24-84a7-c54869c639df"}
  */
 function ship_address_html()

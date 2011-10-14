@@ -1,19 +1,4 @@
 /**
- * // TODO generated, please specify type and doc for the params
- * @param {Object} index
- * @param {Object} selected
- *
- * @properties={typeid:36,uuid:"437ACC5B-1DEB-4A6A-9C48-4F9AC304FA90"}
- */
-function bgRowColor_ltGrey(index, selected) {
-	if (selected){
-	   return globals.core_color_bgRowColor; // light grey for the selected row
-	}else{ 
-		return globals.core_color_defaultBgColor; //white
-	}
-}
-
-/**
  * @properties={type:12,typeid:36,uuid:"580035a9-e25c-4da3-80ba-ec7fbe53e894"}
  */
 function delete_text()

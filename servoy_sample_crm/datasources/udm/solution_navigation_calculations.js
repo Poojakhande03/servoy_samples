@@ -44,18 +44,3 @@ function display_row() {
 	
 	return HTML + '</td></tr></table></html>'
 }
-
-/**
- * // TODO generated, please specify type and doc for the params
- * @param {Number} index
- * @param {Boolean} selected
- *
- * @properties={typeid:36,uuid:"04710DAA-6678-4156-AC8E-78150B150722"}
- */
-function rowBgcolor_ltgrey(index, selected) {
-	if (selected){
-	   return globals.core_color_bgRowColor; // light grey for the selected row
-	}else{ 
-		return globals.core_color_defaultBgColor; //white
-	}
-}
