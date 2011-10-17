@@ -9,6 +9,7 @@ function Exit()
 	}
 	else
 	{
-		application.closeSolution()
+//		application.closeSolution() - In 6.1 returns an error dialog
+		application.exit();
 	}
 }
