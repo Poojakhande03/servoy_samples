@@ -60,5 +60,5 @@ function onAction(event) {
 	/** @type {RuntimeTextField} */
 	var source = event.getSource();
 	var sourceDataProvider = source.getDataProviderID();
-	controller.setSelectedIndex(sourceDataProvider);
+	controller.setSelectedIndex(utils.stringToNumber(sourceDataProvider));
 }

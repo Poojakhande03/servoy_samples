@@ -58,8 +58,8 @@ function btn_toggleList()
 function onAction(event) {
 	/** @type {RuntimeTextField} */
 	var source = event.getSource();
-	application.output('event.getSource():' + event.getSource());
-	application.output('source.getDataProviderID():' + source.getDataProviderID());
+//	application.output('event.getSource():' + event.getSource());
+//	application.output('source.getDataProviderID():' + source.getDataProviderID());
 	var sourceDataProvider = source.getDataProviderID();
-	controller.setSelectedIndex(sourceDataProvider);
+	controller.setSelectedIndex(utils.stringToNumber(sourceDataProvider));
 }
