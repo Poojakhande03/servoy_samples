@@ -11,10 +11,11 @@ function btn_performSQL()
 	}
 
 	//set the variable to the entered query
-	var query = globals.core_sql_sqlQuery
+	var query = globals.core_sql_sqlQuery;
 
 	//if only a part of the query is hilighted - then use that
-	if(elements.sqlQuery.getSelectedText()) query = elements.sqlQuery.getSelectedText();
+//	if(elements.sqlQuery.getSelectedText()) query = elements.sqlQuery.getSelectedText();  
+	//Commented out because getSelectedText on TextArea in WebClient doens't work properly - See Cases SVY-283 and SVY-1257
 	
 	//there is a query - so try to run it
 	//Get a dataset based on query
