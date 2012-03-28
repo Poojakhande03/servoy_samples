@@ -1,33 +1,33 @@
 /**
- * @type String
+ * @type {String}
  *
  * @properties={typeid:35,uuid:"529e99e1-4df8-441a-975f-bd01515e7b3c",variableType:12}
  */
 var cheboxes = '';
 
 /**
- * @type String
+ * @type {String}
  *
  * @properties={typeid:35,uuid:"356a9d6f-67c3-444e-93e3-57d906b385d4",variableType:12}
  */
 var curStyle = "";
 
 /**
- * @type String
+ * @type {String}
  *
  * @properties={typeid:35,uuid:"7a997421-56ee-4dca-bd10-720985f6997a",variableType:12}
  */
 var fieldData = 'Field Data';
 
 /**
- * @type String
+ * @type {String}
  *
  * @properties={typeid:35,uuid:"7fecc22d-c55d-49c3-9717-e50cd2d10791",variableType:12}
  */
 var formName = "";
 
 /**
- * @type String
+ * @type {String}
  *
  * @properties={typeid:35,uuid:"406c2a24-a589-4cb8-a263-0d5f8eef582f",variableType:12}
  */
@@ -48,7 +48,7 @@ function btn_next()
  */
 function btn_prev()
 {
-	formName = globals.getNextForm(controller.getName(),'prev')
+	formName = globals.getNextForm(currentcontroller.getName(),'prev')
 	globals.curStyle = formName;
 	globals.goForm()
 }
