@@ -44,6 +44,7 @@ name:"solution_id"
 },
 {
 allowNull:true,
+compatibleColumnTypes:"[[8,17,17]]",
 creationOrderIndex:3,
 dataType:8,
 length:17,

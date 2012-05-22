@@ -150,6 +150,7 @@ name:"state"
 },
 {
 allowNull:true,
+compatibleColumnTypes:"[[2,19,2]]",
 creationOrderIndex:23,
 dataType:2,
 length:19,

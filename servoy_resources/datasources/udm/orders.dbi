@@ -10,6 +10,7 @@ name:"order_id"
 },
 {
 allowNull:true,
+compatibleColumnTypes:"[[8,17,17]]",
 creationOrderIndex:20,
 dataType:8,
 length:17,
@@ -17,6 +18,7 @@ name:"amt_discount"
 },
 {
 allowNull:true,
+compatibleColumnTypes:"[[8,17,17]]",
 creationOrderIndex:4,
 dataType:8,
 length:17,
@@ -24,6 +26,7 @@ name:"amt_shipping"
 },
 {
 allowNull:true,
+compatibleColumnTypes:"[[8,17,17]]",
 creationOrderIndex:1,
 dataType:8,
 length:17,
@@ -144,6 +147,7 @@ name:"order_number"
 },
 {
 allowNull:true,
+compatibleColumnTypes:"[[8,17,17]]",
 creationOrderIndex:28,
 dataType:8,
 length:17,
@@ -151,6 +155,7 @@ name:"order_subtotal"
 },
 {
 allowNull:true,
+compatibleColumnTypes:"[[8,17,17]]",
 creationOrderIndex:43,
 dataType:8,
 length:17,
@@ -171,6 +176,7 @@ name:"paid_number"
 },
 {
 allowNull:true,
+compatibleColumnTypes:"[[8,17,17]]",
 creationOrderIndex:11,
 dataType:8,
 length:17,
@@ -178,6 +184,7 @@ name:"pct_discount"
 },
 {
 allowNull:true,
+compatibleColumnTypes:"[[8,17,17]]",
 creationOrderIndex:18,
 dataType:8,
 length:17,
