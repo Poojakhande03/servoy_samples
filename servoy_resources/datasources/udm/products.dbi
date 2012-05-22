@@ -10,6 +10,7 @@ name:"product_id"
 },
 {
 allowNull:true,
+compatibleColumnTypes:"[[8,17,17]]",
 creationOrderIndex:3,
 dataType:8,
 length:17,
@@ -90,6 +91,7 @@ name:"order_description"
 },
 {
 allowNull:true,
+compatibleColumnTypes:"[[8,17,17]]",
 creationOrderIndex:16,
 dataType:8,
 length:17,
@@ -144,6 +146,7 @@ name:"product_types"
 },
 {
 allowNull:true,
+compatibleColumnTypes:"[[8,17,17]]",
 creationOrderIndex:10,
 dataType:8,
 length:17,
