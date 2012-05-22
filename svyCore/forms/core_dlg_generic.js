@@ -123,11 +123,10 @@ function close(event) {
 //	application.closeFormDialog("Dialog");
 	application.getWindow('Dialog').hide();
 
-	globals.callback_BgElements(globals.callback);
-//	globals.enableBgElements()
-	
 	//re-enable anything behind the dialog
-	globals.core_enableDisableElements();
+//	globals.core_enableDisableElements();
+	globals.callback_BgElements(globals.callback);
+	scopes.globals.enableBgElements();
 
 	//execute the method to be executed, then clear the global
 	if(globals.core_dlg_methodToExecute) {
