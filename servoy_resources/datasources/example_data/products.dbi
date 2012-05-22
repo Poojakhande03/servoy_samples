@@ -48,6 +48,7 @@ name:"supplierid"
 },
 {
 allowNull:true,
+compatibleColumnTypes:"[[8,17,17]]",
 creationOrderIndex:5,
 dataType:8,
 length:17,

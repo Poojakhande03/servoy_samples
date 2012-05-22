@@ -15,6 +15,7 @@ name:"productid"
 },
 {
 allowNull:false,
+compatibleColumnTypes:"[[8,17,17]]",
 creationOrderIndex:4,
 dataType:8,
 length:17,
