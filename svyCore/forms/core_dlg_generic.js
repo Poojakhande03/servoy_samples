@@ -126,7 +126,7 @@ function close(event) {
 	//re-enable anything behind the dialog
 //	globals.core_enableDisableElements();
 	globals.callback_BgElements(globals.callback);
-	scopes.globals.enableBgElements();
+	globals.enableBgElements();
 
 	//execute the method to be executed, then clear the global
 	if(globals.core_dlg_methodToExecute) {

@@ -8,21 +8,21 @@ var core_appTypeInt;
 /**
  * @type {String}
  *
- * @properties={typeid:35,uuid:"1e926109-e6f5-464c-a4a8-b943b404d699"}
+ * @properties={typeid:35,uuid:"1e926109-e6f5-464c-a4a8-b943b404d699",variableType:12}
  */
 var core_appTypeWords = '';
 
 /**
  * @type {String}
  *
- * @properties={typeid:35,uuid:"76206c5e-0cf1-4910-8dfb-e2f1eed5f594"}
+ * @properties={typeid:35,uuid:"76206c5e-0cf1-4910-8dfb-e2f1eed5f594",variableType:12}
  */
 var core_color_bgRowColor = '#f0f0f0';
 
 /**
  * @type {String}
  *
- * @properties={typeid:35,uuid:"66c65bd1-79b4-452e-a9a8-d48e5fa1e290"}
+ * @properties={typeid:35,uuid:"66c65bd1-79b4-452e-a9a8-d48e5fa1e290",variableType:12}
  */
 var core_color_defaultBgColor = '#ffffff';
 
@@ -64,7 +64,7 @@ var core_const_5 = 5;
 /**
  * @type {String}
  *
- * @properties={typeid:35,uuid:"e32771a5-4650-42cf-a343-190b3f16f1be"}
+ * @properties={typeid:35,uuid:"e32771a5-4650-42cf-a343-190b3f16f1be",variableType:12}
  */
 var core_dlg_buttonPressed = '';
 
@@ -83,21 +83,21 @@ var core_dlg_elementDisableEnable;
 /**
  * @type {String}
  *
- * @properties={typeid:35,uuid:"70e5ac48-5a94-4865-9994-7924f3b54ee6"}
+ * @properties={typeid:35,uuid:"70e5ac48-5a94-4865-9994-7924f3b54ee6",variableType:12}
  */
 var core_dlg_elementName = '';
 
 /**
  * @type {String}
  *
- * @properties={typeid:35,uuid:"7953218c-3dc2-4237-9203-b191e4da4ae6"}
+ * @properties={typeid:35,uuid:"7953218c-3dc2-4237-9203-b191e4da4ae6",variableType:12}
  */
 var core_dlg_formName = '';
 
 /**
  * @type {String}
  *
- * @properties={typeid:35,uuid:"2d8c16ef-0cc6-42dc-bfa4-db108a7cfbbc"}
+ * @properties={typeid:35,uuid:"2d8c16ef-0cc6-42dc-bfa4-db108a7cfbbc",variableType:12}
  */
 var core_dlg_methodToExecute = '';
 
@@ -139,28 +139,28 @@ var core_dlg_origY;
 /**
  * @type {String}
  *
- * @properties={typeid:35,uuid:"97ac0771-aeb2-4635-af70-386164dd901a"}
+ * @properties={typeid:35,uuid:"97ac0771-aeb2-4635-af70-386164dd901a",variableType:12}
  */
 var core_dlg_text = '';
 
 /**
  * @type {String}
  *
- * @properties={typeid:35,uuid:"0688908d-42fd-4e39-9388-bc1aab1ea1fd"}
+ * @properties={typeid:35,uuid:"0688908d-42fd-4e39-9388-bc1aab1ea1fd",variableType:12}
  */
 var core_dlg_title = '';
 
 /**
  * @type {String}
  *
- * @properties={typeid:35,uuid:"bb951e4f-5f33-41d8-9531-c43a13b7faf4"}
+ * @properties={typeid:35,uuid:"bb951e4f-5f33-41d8-9531-c43a13b7faf4",variableType:12}
  */
 var core_sql_sqlQuery = '';
 
 /**
  * @type {String}
  *
- * @properties={typeid:35,uuid:"a4b74fef-6e13-4b91-87bf-49b9ee141985"}
+ * @properties={typeid:35,uuid:"a4b74fef-6e13-4b91-87bf-49b9ee141985",variableType:12}
  */
 var core_sql_sqlResult = '';
 
