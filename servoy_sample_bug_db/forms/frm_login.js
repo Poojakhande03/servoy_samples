@@ -156,7 +156,7 @@ function SubLogin()
 		if(isMasterAdmin)
 			success = true;
 		else
-			success = databaseManager.addTableFilterParam('bug_db', null, 'ixtenant', '=', globals.currTenantID)
+			success = databaseManager.addTableFilterParam('bug_db', 'tbl_people', 'ixtenant', '=', globals.currTenantID)
 		
 		if(success)
 		{
@@ -166,15 +166,17 @@ function SubLogin()
 			{
 				var companyID = dataset.getValue(1, 6)
 				//only show the companies that the user is part of
-				success = databaseManager.addTableFilterParam('bug_db', null, 'ixcompany', 'IN', "SELECT ixcompany FROM tbl_people_company WHERE ixpeople = '" + globals.currUserID + "'")
+				success = databaseManager.addTableFilterParam('bug_db', 'tbl_people', 'ixcompany', 'IN', "SELECT ixcompany FROM tbl_people_company WHERE ixpeople = '" + globals.currUserID + "'")
 				//only show people that are part of the sampe company the loged in user is part of
 				success = databaseManager.addTableFilterParam('bug_db', 'tbl_people', 'ixpeople', 'IN', "SELECT p1.ixpeople FROM tbl_people p1,  tbl_people_company pc1 WHERE pc1.ixpeople = p1.ixpeople AND pc1.ixcompany IN (SELECT pc2.ixcompany FROM tbl_people_company pc2 WHERE pc2.ixpeople = '" + 	globals.currUserID + "')")
 			}
 			
 			//continue to login
 			globals.SolutionAfterLogin();
-			
-			globals.currUserCompanyArray = databaseManager.convertToDataSet(gcurruser_to_people_company, 'ixcompany');
+
+			globals.currUserCompanyArray = databaseManager.convertToDataSet(gcurruser_to_people_company, ['ixcompany']);
+
+//			globals.currUserCompanyArray = databaseManager.getFoundSetDataProviderAsArray(gcurruser_to_people_company.foundset, 'ixcompany')
 			gcurruser_to_people.last_login = new Date()
 			globals.loginDisplay = '<html><body><align="right">Logged in as <b>' + gcurruser_to_people.name_full + '</b></align></body></html>'
 		
