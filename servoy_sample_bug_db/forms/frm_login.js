@@ -167,8 +167,8 @@ function SubLogin()
 				var companyID = dataset.getValue(1, 6)
 				//only show the companies that the user is part of
 				success = databaseManager.addTableFilterParam('bug_db', null, 'ixcompany', 'IN', "SELECT ixcompany FROM tbl_people_company WHERE ixpeople = '" + globals.currUserID + "'")
-				//only show people that are part of the sampe company the loged in user is part of
-				success = databaseManager.addTableFilterParam('bug_db', null, 'ixpeople', 'IN', "SELECT p1.ixpeople FROM tbl_people p1,  tbl_people_company pc1 WHERE pc1.ixpeople = p1.ixpeople AND pc1.ixcompany IN (SELECT pc2.ixcompany FROM tbl_people_company pc2 WHERE pc2.ixpeople = '" + 	globals.currUserID + "')")
+				//only show people that are part of the same company the loged in user is part of
+				success = databaseManager.addTableFilterParam('bug_db', 'tbl_people', 'ixpeople', 'IN', "SELECT p1.ixpeople FROM tbl_people p1,  tbl_people_company pc1 WHERE pc1.ixpeople = p1.ixpeople AND pc1.ixcompany IN (SELECT pc2.ixcompany FROM tbl_people_company pc2 WHERE pc2.ixpeople = '" + globals.currUserID + "')")
 			}
 			
 			//continue to login
