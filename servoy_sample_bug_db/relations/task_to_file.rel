@@ -1,0 +1,12 @@
+allowCreationRelatedRecords:true,
+deleteRelatedRecords:true,
+foreignServerName:"bug_db",
+foreignTableName:"tbl_file",
+items:[
+{foreignColumnName:"ixtask",primaryDataProviderID:"ixtask",typeid:23,uuid:"b71ea91a-77ed-4b3b-8313-4fb0b5a9f5ba"}
+],
+name:"task_to_file",
+primaryServerName:"bug_db",
+primaryTableName:"tbl_task",
+typeid:22,
+uuid:"49c8457f-45b5-44c3-8ce6-8e2490dcd9e6"

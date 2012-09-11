@@ -1,0 +1,11 @@
+allowCreationRelatedRecords:true,
+foreignServerName:"bug_db",
+foreignTableName:"tbl_comment",
+items:[
+{foreignColumnName:"ixcomment",primaryDataProviderID:"globals.currCommentReplyID",typeid:23,uuid:"6bb12c39-0782-487c-9e7b-8fae4679cfaa"}
+],
+name:"gcurrcommentreply_to_comment",
+primaryServerName:"bug_db",
+primaryTableName:"tbl_comment",
+typeid:22,
+uuid:"6938921f-8b9e-45eb-962b-c1a344f3ef52"

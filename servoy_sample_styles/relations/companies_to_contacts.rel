@@ -1,0 +1,11 @@
+allowParentDeleteWhenHavingRelatedRecords:false,
+foreignServerName:"udm",
+foreignTableName:"contacts",
+items:[
+{foreignColumnName:"contact_id",primaryDataProviderID:"company_id",typeid:23,uuid:"18978924-eee6-48b4-b8bd-48d14813ac79"}
+],
+name:"companies_to_contacts",
+primaryServerName:"udm",
+primaryTableName:"companies",
+typeid:22,
+uuid:"7a1873fe-4ad7-4867-b355-10fcefa0bcf1"

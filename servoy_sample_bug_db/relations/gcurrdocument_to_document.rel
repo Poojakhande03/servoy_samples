@@ -1,0 +1,11 @@
+allowCreationRelatedRecords:true,
+foreignServerName:"bug_db",
+foreignTableName:"tbl_document",
+items:[
+{foreignColumnName:"ixdocument",primaryDataProviderID:"globals.currDocumentID",typeid:23,uuid:"26a618d0-938c-4eb4-9d68-aeb0f00d79ce"}
+],
+name:"gcurrdocument_to_document",
+primaryServerName:"bug_db",
+primaryTableName:"tbl_document",
+typeid:22,
+uuid:"9ed82ed8-fcaa-4369-8d3f-a56aca240eb4"

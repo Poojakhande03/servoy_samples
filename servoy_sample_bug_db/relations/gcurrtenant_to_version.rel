@@ -1,0 +1,11 @@
+allowCreationRelatedRecords:true,
+foreignServerName:"bug_db",
+foreignTableName:"tbl_version",
+items:[
+{foreignColumnName:"ixtenant",primaryDataProviderID:"globals.currTenantID",typeid:23,uuid:"795a4b48-20f5-4ddc-a1fe-6852f78796ae"}
+],
+name:"gcurrtenant_to_version",
+primaryServerName:"bug_db",
+primaryTableName:"tbl_version",
+typeid:22,
+uuid:"b0041727-13c7-4572-846c-15440a8c971a"

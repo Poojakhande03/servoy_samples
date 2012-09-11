@@ -1,0 +1,6 @@
+addEmptyValue:1,
+customValues:"i18n:lbl.undefined|0\ni18n:lbl.open|1\ni18n:lbl.blocked|2\ni18n:lbl.doneQ|3\ni18n:lbl.approved|4\ni18n:lbl.closed|5",
+name:"TaskStatus",
+separator:" ",
+typeid:34,
+uuid:"290a1f14-d381-42de-8cf6-0a0e9ca40202"

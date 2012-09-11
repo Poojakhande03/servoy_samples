@@ -1,0 +1,10 @@
+foreignServerName:"bug_db",
+foreignTableName:"tbl_people",
+items:[
+{foreignColumnName:"ixpeople",primaryDataProviderID:"globals.currUserID",typeid:23,uuid:"857d45b5-abba-4aa3-a36a-6a57581d38cd"}
+],
+name:"gcurruser_to_people",
+primaryServerName:"bug_db",
+primaryTableName:"tbl_solution_global",
+typeid:22,
+uuid:"1454a168-f7e1-436d-8dc8-82f6d35248a0"

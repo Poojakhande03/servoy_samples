@@ -1,0 +1,12 @@
+allowCreationRelatedRecords:true,
+deleteRelatedRecords:true,
+foreignServerName:"pdf_forms",
+foreignTableName:"pdf_actions",
+items:[
+{foreignColumnName:"form_id",primaryDataProviderID:"form_id",typeid:23,uuid:"36f8d4c0-a450-43b3-93e8-d4887b03a6a2"}
+],
+name:"pdf_forms_to_pdf_actions",
+primaryServerName:"pdf_forms",
+primaryTableName:"pdf_forms",
+typeid:22,
+uuid:"125f3348-0c35-4ade-a14a-813625bcb5b9"

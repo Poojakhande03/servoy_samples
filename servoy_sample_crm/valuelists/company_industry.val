@@ -1,0 +1,11 @@
+dataProviderID1:"company_industry",
+name:"company_industry",
+returnDataProviders:1,
+separator:" ",
+serverName:"udm",
+showDataProviders:1,
+sortOptions:"company_industry asc",
+tableName:"companies",
+typeid:34,
+uuid:"13179608-73e6-4b1a-a7ff-4ff29ec13166",
+valueListType:1

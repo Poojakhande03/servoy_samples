@@ -1,0 +1,12 @@
+allowCreationRelatedRecords:true,
+deleteRelatedRecords:true,
+foreignServerName:"bug_db",
+foreignTableName:"tbl_file",
+items:[
+{foreignColumnName:"ixdocument",primaryDataProviderID:"ixdocument",typeid:23,uuid:"680a4b8c-240e-40b8-801d-53c403251fc1"}
+],
+name:"document_to_file",
+primaryServerName:"bug_db",
+primaryTableName:"tbl_document",
+typeid:22,
+uuid:"650db340-2c8e-4388-a1b1-a3ec1f233cbe"

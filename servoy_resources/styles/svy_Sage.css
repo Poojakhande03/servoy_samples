@@ -1,0 +1,221 @@
+button
+{
+	color: #444444;
+	font: 11pt "Arial"; 
+}
+button.bold
+{
+	font-weight: bold; 
+}
+
+tabpanel
+{
+	background-color: #F4F7F4;
+	border-style: solid;
+	border-width: 0px;
+	color: #444444;
+}
+portal
+{
+	background-color: #F4F7F4;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #AEAAA0;
+}
+
+form
+{
+	background-color: #F4F7F4; 
+}
+
+field
+{
+	border-style: solid; 
+	border-width: 0px;
+	background-color: #ffffff; 
+	color: #444444;
+	font: 11pt "Tahoma"; 
+	text-align: left; 
+}
+field.border
+{
+	border-width: 1px;
+	border-color: #AAA9A0;
+	margin: 1px 1px 1px 4px;
+}
+field.large
+{
+	font: bold 14pt "Tahoma"; 
+}
+field.noborder
+{
+	border-style: none; 
+	border-width: 0px;
+}
+
+label
+{
+	color: #818181;
+	border-style: none; 
+	font: 11pt "Arial"; 
+	text-align: right;
+}
+label.colorDark
+{
+	color: #475546;
+}
+label.colorMed
+{
+	color: #799177;
+}
+label.colorLight
+{
+	color: #ABC0A9;
+}
+label.colorWhite
+{
+	color: #FFFFFF;
+}
+label.colorContrastDark
+{
+	color: #FFFFFF;
+}
+label.colorContrastMedium
+{
+	color: #FFFFFF;
+}
+label.colorContrastLight
+{
+	color: #444444;
+}
+label.fillDark
+{
+	background-color: #475546;
+	color: #FFFFFF;
+	margin: 5px 5px 5px 5px;
+}
+label.fillMed
+{
+	background-color: #799177;
+	color: #FFFFFF;
+	margin: 1px 5px 1px 5px;
+}
+label.fillLight
+{
+	background-color: #ABC0A9;
+	color: #444444;
+	margin: 1px 5px 1px 5px;
+}
+label.sectionHeadLg
+{
+	color: #FFFFFF;
+	font: bold 18pt "Tahoma"; 
+	text-align: left;
+}
+label.sectionHeadMed
+{
+	color: #FFFFFF;
+	font: bold 14pt "Tahoma"; 
+	text-align: left;
+}
+label.insetDark
+{
+	background-color: #475546;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #332211 #FFFFE9 #FFFFE9 #332211;
+	color: #FFFFFF;
+	text-align: left;
+	margin: 1px 1px 1px 8px;
+	font: bold 14pt "Tahoma";
+}
+label.insetMed
+{
+	background-color: #799177;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #989261 #FFFFE9 #FFFFE9 #989261;
+	color: #FFFFFF;
+	text-align: left;
+	margin: 1px 1px 1px 8px;
+	font: bold 14pt "Tahoma";
+}
+
+label.insetLight
+{
+	background-color: #ABC0A9;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #989261 #FFFFE9 #FFFFE9 #989261;
+	color: #444444;
+	text-align: left;
+	margin: 1px 1px 1px 8px;
+	font: bold 14pt "Tahoma";
+}
+label.outsetDark
+{
+	background-color: #475546;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #FFFFE9 #332211 #332211 #FFFFE9;
+	color: #FFFFFF;
+	text-align: left;
+	margin: 1px 1px 1px 8px;
+	font: bold 14pt "Tahoma";
+}
+label.outsetMed
+{
+	background-color: #799177;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #FFFFE9 #989261 #989261 #FFFFE9;
+	color: #FFFFFF;
+	text-align: left;
+	margin: 1px 1px 1px 8px;
+	font: bold 14pt "Tahoma";
+}
+
+label.outsetLight
+{
+	background-color: #ABC0A9;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #FFFFE9 #989261 #989261 #FFFFE9;
+	color: #444444;
+	text-align: left;
+	margin: 1px 1px 1px 8px;
+	font: bold 14pt "Tahoma";
+}
+label.fieldBackground
+{
+	background-color: #ffffff;
+	border-style: solid; 
+	border-width: 1px;
+	border-color: #AEAAA0;
+}
+label.lblBackground
+{
+	background-color: #799177;
+	border-style: solid;
+	border-width: 0px;
+}
+label.button2
+{
+	background-color: #CFCDBD;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #8B8979;
+	text-align: center;
+	font: 11pt "Arial"; 
+	color: #444444;
+}
+label.button3
+{
+	background-color: #ffffff;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #8B8979;
+	text-align: center;
+	font: bold 11pt "Arial"; 
+	color: #444444;
+}

@@ -1,0 +1,11 @@
+allowCreationRelatedRecords:true,
+foreignServerName:"bug_db",
+foreignTableName:"tbl_task",
+items:[
+{foreignColumnName:"ixpersonassigned",primaryDataProviderID:"globals.currUserID",typeid:23,uuid:"da2fb5b8-1516-404d-817b-3f7ebea16496"}
+],
+name:"gcurruser_to_taskassigned",
+primaryServerName:"bug_db",
+primaryTableName:"tbl_task",
+typeid:22,
+uuid:"8f357572-c343-49d1-8d4e-9839776bd316"

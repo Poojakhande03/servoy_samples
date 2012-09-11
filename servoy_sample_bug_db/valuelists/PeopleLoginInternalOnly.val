@@ -1,0 +1,13 @@
+addEmptyValue:1,
+dataProviderID1:"ixpeople",
+dataProviderID2:"login_name",
+name:"PeopleLoginInternalOnly",
+returnDataProviders:1,
+separator:" ",
+serverName:"bug_db",
+showDataProviders:2,
+sortOptions:"login_name asc",
+tableName:"tbl_people",
+typeid:34,
+uuid:"dedf3542-edb5-4ef6-90fa-96d89259b565",
+valueListType:1

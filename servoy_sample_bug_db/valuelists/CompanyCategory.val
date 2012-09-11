@@ -1,0 +1,6 @@
+addEmptyValue:1,
+customValues:"i18n:lbl.undefined|0\ni18n:lbl.admin|1\ni18n:lbl.client|2\ni18n:lbl.prospectiveClient|3\ni18n:lbl.supplier|4\ni18n:lbl.partner|5",
+name:"CompanyCategory",
+separator:" ",
+typeid:34,
+uuid:"e0b05b99-b962-463a-a0ec-611936a09923"

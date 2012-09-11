@@ -1,0 +1,98 @@
+dataSource:"db:/example_data/book_text",
+items:[
+{
+anchors:11,
+borderType:"SpecialMatteBorder,1.0,0.0,0.0,0.0,#000000,#000000,#000000,#000000,0.0,",
+formIndex:10100,
+horizontalAlignment:4,
+location:"0,45",
+mediaOptions:14,
+size:"900,4",
+tabSeq:-1,
+transparent:true,
+typeid:7,
+uuid:"22b73179-dd4e-4154-80c8-ceca317bb747"
+},
+{
+fontType:"Tahoma,1,24",
+foreground:"#ffffff",
+formIndex:10000,
+horizontalAlignment:2,
+location:"15,7",
+mediaOptions:14,
+size:"570,32",
+tabSeq:-1,
+text:"Example - Resizeable Panes & Tree Control",
+transparent:true,
+typeid:7,
+uuid:"26d0680c-2e8e-444e-8a8c-663b4a546e7c"
+},
+{
+formIndex:10300,
+location:"287,150",
+mediaOptions:14,
+size:"330,80",
+styleClass:"list",
+tabSeq:-1,
+text:"<html>
+  <head>
+    
+  <\/head>
+  <body>
+    <b>This solution is not compatible with the Web Client <\/b>- because it 
+    uses JavaBeans that modify the user interface. JavaBeans and Java Applets 
+    that modify the user interface (dialogs, tree bean, etc.) - don't work in 
+    Web Client, only in Smart Client.
+  <\/body>
+<\/html>",
+transparent:true,
+typeid:7,
+uuid:"30030db7-ba3b-46ae-b112-5607bc3d7365",
+verticalAlignment:1
+},
+{
+background:"#ebebeb",
+borderType:"LineBorder,1,#666666",
+formIndex:10200,
+location:"270,140",
+mediaOptions:14,
+size:"360,130",
+tabSeq:-1,
+typeid:7,
+uuid:"796ba531-17a4-43fa-8aae-0f73ea98aeaa"
+},
+{
+height:430,
+partType:5,
+typeid:19,
+uuid:"a7dff635-190e-4e33-8725-c4bbe8f11e74"
+},
+{
+background:"#666666",
+height:49,
+partType:1,
+typeid:19,
+uuid:"bd2a0a44-cb87-4cff-b2e1-4a077303908f"
+},
+{
+formIndex:10400,
+location:"530,230",
+mediaOptions:14,
+onActionMethodID:"10e0887c-9384-4c0d-b35a-7c282d41a4d3",
+size:"80,26",
+text:"Close",
+transparent:true,
+typeid:7,
+uuid:"e6a51f03-f765-4e9c-a064-978efe77b7ce"
+}
+],
+name:"frm_notWCcompat",
+navigatorID:"-1",
+onLoadMethodID:"-1",
+paperPrintScale:100,
+size:"900,430",
+styleName:"svyWebCrm",
+titleText:"Example",
+typeid:3,
+uuid:"44754582-7388-4f57-8d61-9d6f5196b4f8",
+view:5

@@ -1,0 +1,6 @@
+addEmptyValue:1,
+customValues:"i18n:lbl.undefined|0\ni18n:lbl.bug|1\ni18n:lbl.task|2\ni18n:lbl.feature|3\ni18n:lbl.enhancement|4\ni18n:lbl.refactor|5\ni18n:lbl.idea|6\ni18n:lbl.research|7",
+name:"TaskLabel",
+separator:" ",
+typeid:34,
+uuid:"7e4e74bb-d78c-43cc-9866-c6648d344bf5"
