@@ -1,19 +1,19 @@
 /**
- * @type String
+ * @type {String}
  *
  * @properties={typeid:35,uuid:"98AFAEFE-CCD6-47D4-B85A-D82014258C17",variableType:12}
  */
 var selected_user_uid = null;
 
 /**
- * @type String
+ * @type {String}
  *
  * @properties={typeid:35,uuid:"19ade47b-b781-4e81-ae00-fa8dc1d26410",variableType:12}
  */
 var heading = '';
 
 /**
- * @type String
+ * @type {String}
  *
  * @properties={typeid:35,uuid:"ed38f152-e865-4e2f-9b7b-d5661773e1dd",variableType:12}
  */
@@ -22,7 +22,7 @@ var search = '';
 /**
  * @AllowToRunInFind
  * 
- * @param {Number} arg0 // TODO generated, please specify type and doc
+ * @param {Number} arg0
  *
  * @properties={typeid:24,uuid:"F3E0506D-1AE9-44F3-88A5-4D6F1E905A14"}
  */
@@ -30,15 +30,17 @@ function selectEntityNode(arg0)
 {
 	var e_id = arg0;
 
+	/** @type {JSRecord<db:/user_data/entities>}*/
 	var entity_rec = null;
+	/** @type {JSFoundset<db:/user_data/entities>}*/
 	var fs = databaseManager.getFoundSet('user_data', 'entities')
 	if (fs.find())
 	{
+		/** @type {JSRecord<db:/user_data/entities>}*/
 		var search_entity_rec = fs.getRecord(1)
 		search_entity_rec['entity_id'] = e_id
 		var count = fs.search();
 		if (count > 0)
-			/** @type {JSRecord}*/
 			entity_rec = fs.getRecord(1)
 	}
 
@@ -78,9 +80,9 @@ function selectEntityNode(arg0)
 }
 
 /**
- * @param {JSRecord} entity_rec // TODO generated, please specify type and doc
- * @param {String} fname // TODO generated, please specify type and doc
- * @param {Object} vtype // TODO generated, please specify type and doc
+ * @param {JSRecord<db:/user_data/entities>} entity_rec
+ * @param {String} fname 
+ * @param {Number} vtype 
  *
  * @properties={typeid:24,uuid:"F7FD68DC-4CF4-486F-A908-1DFE9DFB1327"}
  */
@@ -164,10 +166,14 @@ function createForm(entity_rec,fname,vtype)
 			/** @type {JSField}*/
 			var field = smFields[index];
 
-			var jslabel = jsform.newLabel(field['text'], field.x - 110, field.y, 100, field.height,null);
-			jslabel.name = 'lbl_'+field.name;
-			jslabel.labelFor = field.name;
-			jslabel.transparent = true
+			var n = 'lbl_'+field.name
+			if (jsform.getLabel(n) == null) //prevent duplication, would be nicer to check/use 'labelFor' via otherProperties 
+			{
+				var jslabel = jsform.newLabel(field['text'], field.x - 110, field.y, 100, field.height,null);
+				jslabel.name = n;
+				jslabel.labelFor = field.name;
+				jslabel.transparent = true
+			}
 		}
 	}
 
@@ -179,28 +185,29 @@ function createForm(entity_rec,fname,vtype)
 }
 
 /**
- * // TODO generated, please specify type and doc for the params
- * @param {Object} element_rec
+ * @param {JSRecord<db:/user_data/elements>} element_rec
  * @param {JSForm} jsform
- * @param {Object} vtype
+ * @param {Number} vtype
  *
  * @properties={typeid:24,uuid:"A5FEC540-4EF5-4FA5-AA83-5A154D4AD0E9"}
  */
 function createElement(element_rec,jsform,vtype)
 {
+	/** @type {JSComponent}*/ 
 	var jscomponent;
 	if (element_rec.element_type == 0)
 	{
-		/** @type {JSComponent}*/ 
-		jscomponent = jsform.newField(element_rec['dataprovider_id'], element_rec['field_type'], element_rec['xlocation'], element_rec['ylocation'], element_rec['width'], element_rec['height'])
-		if (element_rec.display_options == 1) jscomponent.editable = false;
-		jscomponent.titleText = element_rec['label'];
+		var jsfield = jsform.newField(element_rec['dataprovider_id'], element_rec['field_type'], element_rec['xlocation'], element_rec['ylocation'], element_rec['width'], element_rec['height'])
+		if (element_rec.display_options == 1) jsfield.editable = false;
+		jsfield.titleText = element_rec['label'];
+		jscomponent = jsfield;
 	}
 	else if (element_rec.element_type == 1)
 	{
-		jscomponent = jsform.newLabel(element_rec['label'], element_rec['xlocation'], element_rec['ylocation'], element_rec['width'], element_rec['height'], null);
-		jscomponent.transparent = true
-		jscomponent.titleText = element_rec['label'];
+		var jslabel = jsform.newLabel(element_rec['label'], element_rec['xlocation'], element_rec['ylocation'], element_rec['width'], element_rec['height'], null);
+		jslabel.transparent = true
+		jslabel.text = element_rec['label'];
+		jscomponent = jslabel;
 	}
 	//TODO handle more new elements
 
@@ -218,19 +225,22 @@ function createElement(element_rec,jsform,vtype)
  */
 function gotoDetail()
 {
+	/** @type {JSRecord<db:/user_data/entities>}*/
 	var entity_rec = null;
+	/** @type {JSFoundSet<db:/user_data/entities>}*/
 	var fs = databaseManager.getFoundSet('user_data', 'entities')
 	if (fs.find())
 	{
-		/** @type {JSRecord}*/
+		/** @type {JSRecord<db:/user_data/entities>}*/
 		var search_entity_rec = fs.getRecord(1);
 		var ds = currentcontroller.getDataSource().split('/');
 		
 		search_entity_rec['table_name'] = ds[2];
 		var count = fs.search();
-		if (count > 0) { 
-			/** @type JSRecord*/
-			entity_rec = fs.getRecord(1);}
+		if (count > 0) 
+		{ 
+			entity_rec = fs.getRecord(1);
+		}
 	}
 	if (entity_rec != null)
 	{
@@ -366,7 +376,8 @@ function changedElements(formName, changedElementsArray)
  *
  * @properties={typeid:24,uuid:"24BB894A-23DC-4286-96ED-CA8050A73A5B"}
  */
-function onSolutionClose(force) {
+function onSolutionClose(force) 
+{
 	security.logout();
 	return true;
 }
