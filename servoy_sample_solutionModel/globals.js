@@ -166,10 +166,14 @@ function createForm(entity_rec,fname,vtype)
 			/** @type {JSField}*/
 			var field = smFields[index];
 
-			var jslabel = jsform.newLabel(field['text'], field.x - 110, field.y, 100, field.height,null);
-			jslabel.name = 'lbl_'+field.name;
-			jslabel.labelFor = field.name;
-			jslabel.transparent = true
+			var n = 'lbl_'+field.name
+			if (jsform.getLabel(n) == null) //prevent duplication, would be nicer to check/use 'labelFor' via otherProperties 
+			{
+				var jslabel = jsform.newLabel(field['text'], field.x - 110, field.y, 100, field.height,null);
+				jslabel.name = n;
+				jslabel.labelFor = field.name;
+				jslabel.transparent = true
+			}
 		}
 	}
 
