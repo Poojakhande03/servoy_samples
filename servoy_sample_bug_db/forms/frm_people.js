@@ -21,14 +21,18 @@ function LoadPeople()
 		//Get a dataset based on query
 		var maxReturnedRows = 1000;
 		var args = globals.currUserCompanyArray
-		var questionMarks = globals.ReturnSqlWhereQuestionMarks(globals.currUserCompanyArray);
-		var query = 'SELECT a.ixpeople FROM tbl_people a, tbl_people_company b ' +
-					'WHERE a.ixpeople = b.ixpeople AND b.ixcompany IN (' + questionMarks + ')'
-		var ds = controller.getDataSource().split('/');
-		var dataset = databaseManager.getDataSetByQuery(ds[1], query, args, maxReturnedRows);
 		
+		var ar = args.getColumnAsArray(1);
+		var questionMarks = globals.ReturnSqlWhereQuestionMarks(ar);
+		var query = 'SELECT a.ixpeople FROM tbl_people a, tbl_people_company b ' +
+					'WHERE a.ixpeople = b.ixpeople AND b.ixcompany IN (' + questionMarks + ')';
+		
+		/** @type Array*/
+		var ds = controller.getDataSource().split('/');
+		
+		/** @type {JSDataSet} */
+		var dataset = databaseManager.getDataSetByQuery(ds[1], query, ar, maxReturnedRows);
 		forms.lst_people.controller.loadRecords(dataset)
-	
 	}
 	
 	//set initial sort
