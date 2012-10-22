@@ -1,6 +1,0 @@
-addEmptyValue:1,
-customValues:"i18n:lbl.undefined|0\ni18n:lbl.upcoming|3\ni18n:lbl.new|1\ni18n:lbl.open|2\ni18n:lbl.blocked|4\ni18n:lbl.doneQ|5\ni18n:lbl.approved|6\ni18n:lbl.closed|7",
-name:"ProjectStatus",
-separator:" ",
-typeid:34,
-uuid:"b023044a-cfda-4a38-887c-170c58ca6899"

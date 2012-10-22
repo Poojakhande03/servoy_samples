@@ -1,9 +1,0 @@
-allowCreationRelatedRecords:true,
-foreignDataSource:"db:/example_data/categories",
-items:[
-{foreignColumnName:"categoryid",primaryDataProviderID:"categoryid",typeid:23,uuid:"2fc894c0-cb1a-43fd-854a-249c20df475f"}
-],
-name:"products_to_categories",
-primaryDataSource:"db:/example_data/products",
-typeid:22,
-uuid:"6d9ffa3c-ae51-431c-9633-949ef8f903ba"

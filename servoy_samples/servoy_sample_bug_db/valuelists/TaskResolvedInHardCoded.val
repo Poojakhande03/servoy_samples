@@ -1,6 +1,0 @@
-addEmptyValue:1,
-customValues:"i18n:lbl.undefined|0\ni18n:lbl.nextReleasedVersion|1",
-name:"TaskResolvedInHardCoded",
-separator:" ",
-typeid:34,
-uuid:"cbb1f591-a01d-43e5-98d5-ab9e42f41d9f"

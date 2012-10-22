@@ -1,6 +1,0 @@
-addEmptyValue:1,
-customValues:"i18n:lbl.undefined|0\n-|-1\nMac OS X - Tiger|1\nMac OS X - Leopard|2\n-|-1\nWindows 2000|3\nWindows 2000 Home|4\nWindows XP|5\nWindows XP Home|6\nWindows Server 2003|7\nVista|8\n-|-1\nRed Hat Linux|9\nUbuntu Linux|10\nSuse Linux|11\nBSD|12\nSolaris|13\n-|-1\nMultiple Platforms|14",
-name:"BugPlatform",
-separator:" ",
-typeid:34,
-uuid:"33ce62c4-13f7-43ba-9f0c-852a3d2e530a"

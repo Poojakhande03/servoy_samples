@@ -1,6 +1,0 @@
-addEmptyValue:1,
-customValues:"i18n:lbl.undefined|0\ni18n:lbl.urgent|1\ni18n:lbl.high|2\ni18n:lbl.normal|3\ni18n:lbl.lower|4\ni18n:lbl.lowest|5",
-name:"Priority",
-separator:" ",
-typeid:34,
-uuid:"bf30c487-53c4-4d9e-a13a-4a7454ae4446"
