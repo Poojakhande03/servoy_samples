@@ -1,0 +1,11 @@
+allowCreationRelatedRecords:true,
+deleteRelatedRecords:true,
+foreignDataSource:"db:/user_data/elements",
+items:[
+{foreignColumnName:"user_uid",primaryDataProviderID:"globals.selected_user_uid",typeid:23,uuid:"38E0E489-95B4-4B1A-84AB-EEB8FA921146"},
+{foreignColumnName:"entity_id",primaryDataProviderID:"entity_id",typeid:23,uuid:"5051308d-8a87-4ac6-b4ed-8bea2caee402"}
+],
+name:"entities_to_elements_specific",
+primaryDataSource:"db:/user_data/entities",
+typeid:22,
+uuid:"69279418-0d97-42ea-b419-4e5c81c20c54"

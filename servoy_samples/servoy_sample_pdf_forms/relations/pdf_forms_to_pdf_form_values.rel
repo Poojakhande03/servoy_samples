@@ -1,0 +1,9 @@
+allowCreationRelatedRecords:true,
+foreignDataSource:"db:/pdf_forms/pdf_form_values",
+items:[
+{foreignColumnName:"form_id",primaryDataProviderID:"form_id",typeid:23,uuid:"FFEFBB40-31F4-4ABF-AC9E-AC5B78EF4031"}
+],
+name:"pdf_forms_to_pdf_form_values",
+primaryDataSource:"db:/pdf_forms/pdf_forms",
+typeid:22,
+uuid:"651A2966-41DB-41A9-9FA3-6DCBB6F918AB"

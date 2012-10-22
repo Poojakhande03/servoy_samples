@@ -1,0 +1,6 @@
+addEmptyValue:1,
+customValues:"i18n:lbl.unassigned|0\ni18n:lbl.admin|1\ni18n:lbl.projectManager|2\ni18n:lbl.developer|3\ni18n:lbl.artist|4\ni18n:lbl.tester|5\ni18n:lbl.client|6\ni18n:lbl.clientTrusted|7\ni18n:lbl.guest|8",
+name:"Profile",
+separator:" ",
+typeid:34,
+uuid:"3b97bbb5-458a-4a53-a08b-c373fc9e2b71"

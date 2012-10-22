@@ -1,0 +1,6 @@
+addEmptyValue:1,
+customValues:"i18n:lbl.undefined|0\ni18n:lbl.notPlanned|1\ni18n:lbl.upcoming|2\ni18n:lbl.internal|3\ni18n:lbl.public|4\ni18n:lbl.withoutSupport|5\ni18n:lbl.noLongerSupported|6",
+name:"VersionReleaseAs",
+separator:" ",
+typeid:34,
+uuid:"1c67dd05-82f5-47fe-bf2f-5edf20b40fb6"

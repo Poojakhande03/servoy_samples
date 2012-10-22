@@ -1,0 +1,13 @@
+addEmptyValue:1,
+customValues:"field|0\r
+label|1\r
+button|2\r
+portal|3\r
+tabpanel|4\r
+tab|5",
+name:"element_types",
+returnDataProviders:1,
+separator:" ",
+showDataProviders:1,
+typeid:34,
+uuid:"0AD1C931-221D-47B9-BDEB-2FD7A908425C"

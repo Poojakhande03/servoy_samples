@@ -1,0 +1,10 @@
+dataProviderID1:"company_category",
+name:"company_category",
+returnDataProviders:1,
+separator:" ",
+serverName:"udm",
+showDataProviders:1,
+tableName:"companies",
+typeid:34,
+uuid:"781edd9d-fdcb-41ee-a2fc-c4dd7b25c024",
+valueListType:1

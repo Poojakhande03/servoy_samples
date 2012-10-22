@@ -1,0 +1,6 @@
+addEmptyValue:1,
+customValues:"i18n:lbl.notAvailable|4\ni18n:lbl.always|1\ni18n:lbl.sometimes|2\ni18n:lbl.haveNotTried|0\ni18n:lbl.unableToReproduce|3",
+name:"BugReproducibility",
+separator:" ",
+typeid:34,
+uuid:"5f1afe3c-16c7-4668-8052-ba386f0cd260"

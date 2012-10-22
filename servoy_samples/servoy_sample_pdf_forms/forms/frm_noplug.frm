@@ -1,0 +1,126 @@
+borderType:"LineBorder,1,#cccccc",
+dataSource:"db:/pdf_forms/pdf_forms",
+items:[
+{
+formIndex:10100,
+imageMediaID:"969dcb38-528d-4d40-9ea2-997493cd7a39",
+location:"280,170",
+mediaOptions:14,
+size:"32,32",
+tabSeq:-1,
+transparent:true,
+typeid:7,
+uuid:"161a74d2-c380-4548-a867-f67e9f55c620"
+},
+{
+height:603,
+partType:5,
+typeid:19,
+uuid:"32a109f2-e2c2-4908-bdfb-8d9f3ed29edb"
+},
+{
+formIndex:10200,
+location:"330,176",
+mediaOptions:14,
+size:"360,20",
+styleClass:"subheadreport",
+tabSeq:-1,
+text:"Error - This Solution Can't Be Used - Plug-In Missing",
+transparent:true,
+typeid:7,
+uuid:"61696af8-7d23-49bc-9d9b-cb5ef88cf520"
+},
+{
+formIndex:11000,
+location:"616,386",
+mediaOptions:14,
+onActionMethodID:"9281956b-9aa0-41c3-858b-751c746f5cca",
+size:"80,26",
+tabSeq:4,
+text:"Close",
+transparent:true,
+typeid:7,
+uuid:"6255d5f4-5ac2-478f-9a93-6a5b44893d37"
+},
+{
+displaysTags:true,
+formIndex:10300,
+location:"330,216",
+mediaOptions:14,
+showClick:false,
+showFocus:false,
+size:"350,138",
+styleClass:"list",
+tabSeq:-1,
+text:"<html>
+  <head>
+    
+  <\/head>
+  <body>
+    The free PDF-Forms plug-in can't be found in the plugins directory.<br><br>You 
+    can download the plug-in from the Servoy Website 
+    (http://www.servoy.com/developer).<br><br>Once you download it - put it 
+    into the &quot;plugins&quot; directory inside the Servoy directory and 
+    %%globals.appType_forError%% and you'll be all set.
+  <\/body>
+<\/html>",
+transparent:true,
+typeid:7,
+uuid:"78cba7a9-9abb-4dda-a45b-8da376a10df7",
+verticalAlignment:1
+},
+{
+background:"#666666",
+height:50,
+partType:2,
+typeid:19,
+uuid:"9cbdef04-3546-49c9-b050-324cf377e692"
+},
+{
+background:"#e6e6e6",
+borderType:"LineBorder,1,#666666",
+formIndex:10000,
+location:"260,150",
+mediaOptions:14,
+size:"460,280",
+tabSeq:-1,
+typeid:7,
+uuid:"a8336189-f08f-4a31-9a75-dcf59b06b26d"
+},
+{
+formIndex:12600,
+location:"23,10",
+mediaOptions:14,
+name:"lbl_section",
+size:"420,30",
+styleClass:"whtlg",
+tabSeq:-1,
+text:"PDF Fill-In Forms Sample",
+transparent:true,
+typeid:7,
+uuid:"fee44b42-9d7b-42c0-ba52-4a6f02728866"
+}
+],
+name:"frm_noplug",
+navigatorID:"-1",
+onDeleteAllRecordsCmdMethodID:"-1",
+onDeleteRecordCmdMethodID:"-1",
+onDuplicateRecordCmdMethodID:"-1",
+onFindCmdMethodID:"-1",
+onInvertRecordsCmdMethodID:"-1",
+onNewRecordCmdMethodID:"-1",
+onNextRecordCmdMethodID:"-1",
+onOmitRecordCmdMethodID:"-1",
+onPreviousRecordCmdMethodID:"-1",
+onPrintPreviewCmdMethodID:"-1",
+onSearchCmdMethodID:"-1",
+onShowAllRecordsCmdMethodID:"-1",
+onShowMethodID:"-1",
+onShowOmittedRecordsCmdMethodID:"-1",
+onSortCmdMethodID:"-1",
+paperPrintScale:100,
+size:"996,603",
+styleName:"servoy_sample_auto_pdf",
+titleText:"Web Compatible!",
+typeid:3,
+uuid:"399f83c8-7fe0-4ded-a9f3-51e29a71c8a0"

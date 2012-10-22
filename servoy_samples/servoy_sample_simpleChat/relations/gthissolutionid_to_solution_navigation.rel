@@ -1,0 +1,11 @@
+allowCreationRelatedRecords:true,
+foreignServerName:"udm",
+foreignTableName:"solution_navigation",
+items:[
+{foreignColumnName:"solution_id",primaryDataProviderID:"globals.thisSolutionID",typeid:23,uuid:"a98d21e0-543f-4b13-9a48-a466ad5dfe00"}
+],
+name:"gthissolutionid_to_solution_navigation",
+primaryServerName:"udm",
+primaryTableName:"solution_navigation",
+typeid:22,
+uuid:"0ec3029d-4523-45d6-868b-8e910cf8a02c"

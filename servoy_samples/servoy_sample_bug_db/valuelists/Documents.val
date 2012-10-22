@@ -1,0 +1,12 @@
+addEmptyValue:1,
+dataProviderID1:"ixdocument",
+dataProviderID2:"doc_name",
+name:"Documents",
+relationName:"gcurrproject_to_document",
+returnDataProviders:1,
+separator:" ",
+showDataProviders:2,
+sortOptions:"doc_name asc",
+typeid:34,
+uuid:"3a7e7e4e-b721-4372-ba77-76aaaa2504b7",
+valueListType:1

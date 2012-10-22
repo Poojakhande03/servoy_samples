@@ -1,0 +1,12 @@
+allowCreationRelatedRecords:true,
+deleteRelatedRecords:true,
+foreignServerName:"bug_db",
+foreignTableName:"tbl_task",
+items:[
+{foreignColumnName:"ixproject",primaryDataProviderID:"ixproject",typeid:23,uuid:"b3e85576-0f3e-43d9-8c28-cc5d7a388a7a"}
+],
+name:"project_to_task",
+primaryServerName:"bug_db",
+primaryTableName:"tbl_project",
+typeid:22,
+uuid:"94bd518d-7f37-4afa-a922-6b2a698a8e08"

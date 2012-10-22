@@ -1,0 +1,6 @@
+addEmptyValue:1,
+customValues:"i18n:lbl.undefined|0\n-|-1\ni18n:lbl.employee|1\ni18n:lbl.staff|2\ni18n:lbl.freelancer|3\ni18n:lbl.workingStudent|4\ni18n:lbl.apprentice|5\ni18n:lbl.intern|6\ni18n:lbl.exEmployee|7\n-|-1\ni18n:lbl.contactPerson|8\ni18n:lbl.prospectiveClient|9\ni18n:lbl.supplier|10\ni18n:lbl.partner|11",
+name:"Category",
+separator:" ",
+typeid:34,
+uuid:"cb8c4882-42a2-4537-8260-058b3845bb44"

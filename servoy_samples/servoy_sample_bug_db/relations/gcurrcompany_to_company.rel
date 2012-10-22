@@ -1,0 +1,11 @@
+allowCreationRelatedRecords:true,
+foreignServerName:"bug_db",
+foreignTableName:"tbl_company",
+items:[
+{foreignColumnName:"ixcompany",primaryDataProviderID:"globals.currCompanyID",typeid:23,uuid:"e1ef53fa-9d9d-4f02-ae1d-2e4125c0c792"}
+],
+name:"gcurrcompany_to_company",
+primaryServerName:"bug_db",
+primaryTableName:"tbl_company",
+typeid:22,
+uuid:"3e3e6e41-1783-4776-a34a-b9ed62138a64"

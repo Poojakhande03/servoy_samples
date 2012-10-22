@@ -1,0 +1,11 @@
+addEmptyValue:1,
+dataProviderID1:"productname",
+dataProviderID2:"productid",
+dataSource:"db:/example_data/products",
+name:"products",
+returnDataProviders:2,
+separator:" ",
+showDataProviders:1,
+typeid:34,
+uuid:"DC6DC7AB-260C-493F-AD0E-9B2F832842B5",
+valueListType:1
