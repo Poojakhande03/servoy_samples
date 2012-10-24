@@ -1,0 +1,12 @@
+items:[
+{
+height:480,
+partType:5,
+typeid:19,
+uuid:"7E77D5E0-CAA7-4A00-A732-6C74A6EE8453"
+}
+],
+name:"data_base",
+showInMenu:true,
+typeid:3,
+uuid:"EF6ECBD9-D878-4AE8-A0BB-955595349AC0"
