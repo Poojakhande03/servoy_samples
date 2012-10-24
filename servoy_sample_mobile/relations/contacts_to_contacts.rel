@@ -1,0 +1,7 @@
+allowCreationRelatedRecords:true,
+foreignDataSource:"db:/udm/contacts",
+joinType:1,
+name:"contacts_to_contacts",
+primaryDataSource:"db:/udm/contacts",
+typeid:22,
+uuid:"5CAF2813-322D-405C-B740-C1291064DC95"
