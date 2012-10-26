@@ -10,11 +10,11 @@ customProperties:"mobile:{
 listitemButton:true
 }",
 dataProviderID:"company_name",
-location:"44,83",
+location:"44,94",
 onActionMethodID:"DFB966A7-FA63-430E-94DC-7C5E2A646210",
 onDoubleClickMethodID:"-1",
 onRightClickMethodID:"-1",
-size:"180,26",
+size:"180,30",
 text:"list",
 typeid:7,
 uuid:"01002966-CF9D-4933-B2D5-DD9D5538F529"
@@ -24,7 +24,8 @@ customProperties:"mobile:{
 listitemSubtext:true
 }",
 dataProviderID:"company_description",
-location:"40,40",
+location:"44,126",
+size:"200,20",
 transparent:true,
 typeid:7,
 uuid:"1504BFB1-D9F3-45D9-B777-535CF114D589"
@@ -53,7 +54,7 @@ uuid:"52476C54-059D-404A-9EDB-93161B0C03FE"
 customProperties:"mobile:{
 listitemHeader:true
 }",
-location:"0,0",
+location:"10,53",
 size:"380,30",
 text:"Companies",
 transparent:true,

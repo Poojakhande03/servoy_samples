@@ -1,7 +1,7 @@
 customProperties:"mobile:{
 mobileform:\"true\"
 }",
-dataSource:"db:/udm/companies",
+dataSource:"db:/udm/contacts",
 encapsulation:60,
 items:[
 {
@@ -18,7 +18,7 @@ items:[
 {
 containsFormID:"EFC58CD8-1A98-4686-9592-87C674291055",
 location:"126,257",
-relationName:"companies_to_companies",
+relationName:"accountmanager_to_companies",
 text:"companies_list",
 typeid:15,
 uuid:"2B948936-FC28-4E18-B82C-1C482256C11B"

@@ -1,7 +1,0 @@
-allowCreationRelatedRecords:true,
-foreignDataSource:"db:/udm/companies",
-joinType:1,
-name:"companies_to_companies",
-primaryDataSource:"db:/udm/companies",
-typeid:22,
-uuid:"DBA55FB3-D5DD-49CA-9703-CB15C298FF20"

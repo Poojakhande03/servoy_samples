@@ -4,7 +4,7 @@ items:[
 {foreignColumnName:"email",primaryDataProviderID:"scopes.globals.username",typeid:23,uuid:"64F80C16-8291-4BC1-96B3-A44B7B36AC56"}
 ],
 joinType:1,
-name:"user_select",
+name:"contacts",
 primaryDataSource:"db:/udm/contacts",
 typeid:22,
 uuid:"8D59E2CF-B10D-4C5E-BD73-E575BB30386E"

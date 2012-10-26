@@ -21,7 +21,7 @@ function ws_read(version,name)
 	globals.username = authenticate_info.username;
 	
 	//prepare personal data
-	var fs_contact = globals.user_select;
+	var fs_contact = globals.contacts;//contains the account manager contact
 	traverse = new Array();
 	traverse.push('accountmanager_to_companies');
 	traverse.push('companies_to_contacts');
