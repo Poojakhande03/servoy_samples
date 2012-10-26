@@ -16,7 +16,7 @@ list:true
 }",
 items:[
 {
-containsFormID:"845415D2-8EC0-45D7-A459-4072DC7108E1",
+containsFormID:"EFC58CD8-1A98-4686-9592-87C674291055",
 location:"126,257",
 relationName:"companies_to_companies",
 text:"companies_list",
@@ -27,7 +27,7 @@ uuid:"2B948936-FC28-4E18-B82C-1C482256C11B"
 location:"10,51",
 name:"list",
 printable:false,
-size:"380,90",
+size:"380,100",
 transparent:true,
 typeid:16,
 uuid:"5A63DE1C-D842-4AF1-AD54-A7E02C7D33FF"
@@ -57,8 +57,8 @@ customProperties:"mobile:{
 headerText:true,
 headeritem:true
 }",
-location:"160,6",
-size:"80,35",
+location:"75,6",
+size:"250,35",
 text:"AccountManager",
 transparent:true,
 typeid:7,
