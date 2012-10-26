@@ -3,7 +3,7 @@
 	<name>servoy_sample_mobile_service</name>
 	<comment></comment>
 	<projects>
-		<project>resources_project_mobile</project>
+		<project>servoy_resources</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>
