@@ -10,7 +10,7 @@ headerLeftButton:true,
 headeritem:true
 }",
 location:"20,6",
-onActionMethodID:"-1",
+onActionMethodID:"D02CF83F-0F1E-4898-878B-15517AC5D8E8",
 onDoubleClickMethodID:"-1",
 onRightClickMethodID:"-1",
 size:"50,35",

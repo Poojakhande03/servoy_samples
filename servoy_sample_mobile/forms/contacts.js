@@ -17,3 +17,14 @@ function onDetailAction(event)
 {
 	forms.contact.showContact(foundset);
 }
+
+/**
+ * Perform the element default action.
+ *
+ * @param {JSEvent} event the event that triggered the action
+ *
+ * @properties={typeid:24,uuid:"D02CF83F-0F1E-4898-878B-15517AC5D8E8"}
+ */
+function back(event) {
+	history.back()
+}
