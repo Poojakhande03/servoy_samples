@@ -124,12 +124,14 @@ function doEdit()
 	elements.fld_companyCategory.visible = false
 	elements.fld_companyIndustry.visible = false
 	elements.fld_companyType.visible = false
+	elements.fld_accountmanager.visible = false
 	elements.fld_status.visible = false
 
 	//show the comboboxes
 	elements.fld_companyCategoryc.visible = true
 	elements.fld_companyIndustryc.visible = true
 	elements.fld_companyTypec.visible = true
+	elements.fld_accountmanagerc.visible = true
 	elements.fld_statusc.visible = true
 
 	//hide the buttons that will mess things up
@@ -161,12 +163,14 @@ function hide_btn_reset_fields()
 	elements.fld_companyCategoryc.visible = false
 	elements.fld_companyIndustryc.visible = false
 	elements.fld_companyTypec.visible = false
+	elements.fld_accountmanagerc.visible = false
 	elements.fld_statusc.visible = false
 
 	//show the non combobox fields
 	elements.fld_companyCategory.visible = true
 	elements.fld_companyIndustry.visible = true
 	elements.fld_companyType.visible = true
+	elements.fld_accountmanager.visible = true
 	elements.fld_status.visible = true
 
 	//show the buttons 
@@ -250,6 +254,7 @@ function onShow()
 	elements.fld_companyCategoryc.visible = false
 	elements.fld_companyIndustryc.visible = false
 	elements.fld_companyTypec.visible = false
+	elements.fld_accountmanagerc.visible = false
 	elements.fld_statusc.visible = false
 }
 
