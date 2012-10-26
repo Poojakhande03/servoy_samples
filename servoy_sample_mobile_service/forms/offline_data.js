@@ -39,11 +39,11 @@ function ws_read(version,name)
  */
 function ws_authenticate(useruid,password)
 {
-	if (useruid == null || useruid == 'test')
+	if (useruid == null || useruid == 'demo')
 	{
-		useruid = 'test@servoy.com'
+		useruid = 'yboom@servoy.com'
 	}
-	if (password == 'test')
+	if (password == 'demo')
 	{
 		//TODO check password (against pwhash column)
 		var retval = new Object();
