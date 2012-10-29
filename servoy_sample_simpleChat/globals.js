@@ -1,91 +1,91 @@
 /**
- * @type String
+ * @type {String}
  *
- * @properties={typeid:35,uuid:"D4A3A8BE-D6BE-4D60-AC9E-DBB768E1E5AB",variableType:12}
+ * @properties={typeid:35,uuid:"D4A3A8BE-D6BE-4D60-AC9E-DBB768E1E5AB"}
  */
 var nav_itemName = null;
 
 /**
- * @type Number
+ * @type {String}
  *
- * @properties={typeid:35,uuid:"8C3399C9-3414-4BD2-AD78-50B3C26E8983",variableType:8}
+ * @properties={typeid:35,uuid:"8C3399C9-3414-4BD2-AD78-50B3C26E8983"}
  */
 var lastChatUserIP = null;
 
 /**
- * @type Number
+ * @type {Number}
  *
  * @properties={typeid:35,uuid:"ac4799fb-cb7e-4e65-b9c4-6e0ce74016c8",variableType:4}
  */
 var beepOnNewMessage = 0;
 
 /**
- * @type Number
+ * @type {Number}
  *
  * @properties={typeid:35,uuid:"124066ef-b58b-45dd-8fb5-589425522e1b",variableType:4}
  */
 var chatFromUserID;
 
 /**
- * @type String
+ * @type {String}
  *
- * @properties={typeid:35,uuid:"e6311ca6-05fb-40a0-80e1-7d4867dfa99e",variableType:12}
+ * @properties={typeid:35,uuid:"e6311ca6-05fb-40a0-80e1-7d4867dfa99e"}
  */
 var chatMsg = '';
 
 /**
- * @type Number
+ * @type {Number}
  *
  * @properties={typeid:35,uuid:"c183d6b6-b668-4abe-a3be-91d47f5dfd0a",variableType:4}
  */
 var chatToUserID;
 
 /**
- * @type String
+ * @type {String}
  *
- * @properties={typeid:35,uuid:"dcd0d84e-f6db-4042-834b-52e391175615",variableType:12}
+ * @properties={typeid:35,uuid:"dcd0d84e-f6db-4042-834b-52e391175615"}
  */
 var chatToUserNameDisplay = '';
 
 /**
- * @type Number
+ * @type {Number}
  *
  * @properties={typeid:35,uuid:"98f08cd8-226d-4c91-ae68-68dedf8b602e",variableType:4}
  */
 var lastChatFromUserID;
 
 /**
- * @type String
+ * @type {String}
  *
- * @properties={typeid:35,uuid:"091b6bd2-059d-4b21-9c1f-233e89b335ca",variableType:12}
+ * @properties={typeid:35,uuid:"091b6bd2-059d-4b21-9c1f-233e89b335ca"}
  */
 var localUserName = '';
 
 /**
- * @type Number
+ * @type {Number}
  *
  * @properties={typeid:35,uuid:"838c5b21-ca95-4e66-914d-c790ae1c963b",variableType:4}
  */
 var loginID;
 
 /**
- * @type String
+ * @type {String}
  *
- * @properties={typeid:35,uuid:"c53cada0-e080-44ef-af5c-c91a597c9af0",variableType:12}
+ * @properties={typeid:35,uuid:"c53cada0-e080-44ef-af5c-c91a597c9af0"}
  */
 var received = '';
 
 /**
- * @type Number
+ * @type {Number}
  *
  * @properties={typeid:35,uuid:"c8c6c661-bda0-490e-8631-341e435a1c07",variableType:4}
  */
 var thisSolutionID = 3;
 
 /**
- * @type String
+ * @type {String}
  *
- * @properties={typeid:35,uuid:"602eabd7-dfab-498f-9856-50927466e2c3",variableType:12}
+ * @properties={typeid:35,uuid:"602eabd7-dfab-498f-9856-50927466e2c3"}
  */
 var toIP = '';
 
@@ -94,6 +94,10 @@ var toIP = '';
  */
 function closeSolution() {
 	if(forms.frm_nav_main.elements.btn_login.text == 'Logout') forms.frm_nav_main.btn_login_logOut()
+
+	//delete the users if only 1 client is active
+	if (application.getActiveClientCount(true) == 1)
+		forms.frm_chat.controller.deleteAllRecords();
 
 	//stop the UDP
 	globals.stopUDP();
@@ -153,8 +157,7 @@ function packetReceived() {
 	var packet;
 	var fontColor = '#666666';
 	while ( (packet = plugins.udp.getReceivedPacket()) != null) {
-		
-		var msg = packet.readUTF(packet.getLength());
+		var msg = packet.readUTF();
 		var fromUser = packet.getHost();
 
 		if(fromUser != globals.toIP) 

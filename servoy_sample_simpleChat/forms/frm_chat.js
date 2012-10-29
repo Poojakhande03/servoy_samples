@@ -1,5 +1,6 @@
 /**
  * @properties={typeid:24,uuid:"171de8ad-dc84-4f20-8899-dbb15a57a707"}
+ * @AllowToRunInFind
  */
 function send_msg() {
 	if(globals.chatMsg) {
