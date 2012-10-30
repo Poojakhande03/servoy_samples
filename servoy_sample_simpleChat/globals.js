@@ -308,9 +308,23 @@ function showWarningDialog()
 /**
  * @properties={typeid:24,uuid:"6b2b26e5-c3e7-4626-9d06-062a65cd775b"}
  */
-function startUDP()
-{
+function startUDP() {
 	plugins.udp.startSocket(2828, globals.packetReceived);
+	
+	/**var start = false;
+	var counter = 1;
+	var port = 2828;
+	while (!start) {
+		start = plugins.udp.startSocket(port, globals.packetReceived);
+		if (start) break;
+		counter = counter+1;
+		if ((counter % 10) == 0)
+			port = port + 100;
+		if (counter == 5300) {
+			start = true;
+			break;
+		}
+	}*/
 }
 
 /**
