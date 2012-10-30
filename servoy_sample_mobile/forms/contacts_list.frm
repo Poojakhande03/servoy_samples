@@ -3,13 +3,14 @@ listitemFormContainer:\"8B2835F5-12CD-41DD-863D-40811FC6209C\",
 listitemFormTab:\"F423405E-E014-4DD6-B78E-3B6756183099\",
 mobileform:true
 }",
+dataSource:"db:/udm/contacts",
 items:[
 {
 customProperties:"mobile:{
 listitemButton:true
 }",
 dataProviderID:"name_last",
-location:"44,94",
+location:"44,84",
 onActionMethodID:"90268929-8B65-4991-99CF-BCA34FFB647B",
 onDoubleClickMethodID:"-1",
 onRightClickMethodID:"-1",
@@ -31,7 +32,7 @@ uuid:"58ADD201-754A-4BCF-AAFB-0D151739D0D2"
 customProperties:"mobile:{
 listitemSubtext:true
 }",
-location:"44,126",
+location:"44,116",
 size:"200,20",
 transparent:true,
 typeid:7,
@@ -47,7 +48,7 @@ uuid:"8B69C8A3-5D21-4F49-8969-4D718AC65060"
 customProperties:"mobile:{
 listitemHeader:true
 }",
-location:"10,53",
+location:"10,43",
 size:"380,30",
 text:"Contacts",
 transparent:true,
