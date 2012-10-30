@@ -12,7 +12,7 @@ uuid:"0D865563-E8E9-4309-A614-4F536C2BD0F1"
 },
 {
 groupID:"C8338B89-B899-42BE-A4E6-F510E73B78A0",
-location:"12,134",
+location:"12,124",
 size:"376,38",
 text:"Last name",
 transparent:true,
@@ -20,7 +20,7 @@ typeid:7,
 uuid:"2E98F3D4-BE49-4932-A17A-4342E10791ED"
 },
 {
-height:50,
+height:40,
 partType:2,
 typeid:19,
 uuid:"34FAB7D9-E943-4B51-975F-1C5B26ABD6AF"
@@ -30,11 +30,11 @@ customProperties:"mobile:{
 headerLeftButton:true,
 headeritem:true
 }",
-location:"20,6",
+location:"20,8",
 onActionMethodID:"22F09139-0180-44DA-84E7-CDE12C2AC89E",
 onDoubleClickMethodID:"-1",
 onRightClickMethodID:"-1",
-size:"50,35",
+size:"50,28",
 text:"Back",
 typeid:7,
 uuid:"4C6E2AF7-895E-4040-B063-0E071E4DED63"
@@ -42,14 +42,14 @@ uuid:"4C6E2AF7-895E-4040-B063-0E071E4DED63"
 {
 dataProviderID:"phone_cell",
 groupID:"C636952A-04EB-4432-9D4F-D06EB18D9C3C",
-location:"12,336",
+location:"12,326",
 size:"376,38",
 typeid:4,
 uuid:"4D3E904D-6629-404B-AA67-41217059290E"
 },
 {
 groupID:"C636952A-04EB-4432-9D4F-D06EB18D9C3C",
-location:"12,296",
+location:"12,286",
 size:"376,38",
 text:"Mobile",
 transparent:true,
@@ -57,8 +57,9 @@ typeid:7,
 uuid:"5C031945-75CE-4E21-9FE4-DFE1538F3716"
 },
 {
+dataProviderID:"email",
 groupID:"86613F41-058C-406F-A86D-F5F325D96277",
-location:"12,255",
+location:"12,245",
 size:"376,38",
 typeid:4,
 uuid:"64AB1AC3-B020-4956-A924-6288B0D61BDC"
@@ -68,18 +69,19 @@ customProperties:"mobile:{
 headerRightButton:true,
 headeritem:true
 }",
-location:"330,6",
+location:"330,8",
 onActionMethodID:"1FC496E1-AE4D-4829-A652-A33C5BFB9AA5",
 onDoubleClickMethodID:"-1",
 onRightClickMethodID:"-1",
-size:"50,35",
+size:"50,28",
 text:"Save",
 typeid:7,
 uuid:"86295BA8-1B2F-4A01-93E2-4434EC3C2429"
 },
 {
+dataProviderID:"name_first",
 groupID:"E0AF4AE5-1447-4EF2-88BE-E2F72B4DF959",
-location:"12,93",
+location:"12,83",
 size:"376,38",
 typeid:4,
 uuid:"A5EE5691-5B9B-4778-ABE5-95F723242499"
@@ -89,8 +91,8 @@ customProperties:"mobile:{
 headerText:true,
 headeritem:true
 }",
-location:"160,6",
-size:"80,35",
+location:"75,8",
+size:"250,28",
 text:"Contact",
 transparent:true,
 typeid:7,
@@ -98,7 +100,7 @@ uuid:"AD392BB8-172B-436D-AF6C-696379FB5870"
 },
 {
 groupID:"E0AF4AE5-1447-4EF2-88BE-E2F72B4DF959",
-location:"12,53",
+location:"12,43",
 size:"376,38",
 text:"First name",
 transparent:true,
@@ -107,7 +109,7 @@ uuid:"B45B352E-99A1-4E4A-896F-FB26926EAEE9"
 },
 {
 groupID:"86613F41-058C-406F-A86D-F5F325D96277",
-location:"12,215",
+location:"12,205",
 size:"376,38",
 text:"Email address",
 transparent:true,
@@ -115,8 +117,9 @@ typeid:7,
 uuid:"E6A27BFE-7951-4C04-A69D-AC2A6F2D9217"
 },
 {
+dataProviderID:"name_last",
 groupID:"C8338B89-B899-42BE-A4E6-F510E73B78A0",
-location:"12,174",
+location:"12,164",
 size:"376,38",
 typeid:4,
 uuid:"EA271F84-3E31-4F9B-9553-F613E4F0CA75"
