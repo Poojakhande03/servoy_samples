@@ -69,6 +69,7 @@ function btn_login_logOut() {
 
 /**
  * @properties={typeid:24,uuid:"451a29e6-f305-4cdf-be90-0d1e6fa6a348"}
+ * @SuppressWarnings(unused)
  */
 function sub_toggleRecList() {
 	//make the rec list bigger or smaller

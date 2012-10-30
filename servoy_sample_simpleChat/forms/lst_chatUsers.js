@@ -1,5 +1,6 @@
 /**
  * @properties={typeid:24,uuid:"bad16c66-c710-4178-8bee-2daff6568d27"}
+ * @SuppressWarnings(unused)
  */
 function btn_pickUser() {
 	var a = databaseManager.getFoundSetCount(foundset)
