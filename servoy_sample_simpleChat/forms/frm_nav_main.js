@@ -58,7 +58,7 @@ function btn_login_logOut() {
 		var packet = plugins.udp.createNewPacket()
 		var msg = '<font color="#990000">-- ' + globals.localUserName + ' logged out -- </font>'
 		packet.writeUTF(msg)
-		plugins.udp.sendPacket(globals.toIP,packet)
+		plugins.udp.sendPacket(globals.toIP,packet,2828);
 		elements.fld_login.enabled = true
 		elements.btn_login.text = 'Login'
 
