@@ -27,6 +27,7 @@ uuid:"34FAB7D9-E943-4B51-975F-1C5B26ABD6AF"
 },
 {
 customProperties:"mobile:{
+dataIcon:\"back\",
 headerLeftButton:true,
 headeritem:true
 }",

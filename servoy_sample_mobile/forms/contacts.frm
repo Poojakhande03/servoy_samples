@@ -6,6 +6,7 @@ encapsulation:60,
 items:[
 {
 customProperties:"mobile:{
+dataIcon:\"back\",
 headerLeftButton:true,
 headeritem:true
 }",
