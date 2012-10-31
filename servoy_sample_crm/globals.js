@@ -164,7 +164,7 @@ var vl_editName = null;
  */
 function cancelEditing()
 {
-	databaseManager.rollbackEditedRecords();
+	databaseManager.revertEditedRecords()
 	databaseManager.setAutoSave(true);
 }
 
@@ -279,7 +279,7 @@ function openSolution()
 /**
  * @param {String} formname //formname
  * 
- * @param {Object} rec //record
+ * @param {Boolean} rec //record
  * 
  * @properties={typeid:24,uuid:"9ed894f8-ee2b-4234-8634-3ef4a85b78db"}
  */
@@ -391,6 +391,7 @@ function setupWcValueList(arg0)
  * @param {Object} arg9 // TODO generated, please specify type and doc
  *
  * @properties={typeid:24,uuid:"82E763A8-2B55-42C6-AC01-C3AA450B9FA4"}
+ * @SuppressWarnings(unused)
  */
 function showDialog(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9)
 {
@@ -444,12 +445,12 @@ function showDialog(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9)
 }
 
 /**
- * @param {Object} arg0 // TODO generated, please specify type and doc
- * @param {Object} arg1 // TODO generated, please specify type and doc
- * @param {Object} arg2 // TODO generated, please specify type and doc
- * @param {Object} arg3 // TODO generated, please specify type and doc
- * @param {Object} arg4 // TODO generated, please specify type and doc
- * @param {Object} arg5 // TODO generated, please specify type and doc
+ * @param {String} arg0 // TODO generated, please specify type and doc
+ * @param {String} arg1 // TODO generated, please specify type and doc
+ * @param {String} arg2 // TODO generated, please specify type and doc
+ * @param {String} arg3 // TODO generated, please specify type and doc
+ * @param {String} arg4 // TODO generated, please specify type and doc
+ * @param {String} arg5 // TODO generated, please specify type and doc
  *
  * @properties={typeid:24,uuid:"21624B08-1BFF-4F28-898C-C731023B3D0D"}
  */
@@ -470,12 +471,12 @@ function showErrorDialog(arg0, arg1, arg2, arg3, arg4, arg5)
 }
 
 /**
- * @param {Object} arg0 // TODO generated, please specify type and doc
- * @param {Object} arg1 // TODO generated, please specify type and doc
- * @param {Object} arg2 // TODO generated, please specify type and doc
- * @param {Object} arg3 // TODO generated, please specify type and doc
- * @param {Object} arg4 // TODO generated, please specify type and doc
- * @param {Object} arg5 // TODO generated, please specify type and doc
+ * @param {String} arg0 // TODO generated, please specify type and doc
+ * @param {String} arg1 // TODO generated, please specify type and doc
+ * @param {String} arg2 // TODO generated, please specify type and doc
+ * @param {String} arg3 // TODO generated, please specify type and doc
+ * @param {String} arg4 // TODO generated, please specify type and doc
+ * @param {String} arg5 // TODO generated, please specify type and doc
  *
  * @properties={typeid:24,uuid:"6B7FB335-F2E4-4368-B825-754F5E2C1FE4"}
  */
@@ -496,12 +497,12 @@ function showForbiddenDialog(arg0, arg1, arg2, arg3, arg4, arg5)
 }
 
 /**
- * @param {Object} arg0 // TODO generated, please specify type and doc
- * @param {Object} arg1 // TODO generated, please specify type and doc
- * @param {Object} arg2 // TODO generated, please specify type and doc
- * @param {Object} arg3 // TODO generated, please specify type and doc
- * @param {Object} arg4 // TODO generated, please specify type and doc
- * @param {Object} arg5 // TODO generated, please specify type and doc
+ * @param {String} arg0 // TODO generated, please specify type and doc
+ * @param {String} arg1 // TODO generated, please specify type and doc
+ * @param {String} arg2 // TODO generated, please specify type and doc
+ * @param {String} arg3 // TODO generated, please specify type and doc
+ * @param {String} arg4 // TODO generated, please specify type and doc
+ * @param {String} arg5 // TODO generated, please specify type and doc
  *
  * @properties={typeid:24,uuid:"024CDF49-8D98-4AC5-94AB-262B3E34181B"}
  */
@@ -522,12 +523,12 @@ function showInfoDialog(arg0, arg1, arg2, arg3, arg4, arg5)
 }
 
 /**
- * @param {Object} arg0 // TODO generated, please specify type and doc
- * @param {Object} arg1 // TODO generated, please specify type and doc
- * @param {Object} arg2 // TODO generated, please specify type and doc
- * @param {Object} arg3 // TODO generated, please specify type and doc
- * @param {Object} arg4 // TODO generated, please specify type and doc
- * @param {Object} arg5 // TODO generated, please specify type and doc
+ * @param {String} arg0 // TODO generated, please specify type and doc
+ * @param {String} arg1 // TODO generated, please specify type and doc
+ * @param {String} arg2 // TODO generated, please specify type and doc
+ * @param {String} arg3 // TODO generated, please specify type and doc
+ * @param {String} arg4 // TODO generated, please specify type and doc
+ * @param {String} arg5 // TODO generated, please specify type and doc
  *
  * @properties={typeid:24,uuid:"9434859F-9015-49F1-9383-312B21ECAC81"}
  */
@@ -548,12 +549,12 @@ function showQuestionDialog(arg0, arg1, arg2, arg3, arg4, arg5)
 }
 
 /**
- * @param {Object} arg0 // TODO generated, please specify type and doc
- * @param {Object} arg1 // TODO generated, please specify type and doc
- * @param {Object} arg2 // TODO generated, please specify type and doc
- * @param {Object} arg3 // TODO generated, please specify type and doc
- * @param {Object} arg4 // TODO generated, please specify type and doc
- * @param {Object} arg5 // TODO generated, please specify type and doc
+ * @param {String} arg0 // TODO generated, please specify type and doc
+ * @param {String} arg1 // TODO generated, please specify type and doc
+ * @param {String} arg2 // TODO generated, please specify type and doc
+ * @param {String} arg3 // TODO generated, please specify type and doc
+ * @param {String} arg4 // TODO generated, please specify type and doc
+ * @param {String} arg5 // TODO generated, please specify type and doc
  *
  * @properties={typeid:24,uuid:"67BDE28A-FA0E-4682-A979-ABC8B5581409"}
  */

@@ -218,6 +218,7 @@ function btn_search()
 
 /**
  * @properties={typeid:24,uuid:"683fc232-dd5d-499c-99c2-3bbdbe92300a"}
+ * @SuppressWarnings(unused)
  */
 function sub_toggleRecList()
 {

@@ -111,6 +111,7 @@ function show_iconWarning()
  * @param {JSEvent} event the event that triggered the action
  *
  * @properties={typeid:24,uuid:"F22BFEAD-B0B7-468E-AF48-2B2675756720"}
+ * @SuppressWarnings(unused)
  */
 function close(event) {
 	var frm = globals.core_dlg_formName;
@@ -126,7 +127,8 @@ function close(event) {
 	//re-enable anything behind the dialog
 //	globals.core_enableDisableElements();
 	globals.callback_BgElements(globals.callback);
-	globals.enableBgElements();
+	
+	scopes.globals.enableBgElements();
 
 	//execute the method to be executed, then clear the global
 	if(globals.core_dlg_methodToExecute) {

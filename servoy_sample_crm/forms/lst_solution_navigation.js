@@ -82,6 +82,8 @@ function nav()
 
 /**
  * @properties={typeid:24,uuid:"8bfac57f-7f6b-40f7-a6b4-2187bd85fa9d"}
+ * @SuppressWarnings(wrongparameters)
+ * @SuppressWarnings(unused)
  */
 function setupNav()
 {

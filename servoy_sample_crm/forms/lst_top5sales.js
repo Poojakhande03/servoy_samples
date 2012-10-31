@@ -63,7 +63,8 @@ function draw_chart()
 		totalLine = totalLine.join('+')
 		totalLine = eval(totalLine);
 		HTML += '<tr><td nowrap colspan=2 align="right" class="body"><b>Total: '+
-		utils.numberFormat(totalLine, '$###,###,###.00') + "</b></td></tr>"
+		utils.numberFormat(totalLine, '$###,###,###.00') + "</b></td></tr>";
+
 		HTML += '</table>\n'+'</body>\n' //+'</html>'
 
 		html_sales = HTML
