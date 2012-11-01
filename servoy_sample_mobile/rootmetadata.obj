@@ -1,5 +1,5 @@
 fileVersion:42,
-mustAuthenticate:false,
+mustAuthenticate:true,
 name:"servoy_sample_mobile",
 solutionType:256,
 typeid:43,
