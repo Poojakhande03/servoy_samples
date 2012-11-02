@@ -62,7 +62,7 @@ uuid:"CCB63ACC-6F0C-4EEE-A155-E1F16D3B774E"
 },
 {
 location:"10,265",
-onActionMethodID:"-1",
+onActionMethodID:"A665808B-CDF8-465A-83C8-FE1DBFBC3762",
 onDoubleClickMethodID:"-1",
 onRightClickMethodID:"-1",
 size:"620,55",
@@ -93,7 +93,7 @@ uuid:"E1EC7B9F-06E1-4E83-B2AA-AD3CDAF6EA73"
 },
 {
 location:"10,321",
-onActionMethodID:"-1",
+onActionMethodID:"2AF6A1BD-3BF3-436B-8998-DCF0C57FDDFE",
 onDoubleClickMethodID:"-1",
 onRightClickMethodID:"-1",
 size:"620,55",
