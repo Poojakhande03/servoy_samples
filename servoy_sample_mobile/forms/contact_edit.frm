@@ -67,6 +67,7 @@ uuid:"64AB1AC3-B020-4956-A924-6288B0D61BDC"
 },
 {
 customProperties:"mobile:{
+dataIcon:\"check\",
 headerRightButton:true,
 headeritem:true
 }",

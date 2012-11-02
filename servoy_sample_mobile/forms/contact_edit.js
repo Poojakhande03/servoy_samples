@@ -45,4 +45,5 @@ function onBackAction(event)
 function onSaveAction(event) 
 {
 	databaseManager.saveData();
+	history.back();
 }
