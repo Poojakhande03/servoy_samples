@@ -25,6 +25,22 @@ function onDetailAction(event)
  *
  * @properties={typeid:24,uuid:"D02CF83F-0F1E-4898-878B-15517AC5D8E8"}
  */
-function back(event) {
+function back(event) 
+{
 	history.back()
+}
+
+/**
+ * Perform the element default action.
+ *
+ * @param {JSEvent} event the event that triggered the action
+ *
+ * @private
+ *
+ * @properties={typeid:24,uuid:"097325C7-003F-479A-8138-6A5CF3F7ADD9"}
+ */
+function onNewAction(event) 
+{
+	foundset.newRecord();
+	forms.contact_edit.showContact(foundset);
 }
