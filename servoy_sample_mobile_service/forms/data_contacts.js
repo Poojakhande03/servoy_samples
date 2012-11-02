@@ -7,11 +7,32 @@ function ws_update(data,version,pk)
 	if (foundset.find())
 	{
 		foundset.contact_id = pk;
-		foundset.search();
-		foundset.name_first = data.name_first;
-		foundset.name_last = data.name_last;
-		foundset.email = data.email;
-		foundset.phone_cell = data.phone_cell;
+		var count = foundset.search();
+		if (count > 0)
+		{
+			var rec = foundset.getRecord(1);
+			rec.name_first = data.name_first;
+			rec.name_last = data.name_last;
+			rec.email = data.email;
+			rec.phone_cell = data.phone_cell;
+			databaseManager.saveData(rec);
+		}
 		foundset.loadAllRecords();
 	}
+}
+
+/**
+ * @properties={typeid:24,uuid:"CC4DD13E-AB76-4280-A7E9-BB7608A025CE"}
+ */
+function ws_create(data,version,pk)
+{
+	var rec = foundset.getRecord(foundset.newRecord());
+	rec.name_first = data.name_first;
+	rec.name_last = data.name_last;
+	rec.email = data.email;
+	rec.phone_cell = data.phone_cell;
+	rec.company_id = data.company_id;
+	databaseManager.saveData(rec);
+	
+	foundset.loadAllRecords();
 }
