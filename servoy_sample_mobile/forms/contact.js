@@ -48,8 +48,7 @@ function showContact(fs)
  * @properties={typeid:24,uuid:"A665808B-CDF8-465A-83C8-FE1DBFBC3762"}
  */
 function onCall(event) {
-	var selIdx = foundset.getSelectedIndex();
-	var rec = foundset.getRecord(selIdx);
+	var rec = foundset.getSelectedRecord();
 	if(rec.phone_direct) plugins.mobile.call(rec.phone_direct);
 	else plugins.dialogs.showWarningDialog("Warning", "Missing phone number");
 }
@@ -64,8 +63,7 @@ function onCall(event) {
  * @properties={typeid:24,uuid:"2AF6A1BD-3BF3-436B-8998-DCF0C57FDDFE"}
  */
 function onEmail(event) {
-	var selIdx = foundset.getSelectedIndex();
-	var rec = foundset.getRecord(selIdx);
+	var rec = foundset.getSelectedRecord();
 	if(rec.email) plugins.mobile.email(rec.email);
 	else plugins.dialogs.showWarningDialog("Warning", "Missing email address");
 }
