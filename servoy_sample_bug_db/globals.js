@@ -104,7 +104,7 @@ var currVersionID;
 /**
  * @type {String}
  *
- * @properties={typeid:35,uuid:"6c27adb6-3fa3-496a-8d79-98ba81f8a7f6",variableType:12}
+ * @properties={typeid:35,uuid:"6c27adb6-3fa3-496a-8d79-98ba81f8a7f6"}
  */
 var errorText = '';
 
@@ -118,7 +118,7 @@ var flagIsNew = 0;
 /**
  * @type {String}
  *
- * @properties={typeid:35,uuid:"bcab4941-28e1-4952-ba40-cb19489ca900",variableType:12}
+ * @properties={typeid:35,uuid:"bcab4941-28e1-4952-ba40-cb19489ca900"}
  */
 var htmlHoverStyle = '';
 
@@ -139,42 +139,42 @@ var isDialogOpen = 0;
 /**
  * @type {String}
  *
- * @properties={typeid:35,uuid:"ccaee3b1-a9ee-4a94-a149-e9b52bfaf84a",variableType:12}
+ * @properties={typeid:35,uuid:"ccaee3b1-a9ee-4a94-a149-e9b52bfaf84a"}
  */
 var loginDisplay = '';
 
 /**
  * @type {String}
  *
- * @properties={typeid:35,uuid:"65e36d55-6ef6-49ce-9042-d18722655616",variableType:12}
+ * @properties={typeid:35,uuid:"65e36d55-6ef6-49ce-9042-d18722655616"}
  */
 var loginFullName = '';
 
 /**
  * @type {String}
  *
- * @properties={typeid:35,uuid:"153637ca-791f-4c87-8bb9-c6a8aa5defbc",variableType:12}
+ * @properties={typeid:35,uuid:"153637ca-791f-4c87-8bb9-c6a8aa5defbc"}
  */
 var loginMessageText = '';
 
 /**
  * @type {String}
  *
- * @properties={typeid:35,uuid:"1359536e-c6b2-413c-b0f9-ca494e0c41a0",variableType:12}
+ * @properties={typeid:35,uuid:"1359536e-c6b2-413c-b0f9-ca494e0c41a0"}
  */
 var loginTenantName = '';
 
 /**
  * @type {String}
  *
- * @properties={typeid:35,uuid:"42aa30c6-ad75-43a7-bf6b-875c87246329",variableType:12}
+ * @properties={typeid:35,uuid:"42aa30c6-ad75-43a7-bf6b-875c87246329"}
  */
 var loginUserName = '';
 
 /**
  * @type {String}
  *
- * @properties={typeid:35,uuid:"dd6a7ae9-62e9-4577-b871-25e1c07cb72d",variableType:12}
+ * @properties={typeid:35,uuid:"dd6a7ae9-62e9-4577-b871-25e1c07cb72d"}
  */
 var loginUserPass = '';
 
@@ -207,14 +207,14 @@ var tempInt2;
 /**
  * @type {String}
  *
- * @properties={typeid:35,uuid:"f65badcd-5fc2-487e-9d4e-9f6cfabb6414",variableType:12}
+ * @properties={typeid:35,uuid:"f65badcd-5fc2-487e-9d4e-9f6cfabb6414"}
  */
 var tempTextDisplay = '';
 
 /**
  * @type {String}
  *
- * @properties={typeid:35,uuid:"b36fb20f-944c-4540-9c10-491575ec1c70",variableType:12}
+ * @properties={typeid:35,uuid:"b36fb20f-944c-4540-9c10-491575ec1c70"}
  */
 var tempTextDisplay2 = '';
 
@@ -332,13 +332,13 @@ function DialogCloseCancel(arg0)
 	if(arg0)
 	{
 		//rollback edited record
-		databaseManager.rollbackEditedRecords()
+		databaseManager.revertEditedRecords();
 		
 		//set the global so that if they click the "X" close it won't close
 		globals.isDialogOpen = 0
 		
 //		application.closeFormDialog(arguments[0])
-		application.getWindow(arg0).hide();
+		application.getWindow(arg0.toString()).hide();
 	}
 }
 
@@ -993,11 +993,11 @@ function SetUpDynamicValueLists()
 	}
 	
 	//add "unassigned" to the top of the list
-	displayValues.unshift('<unassigned>')
-	realValues.unshift(0)
-	
-	application.setValueListItems('PersonAssignedTo', displayValues, realValues)
-	
+    if (displayValues.length > 0 && realValues.length > 0) { 
+    	displayValues.unshift('<unassigned>') 
+		realValues.unshift(0) 
+		application.setValueListItems('PersonAssignedTo', displayValues, realValues) 
+	}
 	
 	//task "resolved in" - list of hard coded + version list
 	//reset the list
