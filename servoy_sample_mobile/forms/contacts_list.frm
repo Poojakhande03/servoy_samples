@@ -9,13 +9,12 @@ items:[
 customProperties:"mobile:{
 listitemButton:true
 }",
-dataProviderID:"name_last",
-location:"44,84",
+location:"34,43",
 onActionMethodID:"90268929-8B65-4991-99CF-BCA34FFB647B",
 onDoubleClickMethodID:"-1",
 onRightClickMethodID:"-1",
 size:"180,30",
-text:"list",
+text:"%%name_first%% %%name_last%%",
 typeid:7,
 uuid:"244E3B4C-95D2-4529-B52F-6AD738B2C10F"
 },
@@ -32,7 +31,7 @@ uuid:"58ADD201-754A-4BCF-AAFB-0D151739D0D2"
 customProperties:"mobile:{
 listitemSubtext:true
 }",
-location:"44,116",
+location:"34,75",
 size:"200,20",
 transparent:true,
 typeid:7,
@@ -48,7 +47,7 @@ uuid:"8B69C8A3-5D21-4F49-8969-4D718AC65060"
 customProperties:"mobile:{
 listitemHeader:true
 }",
-location:"10,43",
+location:"0,2",
 size:"380,30",
 text:"Contacts",
 transparent:true,
