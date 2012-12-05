@@ -993,10 +993,11 @@ function SetUpDynamicValueLists()
 	}
 	
 	//add "unassigned" to the top of the list
-	displayValues.unshift('<unassigned>')
-	realValues.unshift(0)
-	
-	application.setValueListItems('PersonAssignedTo', displayValues, realValues)
+    if (displayValues.length > 0 && realValues.length > 0) { 
+    	displayValues.unshift('<unassigned>'); 
+		realValues.unshift(0);
+		application.setValueListItems('PersonAssignedTo', displayValues, realValues); 
+	}
 	
 	
 	//task "resolved in" - list of hard coded + version list
