@@ -104,7 +104,7 @@ function BtnSort(event, arg1) {
 	
 	//column number
 	if (arg1 != null)
-		btnName = event;
+		btnName = event.toString();
 	else
 		btnName = event.getElementName();
 	var columnNum = utils.stringRight(btnName, 2);

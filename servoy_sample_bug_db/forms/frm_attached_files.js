@@ -38,7 +38,6 @@ else
 	//smart client
 	//show choose file dialog
 
-	/** @type JSFile */
 	var file = plugins.file.showFileOpenDialog(1,null,false);
 
 	if(file) //they didn't click "cancel"
