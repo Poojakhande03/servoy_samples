@@ -5,12 +5,13 @@ dataSource:"db:/udm/contacts",
 encapsulation:60,
 items:[
 {
-height:480,
+height:141,
 partType:5,
 typeid:19,
 uuid:"42B73547-1D4B-4384-BA7E-4B678A0F4A6F"
 },
 {
+anchors:15,
 customProperties:"mobile:{
 list:true
 }",
@@ -33,6 +34,7 @@ typeid:16,
 uuid:"5A63DE1C-D842-4AF1-AD54-A7E02C7D33FF"
 },
 {
+anchors:8,
 customProperties:"mobile:{
 dataIcon:\"refresh\",
 headerLeftButton:true,
@@ -54,10 +56,12 @@ typeid:19,
 uuid:"C2BB8157-D57F-4F5B-940F-85466DAC37CF"
 },
 {
+anchors:11,
 customProperties:"mobile:{
 headerText:true,
 headeritem:true
 }",
+horizontalAlignment:0,
 location:"75,8",
 size:"250,28",
 text:"AccountManager",
@@ -68,6 +72,7 @@ uuid:"FB8E97F2-B86F-45DC-AB83-4BAE74A1A86E"
 ],
 name:"companies",
 navigatorID:"-1",
+onShowMethodID:"FD94EACF-7893-4A29-91F1-FA24074BF9A5",
 showInMenu:true,
 size:"400,480",
 typeid:3,
