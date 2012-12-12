@@ -60,6 +60,7 @@ listitemHeader:true
 horizontalAlignment:0,
 location:"0,2",
 size:"380,30",
+styleClass:"b",
 text:"Companies",
 transparent:true,
 typeid:7,
@@ -78,6 +79,7 @@ uuid:"E94AB5A3-71B6-4E0A-A66A-F62B0BC8564A"
 name:"companies_list",
 navigatorID:"-1",
 showInMenu:true,
+styleName:"_servoy_mobile",
 typeid:3,
 uuid:"EFC58CD8-1A98-4686-9592-87C674291055",
 view:3

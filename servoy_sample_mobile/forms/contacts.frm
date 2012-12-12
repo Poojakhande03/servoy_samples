@@ -15,6 +15,7 @@ onActionMethodID:"D02CF83F-0F1E-4898-878B-15517AC5D8E8",
 onDoubleClickMethodID:"-1",
 onRightClickMethodID:"-1",
 size:"50,28",
+styleClass:"b",
 text:"Back",
 typeid:7,
 uuid:"09C884C7-4C7F-4870-ABEF-FA9B55046619"
@@ -30,6 +31,7 @@ onActionMethodID:"097325C7-003F-479A-8138-6A5CF3F7ADD9",
 onDoubleClickMethodID:"-1",
 onRightClickMethodID:"-1",
 size:"50,28",
+styleClass:"b",
 text:"New",
 typeid:7,
 uuid:"2914D274-F2CE-4D20-B98B-D921D6957CE0"
@@ -60,6 +62,7 @@ uuid:"41612C78-0625-4122-B80B-520B506FBADC"
 {
 height:40,
 partType:2,
+styleClass:"b",
 typeid:19,
 uuid:"E4BA9F05-B99F-4604-90FD-A2103FD735F8"
 },
@@ -78,6 +81,7 @@ headeritem:true
 horizontalAlignment:0,
 location:"75,8",
 size:"250,28",
+styleClass:"b",
 text:"AccountManager",
 transparent:true,
 typeid:7,
@@ -88,5 +92,6 @@ name:"contacts",
 navigatorID:"-1",
 showInMenu:true,
 size:"400,480",
+styleName:"_servoy_mobile",
 typeid:3,
 uuid:"8B2835F5-12CD-41DD-863D-40811FC6209C"
