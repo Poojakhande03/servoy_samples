@@ -1,10 +1,10 @@
 allowCreationRelatedRecords:true,
 foreignDataSource:"db:/udm/contacts",
 items:[
-{foreignColumnName:"company_id",primaryDataProviderID:"company_id",typeid:23,uuid:"38CAA27B-49C2-49D6-82AE-31C72CE5B556"}
+{foreignColumnName:"company_id",primaryDataProviderID:"company_id",typeid:23,uuid:"FBBF0E6F-AA3D-456C-9DCC-B87584A34D6D"}
 ],
 joinType:1,
 name:"companies_to_contacts",
 primaryDataSource:"db:/udm/companies",
 typeid:22,
-uuid:"26DAA86B-018C-4246-996F-3BE36F747C45"
+uuid:"8D5DE375-464A-4B33-89EF-E9A093455D7D"
