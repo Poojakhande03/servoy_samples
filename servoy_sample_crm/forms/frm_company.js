@@ -232,7 +232,7 @@ function onRecordSelect()
 	}
 	
 	//see if we're on the last tab and no orders - then jump to the orders tab
-	if(companies_to_orders.getSize() == 0 && elements.tabs_mainPanel.tabIndex == 4)
+	if((companies_to_orders) && elements.tabs_mainPanel.tabIndex == 4)
 	{
 		btn_tabOrders();
 	}
