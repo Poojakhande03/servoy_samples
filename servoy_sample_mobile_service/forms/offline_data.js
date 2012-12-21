@@ -25,7 +25,6 @@ function ws_read(version,name)
 	traverse = new Array();
 	traverse.push('accountmanager_to_companies');
 	traverse.push('companies_to_contacts');
-	traverse.push('contacts_to_contacts');
 
 	retval.addFoundSet(fs_contact, traverse);
 	return retval;
