@@ -1,8 +1,5 @@
 allowCreationRelatedRecords:true,
 foreignDataSource:"db:/udm/contacts",
-items:[
-{foreignColumnName:"contact_id",primaryDataProviderID:"contact_id",typeid:23,uuid:"40E71DF5-FEF9-4981-A83D-F6943FAD1B46"}
-],
 joinType:1,
 name:"contacts_to_contacts",
 primaryDataSource:"db:/udm/contacts",
