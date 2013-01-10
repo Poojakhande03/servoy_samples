@@ -1,5 +1,7 @@
 
 /**
+ * @param {JSFoundSet} fs the foundset to show in this form.
+ * 
  * @properties={typeid:24,uuid:"BCD0E0A7-94CD-41D4-A4E1-645E5E462A50"}
  */
 function showContacts(fs) 
@@ -8,8 +10,7 @@ function showContacts(fs)
 }
 
 /**
- * // TODO generated, please specify type and doc for the params
- * @param event
+ * @param {JSEvent} event the event that triggered the action
  *
  * @properties={typeid:24,uuid:"D0BBE9AF-41BF-497F-AD84-5C75978618A2"}
  */

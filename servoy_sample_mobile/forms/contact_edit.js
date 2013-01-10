@@ -12,6 +12,8 @@ function test(event)
 }
 
 /**
+ * @param {JSFoundSet} fs the foundset to show in this form.
+ * 
  * @properties={typeid:24,uuid:"054AB7B3-1CA1-4B50-9ED0-63EE3CD99D27"}
  */
 function showContact(fs) 

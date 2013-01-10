@@ -28,8 +28,7 @@ function onEditAction(event)
 }
 
 /**
- * // TODO generated, please specify type and doc for the params
- * @param fs
+ * @param {JSFoundSet} fs the foundset to show in this form.
  *
  * @properties={typeid:24,uuid:"770562A2-C877-4C2F-9129-AA9E9C699091"}
  */
