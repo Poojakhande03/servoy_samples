@@ -74,7 +74,7 @@ function onShow()
  */
 function search()
 {
-			application.output('search '+globals.search)
+	application.output('search '+globals.search)
 	if (globals.search != null && globals.search != '')
 	{
 		var jstable = databaseManager.getTable(controller.getDataSource());

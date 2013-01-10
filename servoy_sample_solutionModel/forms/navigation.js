@@ -65,21 +65,19 @@ function fillTree()
 	elements.treeview.addRoots(foundset);
 }
 
+
 /**
  * @AllowToRunInFind
  * 
- * @param {Object} arg0 // TODO generated, please specify type and doc
- * @param {Object} arg1 // TODO generated, please specify type and doc
- * @param {Object} arg2 // TODO generated, please specify type and doc
+ * @param {Object} datasource_id_to_sync
+ * @param {Object} tblname_filter
+ * @param {Object} recreate
  *
  * @properties={typeid:24,uuid:"C1D12BB7-5B88-43F4-9F58-940A500E7B5D"}
  */
-function syncronizeWithDB(arg0, arg1, arg2)
+function syncronizeWithDB(datasource_id_to_sync, tblname_filter, recreate)
 {
 	var i;
-	var datasource_id_to_sync = arg0;
-	var tblname_filter = arg1;
-	var recreate = arg2;
 	var fs = foundset.duplicateFoundSet();
 	if (fs.find())
 	{
@@ -198,13 +196,12 @@ function syncronizeWithDB(arg0, arg1, arg2)
 }
 
 /**
- * @param {String} arg0 // name
+ * @param {String} name
  * 
  * @properties={typeid:24,uuid:"be382e9b-7520-48c6-a40c-116332f9eb00"}
  */
-function makeSingle(arg0)
+function makeSingle(name)
 {
-	var name = arg0;
 	if (name.charAt(name.length-1) == 's')
 	{
 		name = name.substring(0, name.length-1)
@@ -214,13 +211,12 @@ function makeSingle(arg0)
 }
 
 /**
- * @param {String} arg0 // name
+ * @param {String} name
  * 
  * @properties={typeid:24,uuid:"d21bab25-9f23-4b10-8394-636111d7c9c6"}
  */
-function makePlural(arg0)
+function makePlural(name)
 {
-	var name = arg0;
 	if (name.charAt(name.length-1) != 's')
 	{
 		name = name + 's';
