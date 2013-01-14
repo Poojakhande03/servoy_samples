@@ -49,3 +49,15 @@ function onSaveAction(event)
 	databaseManager.saveData();
 	history.back();
 }
+
+/**
+ * Perform the element default action.
+ *
+ * @param {JSEvent} event the event that triggered the action
+ *
+ * @properties={typeid:24,uuid:"CD16B730-A5E8-43A4-94B9-AB76384B2275"}
+ */
+function onAction1(event) {
+	foundset.deleteRecord();
+	history.go(-2);
+}

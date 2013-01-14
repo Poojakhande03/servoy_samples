@@ -36,3 +36,22 @@ function ws_create(data,version,pk)
 	
 	foundset.loadAllRecords();
 }
+
+/**
+ * @AllowToRunInFind
+ * @properties={typeid:24,uuid:"8A267F18-ED12-4B5F-8633-A0985794F7F6"}
+ */
+function ws_delete(version,pk)
+{
+	if (foundset.find())
+	{
+		foundset.contact_id = pk;
+		var count = foundset.search();
+		if (count > 0)
+		{
+			var rec = foundset.getRecord(1);
+			foundset.deleteRecord(rec);
+		}
+		foundset.loadAllRecords();
+	}
+}
