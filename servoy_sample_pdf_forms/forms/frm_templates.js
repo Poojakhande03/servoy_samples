@@ -1,34 +1,37 @@
 /**
  * @properties={typeid:24,uuid:"accd6ab7-74f4-4a03-a64e-3fd2c5ecb36a"}
  */
-function btn_addTemplate()
-{
-	application.getWindow()
-	var fname = plugins.file.showFileOpenDialog();
-	if(fname)
-	{
-		var filedata = plugins.file.readFile(fname);
-		if ( filedata != null )
-		{
-			//store data
-			actual_pdf_form = filedata;
-			filedata = null; //clear
+ function btn_addTemplate()
+ {
+ 	var fname = plugins.file.showFileOpenDialog();
+ 	if(fname)
+ 	{
+ 		var filedata = plugins.file.readFile(fname);
+ 		if ( filedata != null )
+ 		{
+ 			//store data
+ 			actual_pdf_form = filedata;
+ 			filedata = null; //clear
 
-			//set the name field
-			var i1 = fname.lastIndexOf('/');
-			var i2 = fname.lastIndexOf('\\');
-			var index = Math.max(i1,i2);
-			if (index > 0) {
-				fname = fname.substring(index+1);
-			}
-			fname = utils.stringReplace(fname," ","_");//name may NOT contain spaces
-			filename = fname;
+ 			//set/get the name field
 
-			globals.setupRecordStatus();
-			databaseManager.saveData();
-		}
-	}
-}
+ // Commented out because of error when fname.lastIndexOf() is called, case SVY-3973
+ 			/**var i1 = fname.lastIndexOf('/');
+ 			var i2 = fname.lastIndexOf('\\');
+ 			var index = Math.max(i1,i2);
+ 			if (index > 0) {
+ 				fname = fname.substring(index+1);
+ 			}
+ 			*/
+ 			fname = fname.getName();
+ 			fname = utils.stringReplace(fname," ","_");//name may NOT contain spaces
+ 			filename = fname;
+
+ 			globals.setupRecordStatus();
+ 			databaseManager.saveData();
+ 		}
+ 	}
+ }
 
 /**
  * @properties={typeid:24,uuid:"cd357404-2530-4742-8aa4-ebefdd8ba2c7"}
