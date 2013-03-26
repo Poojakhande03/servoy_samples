@@ -1,0 +1,10 @@
+allowCreationRelatedRecords:true,
+foreignDataSource:"db:/udm/companies",
+items:[
+{foreignColumnName:"accountmanager_id",primaryDataProviderID:"contact_id",typeid:23,uuid:"730F7AFA-CFAA-44F2-84F0-86264C8E72BB"}
+],
+joinType:1,
+name:"accountmanager_to_companies",
+primaryDataSource:"db:/udm/contacts",
+typeid:22,
+uuid:"ABC08DE8-A93B-4BF5-B72E-FB1E28A6D0F1"
