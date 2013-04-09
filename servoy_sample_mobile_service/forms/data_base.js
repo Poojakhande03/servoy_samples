@@ -15,7 +15,7 @@ function ws_read(version,method)
 		/** 
 		 * @type {String}
 		 */	
-		var ids = questionParams.ids[0];
+		var ids = questionParams['ids'][0];
 		if (ids != null && ids != '')
 		{
 			/** 

@@ -21,8 +21,14 @@ function onSyncAction(event)
  *
  * @properties={typeid:24,uuid:"FD94EACF-7893-4A29-91F1-FA24074BF9A5"}
  */
-function onShow(firstShow, event) {
-	if (foundset.loadRecords) foundset.loadRecords(39)
+function onShow(firstShow, event)
+{
+	if (application.isInDeveloper() && firstShow && foundset['find'+'']())
+	{
+		// developer-only code to fill the initial foundset with data for 1 contact
+		foundset.email = 'yboom@servoy.com'
+		foundset['search'+'']()
+	}
 }
 
 
