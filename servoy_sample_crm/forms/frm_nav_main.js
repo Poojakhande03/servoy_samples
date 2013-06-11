@@ -199,8 +199,8 @@ function btn_search()
 		//see if anything was found
 		if(found == 0)
 		{
-			globals.showErrorDialog('No records were found matching your search request.', null, null, null, null, null)
 			forms[frm].controller.loadAllRecords()
+			globals.showErrorDialog('No records were found matching your search request.', null, null, null, null, null)
 		}
 		else
 		{
