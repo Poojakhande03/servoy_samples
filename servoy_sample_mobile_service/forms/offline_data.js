@@ -13,7 +13,6 @@ function ws_read(version, name)
 	/** 
 	 * @type {Array<String>}
 	 */	
-	var traverse = null;
 	var retval = plugins.mobileservice.createOfflineDataDescription('data_');
 
 	//setting the key for user_select relation
@@ -22,11 +21,8 @@ function ws_read(version, name)
 	
 	//prepare personal data
 	var fs_contact = globals.accountmanager_contacts; // contains the account manager contact
-	traverse = new Array();
-	traverse.push('accountmanager_to_companies');
-	traverse.push('companies_to_contacts');
 
-	retval.addFoundSet(fs_contact, traverse);
+	retval.addFoundSet(fs_contact);
 	return retval;
 }
 
