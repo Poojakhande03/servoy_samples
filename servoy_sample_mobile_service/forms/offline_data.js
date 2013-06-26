@@ -41,14 +41,14 @@ function ws_authenticate(useruid, password)
 {
 	if (useruid == null || useruid == 'demo')
 	{
-		useruid = 'yboom@servoy.com'
-	}
-	if (password == 'demo')
-	{
-		//TODO check password (against pwhash column)
-		var retval = new Object();
-		retval.username = useruid;
-		return retval; // will be last argument in ws_read()
+		useruid = 'yboom@servoy.com';
+		if (password == 'demo')
+		{
+			//TODO check password (against pwhash column)
+			var retval = new Object();
+			retval.username = useruid;
+			return retval; // will be last argument in ws_read()
+		}
 	}
 	return false;
 }
