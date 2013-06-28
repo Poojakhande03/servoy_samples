@@ -11,10 +11,7 @@ function ws_update(data,version,pk)
 		if (count > 0)
 		{
 			var rec = foundset.getRecord(1);
-			rec.name_first = data.name_first;
-			rec.name_last = data.name_last;
-			rec.email = data.email;
-			rec.phone_cell = data.phone_cell;
+			databaseManager.copyMatchingFields(data,rec, true);
 			databaseManager.saveData(rec);
 		}
 		foundset.loadAllRecords();
