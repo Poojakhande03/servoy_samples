@@ -14,7 +14,6 @@ function ws_update(data,version,pk)
 			databaseManager.copyMatchingFields(data,rec, true);
 			databaseManager.saveData(rec);
 		}
-		foundset.loadAllRecords();
 	}
 }
 
@@ -30,8 +29,6 @@ function ws_create(data,version,pk)
 	rec.phone_cell = data.phone_cell;
 	rec.company_id = data.company_id;
 	databaseManager.saveData(rec);
-	
-	foundset.loadAllRecords();
 }
 
 /**
@@ -49,6 +46,5 @@ function ws_delete(version,pk)
 			var rec = foundset.getRecord(1);
 			foundset.deleteRecord(rec);
 		}
-		foundset.loadAllRecords();
 	}
 }

@@ -20,14 +20,15 @@ function onSyncAction(event)
  * @param {JSEvent} event the event that triggered the action
  *
  * @properties={typeid:24,uuid:"FD94EACF-7893-4A29-91F1-FA24074BF9A5"}
+ * @AllowToRunInFind
  */
 function onShow(firstShow, event)
 {
-	if (application.isInDeveloper() && firstShow && foundset['find'+'']())
+	if (application.isInDeveloper() && firstShow && foundset.find())
 	{
 		// developer-only code to fill the initial foundset with data for 1 contact
 		foundset.email = 'yboom@servoy.com'
-		foundset['search'+'']()
+		foundset.search()
 	}
 }
 

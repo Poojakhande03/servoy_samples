@@ -5,3 +5,13 @@
  */
 var username = null;
 
+
+/**
+ * Callback method for when solution is opened.
+ *
+ * @properties={typeid:24,uuid:"0323582E-1B81-4C15-B4D0-7B6AA5D87047"}
+ */
+function onSolutionOpen() {
+	// prevent prefilling of form foundsets with default query
+	databaseManager.setCreateEmptyFormFoundsets()
+}

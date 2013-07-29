@@ -18,14 +18,10 @@ function ws_read(version,method)
 		var ids = questionParams['ids'][0];
 		if (ids != null && ids != '')
 		{
-			/** 
-			 * @type {Array<Object>}
-			 */	
 			var idsa = ids.split(',', -1);
 			if (idsa.length > 0)
 			{
-				foundset.loadAllRecords();
-				var json = plugins.mobileservice.getRowDescriptions(foundset, idsa)
+				var json = plugins.mobileservice.getRowDescriptions(foundset.getDataSource(), idsa)
 				return json;
 			}
 		}
