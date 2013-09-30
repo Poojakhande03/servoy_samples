@@ -1,4 +1,3 @@
-
 /**
  * Perform the element default action.
  *
@@ -32,7 +31,6 @@ function onShow(firstShow, event)
 	}
 }
 
-
 /**
  * Perform the element default action.
  *
@@ -47,3 +45,13 @@ function onDetailAction(event)
 	forms.contacts.showContacts(accountmanager_to_companies.companies_to_contacts);
 }
 
+/**
+ * Perform the element default action.
+ *
+ * @param {JSEvent} event the event that triggered the action
+ *
+ * @properties={typeid:24,uuid:"31B9F588-5EA1-4937-BB9D-C884C8A0BAA5"}
+ */
+function onSearchInProducts(event) {
+	forms.product_search.controller.show();
+}

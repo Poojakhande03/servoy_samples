@@ -1,0 +1,15 @@
+dataSource:"db:/udm/products",
+encapsulation:60,
+extendsID:"EF6ECBD9-D878-4AE8-A0BB-955595349AC0",
+items:[
+{
+extendsID:"7E77D5E0-CAA7-4A00-A732-6C74A6EE8453",
+height:480,
+typeid:19,
+uuid:"CA5E20F8-E876-473B-8BC5-2121BED4ECE6"
+}
+],
+name:"data_products",
+showInMenu:true,
+typeid:3,
+uuid:"E1EFE27A-99B5-4372-8905-DA4D91942A76"
