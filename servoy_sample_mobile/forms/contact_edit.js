@@ -31,7 +31,8 @@ function showContact(fs)
  * @properties={typeid:24,uuid:"22F09139-0180-44DA-84E7-CDE12C2AC89E"}
  */
 function onBackAction(event) 
-{
+{	
+	foundset.getSelectedRecord().revertChanges();
 	history.back();
 }
 
