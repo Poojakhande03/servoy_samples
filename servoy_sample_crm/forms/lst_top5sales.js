@@ -41,7 +41,7 @@ function draw_chart()
 		HTML += '<tr bgcolor="#cccccc"><td colspan=2 class="body"><b>Top 5 Products</b></td></tr>'
 
 //		Condition for NGClient - case SVY-7254
-		if (elements['chart_pie'] != null) {
+//		if (elements['chart_pie'] != null) {
 		
 			elements.chart_pie.visible = true;
 	
@@ -71,6 +71,6 @@ function draw_chart()
 			HTML += '</table>\n'+'</body>\n' //+'</html>'
 	
 			html_sales = HTML
-		}
+//		}
 	}
 }
