@@ -40,33 +40,37 @@ function draw_chart()
 		HTML += '<table width=145 border=0 cellpadding=1 bgcolor="#ffffff">\n'
 		HTML += '<tr bgcolor="#cccccc"><td colspan=2 class="body"><b>Top 5 Products</b></td></tr>'
 
-		elements.chart_pie.visible = true;
-
-		for( i = 1 ; i <= maxRows ; i++ )
-		{
-			dataset.rowIndex = i;
-			if(dataset[1] != null && dataset[2] != null)
+//		Condition for NGClient - case SVY-7254
+		if (elements['chart_pie'] != null) {
+		
+			elements.chart_pie.visible = true;
+	
+			for( i = 1 ; i <= maxRows ; i++ )
 			{
-				if(elements['chart_pie'] != null)
+				dataset.rowIndex = i;
+				if(dataset[1] != null && dataset[2] != null)
 				{
-					elements.chart_pie.setLegends(i-1,dataset[1])// set legends of chart
-					elements.chart_pie.setValues(i-1, 0, dataset[2])
+					if(elements['chart_pie'] != null)
+					{
+						elements.chart_pie.setLegends(i-1,dataset[1])// set legends of chart
+						elements.chart_pie.setValues(i-1, 0, dataset[2])
+					}
+					HTML += '<tr><td nowrap class="body">'+ dataset[1]+
+					'</td><td nowrap align="right" class="body">'+ utils.numberFormat(dataset[2], '$###,###,###.00')+'</td></tr>';
 				}
-				HTML += '<tr><td nowrap class="body">'+ dataset[1]+
-				'</td><td nowrap align="right" class="body">'+ utils.numberFormat(dataset[2], '$###,###,###.00')+'</td></tr>';
 			}
+	
+			//put total line at bottom
+			/** @type String */
+			var totalLine = dataset.getColumnAsArray(2)
+			totalLine = totalLine.join('+')
+			totalLine = eval(totalLine);
+			HTML += '<tr><td nowrap colspan=2 align="right" class="body"><b>Total: '+
+			utils.numberFormat(totalLine, '$###,###,###.00') + "</b></td></tr>";
+	
+			HTML += '</table>\n'+'</body>\n' //+'</html>'
+	
+			html_sales = HTML
 		}
-
-		//put total line at bottom
-		/** @type String */
-		var totalLine = dataset.getColumnAsArray(2)
-		totalLine = totalLine.join('+')
-		totalLine = eval(totalLine);
-		HTML += '<tr><td nowrap colspan=2 align="right" class="body"><b>Total: '+
-		utils.numberFormat(totalLine, '$###,###,###.00') + "</b></td></tr>";
-
-		HTML += '</table>\n'+'</body>\n' //+'</html>'
-
-		html_sales = HTML
 	}
 }
