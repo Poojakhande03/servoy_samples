@@ -128,7 +128,7 @@ if(!bill_address_id){globals.showErrorDialog('You must choose a billing address.
 
 	_super.btn_save()
 
-	if(application.getApplicationType() == 5) onRecordSelect(); //for web client - to refresh buttons
+	if(application.getApplicationType() == APPLICATION_TYPES.WEB_CLIENT || application.getApplicationType() == APPLICATION_TYPES.NG_CLIENT) onRecordSelect(); //for web client - to refresh buttons
 }
 
 /**
@@ -139,7 +139,7 @@ function doEdit()
 	_super.doEdit();
 
 	//don't need image buttons for webclient - at all
-	if(application.getApplicationType() != 5)
+	if((application.getApplicationType() != APPLICATION_TYPES.WEB_CLIENT) && (application.getApplicationType() != APPLICATION_TYPES.NG_CLIENT))
 	{
 		elements.btn_addImage.visible = true
 
@@ -206,7 +206,7 @@ function onShow()
 	elements.btn_deleteImage.visible = false
 
 	//if web client - then hide the thumbnail and show the underlying image
-	if(application.getApplicationType() == 5)
+	if(application.getApplicationType() == APPLICATION_TYPES.WEB_CLIENT || application.getApplicationType() == APPLICATION_TYPES.NG_CLIENT)
 	{
 		elements.image_thumbnail.visible = false
 		elements.fld_image_product.visible = true
