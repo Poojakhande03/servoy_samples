@@ -10,6 +10,7 @@ onActionMethodID:"833d01cf-3cc7-4a1c-b50d-4c6c9d46b368",
 size:"80,26",
 text:"Cancel",
 typeid:7,
+styleClass:"greybtn",
 uuid:"1399876f-ed4f-410e-a7e7-91839bd7390c"
 },
 {
@@ -38,6 +39,7 @@ onActionMethodID:"23227f7a-7b96-4576-8bbb-aa44c910fa64",
 size:"120,26",
 text:"btn_3",
 typeid:7,
+styleClass:"greybtn",
 uuid:"5bdbe19a-0e8b-407d-855e-28c97dcade9e"
 },
 {
@@ -62,6 +64,7 @@ onActionMethodID:"ab4ea82f-114b-4d88-9627-72bc01cb9c32",
 size:"80,26",
 text:"OK",
 typeid:7,
+styleClass:"greybtn",
 uuid:"8fb398c4-064f-4222-82b9-74f4fdc8410e"
 },
 {

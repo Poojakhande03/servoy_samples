@@ -33,6 +33,7 @@ tabSeq:-2,
 toolTipText:"Open %%company_url%% in a browser",
 transparent:true,
 typeid:7,
+styleClass:"greybtn",
 uuid:"0c631f7d-5975-46da-8cbe-8b6bcafc9b69"
 },
 {
