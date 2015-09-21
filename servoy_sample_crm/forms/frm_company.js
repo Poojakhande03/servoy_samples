@@ -243,12 +243,15 @@ function onRecordSelect()
  */
 function onShow()
 {
-	//make read only
-	controller.readOnly = true
+	if(!globals.isEditing())
+    {
+        //make read only
+        controller.readOnly = true
 
-	//hide save/cancel btsn
-	elements.btn_save.visible = false
-	elements.btn_cancel.visible = false
+        //hide save/cancel btsn
+        elements.btn_save.visible = false
+        elements.btn_cancel.visible = false
+    }
 
 	//hide the comboboxes
 	elements.fld_companyCategoryc.visible = false
